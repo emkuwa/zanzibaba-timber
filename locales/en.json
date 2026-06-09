@@ -1,0 +1,289 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "timberSizes": "Timber Sizes",
+    "prices": "Prices",
+    "projects": "Projects",
+    "hotelSupply": "Hotel Supply",
+    "villaSupply": "Villa Supply",
+    "governmentSupply": "Government Supply",
+    "wholesale": "Wholesale",
+    "delivery": "Delivery",
+    "gallery": "Gallery",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Treated Pine Timber Supplier in Zanzibar",
+    "subtitle": "High Quality Treated Timber & Poles for construction — delivered across Zanzibar",
+    "cta": "Get Free Quote",
+    "whatsappQuote": "WhatsApp Quote",
+    "callNow": "Call +255 716 002 790",
+    "location": "Kwa Ndevu, Daraja Bovu, Zanzibar"
+  },
+  "common": {
+    "call": "Call Now",
+    "whatsapp": "WhatsApp",
+    "requestQuote": "Request Quote",
+    "learnMore": "Learn More",
+    "viewGallery": "View Gallery",
+    "viewAll": "View All",
+    "send": "Send",
+    "sendToWhatsApp": "Send to WhatsApp"
+  },
+  "footer": {
+    "description": "Leading pine timber supplier in Zanzibar serving homeowners, contractors, hotels, resorts, villas, and government projects.",
+    "contact": "Contact Us",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "copyright": "© {year} Zanzibaba Timber. All rights reserved."
+  },
+  "pages": {
+    "home": {
+      "sizesTitle": "Premium Pine Timber Sizes",
+      "sizesSubtitle": "Kiln-dried, ready for construction",
+      "ft18": "18ft Lengths Available",
+      "ft12": "12ft Lengths Available",
+      "quoteTitle": "Get Instant Quote via WhatsApp",
+      "quoteSubtitle": "Send us your requirements. We respond within 30 minutes during business hours.",
+      "locationsTitle": "We Supply Across Zanzibar",
+      "whyChoose": "Why Zanzibar Trusts Us for Timber",
+      "ft1": "High Quality Treated Timber",
+      "ft1Desc": "Premium treated pine timber kiln-dried for Zanzibar's tropical climate",
+      "ft2": "Treated Poles",
+      "ft2Desc": "Treated poles 2\" to 6\" diameter, 18ft length for construction and fencing",
+      "ft3": "Special Sizes Available",
+      "ft3Desc": "Custom cuts and special sizes to match your project requirements",
+      "ft4": "Cash on Delivery",
+      "ft4Desc": "Pay when you receive. Secure and convenient payment on delivery",
+      "ft5": "Delivery Across Zanzibar",
+      "ft5Desc": "Fast, reliable timber delivery to all locations across the island"
+    },
+    "sizes": {
+      "title": "Pine Timber Sizes",
+      "subtitle": "Premium kiln-dried pine timber. Available in 18ft and 12ft lengths for all Zanzibar construction projects.",
+      "ft18Title": "18ft Timber Sizes",
+      "ft12Title": "12ft Timber Sizes",
+      "customTitle": "Need a Different Size?",
+      "customDesc": "Special Sizes Available. Contact for custom orders.",
+      "customBtn": "Request Custom Size",
+      "viewAll": "View All Timber Sizes →"
+    },
+    "quoteForm": {
+      "yourName": "Your Name",
+      "phoneNumber": "Phone",
+      "selectSize": "Select Size",
+      "selectLength": "Select Length",
+      "additionalDetails": "Project details, quantity...",
+      "responseTime": "Response within 30 minutes • Kwa Ndevu, Daraja Bovu",
+      "lengths": {
+        "18ft": "18ft Length",
+        "12ft": "12ft Length"
+      }
+    },
+    "about": {
+      "title": "About Zanzibaba Timber",
+      "subtitle": "Premium treated timber supplier in Zanzibar since 2010",
+      "basedIn": "Based in {location}, we supply premium pine timber to homeowners, contractors, hotels, resorts, and government projects across the island.",
+      "quality": "High Quality Treated Timber. Our timber is sustainably sourced and kiln-dried for Zanzibar's tropical climate. Every piece meets strict quality standards before delivery.",
+      "servicesTitle": "Our Services:",
+      "service1": "Residential & contractor supply",
+      "service2": "Hotel & resort timber solutions",
+      "service3": "Government project supply",
+      "service4": "Wholesale & bulk orders",
+      "service5": "Delivery Across Zanzibar"
+    },
+    "prices": {
+      "title": "Timber Prices",
+      "subtitle": "Competitive pricing for all project sizes. Bulk discounts available.",
+      "size": "Size",
+      "dimensions": "Dimensions",
+      "priceMeter": "Price/Meter",
+      "enquire": "Enquire",
+      "contactForPrice": "Contact for Price",
+      "bulkDiscounts": "Bulk Order Discounts",
+      "bulkDesc": "Special Sizes Available. Contact us for wholesale pricing.",
+      "wholesaleInfo": "Wholesale Info"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch for quotes, delivery, or inquiries",
+      "getInTouch": "Get in Touch",
+      "readyToDiscuss": "Ready to discuss your timber needs? Contact us for a free quote and consultation.",
+      "businessHours": "Business Hours",
+      "hours": "Monday - Saturday: 8:00 AM - 5:00 PM<br />Sunday: Closed",
+      "requestQuote": "Request Quote"
+    },
+    "delivery": {
+      "title": "Delivery Across Zanzibar",
+      "subtitle": "Cash on Delivery. Fast, reliable timber delivery.",
+      "includes": "We deliver timber across Zanzibar including:",
+      "deliveryTime": "Delivery Time:",
+      "timeframe": "24-48 hours for stock items",
+      "arrangeDelivery": "Arrange Delivery"
+    },
+    "wholesale": {
+      "title": "Wholesale Supply",
+      "subtitle": "We offer competitive wholesale rates for timber contractors, retailers, and developers.",
+      "bulk": "Bulk Order Discounts",
+      "desc": "Contact us for bulk pricing on all timber sizes.",
+      "wholesaleInfo": "Wholesale Info",
+      "disc500": "15% discount",
+      "disc1000": "20% discount",
+      "customSizes": "Special Sizes Available",
+      "getPriceList": "Get Wholesale Price List"
+    },
+    "projects": {
+      "title": "Our Projects",
+      "subtitle": "View our completed timber supply projects across Zanzibar. Hotels, villas, government buildings and residential constructions.",
+      "startProject": "Start Your Project"
+    },
+    "gallery": {
+      "title": "Project Gallery",
+      "subtitle": "Treated timber projects across Zanzibar",
+      "alt1": "Timber storage yard in Kwa Ndevu",
+      "alt2": "Pine timber 2x4 for construction",
+      "alt3": "Hotel project Nungwi",
+      "alt4": "Villa construction Paje",
+      "alt5": "Bulk timber delivery",
+      "alt6": "Custom timber cutting",
+      "alt7": "Finished villa project",
+      "alt8": "Roof construction timber"
+    }
+  },
+  "features": {
+    "highQuality": "High Quality Treated Timber",
+    "treatedPoles": "Treated Poles",
+    "specialSizes": "Special Sizes Available",
+    "cashOnDelivery": "Cash on Delivery",
+    "islandWideDelivery": "Delivery Across Zanzibar",
+    "bulkDiscounts": "Bulk discounts available for orders over 100 meters"
+  },
+  "homeSections": {
+    "about": {
+      "heading": "About Zanzibaba Timber",
+      "who": "Zanzibaba Timber has been the island's trusted timber supplier since 2010, providing high quality treated pine timber for homeowners, contractors, hotels, and government projects across Zanzibar.",
+      "stock": "With extensive stock capacity at our Kwa Ndevu yard, we maintain large inventories of all standard timber sizes and treated poles — ready for immediate dispatch.",
+      "supply": "We source premium pine directly from mainland Tanzania, ensuring consistent quality and competitive pricing for every project, from small renovations to large-scale developments.",
+      "coverage": "From Paje to Nungwi, Stone Town to Kendwa — our delivery network covers every corner of Zanzibar with fast, reliable service."
+    },
+    "yard": {
+      "heading": "Our Timber Yard & Stock",
+      "stock1": "Our Kwa Ndevu timber yard is one of the largest and best-stocked in Zanzibar, with a comprehensive inventory of treated pine timber and poles ready for immediate sale and delivery.",
+      "stock2": "Whether you need a few lengths for a home project or hundreds of pieces for a hotel development, we have the capacity to fulfil your order without delay.",
+      "bullet1": "Large stock of all standard timber sizes (1x6 through 2x6)",
+      "bullet2": "Treated poles 2\" to 6\" diameter, 18ft lengths",
+      "bullet3": "Bulk orders welcome — competitive wholesale pricing",
+      "bullet4": "Dedicated loading area for quick turnaround"
+    },
+    "delivery": {
+      "heading": "Delivery Across Zanzibar",
+      "p1": "We offer fast, reliable timber delivery across the entire island of Zanzibar. Our fleet is equipped to handle orders of all sizes, from small residential loads to full truckloads for major projects.",
+      "p2": "With cash on delivery available, you only pay when your timber arrives — giving you peace of mind and convenience.",
+      "feature1": "24-48hr Delivery",
+      "feature2": "Cash on Delivery",
+      "feature3": "Island-Wide Coverage",
+      "feature4": "Bulk Loads Welcome"
+    },
+    "logistics": {
+      "heading": "Logistics & Loading",
+      "p1": "We take logistics seriously. Our experienced team handles every order with care — from selection and loading to secure transport and offloading at your site.",
+      "p2": "We work with contractors, hotels, and project managers to coordinate delivery schedules that keep your project on track.",
+      "bullet1": "Professional loading and secure transport",
+      "bullet2": "Coordination with project delivery schedules",
+      "bullet3": "Contractor supply with flexible delivery timing"
+    },
+    "residential": {
+      "heading": "Residential Construction",
+      "p1": "From new home builds to renovations and extensions, Zanzibaba Timber supplies the highest quality treated pine timber for residential projects across Zanzibar.",
+      "p2": "Homeowners and building contractors trust us for roofing timber, framing, decking, fencing, and structural applications — all cut to the sizes you need.",
+      "item1": "New Homes",
+      "item2": "Renovations",
+      "item3": "Roofing Timber"
+    },
+    "villa": {
+      "heading": "Villa Construction Projects",
+      "p1": "Zanzibar's luxury villa market demands the finest materials, and Zanzibaba Timber delivers. We supply treated pine timber for beachfront villas, private resorts, and high-end residential developments.",
+      "p2": "Our team understands the specific requirements of luxury construction and works closely with architects and builders to ensure the right timber for every application.",
+      "bullet1": "Premium timber for luxury villa construction",
+      "bullet2": "Beachfront and coastal project specialists",
+      "bullet3": "Custom sizes for architectural requirements"
+    },
+    "hotel": {
+      "heading": "Hotel & Resort Supply",
+      "p1": "Zanzibaba Timber is the preferred timber supplier for hotels and resorts across Zanzibar. From Nungwi to Paje, Kendwa to Matemwe — we keep the hospitality industry building.",
+      "p2": "We understand the scale and urgency of hotel projects and offer bulk pricing, scheduled deliveries, and dedicated account management for hospitality clients.",
+      "item1": "Nungwi Resorts",
+      "item2": "Paje Hotels",
+      "item3": "Kendwa Lodges",
+      "item4": "Kiwengwa Resorts"
+    },
+    "government": {
+      "heading": "Government & Commercial Projects",
+      "p1": "We are proud to supply timber for government and commercial construction projects across Zanzibar. Schools, healthcare facilities, offices, and public buildings all rely on our materials.",
+      "p2": "With the capacity to handle large-scale orders and the reliability to meet project deadlines, we are a trusted partner for institutional and commercial developments.",
+      "bullet1": "School and education facility construction",
+      "bullet2": "Healthcare facility and hospital projects",
+      "bullet3": "Government office and administrative buildings",
+      "bullet4": "Large-scale commercial developments"
+    },
+    "quality": {
+      "heading": "Quality Assurance",
+      "p1": "Every piece of timber that leaves our yard is inspected for quality. We take pride in supplying timber that meets the demands of Zanzibar's construction industry.",
+      "p2": "Our treatment process ensures durability against Zanzibar's tropical climate — protecting against termites, rot, and weather damage. We stand behind the quality of every delivery.",
+      "badge1": "Treated for Tropical Climate",
+      "badge2": "Quality Inspected Before Delivery"
+    },
+    "gallery": {
+      "heading": "Project Gallery",
+      "p1": "Browse our project gallery to see real examples of Zanzibaba Timber in action. From luxury villas and hotels to residential homes and government buildings — our timber is building Zanzibar.",
+      "p2": "Each project showcases the quality of our treated pine timber and the craftsmanship of Zanzibar's skilled builders and carpenters."
+    }
+  },
+  "hotelSupply": {
+    "title": "Hotel & Resort Supply",
+    "subtitle": "We specialize in supplying high-quality pine timber to Zanzibar's hospitality sector.",
+    "ourServices": "Our Hotel Services:",
+    "service1": "Bulk timber supply for large projects",
+    "service2": "Custom cutting and sizing",
+    "service3": "Pressure-treated options for outdoor use",
+    "service4": "Reliable island-wide delivery",
+    "service5": "Flexible payment terms for businesses",
+    "hotelsWeServe": "Hotels We Serve:",
+    "hotel1": "Nungwi beach resorts",
+    "hotel2": "Kendwa luxury lodges",
+    "hotel3": "Paje boutique hotels",
+    "hotel4": "Stone Town heritage properties",
+    "hotel5": "Kiwengwa beach hotels",
+    "cta": "Get Hotel Supply Quote"
+  },
+  "villaSupply": {
+    "title": "Villa Supply",
+    "subtitle": "Quality timber for Zanzibar villa construction and renovation.",
+    "ourServices": "Our Villa Services:",
+    "service1": "Custom timber for luxury villas",
+    "service2": "Traditional joinery materials",
+    "service3": "Decking and flooring timber",
+    "service4": "Roofing materials",
+    "service5": "Landscaping timber",
+    "cta": "Get Villa Supply Quote"
+  },
+"locations": {
+    "title": "Delivery Locations",
+    "subtitle": "We deliver pine timber across Zanzibar. Serving all major towns and resort areas.",
+    "service1": "Pine timber supply for residential projects",
+    "service2": "Hotel and resort construction materials",
+    "service3": "Custom cutting services",
+    "service4": "Island-wide delivery network",
+    "service5": "Wholesale for contractors",
+    "services": "Our Services in {location}:",
+    "order": "Order Timber for {location}",
+    "viewAll": "← View All Locations"
+  },
+  "blog": {
+    "title": "Timber Blog",
+    "readMore": "Read More →",
+    "consultation": "Get Timber Consultation"
+  }
+}

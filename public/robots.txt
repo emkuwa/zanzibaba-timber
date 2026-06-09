@@ -1,0 +1,17 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+
+# *
+User-agent: *
+Disallow: /admin/
+
+# Host
+Host: https://timber.zanzibaba.com
+
+# Sitemaps
+Sitemap: https://timber.zanzibaba.com/sitemap.xml

@@ -1,0 +1,79 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { LogOut, FileText, Search } from 'lucide-react'
+
+export default function AdminQuotes() {
+  const router = useRouter()
+  const [quotes, setQuotes] = useState([
+    { id: 1, name: 'Ali Hassan', email: 'ali@example.com', phone: '+25571234567', message: 'Need 50 pieces 2x4', date: '2024-06-08' },
+    { id: 2, name: 'Sophie M.', email: 'sophie@example.com', phone: '+25579876543', message: 'Villa project inquiry', date: '2024-06-07' },
+  ])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && localStorage.getItem('admin_auth') !== 'true') {
+      router.push('/admin')
+    }
+  }, [router])
+
+  return (
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+      <header className="bg-white dark:bg-gray-800 shadow">
+        <div className="px-4 py-4 flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <FileText className="w-5 h-5 text-primary-600" />
+            <h1 className="text-xl font-bold">Quote Requests</h1>
+          </div>
+          <button onClick={() => { localStorage.removeItem('admin_auth'); router.push('/admin') }} className="flex items-center gap-2 text-gray-600">
+            <LogOut className="w-4 h-4" /> Logout
+          </button>
+        </div>
+      </header>
+
+      <nav className="bg-white dark:bg-gray-800 border-b px-4 py-2">
+        <div className="flex gap-2 overflow-x-auto">
+          {['Dashboard', 'Prices', 'Inventory', 'Leads', 'Quotes', 'WhatsApp'].map((item) => (
+            <Link key={item} href={`/admin/${item.toLowerCase()}`} className="px-4 py-2 rounded-lg hover:bg-gray-100">
+              {item}
+            </Link>
+          ))}
+        </div>
+      </nav>
+
+      <main className="p-4 max-w-4xl mx-auto">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow overflow-hidden">
+          <div className="p-4">
+            <div className="relative">
+              <Search className="w-4 h-4 absolute left-3 top-3 text-gray-400" />
+              <input placeholder="Search quotes..." className="w-full pl-10 pr-4 py-2 rounded-lg border" />
+            </div>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-gray-50 dark:bg-gray-700">
+                <tr>
+                  <th className="px-4 py-2 text-left text-sm">Name</th>
+                  <th className="px-4 py-2 text-left text-sm">Phone</th>
+                  <th className="px-4 py-2 text-left text-sm">Message</th>
+                  <th className="px-4 py-2 text-left text-sm">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {quotes.map((quote) => (
+                  <tr key={quote.id} className="border-t">
+                    <td className="px-4 py-2">{quote.name}</td>
+                    <td className="px-4 py-2">{quote.phone}</td>
+                    <td className="px-4 py-2 text-sm">{quote.message}</td>
+                    <td className="px-4 py-2 text-sm text-gray-500">{quote.date}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+}

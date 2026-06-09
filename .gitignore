@@ -1,0 +1,27 @@
+# Aider
+.aider*
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+.next/
+.out/
+.vercel/
+dist/
+build/
+
+# Production
+.output/
+.vercel/output/
+
+# Misc
+.DS_Store
+*.tsbuildinfo
+.env*
+.env.local
+.env.development
+.env.production
