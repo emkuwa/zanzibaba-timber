@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
 import { BLOG_POSTS, TIMBER_SIZES, INDUSTRIES, generateWhatsAppLink } from '@/lib/data'
 import Link from 'next/link'
@@ -58,11 +59,12 @@ export default function VillaSupply() {
                   Luxury villas across Zanzibar trust Zanzibaba Timber for their construction needs. From <strong>beachfront developments in Paje</strong> to <strong>high-end residences in Kendwa</strong>, we supply premium treated pine timber that combines structural integrity with the natural aesthetic the island is famous for.
                 </p>
 
-                <img
+                <ImageWithFallback
                   src="/images/gallery/villa-construction-zanzibar.jpg"
                   alt="Luxury villa construction using Zanzibaba Timber in Zanzibar"
+                  aspectRatio="16/9"
                   className="w-full rounded-xl shadow-lg mb-8"
-                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 66vw"
                 />
 
                 <h2 className="text-2xl font-bold mb-4">Premium Timber for Luxury Villa Developments</h2>

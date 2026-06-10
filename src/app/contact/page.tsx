@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import QuoteForm from '@/components/QuoteForm'
 import { generateSEOMetadata, getLocalBusinessSchema } from '@/lib/seo'
 import { MapPin, Phone, Mail } from 'lucide-react'
@@ -23,11 +24,12 @@ export default function Contact() {
 
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               <div>
-                <img
+                <ImageWithFallback
                   src="/images/gallery/timber-supplier-team.jpg"
                   alt="Zanzibaba Timber Team"
+                  aspectRatio="4/3"
                   className="w-full rounded-lg mb-6"
-                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <h2>Get in Touch</h2>
                 <p className="text-lg mb-6">

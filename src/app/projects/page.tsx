@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import { generateSEOMetadata } from '@/lib/seo'
 import Link from 'next/link'
 import { Project } from '@/types'
@@ -51,11 +52,12 @@ export default function Projects() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {PROJECTS.map((project) => (
                 <article key={project.id} className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                  <img
+                  <ImageWithFallback
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover"
-                    loading="lazy"
+                    aspectRatio="16/9"
+                    className="w-full"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="p-6">
                     <h3 className="font-bold text-xl mb-2">{project.title}</h3>

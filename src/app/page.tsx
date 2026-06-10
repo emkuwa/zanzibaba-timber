@@ -2,6 +2,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import QuoteForm from '@/components/QuoteForm'
 import { getLocalBusinessSchema, getFAQSchema, getReviewSchema } from '@/lib/seo'
 import { PRODUCT_VARIANTS, LOCATIONS, INDUSTRIES, DELIVERY_PROCESS, HOMEPAGE_FAQ, TESTIMONIALS } from '@/lib/data'
@@ -200,11 +201,12 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative">
-                <img
+                <ImageWithFallback
                   src="/images/gallery/contractor-inspecting-timber.jpg"
                   alt="Treated pine timber quality inspection at Zanzibaba Timber yard"
-                  className="w-full h-80 md:h-96 object-cover rounded-2xl shadow-2xl"
-                  loading="lazy"
+                  aspectRatio="4/3"
+                  className="w-full rounded-2xl shadow-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-primary-600 rounded-full flex items-center justify-center shadow-lg">
                   <Award className="w-12 h-12 text-white" />
@@ -256,11 +258,12 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative">
-                <img
+                <ImageWithFallback
                   src="/images/gallery/timber-sizes-display.jpg"
                   alt="Large stock of treated pine timber sizes at Zanzibaba yard"
-                  className="w-full h-80 md:h-96 object-cover rounded-2xl shadow-2xl"
-                  loading="lazy"
+                  aspectRatio="4/3"
+                  className="w-full rounded-2xl shadow-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute -top-6 -left-6 w-20 h-20 bg-green-500 rounded-xl flex items-center justify-center shadow-lg rotate-6">
                   <Leaf className="w-10 h-10 text-white" />
@@ -368,11 +371,11 @@ export default function Home() {
                   href={`/${industry.slug}`}
                   className="group relative block h-72 rounded-2xl overflow-hidden shadow-xl"
                 >
-                  <img
+                  <ImageWithFallback
                     src={industry.image}
                     alt={`${industry.name} - ${industry.description}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
+                    className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -449,11 +452,11 @@ export default function Home() {
                 { src: '/images/gallery/hero-timber-yard-zanzibar.jpg', alt: 'Zanzibaba Timber yard stock', label: 'Our Timber Yard' },
               ].map((item, i) => (
                 <div key={i} className="group relative overflow-hidden rounded-2xl shadow-xl">
-                  <img
+                  <ImageWithFallback
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
+                    className="w-full h-80 group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="absolute bottom-4 left-4 text-white font-semibold text-lg opacity-0 group-hover:opacity-100 transition-opacity">

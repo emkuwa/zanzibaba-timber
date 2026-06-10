@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import { generateSEOMetadata } from '@/lib/seo'
 import Link from 'next/link'
 
@@ -22,12 +23,13 @@ export default function About() {
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <img
-                    src="/images/gallery/timber-yard-aerial-view.jpg"
-                    alt="Zanzibaba Timber Yard - Kwa Ndevu, Daraja Bovu"
-                    className="w-full rounded-lg shadow-lg"
-                    loading="lazy"
-                  />
+                <ImageWithFallback
+                  src="/images/gallery/timber-yard-aerial-view.jpg"
+                  alt="Zanzibaba Timber Yard - Kwa Ndevu, Daraja Bovu"
+                  aspectRatio="4/3"
+                  className="w-full rounded-lg shadow-lg"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
               
               <div className="prose dark:prose-invert">

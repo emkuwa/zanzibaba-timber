@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
 import { TIMBER_SIZES, INDUSTRIES, LOCATIONS, BLOG_POSTS, generateWhatsAppLink } from '@/lib/data'
 import Link from 'next/link'
@@ -72,11 +73,12 @@ export default function Delivery() {
                   Zanzibaba Timber offers <strong>fast, reliable timber delivery</strong> to every corner of Zanzibar. With <strong>cash on delivery</strong>, <strong>24-48 hour service</strong>, and a fleet capable of handling bulk loads, we make getting timber to your project site simple and hassle-free.
                 </p>
 
-                <img
+                <ImageWithFallback
                   src="/images/gallery/timber-delivery-zanzibar.jpg"
                   alt="Timber delivery truck delivering to a construction site in Zanzibar"
+                  aspectRatio="16/9"
                   className="w-full rounded-xl shadow-lg mb-8"
-                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 66vw"
                 />
 
                 <h2 className="text-2xl font-bold mb-4">Island-Wide Timber Delivery Service</h2>
