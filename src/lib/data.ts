@@ -1,7 +1,7 @@
 import { TimberSize, Location, ProductVariant } from '@/types'
 
 export const TIMBER_SIZES: TimberSize[] = [
-  { id: 'mirunda', name: 'Mirunda', dimensions: '2-6" diameter', popular: true, description: 'Treated Pine Poles 2-6 inch diameter, 18ft length — ideal for construction, fencing, and structural applications' },
+  { id: 'treated-wood-poles', name: 'Treated Wood Poles', dimensions: '2-6" diameter', popular: true, description: 'Treated Pine Poles 2-6 inch diameter, 18ft length — ideal for construction, fencing, and structural applications' },
   { id: '1x6', name: '1x6', dimensions: '25x150mm', popular: true, description: 'Treated Pine Timber 1x6 — 25x150mm, ideal for roofing, fencing and light framing' },
   { id: '1x8', name: '1x8', dimensions: '25x200mm', popular: true, description: 'Treated Pine Timber 1x8 — 25x200mm, perfect for decking, shelving and joinery' },
   { id: '1x10', name: '1x10', dimensions: '25x250mm', popular: true, description: 'Treated Pine Timber 1x10 — 25x250mm, wide board for cladding and heavy shelving' },
@@ -11,8 +11,19 @@ export const TIMBER_SIZES: TimberSize[] = [
   { id: '2x6', name: '2x6', dimensions: '50x150mm', popular: true, description: 'Treated Pine Timber 2x6 — 50x150mm, heavy-duty timber for beams and large structures' },
 ]
 
+export const SIZE_USE_CASE: Record<string, string> = {
+  'Treated Wood Poles': 'Poles, Fencing & Support',
+  '2x2': 'Ceilings & Light Framing',
+  '2x3': 'Roof Battens & Framing',
+  '2x4': 'Roof Trusses & Construction',
+  '2x6': 'Heavy Duty Structures',
+  '1x6': 'Ceilings & Interior Works',
+  '1x8': 'Finishing & Furniture',
+  '1x10': 'Premium Joinery & Doors',
+}
+
 export const SIZE_USES: Record<string, string[]> = {
-  'mirunda': ['Construction poles', 'Fencing posts', 'Structural supports', 'Landscaping', 'Utility poles'],
+  'treated-wood-poles': ['Construction poles', 'Fencing posts', 'Structural supports', 'Landscaping', 'Utility poles'],
   '1x6': ['Roofing battens and purlins', 'Fencing and boundary walls', 'Light framing and partitioning', 'Furniture and shelving', 'Garden structures'],
   '1x8': ['Decking boards and walkways', 'Shelving and storage systems', 'Joinery and cabinet making', 'Cladding and wall lining', 'Signage and display'],
   '1x10': ['Wide decking and platforms', 'Heavy shelving and workbenches', 'Cladding and exterior finishing', 'Counter tops and bench surfaces', 'Cabinet and wardrobe construction'],
@@ -23,10 +34,10 @@ export const SIZE_USES: Record<string, string[]> = {
 }
 
 export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }>> = {
-  'mirunda': [
-    { question: 'What are Mirunda treated poles used for?', answer: 'Mirunda (2-6 inch diameter) treated poles are used for construction posts, fencing, utility poles, landscaping, and structural supports in Zanzibar.' },
-    { question: 'Are Mirunda poles available in Zanzibar?', answer: 'Yes, Mirunda treated poles are available in 18ft length at Zanzibaba Timber. We stock diameters from 2 inches to 6 inches.' },
-    { question: 'Can I get Mirunda poles delivered to my site?', answer: 'Yes, we deliver Mirunda treated poles across all Zanzibar locations including Paje, Nungwi, Stone Town and Kendwa.' },
+  'treated-wood-poles': [
+    { question: 'What are treated wood poles used for?', answer: 'Treated wood poles (2-6 inch diameter) are used for construction posts, fencing, utility poles, landscaping, and structural supports in Zanzibar.' },
+    { question: 'Are treated wood poles available in Zanzibar?', answer: 'Yes, treated wood poles are available in 18ft length at Zanzibaba Timber. We stock diameters from 2 inches to 6 inches.' },
+    { question: 'Can I get treated wood poles delivered to my site?', answer: 'Yes, we deliver treated wood poles across all Zanzibar locations including Paje, Nungwi, Stone Town and Kendwa.' },
   ],
   '1x6': [
     { question: 'What is 1x6 pine timber used for?', answer: '1x6 (25x150mm) treated pine timber is commonly used for roofing battens, fencing, light framing, shelving, and garden structures in Zanzibar construction.' },
@@ -87,8 +98,8 @@ export const PRODUCT_VARIANTS: ProductVariant[] = [
   { size: '2x4', length: '18ft', dimensions: '50x100mm', sku: '2X4-18FT' },
   { size: '2x6', length: '12ft', dimensions: '50x150mm', sku: '2X6-12FT' },
   { size: '2x6', length: '18ft', dimensions: '50x150mm', sku: '2X6-18FT' },
-  // 18ft only - Mirunda
-  { size: 'Mirunda', length: '18ft', dimensions: '2-6" diameter', sku: 'MIRUNDA-18FT' },
+  // 18ft only - Treated Wood Poles
+  { size: 'Treated Wood Poles', length: '18ft', dimensions: '2-6" diameter', sku: 'POLE-18FT' },
 ]
 
 export const LOCATIONS: Location[] = [
@@ -174,7 +185,7 @@ export const BLOG_POSTS = [
   { id: '4', title: 'Why Treated Pine is Best for Zanzibar Construction', slug: 'why-treated-pine-best-zanzibar-construction', excerpt: 'Discover why treated pine timber is the preferred choice for construction across Zanzibar\'s unique tropical environment.', date: '2024-05-22', category: 'Guides' },
   { id: '5', title: 'Hotel Construction Timber: A Guide for Zanzibar Developers', slug: 'hotel-construction-timber-zanzibar-developers', excerpt: 'Comprehensive guide for hotel developers on selecting the right timber for Zanzibar hospitality projects.', date: '2024-05-19', category: 'Hotels' },
   { id: '6', title: 'Timber Delivery Zanzibar: What to Expect', slug: 'timber-delivery-zanzibar-expect', excerpt: 'Everything about timber delivery across Zanzibar. Timelines, costs, cash on delivery, and how to prepare for your timber shipment.', date: '2024-05-16', category: 'Delivery' },
-  { id: '7', title: 'Mbao Zanzibar: Understanding Local Timber Terms', slug: 'mbao-zanzibar-understanding-local-timber-terms', excerpt: 'A guide to Swahili timber terminology used in Zanzibar\'s construction industry. Learn about mbao, mirunda, and more.', date: '2024-05-13', category: 'Guides' },
+  { id: '7', title: 'Mbao Zanzibar: Understanding Local Timber Terms', slug: 'mbao-zanzibar-understanding-local-timber-terms', excerpt: 'A guide to Swahili timber terminology used in Zanzibar\'s construction industry. Learn about mbao, treated wood poles, and more.', date: '2024-05-13', category: 'Guides' },
   { id: '8', title: 'Paje Construction Boom: Timber Supply Guide', slug: 'paje-construction-timber-supply', excerpt: 'How Paje\'s rapid development is driving timber demand and what contractors need to know about supply in this growing area.', date: '2024-05-10', category: 'Locations' },
   { id: '9', title: 'Nungwi Resort Development: Timber Requirements', slug: 'nungwi-resort-timber-requirements', excerpt: 'Understanding the timber needs for Nungwi\'s expanding resort and hospitality sector. Sizes, quantities, and delivery logistics.', date: '2024-05-07', category: 'Locations' },
   { id: '10', title: 'Roofing Timber Zanzibar: Sizes and Specifications', slug: 'roofing-timber-zanzibar-sizes-specifications', excerpt: 'Complete guide to roofing timber in Zanzibar. Standard sizes, load requirements, and treated pine options for roof construction.', date: '2024-05-04', category: 'Construction' },
@@ -231,7 +242,7 @@ export const SEO_KEYWORDS = [
   'timber supplier zanzibar',
   'treated pine timber zanzibar',
   'treated poles zanzibar',
-  'mirunda zanzibar',
+  'treated wood poles zanzibar',
   'construction timber zanzibar',
   'timber prices zanzibar',
   'timber delivery zanzibar',

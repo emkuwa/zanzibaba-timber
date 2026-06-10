@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'timber prices zanzibar',
     'timber delivery zanzibar',
     'treated poles zanzibar',
-    'mirunda zanzibar',
+    'treated wood poles zanzibar',
     'building materials zanzibar',
     'timber nungwi',
     'timber paje',

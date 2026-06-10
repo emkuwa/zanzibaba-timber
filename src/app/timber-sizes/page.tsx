@@ -67,7 +67,7 @@ export default function TimberSizes() {
                 {ft18Variants.map((v) => (
                   <Link
                     key={v.sku}
-                    href={`/timber-sizes/${v.size === 'Mirunda' ? 'mirunda' : v.size}?length=${v.length}`}
+                    href={`/timber-sizes/${v.size === 'Treated Wood Poles' ? 'treated-wood-poles' : v.size}?length=${v.length}`}
                     className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all hover:border-primary-300 bg-white dark:bg-gray-800"
                   >
                     <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{v.size}</div>
@@ -101,7 +101,7 @@ export default function TimberSizes() {
                 {TIMBER_SIZES.map((s) => (
                   <Link
                     key={s.id}
-                    href={`/timber-sizes/${s.id === 'Mirunda' ? 'mirunda' : s.id}`}
+                    href={`/timber-sizes/${s.id === 'Treated Wood Poles' ? 'treated-wood-poles' : s.id}`}
                     className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg transition-all bg-white dark:bg-gray-800 flex flex-col h-full"
                   >
                     <h3 className="font-bold text-base md:text-lg text-primary-600">{s.name}</h3>
