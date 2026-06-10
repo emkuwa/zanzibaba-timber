@@ -5,9 +5,9 @@ import FloatingButtons from '@/components/FloatingButtons'
 import ImageWithFallback from '@/components/ImageWithFallback'
 import QuoteForm from '@/components/QuoteForm'
 import { getLocalBusinessSchema, getFAQSchema, getReviewSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, LOCATIONS, INDUSTRIES, DELIVERY_PROCESS, HOMEPAGE_FAQ, TESTIMONIALS } from '@/lib/data'
+import { PRODUCT_VARIANTS, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS } from '@/lib/data'
 import Link from 'next/link'
-import { CheckCircle, MapPin, MessageCircle, Phone, ArrowRight, Package, Truck, ShieldCheck, Leaf, TrendingUp, Clock, Star, Award, Rss, Users, Images, Zap } from 'lucide-react'
+import { CheckCircle, MapPin, MessageCircle, Phone, ArrowRight, Truck, ShieldCheck, Leaf, TrendingUp, Clock, Star, Award, Package } from 'lucide-react'
 import { useBilingual } from '@/lib/bilingual'
 
 function WhatsAppButton({ message }: { message?: string }) {
@@ -45,22 +45,10 @@ function CallButton() {
   )
 }
 
-function SectionDivider() {
-  return (
-    <div className="flex items-center justify-center py-16">
-      <div className="flex items-center gap-4">
-        <div className="h-px bg-gradient-to-r from-transparent via-primary-600 to-transparent w-24"></div>
-        <div className="w-3 h-3 bg-primary-600 rotate-45"></div>
-        <div className="h-px bg-gradient-to-r from-transparent via-primary-600 to-transparent w-24"></div>
-      </div>
-    </div>
-  )
-}
-
-function IconCard({ icon: Icon, title, description }: { 
-  icon: React.ElementType; 
-  title: string; 
-  description: string 
+function IconCard({ icon: Icon, title, description }: {
+  icon: React.ElementType;
+  title: string;
+  description: string
 }) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow">
@@ -98,6 +86,26 @@ function TimberSizeCard({ v }: { v: typeof PRODUCT_VARIANTS[0] }) {
   )
 }
 
+function TeaserCard({ icon: Icon, title, description, href }: {
+  icon: React.ElementType
+  title: string
+  description: string
+  href: string
+}) {
+  return (
+    <Link href={href} className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center">
+      <div className="w-14 h-14 bg-primary-50 dark:bg-primary-900/30 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-100 dark:group-hover:bg-primary-900/50 transition-colors">
+        <Icon className="w-7 h-7 text-primary-600" />
+      </div>
+      <h3 className="font-bold text-lg mb-2">{title}</h3>
+      <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{description}</p>
+      <span className="text-primary-600 font-semibold text-sm group-hover:underline flex items-center gap-1">
+        Learn More <ArrowRight className="w-3 h-3" />
+      </span>
+    </Link>
+  )
+}
+
 export default function Home() {
   const { t } = useBilingual()
   const ft18Variants = PRODUCT_VARIANTS.filter(v => v.length === '18ft')
@@ -106,7 +114,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      
+
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-20 right-4 z-40 md:hidden">
         <div className="flex flex-col gap-2">
@@ -152,19 +160,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Quick nav strip */}
-        <section className="py-4 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-          <div className="container-custom">
-            <div className="flex flex-wrap justify-center gap-3 md:gap-6 text-sm">
-              <a href="#sizes" className="text-primary-600 hover:underline font-medium">Timber Sizes</a>
-              <a href="#quote" className="text-primary-600 hover:underline font-medium">Get Quote</a>
-              <a href="#delivery" className="text-primary-600 hover:underline font-medium">Delivery</a>
-              <a href="#locations" className="text-primary-600 hover:underline font-medium">Locations</a>
-            </div>
-          </div>
-        </section>
-
-        {/* 2. Quote Form - Right after hero for immediate conversion */}
+        {/* 2. Quote Form */}
         <section id="quote" className="py-16 bg-gradient-to-r from-primary-600 to-primary-800 text-white scroll-mt-20">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
@@ -178,8 +174,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <SectionDivider />
 
         {/* 3. Why Choose Treated Pine Timber */}
         <section id="why-treated" className="py-24 md:py-32 bg-gradient-to-br from-primary-50 to-white dark:from-gray-800 dark:to-gray-900 scroll-mt-20">
@@ -216,119 +210,14 @@ export default function Home() {
           </div>
         </section>
 
-        <SectionDivider />
-
-        {/* 4. Pricing Guidance */}
-        <section id="pricing" className="py-24 md:py-32 bg-gradient-to-r from-primary-600 to-primary-800 text-white scroll-mt-20">
-          <div className="container-custom">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Looking for Timber Prices?</h2>
-              <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-                Affordable wholesale and retail pricing available. Contact us for the latest timber prices and bulk order discounts.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <WhatsAppButton message="Hello Zanzibaba Timber, I want timber prices for my project" />
-                <Link href="/prices" className="inline-flex items-center gap-2 bg-white text-primary-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-all">
-                  View Price List
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 5. Our Timber Yard - Split Layout */}
-        <section id="yard" className="py-24 md:py-32 bg-white dark:bg-gray-900 scroll-mt-20">
-          <div className="container-custom">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('homeSections.yard.heading')}</h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">{t('homeSections.yard.stock1')}</p>
-                <p className="text-gray-600 dark:text-gray-300 mb-8">{t('homeSections.yard.stock2')}</p>
-                <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                  <IconCard icon={CheckCircle} title="Premium Stock" description={t('homeSections.yard.bullet1')} />
-                  <IconCard icon={ShieldCheck} title="Treated Pine" description={t('homeSections.yard.bullet2')} />
-                  <IconCard icon={Truck} title="Fast Delivery" description={t('homeSections.yard.bullet3')} />
-                  <IconCard icon={Package} title="Bulk Orders" description={t('homeSections.yard.bullet4')} />
-                </div>
-                <div className="flex gap-4">
-                  <Link href="/prices" className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 font-semibold">
-                    View Prices <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <WhatsAppButton message="Hello Zanzibaba Timber, I want to know about your current stock" />
-                </div>
-              </div>
-              <div className="relative">
-                <ImageWithFallback
-                  src="/images/gallery/timber-sizes-display.jpg"
-                  alt="Large stock of treated pine timber sizes at Zanzibaba yard"
-                  aspectRatio="4/3"
-                  className="w-full rounded-2xl shadow-2xl"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute -top-6 -left-6 w-20 h-20 bg-green-500 rounded-xl flex items-center justify-center shadow-lg rotate-6">
-                  <Leaf className="w-10 h-10 text-white" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 6. Delivery Process - Timeline */}
-        <section id="delivery" className="py-24 md:py-32 bg-gray-50 dark:bg-gray-800 scroll-mt-20">
-          <div className="container-custom">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">{t('homeSections.delivery.heading')}</h2>
-            <p className="text-center text-gray-600 dark:text-gray-300 mb-16 max-w-2xl mx-auto">
-              {t('homeSections.delivery.p1')}
-            </p>
-            <div className="relative max-w-5xl mx-auto">
-              <div className="absolute top-16 left-0 right-0 h-0.5 bg-primary-200 hidden lg:block"></div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
-                {DELIVERY_PROCESS.map((step) => (
-                  <div key={step.step} className="relative text-center">
-                    <div className="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-4 shadow-lg">
-                      {step.step}
-                    </div>
-                    <h3 className="font-bold text-xl mb-3">{step.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 px-2">{step.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-              <WhatsAppButton message="Hello Zanzibaba Timber, I need delivery" />
-              <CallButton />
-            </div>
-          </div>
-        </section>
-
-        <SectionDivider />
-
-        {/* 7. Logistics - Icon Grid */}
-        <section id="logistics" className="py-24 md:py-32 bg-white dark:bg-gray-900 scroll-mt-20">
-          <div className="container-custom">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">{t('homeSections.logistics.heading')}</h2>
-            <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
-              {t('homeSections.logistics.p1')}
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <IconCard icon={ShieldCheck} title="Professional Loading" description={t('homeSections.logistics.bullet1')} />
-              <IconCard icon={Clock} title="Scheduled Delivery" description={t('homeSections.logistics.bullet2')} />
-              <IconCard icon={Users} title="Project Coordination" description={t('homeSections.logistics.bullet3')} />
-            </div>
-            <div className="flex justify-center mt-10">
-              <WhatsAppButton message="Hello Zanzibaba Timber, I need logistics info" />
-            </div>
-          </div>
-        </section>
-
-        {/* 8. Timber Sizes - Premium Cards */}
+        {/* 4. Timber Sizes */}
         <section id="sizes" className="py-24 md:py-32 bg-gradient-to-bl from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 scroll-mt-20">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">{t('pages.home.sizesTitle')}</h2>
             <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-16 max-w-2xl mx-auto">
               {t('pages.home.sizesSubtitle')} - All sizes available in 18ft and 12ft lengths
             </p>
-            
+
             <div className="mb-16">
               <h3 className="text-2xl font-bold text-center mb-8">18ft Treated Pine Lengths</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
@@ -355,9 +244,7 @@ export default function Home() {
           </div>
         </section>
 
-        <SectionDivider />
-
-        {/* 9. Industries - Card Grid */}
+        {/* 5. Industries We Serve */}
         <section id="industries" className="py-24 md:py-32 bg-white dark:bg-gray-900 scroll-mt-20">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">Industries We Serve</h2>
@@ -391,89 +278,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 10. Dedicated Contact CTA */}
-        <section className="py-24 md:py-32 bg-primary-600 text-white">
+        {/* 6. Teaser Cards: Delivery, Logistics, Quality */}
+        <section className="py-24 md:py-32 bg-gray-50 dark:bg-gray-800">
           <div className="container-custom">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Order Timber?</h2>
-              <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-10 text-xl">
-                <div className="flex items-center gap-3">
-                  <Phone className="w-6 h-6" />
-                  <span>+255 716 002 790</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-6 h-6" />
-                  <span>Kwa Ndevu, Daraja Bovu, Zanzibar</span>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <WhatsAppButton message="Hello Zanzibaba Timber, I want to order timber" />
-                <CallButton />
-                <Link
-                  href="/delivery"
-                  className="inline-flex items-center gap-2 bg-white text-primary-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-all"
-                >
-                  <Truck className="w-5 h-5" />
-                  Request Delivery
-                </Link>
-              </div>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">More About Zanzibaba Timber</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Explore our delivery network, logistics capabilities, and quality standards.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <TeaserCard
+                icon={Truck}
+                title="Delivery Across Zanzibar"
+                description="Fast, reliable timber delivery to every corner of Zanzibar. Cash on delivery, 24-48 hour service."
+                href="/delivery"
+              />
+              <TeaserCard
+                icon={Package}
+                title="Logistics & Loading"
+                description="Professional loading, scheduled delivery, and project coordination for bulk orders."
+                href="/delivery"
+              />
+              <TeaserCard
+                icon={ShieldCheck}
+                title="Quality Assurance"
+                description="Every batch is quality inspected. Tropical treatment for termite and moisture resistance."
+                href="/about"
+              />
             </div>
           </div>
         </section>
 
-        {/* 11. Quality Assurance */}
-        <section id="quality" className="py-24 md:py-32 bg-gray-50 dark:bg-gray-800 scroll-mt-20">
-          <div className="container-custom">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">{t('homeSections.quality.heading')}</h2>
-            <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
-              {t('homeSections.quality.p1')}
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <IconCard icon={ShieldCheck} title="Tropical Treatment" description={t('homeSections.quality.badge1')} />
-              <IconCard icon={Award} title="Quality Inspected" description={t('homeSections.quality.badge2')} />
-            </div>
-            <div className="flex justify-center mt-10">
-              <WhatsAppButton message="Hello Zanzibaba Timber, I want to know about your quality standards" />
-            </div>
-          </div>
-        </section>
-
-        {/* 12. Gallery */}
-        <section id="gallery-section" className="py-24 md:py-32 bg-white dark:bg-gray-900 scroll-mt-20">
-          <div className="container-custom">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">{t('homeSections.gallery.heading')}</h2>
-            <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
-              {t('homeSections.gallery.p1')}
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              {[
-                { src: '/images/gallery/tanzanian-carpenters-working.jpg', alt: 'Carpentry & Construction projects', label: 'Carpentry & Construction' },
-                { src: '/images/gallery/resort-construction-zanzibar.jpg', alt: 'Resort construction with treated pine timber', label: 'Resort Developments' },
-                { src: '/images/gallery/hero-timber-yard-zanzibar.jpg', alt: 'Zanzibaba Timber yard stock', label: 'Our Timber Yard' },
-              ].map((item, i) => (
-                <div key={i} className="group relative overflow-hidden rounded-2xl shadow-xl">
-                  <ImageWithFallback
-                    src={item.src}
-                    alt={item.alt}
-                    className="w-full h-80 group-hover:scale-110 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute bottom-4 left-4 text-white font-semibold text-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                    {item.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center">
-              <Link href="/gallery" className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg">
-                <Images className="w-5 h-5" /> View Gallery <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials - Limited to 3 */}
+        {/* 7. Testimonials */}
         <section id="testimonials" className="py-16 md:py-20 bg-white dark:bg-gray-900 scroll-mt-20">
           <div className="container-custom">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">What Our Customers Say</h2>
@@ -504,49 +341,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Locations - Key locations only */}
-        <section id="locations" className="py-12 md:py-16 bg-gray-50 dark:bg-gray-800 scroll-mt-20">
-          <div className="container-custom">
-            <h2 className="text-xl md:text-2xl font-bold text-center mb-6">Key Service Areas</h2>
-            <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
-              {[
-                { slug: 'nungwi', name: 'Nungwi' },
-                { slug: 'paje', name: 'Paje' },
-                { slug: 'kendwa', name: 'Kendwa' },
-                { slug: 'stone-town', name: 'Stone Town' },
-                { slug: 'fumba', name: 'Fumba' },
-                { slug: 'ndevu', name: 'Ndevu' }
-              ].map((loc) => (
-                <Link
-                  key={loc.slug}
-                  href={`/locations/${loc.slug}`}
-                  className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-full text-sm font-medium transition-colors"
-                >
-                  {loc.name}
-                </Link>
-              ))}
-            </div>
-            <div className="text-center mt-6">
-              <Link href="/locations" className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 font-semibold text-sm">
-                View All Locations <ArrowRight className="w-3 h-3" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Bar - Compact */}
-        <section className="py-10 bg-primary-600 text-white">
-          <div className="container-custom">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              <div><div className="text-2xl md:text-3xl font-bold">500+</div><div className="text-xs md:text-sm">Projects</div></div>
-              <div><div className="text-2xl md:text-3xl font-bold">11</div><div className="text-xs md:text-sm">Areas</div></div>
-              <div><div className="text-2xl md:text-3xl font-bold">14+</div><div className="text-xs md:text-sm">Years</div></div>
-              <div><Phone className="w-5 h-5 mx-auto mb-1" /><a href="tel:+255716002790" className="text-sm md:text-base font-bold">+255 716 002 790</a></div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
+        {/* 8. FAQ */}
         <section id="faq" className="py-24 md:py-32 bg-gray-50 dark:bg-gray-800 scroll-mt-20">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">Frequently Asked Questions</h2>
@@ -572,10 +367,8 @@ export default function Home() {
               <WhatsAppButton message="Hello Zanzibaba Timber, I have a question" />
             </div>
           </div>
-</section>
-
-         {/* Footer will be rendered */}
-       </main>
+        </section>
+      </main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getLocalBusinessSchema()) }}
