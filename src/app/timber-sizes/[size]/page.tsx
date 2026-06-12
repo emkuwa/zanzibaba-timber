@@ -180,6 +180,10 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                   Prices
                 </Link>
                 <span className="text-gray-300">|</span>
+                <Link href="/timber-zanzibar" className="text-primary-600 hover:underline">
+                  Timber Zanzibar
+                </Link>
+                <span className="text-gray-300">|</span>
                 <Link href="/" className="text-primary-600 hover:underline">
                   Home
                 </Link>

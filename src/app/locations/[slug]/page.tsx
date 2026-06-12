@@ -211,6 +211,10 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                 View Timber Sizes
               </Link>
               <span className="mx-3 text-gray-300">|</span>
+              <Link href="/timber-zanzibar" className="text-primary-600 hover:underline font-medium">
+                Timber Zanzibar
+              </Link>
+              <span className="mx-3 text-gray-300">|</span>
               <Link href="/" className="text-primary-600 hover:underline font-medium">
                 Home
               </Link>

@@ -94,6 +94,18 @@ export default function Blog() {
                   View Timber Sizes
                 </Link>
                 <Link
+                  href="/timber-zanzibar"
+                  className="inline-block bg-primary-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-700"
+                >
+                  Timber Zanzibar
+                </Link>
+                <Link
+                  href="/locations"
+                  className="inline-block border border-primary-600 text-primary-600 px-6 py-2 rounded-lg font-semibold hover:bg-primary-50 dark:hover:bg-gray-700"
+                >
+                  Delivery Locations
+                </Link>
+                <Link
                   href="/"
                   className="inline-block border border-primary-600 text-primary-600 px-6 py-2 rounded-lg font-semibold hover:bg-primary-50 dark:hover:bg-gray-700"
                 >

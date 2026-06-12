@@ -27,6 +27,8 @@ export default function Header() {
     { href: '/prices', label: t('navigation.prices') },
     { href: '/projects', label: t('navigation.projects') },
     { href: '/gallery', label: t('navigation.gallery') },
+    { href: '/timber-zanzibar', label: t('navigation.timberZanzibar') },
+    { href: '/locations', label: t('navigation.locations') },
     { href: '/blog', label: t('navigation.blog') },
     { href: '/contact', label: t('navigation.contact') },
   ]

@@ -112,6 +112,12 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                     Delivery Locations →
                   </Link>
                   <Link
+                    href="/timber-zanzibar"
+                    className="text-primary-600 hover:underline text-sm"
+                  >
+                    Timber Zanzibar →
+                  </Link>
+                  <Link
                     href="/"
                     className="text-primary-600 hover:underline text-sm"
                   >
