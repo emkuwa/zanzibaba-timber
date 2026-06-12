@@ -42,6 +42,7 @@ export const getLocalBusinessSchema = () => ({
   url: 'https://timber.zanzibaba.com',
   telephone: '+255716002790',
   description: 'Premium pine timber supplier in Zanzibar. High quality treated timber and poles for construction, delivered across the island.',
+  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Kwa Ndevu, Daraja Bovu',
@@ -50,8 +51,8 @@ export const getLocalBusinessSchema = () => ({
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: -6.1667,
-    longitude: 39.1667,
+    latitude: -6.1918,
+    longitude: 39.2056,
   },
   openingHoursSpecification: [
     {
@@ -73,7 +74,43 @@ export const getLocalBusinessSchema = () => ({
     { '@type': 'City', name: 'Kiwengwa' },
     { '@type': 'City', name: 'Jambiani' },
     { '@type': 'City', name: 'Matemwe' },
+    { '@type': 'City', name: 'Fumba' },
+    { '@type': 'City', name: 'Bububu' },
+    { '@type': 'City', name: 'Chukwani' },
+    { '@type': 'City', name: 'Ndevu' },
   ],
+  hasMap: 'https://maps.google.com/?q=Kwa+Ndevu+Daraja+Bovu+Zanzibar',
+})
+
+export const getServiceAreaSchema = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://timber.zanzibaba.com/#servicearea',
+  name: 'Zanzibaba Timber',
+  url: 'https://timber.zanzibaba.com',
+  telephone: '+255716002790',
+  areaServed: [
+    { '@type': 'City', name: 'Paje', sameAs: 'https://en.wikipedia.org/wiki/Paje' },
+    { '@type': 'City', name: 'Nungwi', sameAs: 'https://en.wikipedia.org/wiki/Nungwi' },
+    { '@type': 'City', name: 'Kendwa' },
+    { '@type': 'City', name: 'Jambiani' },
+    { '@type': 'City', name: 'Kiwengwa' },
+    { '@type': 'City', name: 'Matemwe' },
+    { '@type': 'City', name: 'Stone Town', sameAs: 'https://en.wikipedia.org/wiki/Stone_Town' },
+    { '@type': 'City', name: 'Fumba' },
+    { '@type': 'City', name: 'Bububu' },
+    { '@type': 'City', name: 'Chukwani' },
+    { '@type': 'City', name: 'Ndevu' },
+  ],
+  serviceArea: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: -6.1918,
+      longitude: 39.2056,
+    },
+    geoRadius: '50000',
+  },
 })
 
 export const getProductSchema = (name: string, description: string, size?: string) => ({

@@ -8,10 +8,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Zanzibaba Timber - Premium Treated Pine Timber Supplier in Zanzibar',
-    template: '%s | Zanzibaba Timber - Premium Pine Timber Supplier Zanzibar',
+    default: 'Timber Zanzibar | Treated Pine Timber Supplier | Zanzibaba',
+    template: '%s | Timber Zanzibar | Zanzibaba',
   },
-  description: 'Zanzibaba Timber: Zanzibar\'s leading supplier of high quality treated pine timber, poles & construction timber. Serving Paje, Nungwi, Stone Town & all Zanzibar. Cash on delivery, island-wide delivery. Quality timber for hotels, villas, residential & government projects.',
+  description: 'Timber Zanzibar — Zanzibaba Timber is Zanzibar\'s leading supplier of premium treated pine timber, mbao za pine, construction timber and treated poles. Serving Paje, Nungwi, Stone Town and all Zanzibar with cash on delivery and island-wide delivery. Quality timber for hotels, villas, residential and government projects.',
   keywords: [
     'timber supplier zanzibar',
     'pine timber zanzibar',
