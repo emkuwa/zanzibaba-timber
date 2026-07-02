@@ -17,6 +17,12 @@ const LOCATIONS = [
   { name: 'Chukwani', km: 12 },
   { name: 'Bububu', km: 15 },
   { name: 'Ndevu', km: 2 },
+  { name: 'Muyuni', km: 25 },
+  { name: 'Uroa', km: 35 },
+  { name: 'Bwejuu', km: 50 },
+  { name: 'Dongwe', km: 45 },
+  { name: 'Michamvi', km: 48 },
+  { name: 'Kitogani', km: 30 },
 ]
 
 export default function TransportCalculator() {
@@ -67,7 +73,7 @@ export default function TransportCalculator() {
         <select
           value={selectedLocation}
           onChange={(e) => setSelectedLocation(e.target.value)}
-          className="w-full px-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 mb-3"
+          className="w-full px-3 py-2.5 text-base rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 mb-3"
         >
           <option value="">Select delivery location...</option>
           {LOCATIONS.map((loc) => (
