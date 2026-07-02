@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { MessageCircle, Phone, MapPin } from 'lucide-react'
+import { MessageCircle, Phone, MapPin, ShieldCheck, Truck, Clock, Star } from 'lucide-react'
 import { useBilingual } from '@/lib/bilingual'
 
 const containerVariants = {
@@ -39,7 +39,7 @@ function WhatsAppButton({ message }: { message?: string }) {
       className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-500 text-white font-semibold px-5 py-3 rounded-lg transition-all hover:scale-105 shadow-lg text-sm"
     >
       <MessageCircle className="w-4 h-4" />
-      WhatsApp
+      Get Quote
     </a>
   )
 }
@@ -65,7 +65,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/images/gallery/zanzibaba-timber-hero-banner.jpg"
@@ -77,11 +76,9 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-      {/* Content */}
       <motion.div
         className="container-custom py-12 md:py-20 relative z-10"
         variants={containerVariants}
@@ -89,46 +86,51 @@ export default function HeroSection() {
         animate="visible"
       >
         <div className="max-w-4xl">
+          <motion.div
+            className="inline-flex items-center gap-1.5 bg-green-600/20 text-green-300 border border-green-500/30 px-3 py-1 rounded-full text-xs font-semibold mb-4"
+            variants={itemVariants}
+          >
+            <ShieldCheck className="w-3.5 h-3.5" />
+            Zanzibar&apos;s Trusted Timber Supply Network
+          </motion.div>
+
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-tight"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-3 text-white leading-tight"
             variants={itemVariants}
           >
             {t('hero.title')}
           </motion.h1>
 
           <motion.p
-            className="text-sm sm:text-base md:text-lg mb-6 text-gray-200 leading-relaxed max-w-3xl"
+            className="text-sm sm:text-base md:text-lg mb-4 text-gray-200 leading-relaxed max-w-3xl"
             variants={itemVariants}
           >
             {t('hero.subtitle')}
           </motion.p>
 
           <motion.div
-            className="flex flex-wrap gap-x-3 gap-y-1.5 mb-6 text-xs md:text-sm text-primary-200 font-medium"
+            className="flex flex-wrap items-center gap-3 md:gap-5 mb-5 text-xs md:text-sm text-gray-300"
             variants={itemVariants}
           >
-            {['Timber Zanzibar', 'Mbao Zanzibar', 'Pine Timber Zanzibar', 'Treated Timber Zanzibar'].map((keyword, i) => (
-              <span key={keyword} className="flex items-center gap-x-3">
-                <span>{keyword}</span>
-                {i < 3 && <span className="text-primary-400/60">•</span>}
-              </span>
-            ))}
+            <span className="flex items-center gap-1.5"><Truck className="w-3.5 h-3.5 text-green-400" /> Island-wide Delivery</span>
+            <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-green-400" /> Quotes in 30 min</span>
+            <span className="flex items-center gap-1.5"><Star className="w-3.5 h-3.5 text-green-400" /> 1,500+ Projects</span>
           </motion.div>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-3 mb-6"
+            className="flex flex-col sm:flex-row gap-3 mb-4"
             variants={itemVariants}
           >
-            <WhatsAppButton message="Hello Zanzibaba Timber, I need a quote" />
+            <WhatsAppButton message="Hello Zanzibaba Timber, I need timber prices for my project" />
             <CallButton />
           </motion.div>
 
           <motion.div
-            className="flex items-center text-gray-300 text-xs md:text-sm"
+            className="flex items-center text-gray-400 text-xs"
             variants={itemVariants}
           >
-            <MapPin className="w-3.5 h-3.5 mr-1.5 shrink-0" />
-            <span>Kwa Ndevu, Daraja Bovu, Zanzibar</span>
+            <MapPin className="w-3 h-3 mr-1.5 shrink-0" />
+            <span>Kwa Ndevu, Daraja Bovu, Zanzibar • Cash on Delivery Available</span>
           </motion.div>
         </div>
       </motion.div>
