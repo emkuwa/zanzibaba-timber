@@ -7,23 +7,23 @@ import { LogOut, Save, DollarSign } from 'lucide-react'
 
 const INITIAL_PRICES = {
   '18ft': {
-    'Mirunda': { wholesale: 8000, margin: 0, selling: 8000, stock: 'In Stock' },
-    '2x2': { wholesale: 8000, margin: 0, selling: 8000, stock: 'In Stock' },
-    '2x3': { wholesale: 10000, margin: 0, selling: 10000, stock: 'In Stock' },
-    '2x4': { wholesale: 14000, margin: 0, selling: 14000, stock: 'In Stock' },
-    '2x6': { wholesale: 24000, margin: 0, selling: 24000, stock: 'In Stock' },
-    '1x6': { wholesale: 15000, margin: 0, selling: 15000, stock: 'In Stock' },
-    '1x8': { wholesale: 22000, margin: 0, selling: 22000, stock: 'In Stock' },
-    '1x10': { wholesale: 35000, margin: 0, selling: 35000, stock: 'In Stock' },
+    '2x2': { wholesale: 10500, margin: 0, selling: 10500, stock: 'In Stock' },
+    '2x3': { wholesale: 19000, margin: 0, selling: 19000, stock: 'In Stock' },
+    '2x4': { wholesale: 21000, margin: 0, selling: 21000, stock: 'In Stock' },
+    '2x6': { wholesale: 35000, margin: 0, selling: 35000, stock: 'In Stock' },
+    '2x8': { wholesale: 58000, margin: 0, selling: 58000, stock: 'In Stock' },
+    '1x4': { wholesale: 8000, margin: 0, selling: 8000, stock: 'In Stock' },
+    '1x6': { wholesale: 19000, margin: 0, selling: 19000, stock: 'In Stock' },
+    '1x8': { wholesale: 32000, margin: 0, selling: 32000, stock: 'In Stock' },
+    '1x10': { wholesale: 48000, margin: 0, selling: 48000, stock: 'In Stock' },
+    'Treated Wood Poles': { wholesale: 10500, margin: 0, selling: 10500, stock: 'In Stock' },
   },
   '12ft': {
-    '2x2': { wholesale: 5000, margin: 0, selling: 5000, stock: 'In Stock' },
-    '2x3': { wholesale: 7000, margin: 0, selling: 7000, stock: 'In Stock' },
-    '2x4': { wholesale: 10000, margin: 0, selling: 10000, stock: 'In Stock' },
-    '2x6': { wholesale: 18000, margin: 0, selling: 18000, stock: 'In Stock' },
-    '1x6': { wholesale: 8000, margin: 0, selling: 8000, stock: 'In Stock' },
-    '1x8': { wholesale: 11000, margin: 0, selling: 11000, stock: 'In Stock' },
-    '1x10': { wholesale: 18000, margin: 0, selling: 18000, stock: 'In Stock' },
+    '2x2': { wholesale: 7000, margin: 0, selling: 7000, stock: 'In Stock' },
+    '2x4': { wholesale: 10500, margin: 0, selling: 10500, stock: 'In Stock' },
+    '1x6': { wholesale: 12000, margin: 0, selling: 12000, stock: 'In Stock' },
+    '1x8': { wholesale: 17000, margin: 0, selling: 17000, stock: 'In Stock' },
+    '1x10': { wholesale: 29000, margin: 0, selling: 29000, stock: 'In Stock' },
   },
 }
 

@@ -4,6 +4,13 @@ export type ProductVariant = {
   dimensions?: string
   diameter?: string
   sku: string
+  price?: number
+}
+
+export type ProductPrice = {
+  size: string
+  length: string
+  price: number
 }
 
 export type Locale = 'en' | 'sw'

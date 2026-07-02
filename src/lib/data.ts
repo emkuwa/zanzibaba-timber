@@ -1,4 +1,4 @@
-import { TimberSize, Location, ProductVariant } from '@/types'
+import { TimberSize, Location, ProductVariant, ProductPrice } from '@/types'
 
 export function sizeToSlug(size: string): string {
   const map: Record<string, string> = {
@@ -6,6 +6,38 @@ export function sizeToSlug(size: string): string {
   }
   return map[size] ?? size.toLowerCase().replace(/\s+/g, '-')
 }
+
+export function formatTZS(amount: number): string {
+  return `${amount.toLocaleString('en-TZ')} TZS`
+}
+
+export const PRICE_NOTES = [
+  'Prices exclude VAT.',
+  'Prices exclude transportation.',
+  'Delivery is available anywhere in Zanzibar.',
+  'FREE delivery is available for qualifying bulk orders.',
+] as const
+
+export const PRODUCT_PRICES: ProductPrice[] = [
+  // 12ft
+  { size: '2x2', length: '12ft', price: 7000 },
+  { size: '2x4', length: '12ft', price: 10500 },
+  { size: '1x6', length: '12ft', price: 12000 },
+  { size: '1x8', length: '12ft', price: 17000 },
+  { size: '1x10', length: '12ft', price: 29000 },
+  // 18ft
+  { size: '2x2', length: '18ft', price: 10500 },
+  { size: '2x3', length: '18ft', price: 19000 },
+  { size: '2x4', length: '18ft', price: 21000 },
+  { size: '2x6', length: '18ft', price: 35000 },
+  { size: '2x8', length: '18ft', price: 58000 },
+  { size: '1x4', length: '18ft', price: 8000 },
+  { size: '1x6', length: '18ft', price: 19000 },
+  { size: '1x8', length: '18ft', price: 32000 },
+  { size: '1x10', length: '18ft', price: 48000 },
+  // Treated Wood Poles (18ft)
+  { size: 'Treated Wood Poles', length: '18ft', price: 10500 },
+]
 
 export const TIMBER_SIZES: TimberSize[] = [
   { id: 'treated-wood-poles', name: 'Treated Wood Poles', dimensions: '2-6" diameter', popular: true, description: 'Treated Pine Poles 2-6 inch diameter, 18ft length — ideal for construction, fencing, and structural applications' },
@@ -16,6 +48,8 @@ export const TIMBER_SIZES: TimberSize[] = [
   { id: '2x3', name: '2x3', dimensions: '50x75mm', popular: true, description: 'Treated Pine Timber 2x3 — 50x75mm, robust timber for framing and structural work' },
   { id: '2x4', name: '2x4', dimensions: '50x100mm', popular: true, description: 'Treated Pine Timber 2x4 — 50x100mm, the most popular size for construction framing' },
   { id: '2x6', name: '2x6', dimensions: '50x150mm', popular: true, description: 'Treated Pine Timber 2x6 — 50x150mm, heavy-duty timber for beams and large structures' },
+  { id: '2x8', name: '2x8', dimensions: '50x200mm', popular: false, description: 'Treated Pine Timber 2x8 — 50x200mm, extra-heavy timber for large beams and structural applications' },
+  { id: '1x4', name: '1x4', dimensions: '25x100mm', popular: false, description: 'Treated Pine Timber 1x4 — 25x100mm, lightweight timber for light framing, battens and furring' },
 ]
 
 export const SIZE_USE_CASE: Record<string, string> = {
@@ -27,6 +61,8 @@ export const SIZE_USE_CASE: Record<string, string> = {
   '1x6': 'Ceilings & Interior Works',
   '1x8': 'Finishing & Furniture',
   '1x10': 'Premium Joinery & Doors',
+  '2x8': 'Heavy Beams & Large Structures',
+  '1x4': 'Battens & Light Framing',
 }
 
 export const SIZE_USES: Record<string, string[]> = {
@@ -38,6 +74,8 @@ export const SIZE_USES: Record<string, string[]> = {
   '2x3': ['Load-bearing wall framing', 'Roof trusses and rafters', 'Floor joists and supports', 'Structural bracing and ties', 'Heavy-duty shelving frames'],
   '2x4': ['Construction wall framing', 'Roof and ceiling supports', 'Floor framing systems', 'Deck and patio structures', 'General building framework'],
   '2x6': ['Main structural beams', 'Heavy roof trusses', 'Floor joists for large spans', 'Pergola and gazebo beams', 'Commercial construction framing'],
+  '2x8': ['Extra-large structural beams', 'Heavy-duty roof trusses', 'Large-span floor joists', 'Commercial and industrial framing', 'Bridge and deck components'],
+  '1x4': ['Roofing battens and purlins', 'Furring strips and strapping', 'Light framing and partitioning', 'Paneling and wall lining', 'Crating and packaging'],
 }
 
 export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }>> = {
@@ -48,17 +86,17 @@ export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }
   ],
   '1x6': [
     { question: 'What is 1x6 pine timber used for?', answer: '1x6 (25x150mm) treated pine timber is commonly used for roofing battens, fencing, light framing, shelving, and garden structures in Zanzibar construction.' },
-    { question: 'Is 1x6 timber available in 12ft and 18ft?', answer: '1x6 pine timber is available in 12ft length only from Zanzibaba Timber. Contact us for special size requirements.' },
+    { question: 'Is 1x6 timber available in 12ft and 18ft?', answer: 'Yes, 1x6 pine timber is available in both 12ft and 18ft lengths from Zanzibaba Timber.' },
     { question: 'Can I get 1x6 timber delivered to Paje or Nungwi?', answer: 'Yes, we deliver 1x6 treated pine timber to all Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, and across the island.' },
   ],
   '1x8': [
     { question: 'What is 1x8 pine timber used for?', answer: '1x8 (25x200mm) treated pine timber is ideal for decking boards, shelving, joinery, cladding, and cabinet making in Zanzibar construction projects.' },
-    { question: 'Is 1x8 timber available in 12ft and 18ft?', answer: '1x8 pine timber is available in 12ft length only from Zanzibaba Timber. We stock large quantities at our Kwa Ndevu yard.' },
+    { question: 'Is 1x8 timber available in 12ft and 18ft?', answer: 'Yes, 1x8 pine timber is available in both 12ft and 18ft lengths from Zanzibaba Timber. We stock large quantities at our Kwa Ndevu yard.' },
     { question: 'Can I order 1x8 timber for my hotel project?', answer: 'Absolutely. We supply 1x8 treated pine timber to hotels and resorts across Zanzibar including Nungwi, Kendwa, Paje and Kiwengwa.' },
   ],
   '1x10': [
     { question: 'What is 1x10 pine timber used for?', answer: '1x10 (25x250mm) treated pine timber is used for wide decking, heavy shelving, cladding, counter tops, and wardrobe construction in Zanzibar.' },
-    { question: 'Is 1x10 timber available in 12ft and 18ft?', answer: '1x10 pine timber is available in 12ft length only from Zanzibaba Timber. Contact us for custom orders.' },
+    { question: 'Is 1x10 timber available in 12ft and 18ft?', answer: 'Yes, 1x10 pine timber is available in both 12ft and 18ft lengths from Zanzibaba Timber. Contact us for custom orders.' },
     { question: 'Do you deliver 1x10 timber to Stone Town?', answer: 'Yes, we deliver 1x10 treated pine timber to Stone Town, historical restoration projects, and all areas of Zanzibar with cash on delivery.' },
   ],
   '2x2': [
@@ -81,6 +119,16 @@ export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }
     { question: 'Is 2x6 available in both 12ft and 18ft?', answer: 'Yes, 2x6 pine timber is available in both 12ft and 18ft lengths from Zanzibaba Timber for heavy-duty construction projects.' },
     { question: 'Do you supply 2x6 timber for government projects?', answer: 'Yes, we supply 2x6 and all timber sizes for government and commercial construction projects across Zanzibar including schools and hospitals.' },
   ],
+  '2x8': [
+    { question: 'What is 2x8 pine timber used for?', answer: '2x8 (50x200mm) treated pine timber is used for extra-large structural beams, heavy-duty roof trusses, large-span floor joists, and commercial/industrial framing projects.' },
+    { question: 'Is 2x8 available in 18ft?', answer: 'Yes, 2x8 pine timber is available in 18ft length from Zanzibaba Timber for heavy-duty construction projects.' },
+    { question: 'Do you offer wholesale pricing on 2x8 timber?', answer: 'Yes, we offer competitive wholesale pricing on 2x8 and all timber sizes for contractors and large projects across Zanzibar.' },
+  ],
+  '1x4': [
+    { question: 'What is 1x4 pine timber used for?', answer: '1x4 (25x100mm) treated pine timber is used for roofing battens, furring strips, light framing, paneling, and crating applications in Zanzibar construction.' },
+    { question: 'Is 1x4 available in 18ft?', answer: 'Yes, 1x4 pine timber is available in 18ft length from Zanzibaba Timber.' },
+    { question: 'Can I get 1x4 timber delivered to my site?', answer: 'Yes, we deliver 1x4 treated pine timber across all Zanzibar locations with cash on delivery.' },
+  ],
 }
 
 export const POLES: ProductVariant[] = [
@@ -91,22 +139,31 @@ export const POLES: ProductVariant[] = [
   { size: '6"', length: '18ft', diameter: '6"', sku: 'POLE-6IN' },
 ]
 
+const PRICE_MAP = new Map(PRODUCT_PRICES.map(p => [`${p.size}|${p.length}`, p.price]))
+
 export const PRODUCT_VARIANTS: ProductVariant[] = [
   // 12ft only - 1x6, 1x8, 1x10
-  { size: '1x6', length: '12ft', dimensions: '25x150mm', sku: '1X6-12FT' },
-  { size: '1x8', length: '12ft', dimensions: '25x200mm', sku: '1X8-12FT' },
-  { size: '1x10', length: '12ft', dimensions: '25x250mm', sku: '1X10-12FT' },
+  { size: '1x6', length: '12ft', dimensions: '25x150mm', sku: '1X6-12FT', price: PRICE_MAP.get('1x6|12ft') },
+  { size: '1x8', length: '12ft', dimensions: '25x200mm', sku: '1X8-12FT', price: PRICE_MAP.get('1x8|12ft') },
+  { size: '1x10', length: '12ft', dimensions: '25x250mm', sku: '1X10-12FT', price: PRICE_MAP.get('1x10|12ft') },
   // both lengths - 2x2, 2x3, 2x4, 2x6
-  { size: '2x2', length: '12ft', dimensions: '50x50mm', sku: '2X2-12FT' },
-  { size: '2x2', length: '18ft', dimensions: '50x50mm', sku: '2X2-18FT' },
+  { size: '2x2', length: '12ft', dimensions: '50x50mm', sku: '2X2-12FT', price: PRICE_MAP.get('2x2|12ft') },
+  { size: '2x2', length: '18ft', dimensions: '50x50mm', sku: '2X2-18FT', price: PRICE_MAP.get('2x2|18ft') },
   { size: '2x3', length: '12ft', dimensions: '50x75mm', sku: '2X3-12FT' },
-  { size: '2x3', length: '18ft', dimensions: '50x75mm', sku: '2X3-18FT' },
-  { size: '2x4', length: '12ft', dimensions: '50x100mm', sku: '2X4-12FT' },
-  { size: '2x4', length: '18ft', dimensions: '50x100mm', sku: '2X4-18FT' },
+  { size: '2x3', length: '18ft', dimensions: '50x75mm', sku: '2X3-18FT', price: PRICE_MAP.get('2x3|18ft') },
+  { size: '2x4', length: '12ft', dimensions: '50x100mm', sku: '2X4-12FT', price: PRICE_MAP.get('2x4|12ft') },
+  { size: '2x4', length: '18ft', dimensions: '50x100mm', sku: '2X4-18FT', price: PRICE_MAP.get('2x4|18ft') },
   { size: '2x6', length: '12ft', dimensions: '50x150mm', sku: '2X6-12FT' },
-  { size: '2x6', length: '18ft', dimensions: '50x150mm', sku: '2X6-18FT' },
+  { size: '2x6', length: '18ft', dimensions: '50x150mm', sku: '2X6-18FT', price: PRICE_MAP.get('2x6|18ft') },
+  // 18ft only - 2x8, 1x4
+  { size: '2x8', length: '18ft', dimensions: '50x200mm', sku: '2X8-18FT', price: PRICE_MAP.get('2x8|18ft') },
+  { size: '1x4', length: '18ft', dimensions: '25x100mm', sku: '1X4-18FT', price: PRICE_MAP.get('1x4|18ft') },
+  // 18ft only - 1x6, 1x8, 1x10
+  { size: '1x6', length: '18ft', dimensions: '25x150mm', sku: '1X6-18FT', price: PRICE_MAP.get('1x6|18ft') },
+  { size: '1x8', length: '18ft', dimensions: '25x200mm', sku: '1X8-18FT', price: PRICE_MAP.get('1x8|18ft') },
+  { size: '1x10', length: '18ft', dimensions: '25x250mm', sku: '1X10-18FT', price: PRICE_MAP.get('1x10|18ft') },
   // 18ft only - Treated Wood Poles
-  { size: 'Treated Wood Poles', length: '18ft', dimensions: '2-6" diameter', sku: 'POLE-18FT' },
+  { size: 'Treated Wood Poles', length: '18ft', dimensions: '2-6" diameter', sku: 'POLE-18FT', price: PRICE_MAP.get('Treated Wood Poles|18ft') },
 ]
 
 export const LOCATIONS: Location[] = [

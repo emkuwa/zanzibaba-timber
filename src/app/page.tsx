@@ -6,7 +6,7 @@ import HeroSection from '@/components/HeroSection'
 import ImageWithFallback from '@/components/ImageWithFallback'
 import QuoteForm from '@/components/QuoteForm'
 import { getLocalBusinessSchema, getFAQSchema, getReviewSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug } from '@/lib/data'
+import { PRODUCT_VARIANTS, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug, formatTZS } from '@/lib/data'
 import Link from 'next/link'
 import { MessageCircle, Phone, ArrowRight, Truck, Star, Package, Factory, Cog, Network, Warehouse, Container } from 'lucide-react'
 import { useBilingual } from '@/lib/bilingual'
@@ -56,6 +56,7 @@ function TimberSizeCard({ v }: { v: typeof PRODUCT_VARIANTS[0] }) {
       <div className="text-lg font-bold text-primary-600">{v.size}</div>
       {useCase && <div className="text-[10px] text-gray-400 leading-tight mb-1">{useCase}</div>}
       <div className="text-[10px] text-gray-500 mb-2">{v.dimensions} • {v.length}</div>
+      {v.price && <div className="text-[10px] font-semibold text-green-600 mb-1">{formatTZS(v.price)}</div>}
       <div className="flex items-center justify-between">
         <span className="text-[10px] bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-1.5 py-0.5 rounded-full">
           In Stock

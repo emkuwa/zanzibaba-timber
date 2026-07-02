@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { TIMBER_SIZES, SIZE_USES, SIZE_FAQ, LOCATIONS, PRODUCT_VARIANTS, BLOG_POSTS, generateWhatsAppLink, sizeToSlug } from '@/lib/data'
+import { TIMBER_SIZES, SIZE_USES, SIZE_FAQ, LOCATIONS, PRODUCT_VARIANTS, BLOG_POSTS, generateWhatsAppLink, sizeToSlug, formatTZS, PRODUCT_PRICES } from '@/lib/data'
+import PriceNotice from '@/components/PriceNotice'
+import TransportCalculator from '@/components/TransportCalculator'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -89,6 +91,28 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                   {timber.description}. Professionally treated for Zanzibar's tropical climate.
                 </p>
 
+                {variants.length > 0 && (
+                  <div className="mb-4 space-y-2">
+                    {variants.map((v) => v.price && (
+                      <div key={v.sku} className="flex items-center justify-between bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3">
+                        <div>
+                          <span className="font-semibold text-sm">{v.size}</span>
+                          <span className="text-xs text-gray-500 ml-2">({v.length})</span>
+                          {v.dimensions && <span className="text-xs text-gray-400 ml-1">— {v.dimensions}</span>}
+                        </div>
+                        <div className="text-right">
+                          <div className="text-lg font-bold text-primary-600">{formatTZS(v.price)}</div>
+                          <div className="text-[10px] text-gray-400">per piece</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <div className="mb-4">
+                  <PriceNotice />
+                </div>
+
                 {uses.length > 0 && (
                   <div className="mb-4 md:mb-6">
                     <h3 className="font-semibold text-sm md:text-base mb-2">Common Uses:</h3>
@@ -165,6 +189,10 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                     <Link href="/locations" className="text-xs md:text-sm text-primary-600 hover:underline font-semibold">
                       View all →
                     </Link>
+                  </div>
+
+                  <div className="mt-4 md:mt-6">
+                    <TransportCalculator />
                   </div>
                 </div>
               </div>

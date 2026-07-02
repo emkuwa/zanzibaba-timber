@@ -3,7 +3,8 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import Image from 'next/image'
 import { generateSEOMetadata, getFAQSchema, getItemListSchema, getBreadcrumbSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, HOMEPAGE_FAQ, generateWhatsAppLink, sizeToSlug } from '@/lib/data'
+import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, HOMEPAGE_FAQ, generateWhatsAppLink, sizeToSlug, formatTZS } from '@/lib/data'
+import PriceNotice from '@/components/PriceNotice'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
@@ -57,9 +58,13 @@ export default function TimberSizes() {
               </div>
             </div>
 
-            <p className="text-center text-gray-600 dark:text-gray-300 mb-8 md:mb-12 max-w-3xl mx-auto text-sm md:text-base px-2">
+            <p className="text-center text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto text-sm md:text-base px-2">
               High quality treated pine timber available in all standard sizes. Kiln-dried and professionally treated for Zanzibar&apos;s tropical climate.
             </p>
+
+            <div className="max-w-3xl mx-auto mb-8 md:mb-10 px-2">
+              <PriceNotice />
+            </div>
 
             <div className="mb-8 md:mb-12">
               <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">18ft Timber Sizes</h2>
@@ -73,6 +78,7 @@ export default function TimberSizes() {
                     <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{v.size}</div>
                     <div className="text-xs md:text-sm text-gray-500 mb-1">18ft</div>
                     <div className="text-xs text-gray-400">{v.dimensions}</div>
+                    {v.price && <div className="text-xs font-semibold text-green-600 mt-1">{formatTZS(v.price)}</div>}
                   </Link>
                 ))}
               </div>
@@ -90,6 +96,7 @@ export default function TimberSizes() {
                     <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{v.size}</div>
                     <div className="text-xs md:text-sm text-gray-500 mb-1">12ft</div>
                     <div className="text-xs text-gray-400">{v.dimensions}</div>
+                    {v.price && <div className="text-xs font-semibold text-green-600 mt-1">{formatTZS(v.price)}</div>}
                   </Link>
                 ))}
               </div>
