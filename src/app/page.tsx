@@ -2,12 +2,13 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import HeroSection from '@/components/HeroSection'
 import ImageWithFallback from '@/components/ImageWithFallback'
 import QuoteForm from '@/components/QuoteForm'
 import { getLocalBusinessSchema, getFAQSchema, getReviewSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE } from '@/lib/data'
+import { PRODUCT_VARIANTS, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug } from '@/lib/data'
 import Link from 'next/link'
-import { MapPin, MessageCircle, Phone, ArrowRight, Truck, ShieldCheck, Star, Package, Factory, Mountain, Cog, Building, Network, Warehouse, Container, HardHat } from 'lucide-react'
+import { MessageCircle, Phone, ArrowRight, Truck, Star, Package, Factory, Cog, Network, Warehouse, Container } from 'lucide-react'
 import { useBilingual } from '@/lib/bilingual'
 
 function WhatsAppButton({ message }: { message?: string }) {
@@ -49,7 +50,7 @@ function TimberSizeCard({ v }: { v: typeof PRODUCT_VARIANTS[0] }) {
   const useCase = SIZE_USE_CASE[v.size]
   return (
     <Link
-      href={`/timber-sizes/${v.size}?length=${v.length}`}
+      href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
       className="group bg-white dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all"
     >
       <div className="text-lg font-bold text-primary-600">{v.size}</div>
@@ -118,37 +119,7 @@ export default function Home() {
 
       <main>
         {/* 1. Hero Section */}
-        <section className="relative min-h-[60vh] flex items-center bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/gallery/zanzibaba-timber-hero-banner.jpg')" }}>
-          <div className="absolute inset-0 bg-black bg-opacity-60" />
-          <div className="container-custom py-6 relative z-10">
-            <div className="max-w-4xl">
-              <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold mb-2 text-white leading-tight">
-                {t('hero.title')}
-              </h1>
-              <p className="text-sm sm:text-base md:text-lg mb-4 text-gray-200 leading-relaxed max-w-3xl">
-                {t('hero.subtitle')}
-              </p>
-              <div className="flex flex-wrap gap-x-3 gap-y-1 mb-4 text-xs text-primary-200 font-medium">
-                <span>Timber Zanzibar</span>
-                <span className="text-primary-400">•</span>
-                <span>Mbao Zanzibar</span>
-                <span className="text-primary-400">•</span>
-                <span>Pine Timber Zanzibar</span>
-                <span className="text-primary-400">•</span>
-                <span>Treated Timber Zanzibar</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2 mb-4">
-                <WhatsAppButton message="Hello Zanzibaba Timber, I need a quote" />
-                <CallButton />
-              </div>
-              <div className="flex items-center text-gray-300 text-xs">
-                <MapPin className="w-3 h-3 mr-1" />
-                <span>Kwa Ndevu, Daraja Bovu, Zanzibar</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <HeroSection />
 
         {/* 2. Premium Timber Sizes */}
         <section id="sizes" className="py-6 bg-gradient-to-bl from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 scroll-mt-20">
@@ -232,23 +203,23 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 5. Why Contractors Choose Zanzibaba Timber */}
+        {/* 5. Why Zanzibaba Timber — merged infrastructure & advantages */}
         <section className="py-10 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
           <div className="container-custom">
             <div className="text-center mb-8">
-              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">Why Contractors Choose Zanzibaba Timber</h2>
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">Why Zanzibaba Timber</h2>
               <p className="text-gray-500 dark:text-gray-400 text-sm mt-2 max-w-2xl mx-auto">Reliable supply, consistent quality, and on-time delivery for construction projects across Zanzibar.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
               {[
                 { icon: Factory, title: 'Treated Pine Production', desc: 'Daily production capacity of premium treated pine timber at our Kwa Ndevu yard. Consistent quality with reliable supply for projects of any scale.' },
-                { icon: Truck, title: 'Timber Delivery Fleet', desc: 'Own fleet of delivery trucks covering all Zanzibar locations from Paje to Nungwi. Standard 24-48 hour delivery with cash on delivery.' },
-                { icon: Mountain, title: 'Own Stock Yard', desc: 'Kwa Ndevu timber yard is one of the largest and best-stocked in Zanzibar, with comprehensive inventory of all standard sizes and treated poles.' },
-                { icon: Cog, title: 'Treatment Plant', desc: 'In-house pressure treatment and kiln-drying facilities ensure all timber is professionally treated for Zanzibars tropical coastal climate.' },
-                { icon: Building, title: 'Stock Capacity', desc: 'Large stock capacity for all sizes from 1x6 through 2x6 in 12ft and 18ft lengths. Treated poles from 2 to 6 inch diameter always available.' },
-                { icon: Network, title: 'Supply Network', desc: 'Strategic partnerships with mainland Tanzania suppliers ensure consistent quality, competitive pricing, and reliable supply chain for every order.' },
+                { icon: Warehouse, title: 'Stock Yard & Capacity', desc: 'Kwa Ndevu yard with covered storage, loading area, and large inventories of all standard sizes from 1x6 through 2x6 plus treated poles.' },
+                { icon: Cog, title: 'Treatment Plant', desc: 'In-house pressure treatment and kiln-drying facilities ensuring all timber is professionally treated for Zanzibar\'s tropical coastal climate.' },
+                { icon: Container, title: 'Processing & Cutting', desc: 'Log processing, dimensional cutting, and custom sizing capabilities for special orders and non-standard requirements.' },
+                { icon: Truck, title: 'Delivery Fleet', desc: 'Own fleet covering all Zanzibar locations from Paje to Nungwi. Standard 24-48 hour delivery with cash on payment option.' },
+                { icon: Network, title: 'Supply Network', desc: 'Strategic partnerships with mainland Tanzania suppliers ensure consistent quality, competitive pricing, and reliable supply for every order.' },
               ].map((item) => (
-                <div key={item.title} className="flex gap-3 p-4 rounded-lg border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/50 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <div key={item.title} className="flex gap-3 p-4 rounded-lg border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/50 hover:shadow-md hover:border-primary-200 dark:hover:border-primary-800 transition-all">
                   <div className="w-10 h-10 bg-primary-50 dark:bg-primary-900/20 rounded-lg flex items-center justify-center shrink-0">
                     <item.icon className="w-5 h-5 text-primary-600" />
                   </div>
@@ -262,55 +233,36 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 6. Capacity & Infrastructure */}
+        {/* 6. How It Works — process steps */}
         <section className="py-10 bg-gray-50 dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700">
           <div className="container-custom">
             <div className="text-center mb-8">
-              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">Capacity & Infrastructure</h2>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mt-2 max-w-2xl mx-auto">Built to serve contractors, hotels, government projects, and developers across Zanzibar.</p>
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">How It Works</h2>
+              <p className="text-gray-500 dark:text-gray-400 text-sm mt-2 max-w-2xl mx-auto">From enquiry to delivery in three simple steps.</p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+            <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
-                { icon: Warehouse, title: 'Timber Yard', desc: 'Kwa Ndevu yard with dedicated loading area, covered storage sheds, and organized inventory management for fast turnaround.' },
-                { icon: Truck, title: 'Delivery Fleet', desc: 'Multi-vehicle fleet capable of handling orders from small residential loads to full truckloads for major construction projects.' },
-                { icon: Cog, title: 'Treatment Plant', desc: 'Professional pressure treatment and kiln-drying facilities producing durable tropical-grade timber for Zanzibar construction.' },
-                { icon: Package, title: 'Stock Capacity', desc: 'Large inventories of all standard timber sizes plus treated poles maintained at our Kwa Ndevu yard for immediate dispatch.' },
-                { icon: Container, title: 'Processing & Cutting', desc: 'Log processing, dimensional cutting, and custom sizing capabilities for special orders and non-standard requirements.' },
-                { icon: HardHat, title: 'Project Coordination', desc: 'Dedicated team for coordinating delivery schedules with contractors, project managers, and development timelines.' },
+                { step: 1, icon: MessageCircle, title: 'Contact & Quote', desc: 'Reach out via WhatsApp, phone, or our quick quote form. We respond within 30 minutes with competitive pricing.' },
+                { step: 2, icon: Package, title: 'Processing & Quality Check', desc: 'Your timber is prepared, inspected for quality, and loaded at our Kwa Ndevu yard for transport.' },
+                { step: 3, icon: Truck, title: 'Delivery & Payment', desc: 'We deliver across Zanzibar with cash on delivery. You inspect and pay when your timber arrives.' },
               ].map((item) => (
-                <div key={item.title} className="flex gap-3 p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:shadow-sm transition-shadow">
-                  <div className="w-10 h-10 bg-primary-50 dark:bg-primary-900/20 rounded-lg flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-primary-600" />
+                <div key={item.step} className="flex flex-col items-center text-center p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:shadow-lg transition-shadow">
+                  <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mb-3">
+                    <item.icon className="w-6 h-6 text-primary-600" />
                   </div>
-                  <div className="min-w-0">
-                    <h3 className="font-semibold text-sm text-gray-900 dark:text-white mb-0.5">{item.title}</h3>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>
-                  </div>
+                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold mb-2">{item.step}</div>
+                  <h3 className="font-bold text-sm text-gray-900 dark:text-white mb-1">{item.title}</h3>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* 7. Strategic Supply Network */}
-        <section className="py-10 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
-          <div className="container-custom">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="w-12 h-12 bg-primary-50 dark:bg-primary-900/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Network className="w-6 h-6 text-primary-600" />
-              </div>
-              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">Strategic Supply Network</h2>
-              <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
-                Our operations are supported by a network of trusted industry partners across Zanzibar and Mainland Tanzania. In addition to our owned facilities and fleet, these partnerships enable us to scale production capacity, secure additional resources, and maintain reliable supply for large-volume projects when required.
-              </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <Link href="/timber-sizes" className="inline-flex items-center gap-2 bg-primary-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-colors text-sm">
-                  View Timber Sizes <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link href="/contact" className="inline-flex items-center gap-2 border border-primary-600 text-primary-600 px-5 py-2 rounded-lg font-semibold hover:bg-primary-50 dark:hover:bg-gray-800 transition-colors text-sm">
-                  Contact Us
-                </Link>
-              </div>
+            <div className="flex flex-wrap justify-center gap-3 mt-8">
+              <Link href="/timber-sizes" className="inline-flex items-center gap-2 bg-primary-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-primary-700 transition-colors text-sm shadow">
+                Browse Timber Sizes <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link href="/contact" className="inline-flex items-center gap-2 border border-primary-600 text-primary-600 px-5 py-2.5 rounded-lg font-semibold hover:bg-primary-50 dark:hover:bg-gray-800 transition-colors text-sm">
+                Get a Quote
+              </Link>
             </div>
           </div>
         </section>

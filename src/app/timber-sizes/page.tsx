@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import Image from 'next/image'
 import { generateSEOMetadata, getFAQSchema, getItemListSchema, getBreadcrumbSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, HOMEPAGE_FAQ, generateWhatsAppLink } from '@/lib/data'
+import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, HOMEPAGE_FAQ, generateWhatsAppLink, sizeToSlug } from '@/lib/data'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
@@ -64,10 +64,10 @@ export default function TimberSizes() {
             <div className="mb-8 md:mb-12">
               <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">18ft Timber Sizes</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 md:gap-4">
-                {ft18Variants.map((v) => (
+                  {ft18Variants.map((v) => (
                   <Link
                     key={v.sku}
-                    href={`/timber-sizes/${v.size === 'Treated Wood Poles' ? 'treated-wood-poles' : v.size}?length=${v.length}`}
+                    href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
                     className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all hover:border-primary-300 bg-white dark:bg-gray-800"
                   >
                     <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{v.size}</div>
@@ -81,10 +81,10 @@ export default function TimberSizes() {
             <div className="mb-8 md:mb-12">
               <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">12ft Timber Sizes</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-4">
-                {ft12Variants.map((v) => (
+                  {ft12Variants.map((v) => (
                   <Link
                     key={v.sku}
-                    href={`/timber-sizes/${v.size}?length=${v.length}`}
+                    href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
                     className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all hover:border-primary-300 bg-white dark:bg-gray-800"
                   >
                     <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{v.size}</div>
@@ -101,7 +101,7 @@ export default function TimberSizes() {
                 {TIMBER_SIZES.map((s) => (
                   <Link
                     key={s.id}
-                    href={`/timber-sizes/${s.id === 'Treated Wood Poles' ? 'treated-wood-poles' : s.id}`}
+                    href={`/timber-sizes/${s.id}`}
                     className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg transition-all bg-white dark:bg-gray-800 flex flex-col h-full"
                   >
                     <h3 className="font-bold text-base md:text-lg text-primary-600">{s.name}</h3>

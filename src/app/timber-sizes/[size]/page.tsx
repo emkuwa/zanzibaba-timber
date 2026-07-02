@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { TIMBER_SIZES, SIZE_USES, SIZE_FAQ, LOCATIONS, PRODUCT_VARIANTS, BLOG_POSTS, generateWhatsAppLink } from '@/lib/data'
+import { TIMBER_SIZES, SIZE_USES, SIZE_FAQ, LOCATIONS, PRODUCT_VARIANTS, BLOG_POSTS, generateWhatsAppLink, sizeToSlug } from '@/lib/data'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -32,7 +32,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
   const uses = SIZE_USES[timber.id] || []
   const faqs = SIZE_FAQ[timber.id] || []
   const otherSizes = TIMBER_SIZES.filter((s) => s.id !== timber.id)
-  const variants = PRODUCT_VARIANTS.filter((v) => v.size === timber.id)
+  const variants = PRODUCT_VARIANTS.filter((v) => sizeToSlug(v.size) === timber.id)
   const has18ft = variants.some((v) => v.length === '18ft')
   const has12ft = variants.some((v) => v.length === '12ft')
 

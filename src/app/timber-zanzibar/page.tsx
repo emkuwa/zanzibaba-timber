@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import Image from 'next/image'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, generateWhatsAppLink } from '@/lib/data'
+import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, generateWhatsAppLink, sizeToSlug } from '@/lib/data'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
@@ -114,7 +114,7 @@ export default function TimberZanzibarPage() {
                 {ft18Variants.map((v) => (
                   <Link
                     key={v.sku}
-                    href={`/timber-sizes/${v.size === 'Treated Wood Poles' ? 'treated-wood-poles' : v.size.toLowerCase()}?length=${v.length}`}
+                    href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
                     className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all bg-white dark:bg-gray-800"
                   >
                     <div className="text-lg font-bold text-primary-600">{v.size}</div>
@@ -131,7 +131,7 @@ export default function TimberZanzibarPage() {
                 {ft12Variants.map((v) => (
                   <Link
                     key={v.sku}
-                    href={`/timber-sizes/${v.size.toLowerCase()}?length=${v.length}`}
+                    href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
                     className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all bg-white dark:bg-gray-800"
                   >
                     <div className="text-lg font-bold text-primary-600">{v.size}</div>

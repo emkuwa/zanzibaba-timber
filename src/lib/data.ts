@@ -1,5 +1,12 @@
 import { TimberSize, Location, ProductVariant } from '@/types'
 
+export function sizeToSlug(size: string): string {
+  const map: Record<string, string> = {
+    'Treated Wood Poles': 'treated-wood-poles',
+  }
+  return map[size] ?? size.toLowerCase().replace(/\s+/g, '-')
+}
+
 export const TIMBER_SIZES: TimberSize[] = [
   { id: 'treated-wood-poles', name: 'Treated Wood Poles', dimensions: '2-6" diameter', popular: true, description: 'Treated Pine Poles 2-6 inch diameter, 18ft length — ideal for construction, fencing, and structural applications' },
   { id: '1x6', name: '1x6', dimensions: '25x150mm', popular: true, description: 'Treated Pine Timber 1x6 — 25x150mm, ideal for roofing, fencing and light framing' },
