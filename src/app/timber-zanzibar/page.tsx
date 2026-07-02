@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import Image from 'next/image'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, generateWhatsAppLink, sizeToSlug } from '@/lib/data'
+import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, generateWhatsAppLink, sizeToSlug, formatVariantLabel } from '@/lib/data'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
@@ -117,8 +117,7 @@ export default function TimberZanzibarPage() {
                     href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
                     className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all bg-white dark:bg-gray-800"
                   >
-                    <div className="text-lg font-bold text-primary-600">{v.size}</div>
-                    <div className="text-sm text-gray-500">18ft</div>
+                    <div className="text-lg font-bold text-primary-600">{formatVariantLabel(v)}</div>
                     <div className="text-xs text-gray-400">{v.dimensions}</div>
                   </Link>
                 ))}
@@ -134,8 +133,8 @@ export default function TimberZanzibarPage() {
                     href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
                     className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all bg-white dark:bg-gray-800"
                   >
-                    <div className="text-lg font-bold text-primary-600">{v.size}</div>
-                    <div className="text-sm text-gray-500">12ft</div>
+                    <div className="text-lg font-bold text-primary-600">{formatVariantLabel(v)}</div>
+                    <div className="text-xs text-gray-400">{v.dimensions}</div>
                     <div className="text-xs text-gray-400">{v.dimensions}</div>
                   </Link>
                 ))}

@@ -6,7 +6,7 @@ import HeroSection from '@/components/HeroSection'
 import ImageWithFallback from '@/components/ImageWithFallback'
 import QuoteForm from '@/components/QuoteForm'
 import { getLocalBusinessSchema, getFAQSchema, getReviewSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug, formatTZS } from '@/lib/data'
+import { PRODUCT_VARIANTS, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug, formatTZS, formatVariantLabel } from '@/lib/data'
 import Link from 'next/link'
 import { MessageCircle, Phone, ArrowRight, Truck, Star, Package, Factory, Cog, Network, Warehouse, Container } from 'lucide-react'
 import { useBilingual } from '@/lib/bilingual'
@@ -53,9 +53,9 @@ function TimberSizeCard({ v }: { v: typeof PRODUCT_VARIANTS[0] }) {
       href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
       className="group bg-white dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all"
     >
-      <div className="text-lg font-bold text-primary-600">{v.size}</div>
+      <div className="text-lg font-bold text-primary-600">{formatVariantLabel(v)}</div>
       {useCase && <div className="text-[10px] text-gray-400 leading-tight mb-1">{useCase}</div>}
-      <div className="text-[10px] text-gray-500 mb-2">{v.dimensions} • {v.length}</div>
+      <div className="text-[10px] text-gray-500 mb-2">{v.dimensions}</div>
       {v.price && <div className="text-[10px] font-semibold text-green-600 mb-1">{formatTZS(v.price)}</div>}
       <div className="flex items-center justify-between">
         <span className="text-[10px] bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-1.5 py-0.5 rounded-full">

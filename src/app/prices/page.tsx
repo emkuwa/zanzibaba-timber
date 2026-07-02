@@ -4,7 +4,7 @@ import FloatingButtons from '@/components/FloatingButtons'
 import PriceNotice from '@/components/PriceNotice'
 import TransportCalculator from '@/components/TransportCalculator'
 import { generateSEOMetadata } from '@/lib/seo'
-import { PRODUCT_PRICES, PRODUCT_VARIANTS, TIMBER_SIZES, formatTZS, sizeToSlug } from '@/lib/data'
+import { PRODUCT_PRICES, PRODUCT_VARIANTS, TIMBER_SIZES, formatTZS, sizeToSlug, formatVariantLabel } from '@/lib/data'
 import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 
@@ -38,7 +38,7 @@ function PriceTable({ length, title }: { length: string; title: string }) {
               <tr key={v.sku} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
                 <td className="py-3 px-3 font-semibold text-sm">
                   <Link href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`} className="text-primary-600 hover:underline">
-                    {v.size}
+                    {formatVariantLabel(v)}
                   </Link>
                 </td>
                 <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">{v.dimensions}</td>

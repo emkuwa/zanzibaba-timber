@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import Image from 'next/image'
 import { generateSEOMetadata, getFAQSchema, getItemListSchema, getBreadcrumbSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, HOMEPAGE_FAQ, generateWhatsAppLink, sizeToSlug, formatTZS } from '@/lib/data'
+import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, HOMEPAGE_FAQ, generateWhatsAppLink, sizeToSlug, formatTZS, formatVariantLabel, formatSizeName } from '@/lib/data'
 import PriceNotice from '@/components/PriceNotice'
 import Link from 'next/link'
 
@@ -75,9 +75,8 @@ export default function TimberSizes() {
                     href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
                     className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all hover:border-primary-300 bg-white dark:bg-gray-800"
                   >
-                    <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{v.size}</div>
-                    <div className="text-xs md:text-sm text-gray-500 mb-1">18ft</div>
-                    <div className="text-xs text-gray-400">{v.dimensions}</div>
+                    <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{formatVariantLabel(v)}</div>
+                    <div className="text-xs text-gray-400 mb-1">{v.dimensions}</div>
                     {v.price && <div className="text-xs font-semibold text-green-600 mt-1">{formatTZS(v.price)}</div>}
                   </Link>
                 ))}
@@ -93,9 +92,8 @@ export default function TimberSizes() {
                     href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
                     className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all hover:border-primary-300 bg-white dark:bg-gray-800"
                   >
-                    <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{v.size}</div>
-                    <div className="text-xs md:text-sm text-gray-500 mb-1">12ft</div>
-                    <div className="text-xs text-gray-400">{v.dimensions}</div>
+                    <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{formatVariantLabel(v)}</div>
+                    <div className="text-xs text-gray-400 mb-1">{v.dimensions}</div>
                     {v.price && <div className="text-xs font-semibold text-green-600 mt-1">{formatTZS(v.price)}</div>}
                   </Link>
                 ))}
@@ -111,7 +109,7 @@ export default function TimberSizes() {
                     href={`/timber-sizes/${s.id}`}
                     className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg transition-all bg-white dark:bg-gray-800 flex flex-col h-full"
                   >
-                    <h3 className="font-bold text-base md:text-lg text-primary-600">{s.name}</h3>
+                    <h3 className="font-bold text-base md:text-lg text-primary-600">{formatSizeName(s.name)}</h3>
                     <p className="text-xs md:text-sm text-gray-500 mb-1">{s.dimensions}</p>
                     <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 flex-1">{s.description}</p>
                   </Link>

@@ -11,6 +11,16 @@ export function formatTZS(amount: number): string {
   return `${amount.toLocaleString('en-TZ')} TZS`
 }
 
+export function formatSizeName(name: string): string {
+  return name.replace(/(\d+)x(\d+)/g, '$1"×$2"')
+}
+
+export function formatVariantLabel(v: ProductVariant): string {
+  const size = formatSizeName(v.size)
+  const length = v.length.replace('ft', "'")
+  return `${size}×${length}`
+}
+
 export const PRICE_NOTES = [
   'Prices exclude VAT.',
   'Prices exclude transportation.',

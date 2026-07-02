@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { TIMBER_SIZES, SIZE_USES, SIZE_FAQ, LOCATIONS, PRODUCT_VARIANTS, BLOG_POSTS, generateWhatsAppLink, sizeToSlug, formatTZS, PRODUCT_PRICES } from '@/lib/data'
+import { TIMBER_SIZES, SIZE_USES, SIZE_FAQ, LOCATIONS, PRODUCT_VARIANTS, BLOG_POSTS, generateWhatsAppLink, sizeToSlug, formatTZS, formatVariantLabel, formatSizeName } from '@/lib/data'
 import PriceNotice from '@/components/PriceNotice'
 import TransportCalculator from '@/components/TransportCalculator'
 import Header from '@/components/Header'
@@ -61,7 +61,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6">
                 <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
-                  {timber.name} Pine Timber <span className="text-primary-300">Zanzibar</span>
+                  {formatSizeName(timber.name)} Pine Timber <span className="text-primary-300">Zanzibar</span>
                 </h1>
                 <p className="text-gray-200 mt-1 text-xs sm:text-sm">{timber.dimensions} — Treated Pine</p>
               </div>
@@ -74,11 +74,11 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                   <span className="mx-1 text-gray-400">/</span>
                   <Link href="/timber-sizes" className="text-primary-600 hover:underline">Sizes</Link>
                   <span className="mx-1 text-gray-400">/</span>
-                  <span className="text-gray-500">{timber.name}</span>
+                  <span className="text-gray-500">{formatSizeName(timber.name)}</span>
                 </nav>
 
                 <h2 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
-                  {timber.name} Treated Pine in Zanzibar
+                  {formatSizeName(timber.name)} Treated Pine in Zanzibar
                 </h2>
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-2">
                   <strong>Dimensions:</strong> {timber.dimensions}
@@ -96,8 +96,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                     {variants.map((v) => v.price && (
                       <div key={v.sku} className="flex items-center justify-between bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3">
                         <div>
-                          <span className="font-semibold text-sm">{v.size}</span>
-                          <span className="text-xs text-gray-500 ml-2">({v.length})</span>
+                          <span className="font-semibold text-sm">{formatVariantLabel(v)}</span>
                           {v.dimensions && <span className="text-xs text-gray-400 ml-1">— {v.dimensions}</span>}
                         </div>
                         <div className="text-right">
