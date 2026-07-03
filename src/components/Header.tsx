@@ -27,7 +27,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50 shadow-sm">
       <nav className="container-custom flex items-center justify-between h-16 px-4 md:px-6">
         <Link href="/" className="flex flex-col shrink-0">
-          <span className="text-xl md:text-2xl font-bold text-primary-600 dark:text-primary-400 leading-tight">
+          <span className="text-lg md:text-xl font-bold text-primary-600 dark:text-primary-400 leading-tight">
             Zanzibaba Timber
           </span>
           <span className="hidden sm:block text-[10px] md:text-xs text-gray-500 dark:text-gray-400 leading-tight -mt-0.5">
@@ -54,10 +54,10 @@ export default function Header() {
         <div className="flex items-center gap-1.5 md:gap-2">
           <a
             href="tel:+255716002790"
-            className="inline-flex items-center gap-1.5 bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-3 md:px-4 py-2 rounded-lg transition-all hover:shadow-md active:scale-95 min-h-[48px]"
+            className="inline-flex items-center gap-1.5 text-gray-600 dark:text-gray-300 hover:text-primary-600 text-sm font-medium transition-colors min-h-[48px]"
           >
-            <Phone className="w-4 h-4" />
-            <span className="hidden sm:inline">Call Now</span>
+            <Phone className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline whitespace-nowrap">+255 716 002 790</span>
           </a>
 
           <a
@@ -72,11 +72,11 @@ export default function Header() {
 
           <button
             onClick={() => setLocale(locale === 'en' ? 'sw' : 'en')}
-            className="flex items-center gap-1 px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors min-h-[48px] text-sm"
+            className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors min-h-[48px] text-xs font-medium text-gray-500 dark:text-gray-400"
             aria-label="Toggle language"
           >
-            <span className="text-base leading-none">🌐</span>
-            <span className="text-sm font-medium">{locale.toUpperCase()}</span>
+            <span className="text-xs leading-none">🌐</span>
+            <span>{locale.toUpperCase()}</span>
           </button>
 
 
