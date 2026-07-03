@@ -2,23 +2,13 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Moon, Sun, Phone, MessageCircle } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { Phone, MessageCircle } from 'lucide-react'
 import { generateWhatsAppLink } from '@/lib/data'
 import { useBilingual } from '@/lib/bilingual'
 
 export default function Header() {
   const { locale, setLocale, t } = useBilingual()
-  const [isDark, setIsDark] = useState(false)
   const pathname = usePathname()
-
-  useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }, [isDark])
 
   const navigation = [
     { href: '/', label: t('navigation.home') },
@@ -89,24 +79,7 @@ export default function Header() {
             <span className="text-sm font-medium">{locale.toUpperCase()}</span>
           </button>
 
-          <button
-            onClick={() => setIsDark(!isDark)}
-            className="min-h-[48px] min-w-[48px] flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            aria-label="Toggle dark mode"
-          >
-            <div className="relative w-5 h-5">
-              <Sun
-                className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
-                  isDark ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-50 rotate-90'
-                }`}
-              />
-              <Moon
-                className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
-                  isDark ? 'opacity-0 scale-50 -rotate-90' : 'opacity-100 scale-100 rotate-0'
-                }`}
-              />
-            </div>
-          </button>
+
         </div>
       </nav>
     </header>
