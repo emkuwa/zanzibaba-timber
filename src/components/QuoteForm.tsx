@@ -30,8 +30,8 @@ export default function QuoteForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto">
-      <div className="grid grid-cols-2 gap-4">
+    <form onSubmit={handleSubmit} className="space-y-3 max-w-lg mx-auto">
+      <div className="grid grid-cols-2 gap-3">
         <input
           type="text"
           name="name"
@@ -39,7 +39,7 @@ export default function QuoteForm() {
           required
           value={formData.name}
           onChange={handleChange}
-          className="px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500"
+          className="px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500 text-sm"
         />
         <input
           type="tel"
@@ -48,16 +48,16 @@ export default function QuoteForm() {
           required
           value={formData.phone}
           onChange={handleChange}
-          className="px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500"
+          className="px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500 text-sm"
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-3">
         <select
           name="product"
           value={formData.product}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800"
+          className="w-full px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
         >
           <option value="">{t('pages.quoteForm.selectSize')}</option>
           <option value="1x6">1x6 Pine</option>
@@ -73,7 +73,7 @@ export default function QuoteForm() {
           name="length"
           value={formData.length}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800"
+          className="w-full px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
         >
           <option value="18ft">{t('pages.quoteForm.lengths.18ft')}</option>
           <option value="12ft">{t('pages.quoteForm.lengths.12ft')}</option>
@@ -83,21 +83,21 @@ export default function QuoteForm() {
       <textarea
         name="message"
         placeholder={t('pages.quoteForm.additionalDetails')}
-        rows={3}
+        rows={2}
         value={formData.message}
         onChange={handleChange}
-        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800"
+        className="w-full px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
       />
 
       <button
         type="submit"
-        className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+        className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 text-base"
       >
         <MessageCircle className="w-5 h-5" />
         <span>{t('common.sendToWhatsApp')}</span>
       </button>
       
-      <p className="text-center text-sm text-gray-500">{t('pages.quoteForm.responseTime')}</p>
+      <p className="text-center text-xs text-gray-500">{t('pages.quoteForm.responseTime')}</p>
     </form>
   )
 }

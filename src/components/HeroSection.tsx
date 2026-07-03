@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { MessageCircle, Phone, MapPin, ShieldCheck, Truck, Clock, Star } from 'lucide-react'
+import { MessageCircle, Phone, MapPin, ShieldCheck, CheckCircle } from 'lucide-react'
 import { useBilingual } from '@/lib/bilingual'
 
 const containerVariants = {
@@ -60,6 +60,14 @@ function CallButton() {
   )
 }
 
+const BENEFITS = [
+  'Premium Treated Pine — Kiln-dried & professionally treated',
+  'Delivery Across All Zanzibar — From Paje to Nungwi',
+  'Bulk Order Discounts — Save on large quantities',
+  'Fast WhatsApp Quotes — Response in under 30 minutes',
+  'Cash on Delivery — Pay when timber arrives',
+]
+
 export default function HeroSection() {
   const { t } = useBilingual()
 
@@ -95,26 +103,19 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-3 text-white leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-tight"
             variants={itemVariants}
           >
             {t('hero.title')}
           </motion.h1>
 
-          <motion.p
-            className="text-sm sm:text-base md:text-lg mb-4 text-gray-200 leading-relaxed max-w-3xl"
-            variants={itemVariants}
-          >
-            {t('hero.subtitle')}
-          </motion.p>
-
-          <motion.div
-            className="flex flex-wrap items-center gap-3 md:gap-5 mb-5 text-xs md:text-sm text-gray-300"
-            variants={itemVariants}
-          >
-            <span className="flex items-center gap-1.5"><Truck className="w-3.5 h-3.5 text-green-400" /> Island-wide Delivery</span>
-            <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-green-400" /> Quotes in 30 min</span>
-            <span className="flex items-center gap-1.5"><Star className="w-3.5 h-3.5 text-green-400" /> 1,500+ Projects</span>
+          <motion.div className="space-y-1.5 mb-5" variants={itemVariants}>
+            {BENEFITS.map((b) => (
+              <div key={b} className="flex items-start gap-1.5 text-sm md:text-base text-gray-200">
+                <CheckCircle className="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" />
+                <span>{b}</span>
+              </div>
+            ))}
           </motion.div>
 
           <motion.div
@@ -130,7 +131,7 @@ export default function HeroSection() {
             variants={itemVariants}
           >
             <MapPin className="w-3 h-3 mr-1.5 shrink-0" />
-            <span>Kwa Ndevu, Daraja Bovu, Zanzibar • Cash on Delivery Available</span>
+            <span>Kwa Ndevu, Daraja Bovu, Zanzibar</span>
           </motion.div>
         </div>
       </motion.div>
