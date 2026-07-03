@@ -57,7 +57,7 @@ export default function Header() {
             className="inline-flex items-center gap-1.5 text-gray-600 dark:text-gray-300 hover:text-primary-600 text-sm font-medium transition-colors min-h-[48px]"
           >
             <Phone className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline whitespace-nowrap">+255 716 002 790</span>
+            <span className="whitespace-nowrap">+255 716 002 790</span>
           </a>
 
           <a
