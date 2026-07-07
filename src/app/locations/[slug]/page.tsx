@@ -59,6 +59,12 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                 <div className="prose dark:prose-invert max-w-none mb-8">
                   <p>{location.description}. We provide fast, reliable timber delivery throughout {location.name} and surrounding areas with cash on delivery available.</p>
 
+                  {location.uniqueContent && (
+                    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-8">
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{location.uniqueContent}</p>
+                    </div>
+                  )}
+
                   <h2>Timber Sizes Available in {location.name}</h2>
                   <p>We deliver all premium treated pine timber sizes to {location.name}. Here are the standard sizes we supply:</p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 my-6">

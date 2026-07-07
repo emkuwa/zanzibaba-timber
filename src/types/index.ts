@@ -29,6 +29,7 @@ export type Location = {
   name: string
   slug: string
   description: string
+  uniqueContent?: string
 }
 
 export type Industry = {
