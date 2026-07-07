@@ -243,7 +243,7 @@ export default function MarineBoardPriceZanzibarPage() {
                 <Link href="/plywood" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Plywood</p>
-                  <p className="text-xs text-gray-500">From {cheapestPlywood ? formatTZS(cheapestPlywood.finalPrice) : 'TZS 18,000'}</p>
+                  <p className="text-xs text-gray-500">From {cheapestPlywood ? formatTZS(cheapestPlywood.finalPrice) : '18,000'}</p>
                 </Link>
                 <Link href="/treated-timber" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />

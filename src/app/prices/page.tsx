@@ -34,7 +34,7 @@ function PriceTable({ length, title }: { length: string; title: string }) {
               <th className="text-left py-3 px-3 text-sm">Size</th>
               <th className="text-left py-3 px-3 text-sm">Dimensions</th>
               <th className="text-center py-3 px-3 text-sm">Length</th>
-              <th className="text-right py-3 px-3 text-sm">Price</th>
+              <th className="text-right py-3 px-3 text-sm">Price (TZS)</th>
               <th className="text-center py-3 px-3 text-sm">Order</th>
             </tr>
           </thead>
@@ -144,7 +144,7 @@ export default function Prices() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-xs text-gray-500 mt-2">Prices exclude VAT.</p>
+              <p className="text-xs text-gray-500 mt-2">Prices Excluding VAT • Free Delivery Across Zanzibar</p>
             </div>
 
             <div className="max-w-5xl mx-auto mt-8">
@@ -184,7 +184,7 @@ export default function Prices() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-xs text-gray-500 mt-2">Prices exclude VAT.</p>
+              <p className="text-xs text-gray-500 mt-2">Prices Excluding VAT • Free Delivery Across Zanzibar</p>
             </div>
 
             <div className="max-w-5xl mx-auto mt-8">

@@ -212,7 +212,7 @@ export default function MarineBoardPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Link href="/plywood" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
                   <h3 className="font-bold text-primary-600 mb-1">Plywood — All Thicknesses</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Construction plywood from 3mm to 18mm. From {cheapestPlywood ? formatTZS(cheapestPlywood.finalPrice) : 'TZS 18,000'} per sheet.</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Construction plywood from 3mm to 18mm. From {cheapestPlywood ? formatTZS(cheapestPlywood.finalPrice) : '18,000'} per sheet.</p>
                   <p className="text-xs text-gray-400 mt-1">Prices exclude VAT. FREE Delivery.</p>
                 </Link>
                 <Link href="/marine-board-zanzibar" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">

@@ -95,7 +95,7 @@ export default function AdminPrices() {
                   placeholder="Wholesale"
                 />
                 <span className="text-center text-gray-500">→</span>
-                <span className="font-bold text-primary-600">{data.selling.toLocaleString()} TZS</span>
+                <span className="font-bold text-primary-600">{data.selling.toLocaleString()}</span>
               </div>
             ))}
           </div>
@@ -115,7 +115,7 @@ export default function AdminPrices() {
                   placeholder="Wholesale"
                 />
                 <span className="text-center text-gray-500">→</span>
-                <span className="font-bold text-primary-600">{data.selling.toLocaleString()} TZS</span>
+                <span className="font-bold text-primary-600">{data.selling.toLocaleString()}</span>
               </div>
             ))}
           </div>

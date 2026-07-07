@@ -34,11 +34,11 @@ export default function AdminWhatsapp() {
   const generatePriceList = () => {
     let text = 'ZANZIBABA TIMBER PRICE LIST\n\n18ft:\n'
     Object.entries(prices['18ft']).forEach(([size, price]) => {
-      text += `${size}: ${price.toLocaleString()} TZS\n`
+      text += `${size}: ${price.toLocaleString()}\n`
     })
     text += '\n12ft:\n'
     Object.entries(prices['12ft']).forEach(([size, price]) => {
-      text += `${size}: ${price.toLocaleString()} TZS\n`
+      text += `${size}: ${price.toLocaleString()}\n`
     })
     text += '\n📞 +255 716 002 790\n📍 Kwa Ndevu, Daraja Bovu, Zanzibar'
     return text

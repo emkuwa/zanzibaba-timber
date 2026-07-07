@@ -112,7 +112,7 @@ export default function TransportCalculator() {
             <div className="text-green-600 font-bold text-sm">FREE DELIVERY</div>
           ) : (
             <div className="text-lg font-bold text-primary-600">
-              {transportCost.toLocaleString()} TZS
+              {transportCost.toLocaleString()}
             </div>
           )}
           {!freeDelivery && (

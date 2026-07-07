@@ -8,7 +8,7 @@ export function sizeToSlug(size: string): string {
 }
 
 export function formatTZS(amount: number): string {
-  return `${amount.toLocaleString('en-TZ')} TZS`
+  return amount.toLocaleString('en-TZ')
 }
 
 export function formatSizeName(name: string): string {
