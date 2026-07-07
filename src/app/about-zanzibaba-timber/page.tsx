@@ -82,7 +82,7 @@ export default function AboutZanzibabaTimber() {
                   ))}
                 </div>
                 <p>
-                  With cash on delivery available for all locations, we make it simple and risk-free to order 
+                  With flexible payment options available for all locations (cash on delivery, mobile money, bank transfer), we make it simple and risk-free to order 
                   <strong> Timber Zanzibar</strong>. Standard delivery is within 24-48 hours for stock items.
                 </p>
 
@@ -131,7 +131,7 @@ export default function AboutZanzibabaTimber() {
                   <strong>Location:</strong> Kwa Ndevu, Daraja Bovu, Zanzibar<br />
                   <strong>Service Area:</strong> All Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu, and Ndevu<br />
                   <strong>Products:</strong> Treated pine timber, construction timber, treated poles, mbao za pine<br />
-                  <strong>Delivery:</strong> Island-wide with cash on delivery<br />
+                  <strong>Delivery:</strong> Island-wide with flexible payment options<br />
                   <strong>Contact:</strong> +255 716 002 790 | WhatsApp: +255 716 002 790<br />
                   <strong>Email:</strong> info@timber.zanzibaba.com
                 </p>

@@ -18,7 +18,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
   return generateSEOMetadata(
     `Pine Timber Delivery ${location.name} Zanzibar - Treated Timber Supplier`,
-    `${location.description}. Buy premium treated pine timber in ${location.name}, Zanzibar. Sizes: 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6. Cash on delivery. Order your construction timber in ${location.name} today.`,
+    `${location.description}. Buy premium treated pine timber in ${location.name}, Zanzibar. Sizes: 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6. Cash on delivery, mobile money & bank transfer. Order your construction timber in ${location.name} today.`,
     'en',
     `/locations/${location.slug}`
   )
@@ -57,7 +57,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                 </h1>
 
                 <div className="prose dark:prose-invert max-w-none mb-8">
-                  <p>{location.description}. We provide fast, reliable timber delivery throughout {location.name} and surrounding areas with cash on delivery available.</p>
+                  <p>{location.description}. We provide fast, reliable timber delivery throughout {location.name} and surrounding areas with cash on delivery, mobile money, and bank transfer payments available.</p>
 
                   {location.uniqueContent && (
                     <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-8">
@@ -88,14 +88,14 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                     <li>Villa construction timber supply</li>
                     <li>Custom cutting and sizing available</li>
                     <li>Wholesale and bulk pricing for contractors</li>
-                    <li>Cash on delivery — pay when your timber arrives</li>
+                    <li>Cash on delivery, mobile money & bank transfer — flexible payment</li>
                   </ul>
 
                   <h2>Why Choose Zanzibaba Timber for {location.name}</h2>
                   <ul>
                     <li><strong>High Quality Treated Timber</strong> — Professionally treated pine for Zanzibar's tropical climate</li>
                     <li><strong>Reliable Delivery</strong> — Fast, scheduled delivery to {location.name} and surrounding areas</li>
-                    <li><strong>Cash on Delivery</strong> — Pay only when you receive your timber</li>
+                    <li><strong>Flexible Payments</strong> — Cash on delivery, mobile money, or bank transfer</li>
                     <li><strong>Large Stock</strong> — All standard sizes always available at our Kwa Ndevu yard</li>
                     <li><strong>Competitive Prices</strong> — Affordable rates for every project size</li>
                   </ul>

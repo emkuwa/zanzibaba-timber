@@ -139,7 +139,7 @@ export default function Contact() {
                     {[
                       'Family-owned Zanzibar timber business since 2010',
                       'Based at Kwa Ndevu, Daraja Bovu — our own timber yard',
-                      'Cash on delivery for all orders across Zanzibar',
+                      'Cash on delivery, mobile money & bank transfer accepted',
                       '24-48 hour delivery for stock items',
                       'Dedicated service for contractors and bulk buyers',
                       'High quality kiln-dried treated pine timber',

@@ -7,8 +7,8 @@ import { TIMBER_SIZES, INDUSTRIES, LOCATIONS, BLOG_POSTS, generateWhatsAppLink }
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Timber Delivery Zanzibar - Island-Wide Service | Cash on Delivery | 24-48hr',
-  'Fast timber delivery across all Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu. Cash on delivery. Bulk loads. 24-48 hour service.',
+  'Timber Delivery Zanzibar - Island-Wide Service | Cash on Delivery, Mobile Money & Bank Transfer | 24-48hr',
+  'Fast timber delivery across all Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu. Cash on delivery, mobile money & bank transfer. Bulk loads. 24-48 hour service.',
   'en',
   '/delivery'
 )
@@ -70,7 +70,7 @@ export default function Delivery() {
               <div className="lg:col-span-2">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">Timber Delivery Across Zanzibar</h1>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                  Zanzibaba Timber offers <strong>fast, reliable timber delivery</strong> to every corner of Zanzibar. With <strong>cash on delivery</strong>, <strong>24-48 hour service</strong>, and a fleet capable of handling bulk loads, we make getting timber to your project site simple and hassle-free.
+                  Zanzibaba Timber offers <strong>fast, reliable timber delivery</strong> to every corner of Zanzibar. With <strong>flexible payment options</strong> (cash on delivery, mobile money, bank transfer), <strong>24-48 hour service</strong>, and a fleet capable of handling bulk loads, we make getting timber to your project site simple and hassle-free.
                 </p>
 
                 <ImageWithFallback

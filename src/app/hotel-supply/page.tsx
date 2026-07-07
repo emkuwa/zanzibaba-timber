@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
   'Hotel Timber Supply Zanzibar - Bulk Treated Pine for Resorts & Lodges',
-  'Specialized bulk treated pine timber supply for Zanzibar hotels resorts and lodges. Serving Nungwi, Kendwa, Paje, Stone Town & Kiwengwa. Custom cutting, pressure-treated, island-wide delivery with cash on delivery.',
+  'Specialized bulk treated pine timber supply for Zanzibar hotels resorts and lodges. Serving Nungwi, Kendwa, Paje, Stone Town & Kiwengwa. Custom cutting, pressure-treated, island-wide delivery with flexible payment options.',
   'en',
   '/hotel-supply'
 )
@@ -24,7 +24,7 @@ const faq = [
   },
   {
     question: 'Can you deliver timber to my hotel project site?',
-    answer: 'Absolutely. We deliver timber directly to hotel construction sites across Zanzibar with our own fleet. Cash on delivery is available. Typical delivery is within 24-48 hours for stock items.',
+    answer: 'Absolutely. We deliver timber directly to hotel construction sites across Zanzibar with our own fleet. Cash on delivery, mobile money, or bank transfer available. Typical delivery is within 24-48 hours for stock items.',
   },
   {
     question: 'Do you offer payment terms for hospitality businesses?',
@@ -98,7 +98,7 @@ export default function HotelSupply() {
                     { title: 'Bulk Timber Supply', desc: 'Large volume orders for major hotel projects. We maintain high stock levels to meet your schedule.' },
                     { title: 'Custom Cutting', desc: 'Pre-cut timber to your specifications. Save time and reduce waste on your construction site.' },
                     { title: 'Pressure-Treated Options', desc: 'All timber is professionally treated for termite and weather resistance. Ideal for coastal environments.' },
-                    { title: 'Island-Wide Delivery', desc: 'Our fleet delivers directly to your hotel site across Zanzibar. Cash on delivery available.' },
+                    { title: 'Island-Wide Delivery', desc: 'Our fleet delivers directly to your hotel site across Zanzibar. Cash on delivery, mobile money, or bank transfer.' },
                     { title: 'Flexible Payment Terms', desc: 'We work with hospitality businesses to arrange payment schedules that suit your project cash flow.' },
                     { title: 'Dedicated Account Management', desc: 'A single point of contact for all your hotel supply needs, ensuring consistency and reliability.' },
                   ].map((service) => (

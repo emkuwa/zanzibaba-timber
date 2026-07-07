@@ -21,7 +21,7 @@ export function generateMetadata({ params }: { params: { size: string } }) {
 
   return generateSEOMetadata(
     `${timber.name} (${timber.dimensions}) Pine Timber Zanzibar - Treated Pine Timber Supplier`,
-    `Premium ${timber.name} (${timber.dimensions}) treated pine timber in Zanzibar. ${timber.description}. Quality kiln-dried timber for construction, delivery across Zanzibar. Cash on delivery.`,
+    `Premium ${timber.name} (${timber.dimensions}) treated pine timber in Zanzibar. ${timber.description}. Quality kiln-dried timber for construction, delivery across Zanzibar. Cash on delivery, mobile money & bank transfer.`,
     'en',
     `/timber-sizes/${timber.id}`
   )

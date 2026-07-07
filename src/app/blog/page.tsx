@@ -84,7 +84,7 @@ export default function Blog() {
             <div className="mt-12 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center">
               <h2 className="text-2xl font-bold mb-4">Need Timber for Your Project?</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                Browse our full range of treated pine timber sizes or contact us for a quote with island-wide delivery and cash on delivery.
+                Browse our full range of treated pine timber sizes or contact us for a quote with island-wide delivery and flexible payment options.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link

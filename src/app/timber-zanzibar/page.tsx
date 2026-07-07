@@ -8,16 +8,16 @@ import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
   'Timber Zanzibar | Treated Pine Timber Supplier | Mbao Zanzibar',
-  'Timber Zanzibar: Zanzibaba Timber is the leading supplier of premium treated pine timber, mbao za pine, and construction timber across Zanzibar. Island-wide delivery with cash on delivery. Quality timber for contractors, hotels, villas and government projects.',
+  'Timber Zanzibar: Zanzibaba Timber is the leading supplier of premium treated pine timber, mbao za pine, and construction timber across Zanzibar. Island-wide delivery with flexible payment options. Quality timber for contractors, hotels, villas and government projects.',
   'en',
   '/timber-zanzibar'
 )
 
 const faq = [
-  { question: 'What is Timber Zanzibar?', answer: 'Timber Zanzibar refers to the supply of quality treated pine timber, mbao za pine, and construction timber available across Zanzibar island. Zanzibaba Timber is the leading Timber Zanzibar supplier, offering premium treated pine in all standard sizes with island-wide delivery and cash on delivery.' },
+  { question: 'What is Timber Zanzibar?', answer: 'Timber Zanzibar refers to the supply of quality treated pine timber, mbao za pine, and construction timber available across Zanzibar island. Zanzibaba Timber is the leading Timber Zanzibar supplier, offering premium treated pine in all standard sizes with island-wide delivery and flexible payment options.' },
   { question: 'Where can I buy Timber in Zanzibar?', answer: 'Zanzibaba Timber at Kwa Ndevu, Daraja Bovu, is the premier Timber Zanzibar supplier. We stock all standard sizes from 1x6 to 2x6 in 12ft and 18ft lengths, plus treated poles. Visit our yard or order via WhatsApp for delivery across the island.' },
   { question: 'What does Mbao Zanzibar mean?', answer: 'Mbao is the Swahili word for timber or wood. Mbao Zanzibar refers to timber and wood products available in Zanzibar. At Zanzibaba Timber, we supply high quality Mbao Zanzibar including treated pine timber, mbao za pine, and construction timber for all building projects.' },
-  { question: 'Do you deliver timber across Zanzibar?', answer: 'Yes, we deliver Timber Zanzibar to every location including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu, and Ndevu. 24-48 hour delivery with cash on delivery.' },
+  { question: 'Do you deliver timber across Zanzibar?', answer: 'Yes, we deliver Timber Zanzibar to every location including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu, and Ndevu. 24-48 hour delivery with cash on delivery, mobile money, or bank transfer.' },
   { question: 'What timber sizes are available in Zanzibar?', answer: 'We stock all standard Timber Zanzibar sizes: 1x6 (25x150mm), 1x8 (25x200mm), 1x10 (25x250mm), 2x2 (50x50mm), 2x3 (50x75mm), 2x4 (50x100mm), and 2x6 (50x150mm). Available in 12ft and 18ft lengths. Treated poles 2-6 inch diameter also in stock.' },
   { question: 'How much does Timber cost in Zanzibar?', answer: 'Timber prices in Zanzibar vary by size, length, and quantity. Contact Zanzibaba Timber for current pricing on all Timber Zanzibar products. We offer competitive rates and bulk discounts for contractors, hotels, and large projects.' },
 ]
@@ -49,7 +49,7 @@ export default function TimberZanzibarPage() {
                 Zanzibaba Timber is the leading <strong>Timber Zanzibar</strong> supplier, providing premium treated pine timber, 
                 <strong> mbao za pine</strong>, construction timber, and treated poles across the island. Whether you are a contractor 
                 building in Nungwi, a hotel developer in Paje, or a homeowner in Stone Town, we deliver quality 
-                <strong> Timber Zanzibar</strong> with cash on delivery and island-wide service.
+                <strong> Timber Zanzibar</strong> with flexible payment options and island-wide service.
               </p>
 
               <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -146,7 +146,7 @@ export default function TimberZanzibarPage() {
               <p>
                 We deliver <strong>Timber Zanzibar</strong> to every corner of the island. Our fleet covers all major 
                 locations including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, 
-                Bububu, and Ndevu. With cash on delivery available, you only pay when your timber arrives.
+                Bububu, and Ndevu. With cash on delivery, mobile money, and bank transfer available, you only pay when your timber arrives.
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 my-6 not-prose">
@@ -216,7 +216,7 @@ export default function TimberZanzibarPage() {
               <ul>
                 <li>Professional treatment and kiln drying for tropical climate durability</li>
                 <li>Quality inspection before every delivery</li>
-                <li>Cash on delivery for peace of mind</li>
+                <li>Flexible payment — cash on delivery, mobile money, or bank transfer</li>
                 <li>24-48 hour delivery for stock items</li>
                 <li>Island-wide coverage from Paje to Nungwi</li>
                 <li>Bulk capacity for large-scale projects</li>

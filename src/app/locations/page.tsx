@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
   'Timber Delivery Locations Zanzibar | Paje, Nungwi, Stone Town & All Areas',
-  'Zanzibaba Timber delivers premium treated pine timber to all Zanzibar locations: Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu and Ndevu. Cash on delivery. 24-48 hour service.',
+  'Zanzibaba Timber delivers premium treated pine timber to all Zanzibar locations: Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu and Ndevu. Cash on delivery, mobile money & bank transfer. 24-48 hour service.',
   'en',
   '/locations'
 )
@@ -20,7 +20,7 @@ const breadcrumb = getBreadcrumbSchema([
 const locationFaq = [
   { question: 'What areas of Zanzibar do you deliver timber to?', answer: 'We deliver premium treated pine timber to all 11 Zanzibar locations: Paje, Nungwi, Kendwa, Jambiani, Kiwengwa, Matemwe, Stone Town, Fumba, Bububu, Chukwani, and Ndevu. Our fleet covers the entire island with 24-48 hour delivery for stock items.' },
   { question: 'How fast is timber delivery in Zanzibar?', answer: 'Delivery is typically within 24-48 hours for stock items across all Zanzibar locations. Same-day delivery may be available for urgent orders in select areas. Contact us via WhatsApp to check availability for your location.' },
-  { question: 'Do you offer cash on delivery across Zanzibar?', answer: 'Yes, cash on delivery is available for all locations across Zanzibar. You only pay when your timber arrives at your site. This applies to all areas including Paje, Nungwi, Kendwa, Stone Town, and all other locations we serve.' },
+  { question: 'What payment options are available across Zanzibar?', answer: 'We offer cash on delivery, mobile money, and bank transfer payments for all locations across Zanzibar. You only pay when your timber arrives at your site. Choose the method that works best for you.' },
   { question: 'Can I visit your timber yard?', answer: 'Yes, our main timber yard is located at Kwa Ndevu, Daraja Bovu, Zanzibar. You are welcome to visit, inspect our timber quality, and discuss your requirements with our team. We serve customers from all across Zanzibar.' },
 ]
 
@@ -46,7 +46,7 @@ export default function LocationsPage() {
             <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-lg">
               Zanzibaba Timber delivers premium treated pine timber and construction materials to every corner of Zanzibar. 
               From beachfront resorts in Nungwi to heritage projects in Stone Town, our fleet covers all 11 major locations 
-              with cash on delivery and 24-48 hour service.
+              with flexible payment options and 24-48 hour service.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">

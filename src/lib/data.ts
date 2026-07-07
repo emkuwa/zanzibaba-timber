@@ -107,12 +107,12 @@ export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }
   '1x10': [
     { question: 'What is 1x10 pine timber used for?', answer: '1x10 (25x250mm) treated pine timber is used for wide decking, heavy shelving, cladding, counter tops, and wardrobe construction in Zanzibar.' },
     { question: 'Is 1x10 timber available in 12ft and 18ft?', answer: 'Yes, 1x10 pine timber is available in both 12ft and 18ft lengths from Zanzibaba Timber. Contact us for custom orders.' },
-    { question: 'Do you deliver 1x10 timber to Stone Town?', answer: 'Yes, we deliver 1x10 treated pine timber to Stone Town, historical restoration projects, and all areas of Zanzibar with cash on delivery.' },
+    { question: 'Do you deliver 1x10 timber to Stone Town?', answer: 'Yes, we deliver 1x10 treated pine timber to Stone Town, historical restoration projects, and all areas of Zanzibar with cash on delivery, mobile money, or bank transfer.' },
   ],
   '2x2': [
     { question: 'What is 2x2 pine timber used for?', answer: '2x2 (50x50mm) treated pine timber is used for wall framing, furniture frames, garden structures, pergolas, fencing posts and general supports.' },
     { question: 'Is 2x2 available in both 12ft and 18ft?', answer: 'Yes, 2x2 pine timber is available in both 12ft and 18ft lengths from Zanzibaba Timber, giving you flexibility for your project.' },
-    { question: 'Can I get 2x2 timber for my residential project?', answer: 'Yes, we supply 2x2 treated pine timber for residential construction across all Zanzibar locations. Cash on delivery available.' },
+    { question: 'Can I get 2x2 timber for my residential project?', answer: 'Yes, we supply 2x2 treated pine timber for residential construction across all Zanzibar locations. Cash on delivery, mobile money, or bank transfer available.' },
   ],
   '2x3': [
     { question: 'What is 2x3 pine timber used for?', answer: '2x3 (50x75mm) treated pine timber is used for load-bearing wall framing, roof trusses, floor joists, structural bracing, and heavy shelving.' },
@@ -137,7 +137,7 @@ export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }
   '1x4': [
     { question: 'What is 1x4 pine timber used for?', answer: '1x4 (25x100mm) treated pine timber is used for roofing battens, furring strips, light framing, paneling, and crating applications in Zanzibar construction.' },
     { question: 'Is 1x4 available in 18ft?', answer: 'Yes, 1x4 pine timber is available in 18ft length from Zanzibaba Timber.' },
-    { question: 'Can I get 1x4 timber delivered to my site?', answer: 'Yes, we deliver 1x4 treated pine timber across all Zanzibar locations with cash on delivery.' },
+    { question: 'Can I get 1x4 timber delivered to my site?', answer: 'Yes, we deliver 1x4 treated pine timber across all Zanzibar locations with cash on delivery, mobile money, or bank transfer.' },
   ],
 }
 
@@ -412,7 +412,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'Can I get Marine Board delivered to my construction site in Zanzibar?',
-        answer: 'Yes, Zanzibaba Timber delivers Marine Board 18mm across all Zanzibar locations including Stone Town, Paje, Nungwi, Kendwa, Jambiani, Matemwe, Kiwengwa, Fumba, Chwaka, Kizimkazi, and Makunduchi. We offer cash on delivery and 24-48 hour service for stock items.',
+        answer: 'Yes, Zanzibaba Timber delivers Marine Board 18mm across all Zanzibar locations including Stone Town, Paje, Nungwi, Kendwa, Jambiani, Matemwe, Kiwengwa, Fumba, Chwaka, Kizimkazi, and Makunduchi. We offer cash on delivery, mobile money, or bank transfer and 24-48 hour service for stock items.',
       },
     ],
     seoTitle: 'Marine Board 18mm Zanzibar | Waterproof Marine Plywood | TZS 52,000/Sheet',
@@ -621,7 +621,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 15mm plywood cost in Zanzibar?',
-        answer: '15mm plywood is available at Zanzibaba Timber for TZS 46,000 per sheet. This price includes transport. We deliver across all Zanzibar locations with cash on delivery available.',
+        answer: '15mm plywood is available at Zanzibaba Timber for TZS 46,000 per sheet. This price includes transport. We deliver across all Zanzibar locations with cash on delivery, mobile money, or bank transfer.',
       },
       {
         question: 'Is 15mm plywood strong enough for flooring?',

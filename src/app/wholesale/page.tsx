@@ -24,7 +24,7 @@ const faq = [
   },
   {
     question: 'Do you offer scheduled delivery for wholesale buyers?',
-    answer: 'Yes, wholesale buyers receive priority scheduled delivery. We work with your project timeline to ensure timber arrives when you need it. Cash on delivery is available for all wholesale orders.',
+    answer: 'Yes, wholesale buyers receive priority scheduled delivery. We work with your project timeline to ensure timber arrives when you need it. Cash on delivery, mobile money, or bank transfer available for all wholesale orders.',
   },
   {
     question: 'What is the minimum order for wholesale pricing?',

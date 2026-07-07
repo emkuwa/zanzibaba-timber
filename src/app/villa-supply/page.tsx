@@ -20,7 +20,7 @@ const faq = [
   },
   {
     question: 'Do you deliver timber to villa construction sites?',
-    answer: 'Yes, we deliver directly to villa construction sites across Zanzibar including Paje, Nungwi, Kendwa, Matemwe, and Jambiani. Cash on delivery is available. Typical delivery is within 24-48 hours for stock items.',
+    answer: 'Yes, we deliver directly to villa construction sites across Zanzibar including Paje, Nungwi, Kendwa, Matemwe, and Jambiani. Cash on delivery, mobile money, or bank transfer available. Typical delivery is within 24-48 hours for stock items.',
   },
   {
     question: 'Can you supply timber for traditional Swahili-style villas?',
