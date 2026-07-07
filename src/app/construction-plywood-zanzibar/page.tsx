@@ -123,46 +123,24 @@ export default function ConstructionPlywoodZanzibarPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-gray-200 dark:border-gray-700">
-                      <td className="py-3 px-4 font-semibold">3mm</td>
-                      <td className="py-3 px-4 text-sm">Ceiling lining, decorative, packaging</td>
-                      <td className="py-3 px-4 text-sm">Light duty</td>
-                      <td className="py-3 px-4 text-right font-bold text-primary-600">{formatTZS(18000)}</td>
-                    </tr>
-                    <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-                      <td className="py-3 px-4 font-semibold">6mm</td>
-                      <td className="py-3 px-4 text-sm">Wall cladding, partitions, backing</td>
-                      <td className="py-3 px-4 text-sm">Light-medium duty</td>
-                      <td className="py-3 px-4 text-right font-bold text-primary-600">{formatTZS(28000)}</td>
-                    </tr>
-                    <tr className="border-b border-gray-200 dark:border-gray-700">
-                      <td className="py-3 px-4 font-semibold">9mm</td>
-                      <td className="py-3 px-4 text-sm">Partitions, wall sheathing, roofing</td>
-                      <td className="py-3 px-4 text-sm">Medium duty</td>
-                      <td className="py-3 px-4 text-right font-bold text-primary-600">{formatTZS(40000)}</td>
-                    </tr>
-                    <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-                      <td className="py-3 px-4 font-semibold">12mm</td>
-                      <td className="py-3 px-4 text-sm">Flooring substrate, structural sheathing</td>
-                      <td className="py-3 px-4 text-sm">Medium-heavy duty</td>
-                      <td className="py-3 px-4 text-right font-bold text-primary-600">{formatTZS(43000)}</td>
-                    </tr>
-                    <tr className="border-b border-gray-200 dark:border-gray-700">
-                      <td className="py-3 px-4 font-semibold">15mm</td>
-                      <td className="py-3 px-4 text-sm">Heavy flooring, structural, commercial</td>
-                      <td className="py-3 px-4 text-sm">Heavy duty</td>
-                      <td className="py-3 px-4 text-right font-bold text-primary-600">{formatTZS(46000)}</td>
-                    </tr>
-                    <tr className="bg-gray-50 dark:bg-gray-800/50">
-                      <td className="py-3 px-4 font-semibold">18mm</td>
-                      <td className="py-3 px-4 text-sm">Formwork, heavy structural, commercial</td>
-                      <td className="py-3 px-4 text-sm">Maximum</td>
-                      <td className="py-3 px-4 text-right font-bold text-primary-600">{formatTZS(50000)}</td>
-                    </tr>
+                    {plywoodProducts.map((product, i) => {
+                      const loadMap: Record<string, string> = {
+                        '3mm': 'Light duty', '6mm': 'Light-medium duty', '9mm': 'Medium duty',
+                        '12mm': 'Medium-heavy duty', '15mm': 'Heavy duty', '18mm': 'Maximum',
+                      }
+                      return (
+                        <tr key={product.id} className={`border-b border-gray-200 dark:border-gray-700 ${i % 2 === 1 ? 'bg-gray-50 dark:bg-gray-800/50' : ''}`}>
+                          <td className="py-3 px-4 font-semibold">{product.thickness}</td>
+                          <td className="py-3 px-4 text-sm">{product.description}</td>
+                          <td className="py-3 px-4 text-sm">{loadMap[product.thickness] || 'Medium duty'}</td>
+                          <td className="py-3 px-4 text-right font-bold text-primary-600">{formatTZS(product.finalPrice)}</td>
+                        </tr>
+                      )
+                    })}
                   </tbody>
                 </table>
               </div>
-              <p className="text-sm text-gray-500 p-4">All prices exclude VAT. FREE Delivery Across Zanzibar.</p>
+              <p className="text-sm text-gray-500 p-4">Prices Excluding VAT. Free Delivery Across Zanzibar.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -227,17 +205,17 @@ export default function ConstructionPlywoodZanzibarPage() {
                 <Link href="/marine-board" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Marine Board</p>
-                  <p className="text-xs text-gray-500">From TZS 46,000</p>
+                  <p className="text-xs text-gray-500">From {formatTZS(46000)}</p>
                 </Link>
                 <Link href="/treated-timber" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Treated Timber</p>
-                  <p className="text-xs text-gray-500">From TZS 18,000</p>
+                  <p className="text-xs text-gray-500">From {formatTZS(8000)}</p>
                 </Link>
                 <Link href="/ceiling-board" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Ceiling Board</p>
-                  <p className="text-xs text-gray-500">From TZS 10,000</p>
+                  <p className="text-xs text-gray-500">All sizes</p>
                 </Link>
                 <Link href="/prices" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />

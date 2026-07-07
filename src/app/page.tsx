@@ -14,7 +14,7 @@ import { useBilingual } from '@/lib/bilingual'
 
 const POPULAR_SIZES = new Set(TIMBER_SIZES.filter(s => s.popular).map(s => s.name))
 
-const TIMBER_PRICE_NOTES = 'Prices exclude VAT and transport. We deliver across Zanzibar. Free delivery for large quantity orders.'
+const TIMBER_PRICE_NOTES = 'Prices Excluding VAT. Free Delivery Across Zanzibar. Cash on Delivery Available. Prices may change without prior notice depending on stock availability.'
 
 function WhatsAppButton({ message, label, fullWidth }: { message?: string; label?: string; fullWidth?: boolean }) {
   const msg = message || 'Hello Zanzibaba Timber, I need a quote'

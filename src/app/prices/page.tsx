@@ -10,7 +10,7 @@ import { MessageCircle } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
   'Pine Timber Prices in Zanzibar - Updated 2026',
-  'Current pine timber prices in Zanzibar. 2x2, 2x4, 1x6, 1x8, 1x10 in 12ft. 2x2, 2x3, 2x4, 2x6, 2x8, 1x4, 1x6, 1x8, 1x10 in 18ft. Cash on Delivery.',
+  'Current pine timber prices in Zanzibar. 2x2, 2x4, 1x6, 1x8, 1x10 in 12ft. 2x2, 2x3, 2x4, 2x6, 2x8, 1x4, 1x6, 1x8, 1x10 in 18ft. Free Delivery Across Zanzibar.',
   'en',
   '/prices'
 )
@@ -61,7 +61,7 @@ function PriceTable({ length, title }: { length: string; title: string }) {
                 <td className="py-3 px-3 font-semibold text-sm">Treated Wood Poles</td>
                 <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">2-6" diameter</td>
                 <td className="py-3 px-3 text-center text-sm">{length}</td>
-                <td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(10500)}</td>
+                <td className="py-3 px-3 text-right font-bold text-sm">{poles[0]?.price ? formatTZS(poles[0].price) : '-'}</td>
                 <td className="py-3 px-3 text-center">
                   <a
                     href="https://wa.me/255716002790?text=Hello%20Zanzibaba%20Timber,%20I%20need%20Treated%20Wood%20Poles"

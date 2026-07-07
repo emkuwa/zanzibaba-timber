@@ -15,6 +15,7 @@ export const metadata = generateSEOMetadata(
 )
 
 const plywoodProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood')
+const cheapestMarineBoard = SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board').sort((a, b) => a.finalPrice - b.finalPrice)[0]
 const breadcrumb = getBreadcrumbSchema([
   { name: 'Home', url: '/' },
   { name: 'Plywood Zanzibar', url: '/plywood-zanzibar' },
@@ -201,7 +202,7 @@ export default function PlywoodZanzibarPage() {
                 <Link href="/marine-board" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
                   <h3 className="font-bold text-primary-600 mb-1">Marine Board</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Waterproof sheets for formwork and marine use.</p>
-                  <p className="text-xs text-gray-400 mt-1">From TZS 46,000 — Prices exclude VAT.</p>
+                  <p className="text-xs text-gray-400 mt-1">From {cheapestMarineBoard ? formatTZS(cheapestMarineBoard.finalPrice) : 'TZS 46,000'} — Prices exclude VAT.</p>
                 </Link>
                 <Link href="/construction-plywood-zanzibar" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
                   <h3 className="font-bold text-primary-600 mb-1">Construction Plywood</h3>

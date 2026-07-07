@@ -3,11 +3,13 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
-import { SHEET_PRODUCTS, generateWhatsAppLink, formatTZS } from '@/lib/data'
+import { SHEET_PRODUCTS, PRODUCT_PRICES, generateWhatsAppLink, formatTZS } from '@/lib/data'
 import { Truck, Phone, MessageCircle, CheckCircle, Shield, Droplets, Package } from 'lucide-react'
 import Link from 'next/link'
 
 const marineBoard = SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board')
+const cheapestPlywood = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood').sort((a, b) => a.finalPrice - b.finalPrice)[0]
+const cheapestTimber = PRODUCT_PRICES.filter(p => p.size !== 'Treated Wood Poles').sort((a, b) => a.price - b.price)[0]
 
 export const metadata: Metadata = generateSEOMetadata(
   'Concrete Formwork Marine Board Zanzibar | Reusable Shuttering',
@@ -121,8 +123,8 @@ export default function ConcreteFormworkMarineBoardPage() {
                         </tr>
                         <tr>
                           <td className="py-2 px-3 font-medium">Price (TZS)</td>
-                          <td className="py-2 px-3 font-bold text-primary-600">{formatTZS(52000)}</td>
-                          <td className="py-2 px-3 font-bold text-primary-600">{formatTZS(46000)}</td>
+                          <td className="py-2 px-3 font-bold text-primary-600">{marineBoard[0] ? formatTZS(marineBoard[0].finalPrice) : '-'}</td>
+                          <td className="py-2 px-3 font-bold text-primary-600">{marineBoard[1] ? formatTZS(marineBoard[1].finalPrice) : '-'}</td>
                         </tr>
                       </tbody>
                     </table>
@@ -266,12 +268,12 @@ export default function ConcreteFormworkMarineBoardPage() {
                 <Link href="/plywood" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Plywood</p>
-                  <p className="text-xs text-gray-500">From TZS 18,000</p>
+                  <p className="text-xs text-gray-500">From {cheapestPlywood ? formatTZS(cheapestPlywood.finalPrice) : 'TZS 18,000'}</p>
                 </Link>
                 <Link href="/treated-timber" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Treated Timber</p>
-                  <p className="text-xs text-gray-500">From TZS 18,000</p>
+                  <p className="text-xs text-gray-500">From {cheapestTimber ? formatTZS(cheapestTimber.price) : 'TZS 8,000'}</p>
                 </Link>
                 <Link href="/marine-board" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />

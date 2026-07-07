@@ -8,6 +8,7 @@ import { Truck, Phone, MessageCircle, CheckCircle, Shield, Info, Package } from 
 import Link from 'next/link'
 
 const plywoodProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood')
+const cheapestMarineBoard = SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board').sort((a, b) => a.finalPrice - b.finalPrice)[0]
 
 export const metadata: Metadata = generateSEOMetadata(
   'Plywood Price Zanzibar 2026 | All Thicknesses',
@@ -198,17 +199,17 @@ export default function PlywoodPriceZanzibarPage() {
                 <Link href="/marine-board" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Marine Board</p>
-                  <p className="text-xs text-gray-500">From TZS 46,000</p>
+                  <p className="text-xs text-gray-500">From {cheapestMarineBoard ? formatTZS(cheapestMarineBoard.finalPrice) : 'TZS 46,000'}</p>
                 </Link>
                 <Link href="/treated-timber" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Treated Timber</p>
-                  <p className="text-xs text-gray-500">From TZS 18,000</p>
+                  <p className="text-xs text-gray-500">From {formatTZS(8000)}</p>
                 </Link>
                 <Link href="/ceiling-board" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Ceiling Board</p>
-                  <p className="text-xs text-gray-500">From TZS 10,000</p>
+                  <p className="text-xs text-gray-500">All sizes</p>
                 </Link>
                 <Link href="/prices" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />

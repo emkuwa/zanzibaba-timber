@@ -14,6 +14,7 @@ export const metadata = generateSEOMetadata(
 )
 
 const marineProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board')
+const cheapestPlywood = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood').sort((a, b) => a.finalPrice - b.finalPrice)[0]
 const breadcrumb = getBreadcrumbSchema([
   { name: 'Home', url: '/' },
   { name: 'Marine Board Zanzibar', url: '/marine-board-zanzibar' },
@@ -212,7 +213,7 @@ export default function MarineBoardZanzibarPage() {
                 <Link href="/plywood" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
                   <h3 className="font-bold text-primary-600 mb-1">Plywood</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">All thicknesses from 3mm to 18mm.</p>
-                  <p className="text-xs text-gray-400 mt-1">From TZS 18,000 — Prices exclude VAT.</p>
+                  <p className="text-xs text-gray-400 mt-1">From {cheapestPlywood ? formatTZS(cheapestPlywood.finalPrice) : 'TZS 18,000'} — Prices exclude VAT.</p>
                 </Link>
                 <Link href="/construction-plywood-zanzibar" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
                   <h3 className="font-bold text-primary-600 mb-1">Construction Plywood</h3>

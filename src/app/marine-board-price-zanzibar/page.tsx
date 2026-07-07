@@ -3,11 +3,12 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema, getItemListSchema } from '@/lib/seo'
-import { SHEET_PRODUCTS, SHEET_PRODUCT_FAQ, generateWhatsAppLink, formatTZS } from '@/lib/data'
+import { SHEET_PRODUCTS, SHEET_PRODUCT_FAQ, PRODUCT_PRICES, generateWhatsAppLink, formatTZS } from '@/lib/data'
 import { Truck, Phone, MessageCircle, CheckCircle, Shield, Info, Package } from 'lucide-react'
 import Link from 'next/link'
 
 const marineProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board')
+const cheapestPlywood = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood').sort((a, b) => a.finalPrice - b.finalPrice)[0]
 
 export const metadata: Metadata = generateSEOMetadata(
   'Marine Board Price Zanzibar 2026 | Updated Pricing',
@@ -202,17 +203,17 @@ export default function MarineBoardPriceZanzibarPage() {
                 <Link href="/plywood" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Plywood</p>
-                  <p className="text-xs text-gray-500">From TZS 18,000</p>
+                  <p className="text-xs text-gray-500">From {cheapestPlywood ? formatTZS(cheapestPlywood.finalPrice) : 'TZS 18,000'}</p>
                 </Link>
                 <Link href="/treated-timber" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Treated Timber</p>
-                  <p className="text-xs text-gray-500">From TZS 18,000</p>
+                  <p className="text-xs text-gray-500">From {formatTZS(8000)}</p>
                 </Link>
                 <Link href="/ceiling-board" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Ceiling Board</p>
-                  <p className="text-xs text-gray-500">From TZS 10,000</p>
+                  <p className="text-xs text-gray-500">All sizes</p>
                 </Link>
                 <Link href="/prices" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
