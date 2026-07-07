@@ -10,8 +10,8 @@ import Link from 'next/link'
 const plywoodProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood')
 
 export const metadata: Metadata = generateSEOMetadata(
-  'Construction Plywood Zanzibar | Structural Grade Sheets',
-  'Construction-grade plywood in Zanzibar. All thicknesses from 3mm to 18mm. 4ft x 8ft sheets for structural and commercial projects. TZS 18,000 to TZS 50,000. FREE Delivery.',
+  'Construction Plywood Zanzibar — Structural Grade Plywood Sheets',
+  'Construction-grade plywood and marine board in Zanzibar. All thicknesses from 3mm to 18mm. 4ft x 8ft sheets for structural and commercial projects. TZS 18,000 to TZS 50,000. FREE Delivery.',
   'en',
   '/construction-plywood-zanzibar'
 )
@@ -55,7 +55,7 @@ export default function ConstructionPlywoodZanzibarPage() {
             </nav>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Construction Plywood — Zanzibar</h1>
             <p className="text-lg md:text-xl text-primary-100 max-w-3xl">
-              Structural-grade plywood for construction projects in Zanzibar. All thicknesses from 3mm to 18mm. 
+              Construction-grade plywood for projects in Zanzibar. Marine board and plywood in all thicknesses from 3mm to 18mm.
               Standard 4ft x 8ft sheets for residential and commercial building. FREE Delivery Across Zanzibar.
             </p>
           </div>

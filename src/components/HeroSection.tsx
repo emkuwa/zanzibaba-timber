@@ -61,11 +61,11 @@ function CallButton() {
 }
 
 const BENEFITS = [
-  'Premium Treated Pine — Kiln-dried & professionally treated',
+  'Premium Treated Pine, Marine Board & Plywood — Kiln-dried & professionally treated',
   'Delivery Across All Zanzibar — From Paje to Nungwi',
   'Bulk Order Discounts — Save on large quantities',
   'Fast WhatsApp Quotes — Response in under 30 minutes',
-  'Cash on Delivery — Pay when timber arrives',
+  'Cash on Delivery — Pay when your order arrives',
 ]
 
 export default function HeroSection() {
@@ -99,7 +99,7 @@ export default function HeroSection() {
             variants={itemVariants}
           >
             <ShieldCheck className="w-3.5 h-3.5" />
-            Zanzibar&apos;s Trusted Timber Supply Network
+            Zanzibar&apos;s Trusted Timber, Marine Board & Plywood Supplier
           </motion.div>
 
           <motion.h1

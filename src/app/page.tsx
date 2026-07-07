@@ -147,7 +147,7 @@ export default function Home() {
         <section className="bg-primary-800 py-2.5">
           <div className="container-custom">
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs md:text-sm text-primary-100">
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Premium Treated Pine</span>
+                <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Premium Timber, Marine Board & Plywood</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> FREE Delivery Across Zanzibar</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Bulk Order Discounts</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Fast WhatsApp Quotes</span>
@@ -163,7 +163,7 @@ export default function Home() {
                 <div className="flex items-center gap-3 shrink-0">
                   <TrendingUp className="w-8 h-8 text-green-400" />
                   <div>
-                    <h2 className="text-base md:text-lg font-bold">Trusted by Builders Across Zanzibar</h2>
+                    <h2 className="text-base md:text-lg font-bold">Trusted Marine Board, Plywood & Timber Supplier in Zanzibar</h2>
                     <p className="text-primary-200 text-xs">Reliable supply for contractors, hotels & government projects</p>
                   </div>
                 </div>
@@ -230,7 +230,7 @@ export default function Home() {
         {/* 5b. Marine Board & Plywood Products */}
         <section className="py-6 bg-white dark:bg-gray-900">
           <div className="container-custom">
-            <h2 className="text-xl md:text-3xl font-bold text-center mb-2">Marine Board & Plywood</h2>
+            <h2 className="text-xl md:text-3xl font-bold text-center mb-2">Marine Board, Plywood & Timber Prices</h2>
             <p className="text-center text-sm text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
               Waterproof marine boards and construction plywood in all thicknesses — 4ft x 8ft sheets delivered across Zanzibar.
             </p>
@@ -277,7 +277,7 @@ export default function Home() {
         {/* 7. Testimonials — moved above quote */}
         <section id="testimonials" className="py-6 bg-white dark:bg-gray-900 scroll-mt-20">
           <div className="container-custom">
-            <h2 className="text-lg md:text-2xl font-bold text-center mb-3">What Our Customers Say</h2>
+              <h2 className="text-lg md:text-2xl font-bold text-center mb-3">What Our Customers Say About Our Timber, Marine Board & Plywood</h2>
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3">
               {TESTIMONIALS.slice(0, 3).map((t, i) => (
                 <div key={i} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-3 border border-gray-200 dark:border-gray-700">
@@ -309,7 +309,7 @@ export default function Home() {
               <div className="inline-flex items-center gap-1.5 bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded-full text-xs font-semibold mb-3">
                 <Percent className="w-3 h-3" /> Get Your Free Quote
               </div>
-              <h2 className="text-xl md:text-3xl font-bold mb-2">Get Your Quote in 30 Minutes</h2>
+              <h2 className="text-xl md:text-3xl font-bold mb-2">Get Your Marine Board, Plywood & Timber Quote</h2>
               <p className="text-primary-100 mb-4 text-sm">Send your timber requirements. Competitive pricing and fast response guaranteed.</p>
               <div className="flex flex-col sm:flex-row gap-2 justify-center mb-4">
                 <WhatsAppButton message="Hello Zanzibaba Timber, I need timber prices for my project" label="Get Quote via WhatsApp" />
@@ -323,7 +323,7 @@ export default function Home() {
         {/* 9. Industries We Serve */}
         <section id="industries" className="py-6 bg-white dark:bg-gray-900 scroll-mt-20">
           <div className="container-custom">
-            <h2 className="text-lg md:text-2xl font-bold text-center mb-3">Industries We Serve</h2>
+            <h2 className="text-lg md:text-2xl font-bold text-center mb-3">Industries We Supply — Timber, Marine Board & Plywood</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-3">
               {INDUSTRIES.map((industry) => (
                 <Link
@@ -352,7 +352,7 @@ export default function Home() {
         <section className="py-6 md:py-8 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
           <div className="container-custom">
             <div className="text-center mb-5">
-              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">Why Zanzibaba Timber</h2>
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">Why Choose Zanzibaba Timber, Marine Board & Plywood</h2>
               <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 max-w-2xl mx-auto">Reliable supply, consistent quality, and on-time delivery for construction projects across Zanzibar.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-6xl mx-auto">
@@ -382,7 +382,7 @@ export default function Home() {
         <section className="py-6 md:py-8 bg-gray-50 dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700">
           <div className="container-custom">
             <div className="text-center mb-5">
-              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">How It Works</h2>
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">How It Works — Timber, Marine Board & Plywood</h2>
               <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 max-w-2xl mx-auto">From enquiry to delivery in three simple steps.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-5xl mx-auto">
@@ -413,7 +413,7 @@ export default function Home() {
         {/* 12. FAQ */}
         <section id="faq" className="py-6 bg-white dark:bg-gray-900 scroll-mt-20">
           <div className="container-custom">
-            <h2 className="text-lg md:text-2xl font-bold text-center mb-4">FAQs</h2>
+            <h2 className="text-lg md:text-2xl font-bold text-center mb-4">FAQs — Timber, Marine Board & Plywood</h2>
             <div className="max-w-4xl mx-auto space-y-2">
               {HOMEPAGE_FAQ.slice(0, 3).map((faq, i) => (
                 <details key={i} className="group bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">

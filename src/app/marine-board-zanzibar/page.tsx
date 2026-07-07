@@ -7,7 +7,7 @@ import { SHEET_PRODUCTS, LOCATIONS, generateWhatsAppLink, formatTZS } from '@/li
 import { MessageCircle, Phone, CheckCircle, Droplets, Truck, Shield, ArrowRight } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Marine Board Zanzibar | Waterproof Marine Plywood Supplier | Zanzibaba Timber',
+  'Marine Board Zanzibar — Waterproof Plywood Supplier | Zanzibaba Timber',
   'Zanzibaba Timber — Zanzibar\'s trusted marine board supplier. Waterproof marine-grade plywood in 18mm and 12mm. 4ft x 8ft sheets. Concrete formwork, boat building, construction. Island-wide delivery.',
   'en',
   '/marine-board-zanzibar'
@@ -49,7 +49,7 @@ export default function MarineBoardZanzibarPage() {
             </nav>
 
             <h1 className="text-3xl md:text-5xl font-bold text-center mb-4">
-              Marine Board <span className="text-primary-600">Zanzibar</span>
+              Marine Board <span className="text-primary-600">Zanzibar</span> — Waterproof Plywood Supplier
             </h1>
             <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-sm md:text-base">
               Marine board is a waterproof plywood engineered with phenolic resin for maximum moisture resistance. The go-to material for concrete formwork, boat building, and construction projects exposed to water or humidity in Zanzibar. Available in 18mm and 12mm thicknesses — 4ft x 8ft sheets.

@@ -9,8 +9,8 @@ import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Pine Timber Prices in Zanzibar - Updated 2026',
-  'Current pine timber prices in Zanzibar. 2x2, 2x4, 1x6, 1x8, 1x10 in 12ft. 2x2, 2x3, 2x4, 2x6, 2x8, 1x4, 1x6, 1x8, 1x10 in 18ft. Free Delivery Across Zanzibar.',
+  'Marine Board, Plywood & Timber Prices in Zanzibar - Updated 2026',
+  'Current marine board, plywood and timber prices in Zanzibar. Marine board 18mm and 12mm. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. Timber 2x2, 2x4, 1x6, 1x8, 1x10. Free Delivery Across Zanzibar.',
   'en',
   '/prices'
 )
@@ -88,9 +88,9 @@ export default function Prices() {
       <main>
         <section className="py-10 md:py-16 bg-white dark:bg-gray-900">
           <div className="container-custom">
-            <h1 className="text-3xl md:text-5xl font-bold text-center mb-3">Timber Prices</h1>
+            <h1 className="text-3xl md:text-5xl font-bold text-center mb-3">Marine Board, Plywood & Timber Prices in Zanzibar</h1>
             <p className="text-center text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto text-sm md:text-base">
-              Competitive pricing for all project sizes. Bulk discounts available.
+              Current marine board, plywood and timber prices in Zanzibar. Competitive pricing for all project sizes. Bulk discounts available.
             </p>
 
             <div className="max-w-5xl mx-auto mb-8">
@@ -98,12 +98,12 @@ export default function Prices() {
             </div>
 
             <div className="max-w-5xl mx-auto">
-              <PriceTable length="18ft" title="18ft Timber Prices" />
-              <PriceTable length="12ft" title="12ft Timber Prices" />
+              <PriceTable length="18ft" title="18ft Timber Prices in Zanzibar" />
+              <PriceTable length="12ft" title="12ft Timber Prices in Zanzibar" />
             </div>
 
             <div className="max-w-5xl mx-auto mt-8">
-              <h2 className="text-xl md:text-2xl font-bold mb-4">Marine Board Prices</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Marine Board Prices in Zanzibar</h2>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
@@ -143,7 +143,7 @@ export default function Prices() {
             </div>
 
             <div className="max-w-5xl mx-auto mt-8">
-              <h2 className="text-xl md:text-2xl font-bold mb-4">Plywood Prices</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Plywood Prices in Zanzibar</h2>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>

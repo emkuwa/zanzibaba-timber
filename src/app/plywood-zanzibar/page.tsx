@@ -8,7 +8,7 @@ import PriceNotice from '@/components/PriceNotice'
 import { MessageCircle, Phone, CheckCircle, Layers, Truck, Shield } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Plywood Zanzibar | Construction Plywood Supplier | All Thicknesses | Zanzibaba Timber',
+  'Plywood Zanzibar — Construction Plywood Supplier | Zanzibaba Timber',
   'Zanzibaba Timber — Zanzibar\'s trusted plywood supplier. Construction plywood in 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. 4ft x 8ft sheets. From TZS 18,000. Island-wide delivery.',
   'en',
   '/plywood-zanzibar'
@@ -50,7 +50,7 @@ export default function PlywoodZanzibarPage() {
             </nav>
 
             <h1 className="text-3xl md:text-5xl font-bold text-center mb-4">
-              Plywood <span className="text-primary-600">Zanzibar</span>
+              Plywood <span className="text-primary-600">Zanzibar</span> — Construction Plywood Supplier
             </h1>
             <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-sm md:text-base">
               Zanzibaba Timber is Zanzibar&apos;s trusted supplier of construction plywood. We stock all standard thicknesses from 3mm to 18mm in 4ft x 8ft sheets. From structural flooring and roofing to decorative paneling and craft work — we have the right plywood for every project on the island.
