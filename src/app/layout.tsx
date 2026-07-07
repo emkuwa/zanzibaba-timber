@@ -98,14 +98,15 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "XXXXXXXXXX");
           `}
         </Script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if(location.pathname.startsWith('/sw')){document.documentElement.lang='sw'}`
+          }}
+        />
         <Script id="ga4-conversions" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-
-            if (location.pathname.startsWith('/sw')) {
-              document.documentElement.lang = 'sw';
-            }
 
             document.addEventListener('click', function(e) {
               var el = e.target.closest('a[href^="tel:"]');
