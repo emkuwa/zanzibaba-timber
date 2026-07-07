@@ -201,19 +201,29 @@ export default function Delivery() {
               {/* Sidebar */}
               <aside className="space-y-6">
                 <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl">
-                  <h3 className="font-bold text-lg mb-4">Our Timber Sizes</h3>
+                  <h3 className="font-bold text-lg mb-4">Our Products</h3>
                   <div className="space-y-3">
-                    {TIMBER_SIZES.map((size) => (
-                      <Link
-                        key={size.id}
-                        href={`/timber-sizes/${size.id}`}
-                        className="block p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition-all"
-                      >
-                        <div className="font-semibold text-primary-600">{size.name}</div>
-                        <div className="text-sm text-gray-500">{size.dimensions}</div>
-                        <div className="text-xs text-gray-400 mt-1">{size.description}</div>
-                      </Link>
-                    ))}
+                    <Link
+                      href="/timber-sizes"
+                      className="block p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition-all"
+                    >
+                      <div className="font-semibold text-primary-600">Treated Pine Timber</div>
+                      <div className="text-sm text-gray-500">1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6</div>
+                    </Link>
+                    <Link
+                      href="/marine-board"
+                      className="block p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition-all"
+                    >
+                      <div className="font-semibold text-primary-600">Marine Board</div>
+                      <div className="text-sm text-gray-500">18mm & 12mm waterproof sheets</div>
+                    </Link>
+                    <Link
+                      href="/plywood"
+                      className="block p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition-all"
+                    >
+                      <div className="font-semibold text-primary-600">Plywood</div>
+                      <div className="text-sm text-gray-500">3mm to 18mm construction sheets</div>
+                    </Link>
                   </div>
                 </div>
 

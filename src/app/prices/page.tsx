@@ -4,7 +4,7 @@ import FloatingButtons from '@/components/FloatingButtons'
 import PriceNotice from '@/components/PriceNotice'
 import TransportCalculator from '@/components/TransportCalculator'
 import { generateSEOMetadata } from '@/lib/seo'
-import { PRODUCT_PRICES, PRODUCT_VARIANTS, TIMBER_SIZES, formatTZS, sizeToSlug, formatVariantLabel } from '@/lib/data'
+import { PRODUCT_PRICES, PRODUCT_VARIANTS, TIMBER_SIZES, formatTZS, sizeToSlug, formatVariantLabel, SHEET_PRODUCTS } from '@/lib/data'
 import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 
@@ -100,6 +100,86 @@ export default function Prices() {
             <div className="max-w-5xl mx-auto">
               <PriceTable length="18ft" title="18ft Timber Prices" />
               <PriceTable length="12ft" title="12ft Timber Prices" />
+            </div>
+
+            <div className="max-w-5xl mx-auto mt-8">
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Marine Board Prices</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b-2 border-primary-600">
+                      <th className="text-left py-3 px-3 text-sm">Product</th>
+                      <th className="text-left py-3 px-3 text-sm">Thickness</th>
+                      <th className="text-left py-3 px-3 text-sm">Sheet Size</th>
+                      <th className="text-right py-3 px-3 text-sm">Price (TZS)</th>
+                      <th className="text-center py-3 px-3 text-sm">Order</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board').map((product) => (
+                      <tr key={product.id} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        <td className="py-3 px-3 font-semibold text-sm">
+                          <Link href={`/marine-board/${product.slug}`} className="text-primary-600 hover:underline">{product.name}</Link>
+                        </td>
+                        <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">{product.thickness}</td>
+                        <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">{product.sheetSize}</td>
+                        <td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(product.finalPrice)}</td>
+                        <td className="py-3 px-3 text-center">
+                          <a
+                            href={`https://wa.me/255716002790?text=Hello%20Zanzibaba%20Timber,%20I%20need%20${product.name}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-green-600 hover:text-green-700 text-xs font-semibold"
+                          >
+                            <MessageCircle className="w-3 h-3" /> WhatsApp
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-500 mt-2">Price excludes VAT.</p>
+            </div>
+
+            <div className="max-w-5xl mx-auto mt-8">
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Plywood Prices</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b-2 border-primary-600">
+                      <th className="text-left py-3 px-3 text-sm">Product</th>
+                      <th className="text-left py-3 px-3 text-sm">Thickness</th>
+                      <th className="text-left py-3 px-3 text-sm">Sheet Size</th>
+                      <th className="text-right py-3 px-3 text-sm">Price (TZS)</th>
+                      <th className="text-center py-3 px-3 text-sm">Order</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood').map((product) => (
+                      <tr key={product.id} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        <td className="py-3 px-3 font-semibold text-sm">
+                          <Link href={`/plywood/${product.slug}`} className="text-primary-600 hover:underline">{product.name}</Link>
+                        </td>
+                        <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">{product.thickness}</td>
+                        <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">{product.sheetSize}</td>
+                        <td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(product.finalPrice)}</td>
+                        <td className="py-3 px-3 text-center">
+                          <a
+                            href={`https://wa.me/255716002790?text=Hello%20Zanzibaba%20Timber,%20I%20need%20${product.name}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-green-600 hover:text-green-700 text-xs font-semibold"
+                          >
+                            <MessageCircle className="w-3 h-3" /> WhatsApp
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-500 mt-2">Price excludes VAT.</p>
             </div>
 
             <div className="max-w-5xl mx-auto mt-8">

@@ -76,3 +76,33 @@ export type DeliveryStep = {
   title: string
   description: string
 }
+
+export type SheetProductCategory = {
+  id: string
+  name: string
+  slug: string
+  description: string
+  shortDescription: string
+}
+
+export type SheetProduct = {
+  id: string
+  categoryId: string
+  name: string
+  slug: string
+  thickness: string
+  supplierPrice: number
+  finalPrice: number
+  sheetSize: string
+  description: string
+  applications: string[]
+  features: string[]
+  advantages: string[]
+  moistureResistance: string
+  suitableProjects: string[]
+  buyingGuide: string
+  faqs: Array<{ question: string; answer: string }>
+  seoTitle: string
+  seoDescription: string
+  keywords: string[]
+}

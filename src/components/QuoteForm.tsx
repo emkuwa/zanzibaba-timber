@@ -67,6 +67,14 @@ export default function QuoteForm() {
           <option value="2x3">2x3 Pine</option>
           <option value="2x4">2x4 Pine</option>
           <option value="2x6">2x6 Pine</option>
+          <option value="Marine Board 18mm">Marine Board 18mm</option>
+          <option value="Marine Board 12mm">Marine Board 12mm</option>
+          <option value="18mm Plywood">18mm Plywood</option>
+          <option value="15mm Plywood">15mm Plywood</option>
+          <option value="12mm Plywood">12mm Plywood</option>
+          <option value="9mm Plywood">9mm Plywood</option>
+          <option value="6mm Plywood">6mm Plywood</option>
+          <option value="3mm Plywood">3mm Plywood</option>
           <option value="Mirunda">Mirunda</option>
         </select>
         <select

@@ -28,6 +28,8 @@ export default function Footer() {
             <h4 className="font-semibold mb-3">{t('footer.quickLinks')}</h4>
             <ul className="space-y-1">
               <li><Link href="/timber-sizes" className="text-gray-300 hover:text-white block py-2">{t('navigation.timberSizes')}</Link></li>
+              <li><Link href="/marine-board" className="text-gray-300 hover:text-white block py-2">Marine Board</Link></li>
+              <li><Link href="/plywood" className="text-gray-300 hover:text-white block py-2">Plywood</Link></li>
               <li><Link href="/prices" className="text-gray-300 hover:text-white block py-2">{t('navigation.prices')}</Link></li>
               <li><Link href="/projects" className="text-gray-300 hover:text-white block py-2">{t('navigation.projects')}</Link></li>
               <li><Link href="/delivery" className="text-gray-300 hover:text-white block py-2">{t('navigation.delivery')}</Link></li>

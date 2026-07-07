@@ -7,7 +7,7 @@ import ImageWithFallback from '@/components/ImageWithFallback'
 import QuoteForm from '@/components/QuoteForm'
 import PriceNotice from '@/components/PriceNotice'
 import { getLocalBusinessSchema, getFAQSchema, getReviewSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, TIMBER_SIZES, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug, formatTZS, formatVariantLabel } from '@/lib/data'
+import { PRODUCT_VARIANTS, TIMBER_SIZES, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug, formatTZS, formatVariantLabel, SHEET_PRODUCTS } from '@/lib/data'
 import Link from 'next/link'
 import { MessageCircle, Phone, ArrowRight, Truck, Star, Package, Factory, Cog, Network, Warehouse, Container, ShieldCheck, Building2, MapPin, Percent, CheckCircle, Zap, TrendingUp } from 'lucide-react'
 import { useBilingual } from '@/lib/bilingual'
@@ -223,6 +223,38 @@ export default function Home() {
               <Truck className="w-4 h-4" />
               FREE DELIVERY available for qualifying bulk orders across Zanzibar
               <Link href="/delivery" className="underline text-green-200 hover:text-white">Learn more</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 5b. Marine Board & Plywood Products */}
+        <section className="py-6 bg-white dark:bg-gray-900">
+          <div className="container-custom">
+            <h2 className="text-xl md:text-3xl font-bold text-center mb-2">Marine Board & Plywood</h2>
+            <p className="text-center text-sm text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+              Waterproof marine boards and construction plywood in all thicknesses — 4ft x 8ft sheets delivered across Zanzibar.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto mb-4">
+              {SHEET_PRODUCTS.slice(0, 4).map((product) => (
+                <Link
+                  key={product.id}
+                  href={`/${product.categoryId === 'marine-board' ? 'marine-board' : 'plywood'}/${product.slug}`}
+                  className="group bg-white dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all text-center"
+                >
+                  <div className="text-[10px] text-gray-400 mb-1">{product.categoryId === 'marine-board' ? 'Marine Board' : 'Plywood'}</div>
+                  <div className="text-lg font-bold text-primary-600 mb-1">{product.thickness}</div>
+                  <div className="text-sm font-bold text-green-600 mb-1">{formatTZS(product.finalPrice)}</div>
+                  <div className="text-[10px] text-gray-400">per sheet</div>
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link href="/marine-board" className="inline-flex items-center gap-2 bg-primary-600 text-white px-5 py-2 rounded-xl font-semibold hover:bg-primary-700 transition-all shadow text-sm">
+                Marine Board <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link href="/plywood" className="inline-flex items-center gap-2 bg-accent-500 text-white px-5 py-2 rounded-xl font-semibold hover:bg-accent-600 transition-all shadow text-sm">
+                Plywood <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </section>
