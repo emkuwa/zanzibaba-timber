@@ -19,8 +19,8 @@ const faq = [
     answer: 'We offer 24-48 hour delivery for stock items across Zanzibar. Larger bulk orders may require additional processing time. Contact us to confirm availability and schedule your delivery.',
   },
   {
-    question: 'Do you offer cash on delivery for timber?',
-    answer: 'Yes, cash on delivery is available for all timber orders across Zanzibar. You only pay when your timber arrives at your site. We accept cash and mobile money payments.',
+    question: 'What payment options do you offer?',
+    answer: 'We accept cash on delivery, mobile money, and bank transfer payments. Pay via the method that suits you best — cash when your timber arrives, mobile money transfer, or direct bank deposit.',
   },
   {
     question: 'What areas of Zanzibar do you deliver to?',
@@ -104,7 +104,7 @@ export default function Delivery() {
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
                   {[
                     { title: 'Fast Delivery', desc: '24-48 hour delivery for stock items. We prioritize speed without compromising quality.' },
-                    { title: 'Cash on Delivery', desc: 'Pay when your timber arrives. No advance payment needed for standard orders.' },
+                    { title: 'Flexible Payment', desc: 'Pay via cash on delivery, mobile money, or bank transfer. Choose the option that works best for you.' },
                     { title: 'Island-Wide Coverage', desc: 'We deliver to all 11 locations across Zanzibar. From north to south, east to west.' },
                     { title: 'Bulk Loads', desc: 'Our fleet handles orders of any size. Full truckloads for major construction projects.' },
                     { title: 'Quality Inspection', desc: 'Inspect your timber before payment. We ensure every piece meets our quality standards.' },

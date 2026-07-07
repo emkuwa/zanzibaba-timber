@@ -115,8 +115,8 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                         answer: `All standard treated pine timber sizes are available for delivery to ${location.name}: 1x6 (25x150mm), 1x8 (25x200mm), 1x10 (25x250mm), 2x2 (50x50mm), 2x3 (50x75mm), 2x4 (50x100mm), and 2x6 (50x150mm) — in 12ft and 18ft lengths.`,
                       },
                       {
-                        question: `Can I pay cash on delivery in ${location.name}?`,
-                        answer: `Yes! We offer cash on delivery for all orders to ${location.name}. You only pay when your timber arrives at your site. This is our standard payment option, giving you peace of mind with every order.`,
+                        question: `What payment options are available in ${location.name}?`,
+                        answer: `We offer cash on delivery, mobile money, and bank transfer payments for all orders to ${location.name}. You only pay when your timber arrives at your site. Choose the payment method that works best for you.`,
                       },
                     ].map((faq, i) => (
                       <div key={i} className="bg-gray-50 dark:bg-gray-800 rounded-lg p-5">

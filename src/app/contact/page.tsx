@@ -107,7 +107,7 @@ export default function Contact() {
                       'Government and institutional project supply',
                       'Wholesale and bulk timber for contractors',
                       'Custom cutting and special sizing available',
-                      'Island-wide timber delivery with cash on delivery',
+                      'Island-wide timber delivery — cash on delivery, mobile money & bank transfer',
                     ].map((s, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-primary-600 mt-0.5 shrink-0" />

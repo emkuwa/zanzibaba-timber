@@ -65,7 +65,7 @@ const BENEFITS = [
   'Delivery Across All Zanzibar — From Paje to Nungwi',
   'Bulk Order Discounts — Save on large quantities',
   'Fast WhatsApp Quotes — Response in under 30 minutes',
-  'Cash on Delivery — Pay when your order arrives',
+  'Cash on Delivery, Mobile Money & Bank Transfer — Flexible payment options',
 ]
 
 export default function HeroSection() {

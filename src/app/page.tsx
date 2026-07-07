@@ -14,7 +14,7 @@ import { useBilingual } from '@/lib/bilingual'
 
 const POPULAR_SIZES = new Set(TIMBER_SIZES.filter(s => s.popular).map(s => s.name))
 
-const TIMBER_PRICE_NOTES = 'Prices Excluding VAT. Free Delivery Across Zanzibar. Cash on Delivery Available. Prices may change without prior notice depending on stock availability.'
+const TIMBER_PRICE_NOTES = 'Prices Excluding VAT. Free Delivery Across Zanzibar. Cash on Delivery, Mobile Money & Bank Transfer Accepted. Prices may change without prior notice depending on stock availability.'
 
 function WhatsAppButton({ message, label, fullWidth }: { message?: string; label?: string; fullWidth?: boolean }) {
   const msg = message || 'Hello Zanzibaba Timber, I need a quote'
@@ -391,7 +391,7 @@ export default function Home() {
               {[
                 { step: 1, icon: MessageCircle, title: 'Contact & Quote', desc: 'Reach out via WhatsApp, phone, or our quick quote form. We respond within 30 minutes with competitive pricing.' },
                 { step: 2, icon: Package, title: 'Processing & Quality Check', desc: 'Your timber is prepared, inspected for quality, and loaded at our Kwa Ndevu yard for transport.' },
-                { step: 3, icon: Truck, title: 'Delivery & Payment', desc: 'We deliver across Zanzibar with cash on delivery. You inspect and pay when your timber arrives.' },
+                { step: 3, icon: Truck, title: 'Delivery & Payment', desc: 'We deliver across Zanzibar. Pay via cash on delivery, mobile money, or bank transfer.' },
               ].map((item) => (
                 <div key={item.step} className="flex flex-col items-center text-center p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:shadow-lg transition-shadow">
                   <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mb-2">

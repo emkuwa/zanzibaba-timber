@@ -24,7 +24,7 @@ export function formatVariantLabel(v: ProductVariant): string {
 export const PRICE_NOTES = [
   'Prices Excluding VAT.',
   'Free Delivery Across Zanzibar.',
-  'Cash on Delivery Available.',
+  'Cash on Delivery, Mobile Money & Bank Transfer Accepted.',
   'Prices may change without prior notice depending on stock availability.',
 ] as const
 
@@ -205,10 +205,10 @@ export const INDUSTRIES = [
 
 export const HOMEPAGE_FAQ = [
   { question: 'What timber sizes are available in Zanzibar?', answer: 'Zanzibaba Timber stocks premium treated pine timber in sizes 1x6 (25x150mm), 1x8 (25x200mm), 1x10 (25x250mm), 2x2 (50x50mm), 2x3 (50x75mm), 2x4 (50x100mm), and 2x6 (50x150mm). Sizes 1x6, 1x8, and 1x10 are available in 12ft lengths. Sizes 2x2, 2x3, 2x4, and 2x6 are available in both 12ft and 18ft lengths. We also stock treated poles from 2 inches to 6 inches diameter in 18ft lengths.' },
-  { question: 'Do you deliver timber across Zanzibar?', answer: 'Yes, we deliver high quality treated pine timber to every corner of Zanzibar including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu, and Ndevu. We offer cash on delivery and aim for 24-48 hour delivery for stock items.' },
+  { question: 'Do you deliver timber across Zanzibar?', answer: 'Yes, we deliver high quality treated pine timber to every corner of Zanzibar including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu, and Ndevu. We offer cash on delivery and aim for 24-48 hour delivery for stock items. We also accept mobile money and bank transfer payments.' },
   { question: 'What is treated pine timber?', answer: 'Treated pine timber is pine wood that has been chemically treated to resist termites, rot, fungi, and weather damage. At Zanzibaba Timber, all our pine timber is professionally treated and kiln-dried to withstand Zanzibar\'s tropical climate, making it ideal for construction, decking, fencing, and structural applications.' },
   { question: 'How much does timber cost in Zanzibar?', answer: 'Timber prices in Zanzibar vary by size, length, and quantity. Contact Zanzibaba Timber directly for current pricing on all sizes. We offer competitive rates and bulk discounts for contractors, hotels, and large projects. Special sizes available on request.' },
-  { question: 'Do you offer cash on delivery?', answer: 'Yes, we offer cash on delivery for timber orders across all Zanzibar locations. You only pay when your timber arrives at your site, giving you complete peace of mind and convenience.' },
+  { question: 'Do you offer cash on delivery?', answer: 'Yes, cash on delivery is available for all timber orders across Zanzibar. You only pay when your timber arrives at your site. We also accept mobile money and bank transfer payments — choose the option that works best for you.' },
   { question: 'Can I order custom timber sizes?', answer: 'Yes, special sizes are available. Contact Zanzibaba Timber with your requirements and we will source or cut timber to your specifications. We accommodate custom orders for hotels, villas, and unique construction projects.' },
   { question: 'What is the delivery time for timber in Zanzibar?', answer: 'For stock items, delivery is typically within 24-48 hours across Zanzibar. Larger orders may require additional processing time. Contact us to confirm availability and schedule your delivery.' },
   { question: 'Do you supply timber for government projects?', answer: 'Yes, we are an experienced supplier for government and commercial construction projects across Zanzibar including schools, healthcare facilities, government offices, and public buildings. We handle large-scale orders with competitive pricing.' },
@@ -221,7 +221,7 @@ export const DELIVERY_PROCESS = [
   { step: 2, title: 'Get a Quote', description: 'We respond within 30 minutes with competitive pricing. Bulk discounts available for large orders.' },
   { step: 3, title: 'Order Confirmed', description: 'Confirm your order and choose your delivery date. We coordinate with your project schedule.' },
   { step: 4, title: 'Quality Check', description: 'Your timber is inspected for quality, loaded carefully, and prepared for transport from our Kwa Ndevu yard.' },
-  { step: 5, title: 'Delivery & Payment', description: 'We deliver across Zanzibar with cash on delivery. You inspect and pay when your timber arrives.' },
+  { step: 5, title: 'Delivery & Payment', description: 'We deliver across Zanzibar. Pay via cash on delivery, mobile money, or bank transfer — whichever suits you.' },
 ]
 
 export const TESTIMONIALS = [
