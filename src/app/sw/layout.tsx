@@ -3,10 +3,7 @@ import type { Metadata } from 'next'
 const baseUrl = 'https://timber.zanzibaba.com'
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Mbao, Marine Board na Plywood Mwasambazaji | Zanzibaba Zanzibar',
-    template: '%s | Mbao, Marine Board na Plywood | Zanzibaba',
-  },
+  title: 'Mbao, Marine Board na Plywood Mwasambazaji | Zanzibaba Zanzibar',
   description: 'Zanzibaba Timber — msambazaji mkuu wa mbao treated pine, marine board, plywood, mbao za ujenzi na treated poles Zanzibar. Tunahudumia Paje, Nungwi, Stone Town na Zanzibar zima kwa utoaji na malipo wakati wa kuuza.',
   robots: {
     index: true,

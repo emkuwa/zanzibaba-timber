@@ -103,6 +103,10 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
 
+            if (location.pathname.startsWith('/sw')) {
+              document.documentElement.lang = 'sw';
+            }
+
             document.addEventListener('click', function(e) {
               var el = e.target.closest('a[href^="tel:"]');
               if (el) {
