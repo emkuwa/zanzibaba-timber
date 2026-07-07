@@ -11,7 +11,8 @@ export const metadata = generateSEOMetadata(
   'Marine Board Zanzibar — Waterproof Plywood Supplier | Zanzibaba Timber',
   'Zanzibaba Timber — Zanzibar\'s trusted marine board supplier. Waterproof marine-grade plywood in 18mm and 12mm. 4ft x 8ft sheets. Concrete formwork, boat building, construction. Island-wide delivery.',
   'en',
-  '/marine-board-zanzibar'
+  '/marine-board-zanzibar',
+  '/marine-board'
 )
 
 const marineProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board')

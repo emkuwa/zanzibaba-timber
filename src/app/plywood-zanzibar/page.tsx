@@ -12,7 +12,8 @@ export const metadata = generateSEOMetadata(
   'Plywood Zanzibar — Construction Plywood Supplier | Zanzibaba Timber',
   'Zanzibaba Timber — Zanzibar\'s trusted plywood supplier. Construction plywood in 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. 4ft x 8ft sheets. From TZS 18,000. Island-wide delivery.',
   'en',
-  '/plywood-zanzibar'
+  '/plywood-zanzibar',
+  '/plywood'
 )
 
 const plywoodProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood')

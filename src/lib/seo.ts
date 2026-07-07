@@ -6,7 +6,8 @@ export const generateSEOMetadata = (
   title: string,
   description: string,
   locale: string = 'en',
-  path: string = ''
+  path: string = '',
+  canonicalPath?: string
 ): Metadata => {
   const baseUrl = 'https://timber.zanzibaba.com'
   const swPath = locale === 'sw' ? path : `/sw${path}`
@@ -15,7 +16,7 @@ export const generateSEOMetadata = (
     title,
     description,
     alternates: {
-      canonical: `${baseUrl}${path}`,
+      canonical: `${baseUrl}${canonicalPath || path}`,
       languages: {
         'en': `${baseUrl}${enPath}`,
         'sw': `${baseUrl}${swPath}`,
