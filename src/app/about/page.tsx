@@ -2,7 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import ImageWithFallback from '@/components/ImageWithFallback'
-import { generateSEOMetadata } from '@/lib/seo'
+import { generateSEOMetadata, getBreadcrumbSchema } from '@/lib/seo'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
@@ -11,6 +11,11 @@ export const metadata = generateSEOMetadata(
   'en',
   '/about'
 )
+
+const breadcrumb = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about' },
+])
 
 export default function About() {
   return (
@@ -67,6 +72,7 @@ export default function About() {
           </div>
         </section>
       </main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Footer />
       <FloatingButtons />
     </>

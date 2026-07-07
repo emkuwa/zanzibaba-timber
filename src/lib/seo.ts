@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 
+const OG_IMAGE = 'https://timber.zanzibaba.com/images/gallery/zanzibaba-timber-hero-banner.jpg'
+
 export const generateSEOMetadata = (
   title: string,
   description: string,
@@ -7,14 +9,16 @@ export const generateSEOMetadata = (
   path: string = ''
 ): Metadata => {
   const baseUrl = 'https://timber.zanzibaba.com'
+  const swPath = locale === 'sw' ? path : `/sw${path}`
+  const enPath = locale === 'sw' ? path.replace(/^\/sw/, '') || '/' : path
   return {
     title,
     description,
     alternates: {
       canonical: `${baseUrl}${path}`,
       languages: {
-        'en': `${baseUrl}${path}`,
-        'sw': `${baseUrl}/sw${path}`,
+        'en': `${baseUrl}${enPath}`,
+        'sw': `${baseUrl}${swPath}`,
       },
     },
     openGraph: {
@@ -22,6 +26,7 @@ export const generateSEOMetadata = (
       description,
       url: `${baseUrl}${path}`,
       siteName: 'Zanzibaba Timber',
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: title }],
       locale: locale === 'sw' ? 'sw_TZ' : 'en_TZ',
       type: 'website',
     },
@@ -29,6 +34,7 @@ export const generateSEOMetadata = (
       card: 'summary_large_image',
       title,
       description,
+      images: [OG_IMAGE],
     },
   }
 }
@@ -47,6 +53,8 @@ export const getLocalBusinessSchema = () => ({
     '@type': 'PostalAddress',
     streetAddress: 'Kwa Ndevu, Daraja Bovu',
     addressLocality: 'Zanzibar',
+    addressRegion: 'Zanzibar',
+    postalCode: '',
     addressCountry: 'TZ',
   },
   geo: {
@@ -64,12 +72,13 @@ export const getLocalBusinessSchema = () => ({
   ],
   sameAs: [
     'https://wa.me/255716002790',
+    'https://maps.google.com/?q=Kwa+Ndevu+Daraja+Bovu+Zanzibar',
   ],
   areaServed: [
-    { '@type': 'City', name: 'Zanzibar City' },
-    { '@type': 'City', name: 'Stone Town' },
-    { '@type': 'City', name: 'Paje' },
-    { '@type': 'City', name: 'Nungwi' },
+    { '@type': 'City', name: 'Zanzibar City', sameAs: 'https://en.wikipedia.org/wiki/Zanzibar_City' },
+    { '@type': 'City', name: 'Stone Town', sameAs: 'https://en.wikipedia.org/wiki/Stone_Town' },
+    { '@type': 'City', name: 'Paje', sameAs: 'https://en.wikipedia.org/wiki/Paje,_Zanzibar' },
+    { '@type': 'City', name: 'Nungwi', sameAs: 'https://en.wikipedia.org/wiki/Nungwi' },
     { '@type': 'City', name: 'Kendwa' },
     { '@type': 'City', name: 'Kiwengwa' },
     { '@type': 'City', name: 'Jambiani' },
@@ -80,6 +89,15 @@ export const getLocalBusinessSchema = () => ({
     { '@type': 'City', name: 'Ndevu' },
   ],
   hasMap: 'https://maps.google.com/?q=Kwa+Ndevu+Daraja+Bovu+Zanzibar',
+  serviceArea: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: -6.1918,
+      longitude: 39.2056,
+    },
+    geoRadius: '50000',
+  },
 })
 
 export const getServiceAreaSchema = () => ({

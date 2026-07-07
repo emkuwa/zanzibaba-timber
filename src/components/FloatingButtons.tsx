@@ -7,12 +7,27 @@ import { useBilingual } from '@/lib/bilingual'
 export default function FloatingButtons() {
   const { t } = useBilingual()
 
+  const trackWhatsApp = () => {
+    ;(window as any).gtag?.('event', 'whatsapp_click', {
+      event_category: 'conversion',
+      event_label: 'floating_button'
+    })
+  }
+
+  const trackCall = () => {
+    ;(window as any).gtag?.('event', 'phone_call', {
+      event_category: 'conversion',
+      event_label: 'floating_button'
+    })
+  }
+
   return (
     <div className="fixed bottom-4 right-4 z-50 flex flex-col space-y-2 sm:bottom-6 sm:right-6 sm:space-y-3">
       <a
         href={generateWhatsAppLink('Hello')}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={trackWhatsApp}
         className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-transform hover:scale-110 animate-pulse"
         aria-label={t('common.whatsapp')}
       >
@@ -21,6 +36,7 @@ export default function FloatingButtons() {
 
       <a
         href="tel:+255716002790"
+        onClick={trackCall}
         className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg transition-transform hover:scale-110"
         aria-label={t('common.call')}
       >

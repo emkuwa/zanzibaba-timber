@@ -17,9 +17,14 @@ export default function QuoteForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     ;(window as any).gtag?.('event', 'quote_submit', { 
-      event_category: 'engagement',
+      event_category: 'conversion',
+      event_label: formData.product,
       product: formData.product,
       length: formData.length
+    })
+    ;(window as any).gtag?.('event', 'form_submit', {
+      event_category: 'conversion',
+      event_label: 'quote_form'
     })
     const text = `New Quote:%0AName: ${formData.name}%0APhone: ${formData.phone}%0AProduct: ${formData.product} ${formData.length}%0AMessage: ${formData.message}`
     window.open(`https://wa.me/255716002790?text=${encodeURIComponent(text)}`, '_blank')

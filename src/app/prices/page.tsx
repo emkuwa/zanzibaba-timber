@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import PriceNotice from '@/components/PriceNotice'
 import TransportCalculator from '@/components/TransportCalculator'
-import { generateSEOMetadata } from '@/lib/seo'
+import { generateSEOMetadata, getBreadcrumbSchema } from '@/lib/seo'
 import { PRODUCT_PRICES, PRODUCT_VARIANTS, TIMBER_SIZES, formatTZS, sizeToSlug, formatVariantLabel, SHEET_PRODUCTS } from '@/lib/data'
 import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
@@ -14,6 +14,11 @@ export const metadata = generateSEOMetadata(
   'en',
   '/prices'
 )
+
+const breadcrumb = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Prices', url: '/prices' },
+])
 
 function PriceTable({ length, title }: { length: string; title: string }) {
   const variants = PRODUCT_VARIANTS.filter(v => v.length === length && v.price)
@@ -29,7 +34,7 @@ function PriceTable({ length, title }: { length: string; title: string }) {
               <th className="text-left py-3 px-3 text-sm">Size</th>
               <th className="text-left py-3 px-3 text-sm">Dimensions</th>
               <th className="text-center py-3 px-3 text-sm">Length</th>
-              <th className="text-right py-3 px-3 text-sm">Price (TZS)</th>
+              <th className="text-right py-3 px-3 text-sm">Price</th>
               <th className="text-center py-3 px-3 text-sm">Order</th>
             </tr>
           </thead>
@@ -203,6 +208,7 @@ export default function Prices() {
           </div>
         </section>
       </main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Footer />
       <FloatingButtons />
     </>

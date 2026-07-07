@@ -6,6 +6,9 @@ import { BilingualProvider } from '@/lib/bilingual'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const baseUrl = 'https://timber.zanzibaba.com'
+const ogImage = `${baseUrl}/images/gallery/zanzibaba-timber-hero-banner.jpg`
+
 export const metadata: Metadata = {
   title: {
     default: 'Timber, Marine Board & Plywood Supplier | Zanzibaba Zanzibar',
@@ -39,6 +42,31 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: baseUrl,
+    languages: {
+      'en': baseUrl,
+      'sw': `${baseUrl}/sw`,
+    },
+  },
+  openGraph: {
+    title: 'Timber, Marine Board & Plywood Supplier | Zanzibaba Zanzibar',
+    description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles. Serving Paje, Nungwi, Stone Town and all Zanzibar with cash on delivery and FREE island-wide delivery.',
+    url: baseUrl,
+    siteName: 'Zanzibaba Timber',
+    images: [{ url: ogImage, width: 1200, height: 630, alt: 'Zanzibaba Timber — Premium Treated Pine Supplier in Zanzibar' }],
+    locale: 'en_TZ',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Timber, Marine Board & Plywood Supplier | Zanzibaba Zanzibar',
+    description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles.',
+    images: [ogImage],
+  },
+  verification: {
+    google: 'google-site-verification-placeholder',
+  },
 }
 
 export default function RootLayout({
@@ -68,6 +96,32 @@ export default function RootLayout({
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "XXXXXXXXXX");
+          `}
+        </Script>
+        <Script id="ga4-conversions" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            document.addEventListener('click', function(e) {
+              var el = e.target.closest('a[href^="tel:"]');
+              if (el) {
+                gtag('event', 'phone_call', {
+                  event_category: 'conversion',
+                  event_label: el.href
+                });
+              }
+            });
+
+            document.addEventListener('click', function(e) {
+              var el = e.target.closest('a[href*="wa.me"]');
+              if (el) {
+                gtag('event', 'whatsapp_click', {
+                  event_category: 'conversion',
+                  event_label: 'whatsapp'
+                });
+              }
+            });
           `}
         </Script>
       </head>

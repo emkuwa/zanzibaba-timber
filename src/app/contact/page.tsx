@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import ImageWithFallback from '@/components/ImageWithFallback'
 import QuoteForm from '@/components/QuoteForm'
-import { generateSEOMetadata, getLocalBusinessSchema, getReviewSchema } from '@/lib/seo'
+import { generateSEOMetadata, getLocalBusinessSchema, getReviewSchema, getBreadcrumbSchema } from '@/lib/seo'
 import { MapPin, Phone, Mail, CheckCircle, Star } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
@@ -12,6 +12,11 @@ export const metadata = generateSEOMetadata(
   'en',
   '/contact'
 )
+
+const breadcrumb = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Contact', url: '/contact' },
+])
 
 export default function Contact() {
   return (
@@ -187,6 +192,7 @@ export default function Contact() {
           { author: 'James K.', text: 'Great quality timber and fair prices. Helpful team for choosing the right sizes.', rating: 5 },
         ])) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Footer />
       <FloatingButtons />
     </>
