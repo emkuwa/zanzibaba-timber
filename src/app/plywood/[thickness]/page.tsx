@@ -56,8 +56,8 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
           <div className="container-custom px-3 md:px-4">
             <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mb-6 md:mb-8 shadow-lg">
               <Image
-                src="/images/gallery/timber-sizes-display.jpg"
-                alt={`${product.name} construction plywood at Zanzibaba Timber yard in Zanzibar`}
+                src="/images/gallery/construction-plywood-zanzibar.jpg"
+                alt="Construction Plywood Supplier in Zanzibar"
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"

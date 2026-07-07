@@ -56,8 +56,8 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
           <div className="container-custom px-3 md:px-4">
             <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mb-6 md:mb-8 shadow-lg">
               <Image
-                src="/images/gallery/timber-sizes-display.jpg"
-                alt={`${product.name} waterproof marine board at Zanzibaba Timber yard in Zanzibar`}
+                src="/images/gallery/marine-board-zanzibar.jpg"
+                alt="Marine Board Supplier in Zanzibar"
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
