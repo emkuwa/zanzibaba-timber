@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Phone, MessageCircle, MapPin } from 'lucide-react'
+import { Phone, MessageCircle, MapPin, Mail, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
 import { generateWhatsAppLink } from '@/lib/data'
 import { useBilingual } from '@/lib/bilingual'
 
@@ -9,70 +9,137 @@ export default function Footer() {
   const { t } = useBilingual()
   const year = new Date().getFullYear()
 
+  const locations = [
+    { name: 'Paje', slug: 'paje' },
+    { name: 'Nungwi', slug: 'nungwi' },
+    { name: 'Kendwa', slug: 'kendwa' },
+    { name: 'Stone Town', slug: 'stone-town' },
+    { name: 'Chukwani', slug: 'chukwani' },
+    { name: 'Bububu', slug: 'bububu' },
+    { name: 'Fumba', slug: 'fumba' },
+    { name: 'Kiwengwa', slug: 'kiwengwa' },
+    { name: 'Matemwe', slug: 'matemwe' },
+    { name: 'Jambiani', slug: 'jambiani' },
+    { name: 'Daraja Bovu', slug: 'ndevu' },
+  ]
+
+  const isActive = (href: string) => {
+    if (typeof window === 'undefined') return false
+    return window.location.pathname === href
+  }
+
   return (
-    <footer className="bg-gray-900 dark:bg-gray-950 text-white py-8 md:py-12">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-          <div className="text-center sm:text-left">
-            <h3 className="text-xl md:text-2xl font-bold mb-3">Zanzibaba Timber</h3>
-            <p className="text-gray-300 text-sm mb-3">
-              {t('footer.description')}
-            </p>
-            <div className="flex items-center justify-center sm:justify-start gap-1.5 text-gray-300 text-sm">
-              <MapPin className="w-4 h-4 shrink-0" />
-              <span>{t('hero.location')}</span>
-            </div>
-          </div>
-
-          <div className="text-center sm:text-left">
-            <h4 className="font-semibold mb-3">{t('footer.quickLinks')}</h4>
-            <ul className="space-y-1">
-              <li><Link href="/timber-sizes" className="text-gray-300 hover:text-white block py-2">{t('navigation.timberSizes')}</Link></li>
-              <li><Link href="/marine-board" className="text-gray-300 hover:text-white block py-2">Marine Board</Link></li>
-              <li><Link href="/plywood" className="text-gray-300 hover:text-white block py-2">Plywood</Link></li>
-              <li><Link href="/prices" className="text-gray-300 hover:text-white block py-2">{t('navigation.prices')}</Link></li>
-              <li><Link href="/projects" className="text-gray-300 hover:text-white block py-2">{t('navigation.projects')}</Link></li>
-              <li><Link href="/delivery" className="text-gray-300 hover:text-white block py-2">{t('navigation.delivery')}</Link></li>
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white">
+      <div className="container-custom px-4 py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
+          <div>
+            <h3 className="text-lg font-bold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li><Link href="/" className="text-gray-400 hover:text-white text-sm transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-white text-sm transition-colors">About</Link></li>
+              <li><Link href="/projects" className="text-gray-400 hover:text-white text-sm transition-colors">Projects</Link></li>
+              <li><Link href="/blog" className="text-gray-400 hover:text-white text-sm transition-colors">Blog</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">Contact</Link></li>
             </ul>
           </div>
 
-          <div className="text-center sm:text-left">
-            <h4 className="font-semibold mb-3">{t('footer.contact')}</h4>
-            <ul className="space-y-1">
-              <li>
-                <a href="tel:+255716002790" className="flex items-center justify-center sm:justify-start gap-2 text-gray-300 hover:text-white py-2">
-                  <Phone className="w-4 h-4 shrink-0" />
-                  <span>+255 716 002 790</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={generateWhatsAppLink('Hello Zanzibaba Timber')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center sm:justify-start gap-2 text-gray-300 hover:text-white py-2"
-                >
-                  <MessageCircle className="w-4 h-4 shrink-0" />
-                  <span>{t('common.whatsapp')}</span>
-                </a>
-              </li>
+          <div>
+            <h3 className="text-lg font-bold mb-4">Products</h3>
+            <ul className="space-y-2">
+              <li><Link href="/timber-sizes" className="text-gray-400 hover:text-white text-sm transition-colors">Timber Sizes</Link></li>
+              <li><Link href="/timber-zanzibar" className="text-gray-400 hover:text-white text-sm transition-colors">Treated Pine Timber</Link></li>
+              <li><Link href="/marine-board" className="text-gray-400 hover:text-white text-sm transition-colors">Marine Board</Link></li>
+              <li><Link href="/plywood" className="text-gray-400 hover:text-white text-sm transition-colors">Plywood</Link></li>
+              <li><Link href="/prices" className="text-gray-400 hover:text-white text-sm transition-colors">Prices</Link></li>
             </ul>
           </div>
 
-          <div className="text-center sm:text-left">
-            <h4 className="font-semibold mb-3">{t('footer.followUs')}</h4>
-            <a
-              href={generateWhatsAppLink('Hello')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-lg transition-colors text-sm"
-            >
-              {t('common.whatsapp')}
-            </a>
+          <div>
+            <h3 className="text-lg font-bold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li><Link href="/timber-sizes" className="text-gray-400 hover:text-white text-sm transition-colors">Timber Supply</Link></li>
+              <li><Link href="/hotel-supply" className="text-gray-400 hover:text-white text-sm transition-colors">Hotel Supply</Link></li>
+              <li><Link href="/villa-supply" className="text-gray-400 hover:text-white text-sm transition-colors">Villa Supply</Link></li>
+              <li><Link href="/government-supply" className="text-gray-400 hover:text-white text-sm transition-colors">Government Supply</Link></li>
+              <li><Link href="/wholesale" className="text-gray-400 hover:text-white text-sm transition-colors">Wholesale</Link></li>
+              <li><Link href="/delivery" className="text-gray-400 hover:text-white text-sm transition-colors">Delivery</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-bold mb-4">Locations</h3>
+            <ul className="space-y-2">
+              {locations.map((loc) => (
+                <li key={loc.slug}>
+                  <Link
+                    href={`/locations/${loc.slug}`}
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    {loc.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-bold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link href="/prices" className="text-gray-400 hover:text-white text-sm transition-colors">FAQ</Link></li>
+              <li><Link href="/sitemap.xml" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link></li>
+              <li><Link href="/sw" className="text-gray-400 hover:text-white text-sm transition-colors">Swahili Version</Link></li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400 text-sm">
+        <div className="border-t border-gray-800 mt-10 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div className="space-y-3">
+              <a href="tel:+255716002790" className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors">
+                <Phone className="w-4 h-4 shrink-0" />
+                <span>+255 716 002 790</span>
+              </a>
+              <a href={generateWhatsAppLink('Hello Zanzibaba Timber')} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors">
+                <MessageCircle className="w-4 h-4 shrink-0" />
+                <span>WhatsApp</span>
+              </a>
+              <a href="mailto:info@zanzibaba.com" className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors">
+                <Mail className="w-4 h-4 shrink-0" />
+                <span>info@zanzibaba.com</span>
+              </a>
+              <div className="flex items-center gap-2 text-gray-400 text-sm">
+                <MapPin className="w-4 h-4 shrink-0" />
+                <span>Kwa Ndevu, Daraja Bovu, Zanzibar</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-start md:items-end gap-3">
+              <div className="flex items-center gap-3">
+                <a href={generateWhatsAppLink('Hello Zanzibaba Timber')} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="WhatsApp">
+                  <MessageCircle className="w-5 h-5" />
+                </a>
+                <a href="https://facebook.com/zanzibaba" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="https://instagram.com/zanzibaba" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="https://linkedin.com/company/zanzibaba" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://youtube.com/@zanzibaba" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="YouTube">
+                  <Youtube className="w-5 h-5" />
+                </a>
+              </div>
+              <div className="text-xs text-gray-500 space-y-1 text-right">
+                <p>Prices Excluding VAT</p>
+                <p>Free Delivery Across Zanzibar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-6 pt-6 text-center text-gray-500 text-xs">
           {t('footer.copyright').replace('{year}', String(year))}
         </div>
       </div>
