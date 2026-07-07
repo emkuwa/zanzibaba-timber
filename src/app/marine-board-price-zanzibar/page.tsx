@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import PriceNotice from '@/components/PriceNotice'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema, getItemListSchema } from '@/lib/seo'
 import { SHEET_PRODUCTS, SHEET_PRODUCT_FAQ, PRODUCT_PRICES, generateWhatsAppLink, formatTZS } from '@/lib/data'
 import { Truck, Phone, MessageCircle, CheckCircle, Shield, Info, Package } from 'lucide-react'
@@ -64,6 +65,10 @@ export default function MarineBoardPriceZanzibarPage() {
 
         <section className="py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-4">
+            <div className="mb-8">
+              <PriceNotice />
+            </div>
+
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 md:p-8 shadow-sm border border-gray-200 dark:border-gray-700 mb-10">
               <div className="flex items-center gap-3 mb-4">
                 <Info className="w-6 h-6 text-primary-600" />
@@ -179,6 +184,30 @@ export default function MarineBoardPriceZanzibarPage() {
                 </a>
                 <a href="tel:+255716002790"
                   className="flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
+                  <Phone className="w-5 h-5" />
+                  Call Now
+                </a>
+              </div>
+            </section>
+
+            <section className="bg-green-50 dark:bg-green-900/20 rounded-xl p-8 mb-12">
+              <div className="flex items-center gap-3 mb-4">
+                <Truck className="w-8 h-8 text-green-600" />
+                <h2 className="text-2xl font-bold">FREE Delivery Across Zanzibar</h2>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                We deliver marine board to every location in Zanzibar — Stone Town, Paje, Nungwi, Kendwa, 
+                Jambiani, Matemwe, Kiwengwa, Fumba, and all other areas. Delivery is included in every order.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href={generateWhatsAppLink('I need marine board delivered to my location in Zanzibar')}
+                  target="_blank" rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                  <MessageCircle className="w-5 h-5" />
+                  WhatsApp for Delivery
+                </a>
+                <a href="tel:+255716002790"
+                  className="flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
                   <Phone className="w-5 h-5" />
                   Call Now
                 </a>

@@ -6,9 +6,8 @@ export default function PriceNotice() {
       <div className="flex items-start gap-2">
         <Info className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
         <div className="text-xs md:text-sm text-amber-800 dark:text-amber-200 space-y-0.5">
-          <p>• Prices Excluding VAT.</p>
-          <p>• Free Delivery Across Zanzibar.</p>
-          <p>• Cash on Delivery Available.</p>
+          <p>• Prices exclude VAT.</p>
+          <p>• FREE Delivery Across Zanzibar.</p>
           <p>• Prices may change without prior notice depending on stock availability.</p>
         </div>
       </div>

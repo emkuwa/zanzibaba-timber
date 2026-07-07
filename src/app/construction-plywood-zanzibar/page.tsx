@@ -35,7 +35,7 @@ export default function ConstructionPlywoodZanzibarPage() {
   const itemListSchema = getItemListSchema(
     plywoodProducts.map(p => ({
       name: p.name,
-      url: `https://timber.zanzibaba.com/plywood/${p.slug}`,
+      url: `/plywood/${p.slug}`,
     })),
     'Construction Plywood Zanzibar'
   )

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
-import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
+import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema, getItemListSchema } from '@/lib/seo'
 import { SHEET_PRODUCTS, PRODUCT_PRICES, generateWhatsAppLink, formatTZS } from '@/lib/data'
 import { Truck, Phone, MessageCircle, CheckCircle, Shield, Droplets, Package } from 'lucide-react'
 import Link from 'next/link'
@@ -34,6 +34,13 @@ const faqData = [
 export default function ConcreteFormworkMarineBoardPage() {
   const faqSchema = getFAQSchema(faqData)
   const breadcrumbSchema = getBreadcrumbSchema(breadcrumbs)
+  const itemListSchema = getItemListSchema(
+    marineBoard.map(p => ({
+      name: p.name,
+      url: `/marine-board/${p.slug}`,
+    })),
+    'Marine Board Products Zanzibar'
+  )
 
   return (
     <>
@@ -263,22 +270,17 @@ export default function ConcreteFormworkMarineBoardPage() {
             </section>
 
             <section className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 md:p-8">
-              <h2 className="text-xl font-bold mb-4">Also Available at Zanzibaba Timber</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <h2 className="text-xl font-bold mb-4">Related Products</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Link href="/marine-board" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                  <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
+                  <p className="font-semibold text-sm">All Marine Board</p>
+                  <p className="text-xs text-gray-500">18mm and 12mm sheets</p>
+                </Link>
                 <Link href="/plywood" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
                   <p className="font-semibold text-sm">Plywood</p>
                   <p className="text-xs text-gray-500">From {cheapestPlywood ? formatTZS(cheapestPlywood.finalPrice) : 'TZS 18,000'}</p>
-                </Link>
-                <Link href="/treated-timber" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
-                  <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
-                  <p className="font-semibold text-sm">Treated Timber</p>
-                  <p className="text-xs text-gray-500">From {cheapestTimber ? formatTZS(cheapestTimber.price) : 'TZS 8,000'}</p>
-                </Link>
-                <Link href="/marine-board" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
-                  <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
-                  <p className="font-semibold text-sm">All Marine Board</p>
-                  <p className="text-xs text-gray-500">All thicknesses</p>
                 </Link>
                 <Link href="/prices" className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                   <Package className="w-8 h-8 mx-auto mb-2 text-primary-600" />
@@ -299,6 +301,10 @@ export default function ConcreteFormworkMarineBoardPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
     </>
   )
