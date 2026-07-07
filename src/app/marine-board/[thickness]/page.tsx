@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { SHEET_PRODUCTS, SHEET_PRODUCT_CATEGORIES, SHEET_PRODUCT_FAQ, LOCATIONS, generateWhatsAppLink, formatTZS } from '@/lib/data'
+import { SHEET_PRODUCTS, SHEET_PRODUCT_FAQ, LOCATIONS, generateWhatsAppLink, formatTZS } from '@/lib/data'
 import PriceNotice from '@/components/PriceNotice'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
-import { generateSEOMetadata, getProductSchema, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
-import { Truck, Phone, MessageCircle, CheckCircle, Shield, Droplets, Package } from 'lucide-react'
+import { generateSEOMetadata, getSheetProductSchema, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
+import { Truck, Phone, MessageCircle, CheckCircle, Shield, Droplets, Package, Info, ArrowRight, ClipboardList, Wrench, Home } from 'lucide-react'
 
 export async function generateStaticParams() {
   return SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board').map((product) => ({
@@ -31,7 +31,7 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
   const product = SHEET_PRODUCTS.find(p => p.categoryId === 'marine-board' && p.slug === params.thickness)
   if (!product) notFound()
 
-  const otherProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board' && p.id !== product.id)
+  const otherMarineProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board' && p.id !== product.id)
   const plywoodProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood').slice(0, 3)
 
   const breadcrumb = getBreadcrumbSchema([
@@ -39,6 +39,14 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
     { name: 'Marine Board', url: '/marine-board' },
     { name: product.name, url: `/marine-board/${product.slug}` },
   ])
+
+  const productSchema = getSheetProductSchema(
+    product.name,
+    product.description,
+    product.finalPrice,
+    `/marine-board/${product.slug}`,
+    product.thickness
+  )
 
   return (
     <>
@@ -78,7 +86,7 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
                     <div>
                       <div className="text-sm text-gray-500">Price per sheet</div>
                       <div className="text-3xl font-bold text-primary-600">{formatTZS(product.finalPrice)}</div>
-                      <div className="text-xs text-gray-400">Price excludes VAT</div>
+                      <div className="text-xs text-gray-400">Prices exclude VAT.</div>
                     </div>
                     <a
                       href={generateWhatsAppLink(`Hello Zanzibaba Timber, I need ${product.name} for my project. Please share pricing and availability.`)}
@@ -94,19 +102,49 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
                 <h2 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
                   {product.name} — Waterproof Marine Board
                 </h2>
-                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-2">
-                  <strong>Thickness:</strong> {product.thickness}
-                </p>
-                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-2">
-                  <strong>Sheet Size:</strong> {product.sheetSize}
-                </p>
-
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-6">
                   {product.description}
                 </p>
 
                 <div className="mb-6">
                   <PriceNotice />
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="font-semibold text-base mb-3 flex items-center gap-2">
+                    <ClipboardList className="w-5 h-5 text-primary-500" /> Specifications
+                  </h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse">
+                      <tbody>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-3 px-3 font-semibold text-sm w-1/3">Thickness</td>
+                          <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">{product.thickness}</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-3 px-3 font-semibold text-sm">Sheet Size</td>
+                          <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">1220 × 2440 mm / 4ft × 8ft</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-3 px-3 font-semibold text-sm">Material</td>
+                          <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">Marine-grade plywood with phenolic resin</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-3 px-3 font-semibold text-sm">Moisture Resistance</td>
+                          <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">Waterproof phenolic resin bond</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-3 px-3 font-semibold text-sm">Price</td>
+                          <td className="py-3 px-3 text-sm font-bold">{formatTZS(product.finalPrice)}</td>
+                        </tr>
+                        <tr>
+                          <td className="py-3 px-3 font-semibold text-sm">VAT</td>
+                          <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">Excluded</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-2">Prices exclude VAT.</p>
                 </div>
 
                 <div className="mb-6">
@@ -163,8 +201,24 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
                 </div>
 
                 <div className="mb-6 bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                  <h3 className="font-semibold text-base mb-2">Buying Guide</h3>
+                  <h3 className="font-semibold text-base mb-2 flex items-center gap-2">
+                    <Info className="w-5 h-5 text-primary-500" /> Buying Guide
+                  </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">{product.buyingGuide}</p>
+                </div>
+
+                <div className="mb-6 bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                  <h3 className="font-semibold text-base mb-2 flex items-center gap-2">
+                    <Home className="w-5 h-5 text-primary-500" /> Storage Tips
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{product.storageTips}</p>
+                </div>
+
+                <div className="mb-6 bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                  <h3 className="font-semibold text-base mb-2 flex items-center gap-2">
+                    <Wrench className="w-5 h-5 text-primary-500" /> Installation Tips
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{product.installationTips}</p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-2 md:gap-3 mb-6">
@@ -209,7 +263,7 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-lg md:rounded-xl p-4 md:p-6">
                   <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4">Other Marine Board Sizes</h3>
                   <div className="space-y-2 md:space-y-3">
-                    {otherProducts.map((p) => (
+                    {otherMarineProducts.map((p) => (
                       <Link
                         key={p.id}
                         href={`/marine-board/${p.slug}`}
@@ -218,6 +272,7 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
                         <div className="font-semibold text-primary-600 text-sm">{p.name}</div>
                         <div className="text-xs text-gray-500">{p.thickness} — {p.sheetSize}</div>
                         <div className="text-sm font-bold text-green-600 mt-1">{formatTZS(p.finalPrice)}</div>
+                        <div className="text-[10px] text-gray-400">Prices exclude VAT.</div>
                       </Link>
                     ))}
                   </div>
@@ -236,7 +291,7 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
                       </Link>
                     ))}
                     <Link href="/plywood" className="block text-center text-xs text-primary-600 hover:underline font-semibold">
-                      View All Plywood →
+                      View All Plywood <ArrowRight className="w-3 h-3 inline" />
                     </Link>
                   </div>
 
@@ -259,10 +314,10 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
                   <div className="mt-4 md:mt-6 p-4 bg-primary-50 dark:bg-primary-900/20 rounded-lg">
                     <div className="flex items-center gap-2 mb-2">
                       <Truck className="w-4 h-4 text-primary-600" />
-                      <h4 className="font-semibold text-sm">Island-Wide Delivery</h4>
+                      <h4 className="font-semibold text-sm">FREE Delivery Across Zanzibar</h4>
                     </div>
                     <p className="text-xs text-gray-600 dark:text-gray-300 mb-2">
-                      We deliver marine board and plywood across all Zanzibar locations. Cash on delivery available.
+                      We deliver marine board and plywood to every location across Zanzibar. FREE Delivery Across Zanzibar.
                     </p>
                     <a
                       href={generateWhatsAppLink('Hello Zanzibaba Timber, I need delivery of marine board in Zanzibar.')}
@@ -291,7 +346,7 @@ export default function MarineBoardProductPage({ params }: { params: { thickness
           </div>
         </section>
       </main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getProductSchema(product.name, product.description, product.thickness)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       {product.faqs.length > 0 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(product.faqs)) }} />

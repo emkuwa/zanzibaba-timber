@@ -135,6 +135,31 @@ export const getProductSchema = (name: string, description: string, size?: strin
   },
 })
 
+export const getSheetProductSchema = (name: string, description: string, price: number, slug: string, thickness: string) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name,
+  description,
+  brand: {
+    '@type': 'Brand',
+    name: 'Zanzibaba Timber',
+  },
+  size: thickness,
+  material: 'Marine-grade plywood / Construction plywood',
+  offers: {
+    '@type': 'Offer',
+    price: price,
+    priceCurrency: 'TZS',
+    availability: 'https://schema.org/InStock',
+    url: `https://timber.zanzibaba.com${slug}`,
+    seller: {
+      '@type': 'LocalBusiness',
+      name: 'Zanzibaba Timber',
+    },
+    priceValidUntil: '2027-12-31',
+  },
+})
+
 export const getFAQSchema = (questions: Array<{ question: string; answer: string }>) => ({
   '@context': 'https://schema.org',
   '@type': 'FAQPage',

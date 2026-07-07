@@ -148,7 +148,7 @@ export default function Home() {
           <div className="container-custom">
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs md:text-sm text-primary-100">
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Premium Treated Pine</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Delivery Across Zanzibar</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> FREE Delivery Across Zanzibar</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Bulk Order Discounts</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Fast WhatsApp Quotes</span>
             </div>
@@ -221,7 +221,7 @@ export default function Home() {
           <div className="container-custom">
             <div className="flex items-center justify-center gap-2 text-white text-sm font-semibold">
               <Truck className="w-4 h-4" />
-              FREE DELIVERY available for qualifying bulk orders across Zanzibar
+              FREE Delivery Across Zanzibar on all timber products
               <Link href="/delivery" className="underline text-green-200 hover:text-white">Learn more</Link>
             </div>
           </div>

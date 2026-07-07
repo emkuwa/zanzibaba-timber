@@ -389,6 +389,9 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       'Industrial platform and flooring',
       'Exterior cladding and weather-exposed structures',
     ],
+    material: 'Marine-grade plywood',
+    storageTips: 'Store marine board sheets on a flat, dry surface with adequate support points to prevent sagging. Keep sheets off the ground using timber bearers spaced no more than 600mm apart. Cover with a waterproof tarp to protect from direct rain while allowing air circulation. Avoid storing in direct sunlight for prolonged periods. Marine board can be stored outdoors under cover for extended periods without damage.',
+    installationTips: 'Cut marine board using standard woodworking tools — circular saw, jigsaw, or hand saw. Use fine-tooth blades for clean cuts. Pre-drill screw holes to prevent splitting. Use stainless steel or coated screws for marine applications to prevent corrosion. Seal all cut edges with marine-grade sealant or epoxy to maintain waterproof integrity. For formwork, apply release agent before each concrete pour.',
     buyingGuide: 'When purchasing Marine Board 18mm in Zanzibar, consider the specific application requirements. For concrete formwork, the 18mm thickness provides the rigidity needed for large pours and heavy loads. For boat building, this thickness offers the structural integrity required for hull and deck construction. Always verify the resin type — marine boards should use phenolic (waterproof) resin, not urea-formaldehyde. At Zanzibaba Timber, we stock genuine marine-grade boards sourced from certified manufacturers. We deliver across all Zanzibar locations including Paje, Nungwi, Stone Town, and Kendwa.',
     faqs: [
       {
@@ -397,7 +400,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does Marine Board 18mm cost in Zanzibar?',
-        answer: 'Marine Board 18mm is available at Zanzibaba Timber for TZS 52,000 per sheet. This price includes transport and our service margin. We deliver across all Zanzibar locations. Contact us for bulk order discounts.',
+        answer: 'Marine Board 18mm is available at Zanzibaba Timber for TZS 52,000 per sheet. Contact us for bulk order discounts. FREE Delivery Across Zanzibar.',
       },
       {
         question: 'Is Marine Board 18mm waterproof?',
@@ -462,6 +465,9 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       'Exterior signage and displays',
       'Temporary construction structures',
     ],
+    material: 'Marine-grade plywood',
+    storageTips: 'Store marine board sheets flat on timber bearers spaced no more than 600mm apart. Keep in a dry, covered area with good air circulation. Protect from direct rain with a waterproof cover. For 12mm sheets, ensure adequate support across the full sheet to prevent bowing. Can be stored vertically against a wall with proper bottom support if space is limited.',
+    installationTips: 'Cut with standard woodworking tools — circular saw or jigsaw with fine-tooth blade for clean edges. Pre-drill screw holes to prevent splitting at thinner 12mm sections. Use stainless steel or coated fasteners for marine and wet area applications. Seal cut edges with marine-grade sealant. For formwork, apply release agent and ensure sheets are securely fixed to prevent movement during concrete pours.',
     buyingGuide: 'Marine Board 12mm is an excellent choice for lighter-duty applications in Zanzibar construction. While not as rigid as 18mm, it provides the same waterproof performance at a lower cost and weight. Ideal for interior wet areas, lighter formwork panels, and decorative applications. At Zanzibaba Timber, we recommend 12mm for projects where weight and cost are primary considerations while still requiring waterproof performance. We stock genuine marine-grade boards and deliver across all Zanzibar locations.',
     faqs: [
       {
@@ -470,7 +476,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does Marine Board 12mm cost in Zanzibar?',
-        answer: 'Marine Board 12mm is available at Zanzibaba Timber for TZS 46,000 per sheet. This price includes transport. Contact us for bulk pricing and delivery across Zanzibar.',
+        answer: 'Marine Board 12mm is available at Zanzibaba Timber for TZS 46,000 per sheet. Contact us for bulk pricing. FREE Delivery Across Zanzibar.',
       },
       {
         question: 'What is the difference between 12mm and 18mm Marine Board?',
@@ -528,6 +534,9 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       'Workshop and garage flooring',
       'Temporary construction platforms',
     ],
+    material: 'Construction plywood',
+    storageTips: 'Store 18mm plywood sheets flat on timber bearers spaced no more than 600mm apart. Keep in a dry, covered area. Protect from direct rain and prolonged sun exposure. Can be stacked with spacers between sheets for air circulation.',
+    installationTips: 'Cut with circular saw or jigsaw using fine-tooth blades. Pre-drill screw holes near sheet edges. Use corrosion-resistant screws for exterior applications. Seal edges with paint or sealant for added moisture protection.',
     buyingGuide: 'When purchasing 18mm Plywood in Zanzibar, consider the application carefully. This thickness is ideal for structural flooring, heavy-duty shelving, and formwork where moderate loads are expected. For fully waterproof applications such as boat building or prolonged water exposure, marine board is the better choice. At Zanzibaba Timber, we stock construction-grade 18mm plywood sourced from reputable manufacturers. We deliver across all Zanzibar locations including Paje, Nungwi, Stone Town, Kendwa, and beyond.',
     faqs: [
       {
@@ -536,7 +545,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 18mm plywood cost in Zanzibar?',
-        answer: '18mm plywood is available at Zanzibaba Timber for TZS 50,000 per sheet. This price includes transport and service margin. Contact us for bulk order discounts and delivery scheduling.',
+        answer: '18mm plywood is available at Zanzibaba Timber for TZS 50,000 per sheet. Contact us for bulk order discounts. FREE Delivery Across Zanzibar.',
       },
       {
         question: 'Is 18mm plywood waterproof?',
@@ -601,6 +610,9 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       'Temporary construction barriers',
       'Cabinet and furniture making',
     ],
+    material: 'Construction plywood',
+    storageTips: 'Store flat on timber bearers in a dry, covered location. Stack with spacers for air circulation. Protect from rain and direct sunlight. For vertical storage, ensure adequate bottom support to prevent warping.',
+    installationTips: 'Easy to cut with standard woodworking tools. Pre-drill screw holes for clean fastening. Use appropriate screws for the application — coated screws for exterior, standard for interior. Seal cut edges in moisture-prone areas.',
     buyingGuide: '15mm plywood is an excellent all-purpose choice for Zanzibar construction projects. It is thick enough for structural wall sheathing and ceiling installations while being lighter and more affordable than 18mm. For most residential and commercial interior applications, 15mm provides the ideal balance of performance and cost. At Zanzibaba Timber, we recommend 15mm for wall sheathing, partitioning, and ceiling projects. We deliver across all Zanzibar locations.',
     faqs: [
       {
@@ -666,6 +678,9 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       'Light-duty partitioning',
       'Craft and DIY projects',
     ],
+    material: 'Construction plywood',
+    storageTips: 'Store flat on even supports in a dry area. Use timber bearers spaced no more than 500mm apart for 12mm sheets. Keep covered and dry. Avoid stacking heavy items on top of 12mm sheets to prevent bowing.',
+    installationTips: 'Cut with hand saw, circular saw, or jigsaw. 12mm is easy to work with using basic tools. Pre-drill all screw holes. Use wood glue in addition to screws for stronger joints. Paint or seal edges for moisture protection.',
     buyingGuide: '12mm plywood is the go-to choice for interior applications in Zanzibar where weight and cost are primary considerations. It is ideal for furniture backing, ceiling panels, signage, and light-duty shelving. For structural or wet-area applications, consider 15mm or 18mm plywood, or marine board for fully waterproof needs. At Zanzibaba Timber, we stock 12mm plywood for immediate delivery across Zanzibar.',
     faqs: [
       {
@@ -674,7 +689,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 12mm plywood cost in Zanzibar?',
-        answer: '12mm plywood is available at Zanzibaba Timber for TZS 43,000 per sheet. This price includes transport. We deliver across all Zanzibar locations including Paje, Nungwi, and Stone Town.',
+        answer: '12mm plywood is available at Zanzibaba Timber for TZS 43,000 per sheet. FREE Delivery Across Zanzibar.',
       },
       {
         question: 'Can 12mm plywood be used for flooring?',
@@ -731,6 +746,9 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       'Temporary wall coverings',
       'Light-duty partition backing',
     ],
+    material: 'Construction plywood',
+    storageTips: 'Store flat on even supports with bearers spaced no more than 400mm apart. Keep in dry conditions. 9mm sheets are prone to warping if not properly supported. Store vertically only with proper edge support.',
+    installationTips: 'Easy to cut with hand saw or utility knife for thin sections. Use fine-tooth blades for clean cuts. Pre-drill all screw holes. Apply wood glue for stronger bonds. Not suitable for structural use — use only for decorative and light-duty applications.',
     buyingGuide: '9mm plywood is the most economical plywood option available at Zanzibaba Timber. It is ideal for decorative applications, backing boards, and light-duty construction where structural strength is not required. For any load-bearing or wet-area applications, consider thicker plywood options or marine board. We deliver 9mm plywood across all Zanzibar locations.',
     faqs: [
       {
@@ -739,7 +757,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 9mm plywood cost in Zanzibar?',
-        answer: '9mm plywood is available at Zanzibaba Timber for TZS 40,000 per sheet. This price includes transport. We offer bulk discounts for large orders.',
+        answer: '9mm plywood is available at Zanzibaba Timber for TZS 40,000 per sheet. Contact us for bulk discounts. FREE Delivery Across Zanzibar.',
       },
     ],
     seoTitle: '9mm Plywood Zanzibar | Lightweight Plywood | TZS 40,000/Sheet',
@@ -792,6 +810,9 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       'Furniture lining and backing',
       'Temporary decorative structures',
     ],
+    material: 'Construction plywood',
+    storageTips: 'Store flat on full-length supports. 6mm plywood is flexible and must be supported across its entire area to prevent permanent bending. Keep dry and covered. Can be rolled for transport if needed.',
+    installationTips: 'Can be cut with hand saw, utility knife, or fine-tooth power saw. Can be bent for curved applications when properly supported. Use small nails or staples for thin sections. Apply adhesive for permanent bonding. Not for structural use.',
     buyingGuide: '6mm plywood is the thinnest and most affordable plywood available at Zanzibaba Timber. It is perfect for decorative applications, curved architectural features, and craft projects. This is not a structural product — for any load-bearing applications, use 9mm or thicker plywood. We deliver 6mm plywood across Zanzibar.',
     faqs: [
       {
@@ -800,7 +821,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 6mm plywood cost in Zanzibar?',
-        answer: '6mm plywood is available at Zanzibaba Timber for TZS 28,000 per sheet. This is the most affordable plywood option. We deliver across all Zanzibar locations.',
+        answer: '6mm plywood is available at Zanzibaba Timber for TZS 28,000 per sheet. This is the most affordable plywood option. FREE Delivery Across Zanzibar.',
       },
     ],
     seoTitle: '6mm Plywood Zanzibar | Thin Flexible Plywood | TZS 28,000/Sheet',
@@ -853,6 +874,9 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       'Temporary display structures',
       'Prototype development',
     ],
+    material: 'Craft plywood',
+    storageTips: 'Store flat on a completely level surface. 3mm plywood is very thin and can permanently bend or crease if improperly stored. Keep in dry conditions. Handle with care to avoid damage during transport.',
+    installationTips: 'Can be cut with craft knife, scissors, or fine-tooth saw. Extremely easy to work with using basic hand tools. Use craft glue or small tacks for fixing. Not structural — for decorative and craft use only.',
     buyingGuide: '3mm plywood is the thinnest and most affordable plywood available. At Zanzibaba Timber, it is ideal for craft projects, model making, templates, and decorative overlays. This is purely a decorative material — not suitable for any structural application. We deliver 3mm plywood across Zanzibar.',
     faqs: [
       {
@@ -861,7 +885,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 3mm plywood cost in Zanzibar?',
-        answer: '3mm plywood is available at Zanzibaba Timber for TZS 18,000 per sheet. This is the most affordable plywood product. We deliver across all Zanzibar locations.',
+        answer: '3mm plywood is available at Zanzibaba Timber for TZS 18,000 per sheet. This is the most affordable plywood product. FREE Delivery Across Zanzibar.',
       },
     ],
     seoTitle: '3mm Plywood Zanzibar | Ultra-Thin Craft Plywood | TZS 18,000/Sheet',
@@ -873,8 +897,8 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
 export const SHEET_PRODUCT_FAQ = [
   { question: 'What marine board and plywood products does Zanzibaba Timber stock?', answer: 'Zanzibaba Timber stocks Marine Board in 18mm and 12mm thicknesses, and Plywood in 18mm, 15mm, 12mm, 9mm, 6mm, and 3mm thicknesses. All sheets are standard 4ft x 8ft (1220mm x 2440mm) size. We deliver across all Zanzibar locations.' },
   { question: 'What is the difference between marine board and plywood?', answer: 'Marine board is manufactured with waterproof phenolic resin glue, making it fully waterproof and suitable for continuous water exposure, concrete formwork, and marine construction. Standard plywood uses urea-formaldehyde resin, which provides moderate moisture resistance suitable for interior and covered applications.' },
-  { question: 'How are sheet product prices calculated?', answer: 'Our sheet product prices include the supplier cost, transport to Zanzibar (TZS 1,000 per sheet), and Zanzibaba service margin (TZS 2,000 per sheet). The price displayed is the final selling price. Prices exclude VAT.' },
-  { question: 'Do you deliver marine board and plywood across Zanzibar?', answer: 'Yes, we deliver marine board and plywood products to every location across Zanzibar including Stone Town, Paje, Nungwi, Kendwa, Jambiani, Matemwe, Kiwengwa, Fumba, Chwaka, Kizimkazi, Makunduchi, and all other areas. Cash on delivery is available.' },
+  { question: 'How are sheet product prices calculated?', answer: 'The prices displayed are the final selling prices. Prices exclude VAT. Contact us for bulk order discounts.' },
+  { question: 'Do you deliver marine board and plywood across Zanzibar?', answer: 'Yes, we deliver marine board and plywood products to every location across Zanzibar including Stone Town, Paje, Nungwi, Kendwa, Jambiani, Matemwe, Kiwengwa, Fumba, Chwaka, Kizimkazi, Makunduchi, and all other areas. FREE Delivery Across Zanzibar.' },
   { question: 'Can I order bulk quantities of marine board or plywood?', answer: 'Yes, we offer bulk order discounts for large quantities. Contact us via WhatsApp or phone for competitive bulk pricing on marine board and plywood products. We handle orders of any size from single sheets to full truckloads.' },
   { question: 'What sheet size do marine board and plywood come in?', answer: 'All marine board and plywood products at Zanzibaba Timber come in the standard construction sheet size of 4ft x 8ft (1220mm x 2440mm). This is the most widely used size for construction projects in Zanzibar.' },
 ]

@@ -94,6 +94,7 @@ export type SheetProduct = {
   supplierPrice: number
   finalPrice: number
   sheetSize: string
+  material: string
   description: string
   applications: string[]
   features: string[]
@@ -101,6 +102,8 @@ export type SheetProduct = {
   moistureResistance: string
   suitableProjects: string[]
   buyingGuide: string
+  storageTips: string
+  installationTips: string
   faqs: Array<{ question: string; answer: string }>
   seoTitle: string
   seoDescription: string

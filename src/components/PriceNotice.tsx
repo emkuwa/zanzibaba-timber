@@ -1,5 +1,4 @@
 import { Info } from 'lucide-react'
-import { PRICE_NOTES } from '@/lib/data'
 
 export default function PriceNotice() {
   return (
@@ -7,9 +6,8 @@ export default function PriceNotice() {
       <div className="flex items-start gap-2">
         <Info className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
         <div className="text-xs md:text-sm text-amber-800 dark:text-amber-200 space-y-0.5">
-          {PRICE_NOTES.map((note) => (
-            <p key={note}>• {note}</p>
-          ))}
+          <p>• Prices exclude VAT.</p>
+          <p>• FREE Delivery Across Zanzibar.</p>
         </div>
       </div>
     </div>

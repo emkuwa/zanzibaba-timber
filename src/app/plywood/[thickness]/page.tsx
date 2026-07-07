@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { SHEET_PRODUCTS, SHEET_PRODUCT_FAQ, LOCATIONS, generateWhatsAppLink, formatTZS } from '@/lib/data'
+import { SHEET_PRODUCTS, LOCATIONS, generateWhatsAppLink, formatTZS } from '@/lib/data'
 import PriceNotice from '@/components/PriceNotice'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
-import { generateSEOMetadata, getProductSchema, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
-import { Truck, Phone, MessageCircle, CheckCircle, Shield, Layers, Package } from 'lucide-react'
+import { generateSEOMetadata, getSheetProductSchema, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
+import { Truck, Phone, MessageCircle, CheckCircle, Shield, Layers, Package, Info, ArrowRight, Star, ClipboardList, Wrench, Home } from 'lucide-react'
 
 export async function generateStaticParams() {
   return SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood').map((product) => ({
@@ -40,6 +40,14 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
     { name: product.name, url: `/plywood/${product.slug}` },
   ])
 
+  const productSchema = getSheetProductSchema(
+    product.name,
+    product.description,
+    product.finalPrice,
+    `/plywood/${product.slug}`,
+    product.thickness
+  )
+
   return (
     <>
       <Header />
@@ -59,7 +67,7 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
                 <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
                   {product.name} <span className="text-primary-300">Zanzibar</span>
                 </h1>
-                <p className="text-gray-200 mt-1 text-xs sm:text-sm">Construction Plywood — {product.thickness} — {product.sheetSize}</p>
+                <p className="text-gray-200 mt-1 text-xs sm:text-sm">Construction Plywood — {product.thickness} — 1220 × 2440 mm / 4ft × 8ft</p>
               </div>
             </div>
 
@@ -78,10 +86,10 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
                     <div>
                       <div className="text-sm text-gray-500">Price per sheet</div>
                       <div className="text-3xl font-bold text-primary-600">{formatTZS(product.finalPrice)}</div>
-                      <div className="text-xs text-gray-400">Price excludes VAT</div>
+                      <div className="text-xs text-gray-400">Prices exclude VAT.</div>
                     </div>
                     <a
-                      href={generateWhatsAppLink(`Hello Zanzibaba Timber, I need ${product.name} for my project.`)}
+                      href={generateWhatsAppLink(`Hello Zanzibaba Timber, I need ${product.name} for my project. Please share pricing and availability.`)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2.5 rounded-lg text-sm"
@@ -94,19 +102,50 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
                 <h2 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
                   {product.name} — Construction Plywood
                 </h2>
-                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-2">
-                  <strong>Thickness:</strong> {product.thickness}
-                </p>
-                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-2">
-                  <strong>Sheet Size:</strong> {product.sheetSize}
-                </p>
-
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-6">
                   {product.description}
                 </p>
 
                 <div className="mb-6">
                   <PriceNotice />
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="font-semibold text-base mb-3 flex items-center gap-2">
+                    <ClipboardList className="w-5 h-5 text-blue-500" /> Specifications
+                  </h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse">
+                      <tbody>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-2.5 px-3 text-sm font-medium text-gray-500 w-1/3">Thickness</td>
+                          <td className="py-2.5 px-3 text-sm font-semibold">{product.thickness}</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-2.5 px-3 text-sm font-medium text-gray-500">Sheet Size</td>
+                          <td className="py-2.5 px-3 text-sm">1220 × 2440 mm / 4ft × 8ft</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-2.5 px-3 text-sm font-medium text-gray-500">Material</td>
+                          <td className="py-2.5 px-3 text-sm">Construction Plywood</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-2.5 px-3 text-sm font-medium text-gray-500">Moisture Resistance</td>
+                          <td className="py-2.5 px-3 text-sm">
+                            {product.thickness === '18mm' || product.thickness === '15mm' ? 'Moderate' : product.thickness === '12mm' ? 'Limited' : 'Minimal'}
+                          </td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-2.5 px-3 text-sm font-medium text-gray-500">Price</td>
+                          <td className="py-2.5 px-3 text-sm font-bold text-primary-600">{formatTZS(product.finalPrice)}</td>
+                        </tr>
+                        <tr>
+                          <td className="py-2.5 px-3 text-sm font-medium text-gray-500">VAT</td>
+                          <td className="py-2.5 px-3 text-sm text-gray-500">Excluded</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
 
                 <div className="mb-6">
@@ -163,13 +202,33 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
                 </div>
 
                 <div className="mb-6 bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                  <h3 className="font-semibold text-base mb-2">Buying Guide</h3>
+                  <h3 className="font-semibold text-base mb-2 flex items-center gap-2">
+                    <Star className="w-5 h-5 text-amber-500" /> Buying Guide
+                  </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">{product.buyingGuide}</p>
+                </div>
+
+                <div className="mb-6 bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                  <h3 className="font-semibold text-base mb-2 flex items-center gap-2">
+                    <Info className="w-5 h-5 text-blue-500" /> Storage Tips
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Store plywood sheets flat on a level surface with spacers between sheets to allow air circulation. Keep sheets off the ground using timber bearers. Store indoors or under cover to protect from rain and direct sunlight. In Zanzibar&apos;s humid climate, proper storage prevents warping and moisture absorption.
+                  </p>
+                </div>
+
+                <div className="mb-6 bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                  <h3 className="font-semibold text-base mb-2 flex items-center gap-2">
+                    <Wrench className="w-5 h-5 text-orange-500" /> Installation Tips
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Use clean, sharp cutting tools for smooth edges. Pre-drill screw holes to prevent splitting near sheet edges. Leave a 2-3mm expansion gap at wall junctions. For structural applications, ensure adequate joist or batten spacing as specified for the thickness used. Use appropriate fixings rated for plywood thickness.
+                  </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-2 md:gap-3 mb-6">
                   <a
-                    href={generateWhatsAppLink(`Hello Zanzibaba Timber, I need ${product.name} for my project.`)}
+                    href={generateWhatsAppLink(`Hello Zanzibaba Timber, I need ${product.name} for my project. Please share pricing and availability.`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-4 md:px-6 py-2 md:py-3 rounded-lg transition-colors text-sm"
@@ -206,7 +265,7 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
               </div>
 
               <div className="md:col-span-2">
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg md:rounded-xl p-4 md:p-6">
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg md:rounded-xl p-4 md:p-6 sticky top-4">
                   <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4">Other Plywood Sizes</h3>
                   <div className="space-y-2 md:space-y-3">
                     {otherProducts.map((p) => (
@@ -216,13 +275,14 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
                         className="block p-3 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-primary-300 transition-all"
                       >
                         <div className="font-semibold text-primary-600 text-sm">{p.name}</div>
-                        <div className="text-xs text-gray-500">{p.sheetSize}</div>
+                        <div className="text-xs text-gray-500">{p.thickness} — 1220 × 2440 mm</div>
                         <div className="text-sm font-bold text-green-600 mt-1">{formatTZS(p.finalPrice)}</div>
+                        <div className="text-xs text-gray-400">Prices exclude VAT.</div>
                       </Link>
                     ))}
                   </div>
 
-                  <h3 className="font-bold text-sm md:text-base mt-4 md:mt-6 mb-2 md:mb-3">Marine Board</h3>
+                  <h3 className="font-bold text-sm md:text-base mt-4 md:mt-6 mb-2 md:mb-3">Related Products</h3>
                   <div className="space-y-2">
                     {marineProducts.map((p) => (
                       <Link
@@ -259,10 +319,10 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
                   <div className="mt-4 md:mt-6 p-4 bg-primary-50 dark:bg-primary-900/20 rounded-lg">
                     <div className="flex items-center gap-2 mb-2">
                       <Truck className="w-4 h-4 text-primary-600" />
-                      <h4 className="font-semibold text-sm">Island-Wide Delivery</h4>
+                      <h4 className="font-semibold text-sm">FREE Delivery Across Zanzibar</h4>
                     </div>
                     <p className="text-xs text-gray-600 dark:text-gray-300 mb-2">
-                      We deliver plywood and marine board across all Zanzibar locations. Cash on delivery available.
+                      We deliver plywood and marine board across all Zanzibar locations. FREE Delivery Across Zanzibar.
                     </p>
                     <a
                       href={generateWhatsAppLink('Hello Zanzibaba Timber, I need delivery of plywood in Zanzibar.')}
@@ -291,7 +351,7 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
           </div>
         </section>
       </main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getProductSchema(product.name, product.description, product.thickness)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       {product.faqs.length > 0 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(product.faqs)) }} />
