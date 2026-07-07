@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -249,7 +250,7 @@ export default function Home() {
                     className="group bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all overflow-hidden"
                   >
                     <div className="relative w-full h-28 sm:h-32">
-                      <ImageWithFallback
+                      <Image
                         src={imgSrc}
                         alt={imgAlt}
                         fill
