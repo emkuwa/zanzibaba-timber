@@ -22,31 +22,31 @@ export function formatVariantLabel(v: ProductVariant): string {
 }
 
 export const PRICE_NOTES = [
-  'Prices exclude VAT.',
-  'Prices exclude transportation.',
-  'Delivery is available anywhere in Zanzibar.',
-  'FREE delivery is available for qualifying bulk orders.',
+  'Prices Excluding VAT.',
+  'Free Delivery Across Zanzibar.',
+  'Cash on Delivery Available.',
+  'Prices may change without prior notice depending on stock availability.',
 ] as const
 
 export const PRODUCT_PRICES: ProductPrice[] = [
   // 12ft
-  { size: '2x2', length: '12ft', price: 7000 },
-  { size: '2x4', length: '12ft', price: 10500 },
-  { size: '1x6', length: '12ft', price: 12000 },
-  { size: '1x8', length: '12ft', price: 17000 },
-  { size: '1x10', length: '12ft', price: 29000 },
+  { size: '2x2', length: '12ft', price: 8000 },
+  { size: '2x4', length: '12ft', price: 11500 },
+  { size: '1x6', length: '12ft', price: 13000 },
+  { size: '1x8', length: '12ft', price: 16000 },
+  { size: '1x10', length: '12ft', price: 25000 },
   // 18ft
-  { size: '2x2', length: '18ft', price: 10500 },
-  { size: '2x3', length: '18ft', price: 19000 },
-  { size: '2x4', length: '18ft', price: 21000 },
-  { size: '2x6', length: '18ft', price: 35000 },
-  { size: '2x8', length: '18ft', price: 58000 },
-  { size: '1x4', length: '18ft', price: 8000 },
-  { size: '1x6', length: '18ft', price: 19000 },
-  { size: '1x8', length: '18ft', price: 32000 },
-  { size: '1x10', length: '18ft', price: 48000 },
+  { size: '2x2', length: '18ft', price: 11500 },
+  { size: '2x3', length: '18ft', price: 18000 },
+  { size: '2x4', length: '18ft', price: 19500 },
+  { size: '2x6', length: '18ft', price: 31000 },
+  { size: '2x8', length: '18ft', price: 48000 },
+  { size: '1x4', length: '18ft', price: 9000 },
+  { size: '1x6', length: '18ft', price: 18000 },
+  { size: '1x8', length: '18ft', price: 28000 },
+  { size: '1x10', length: '18ft', price: 41000 },
   // Treated Wood Poles (18ft)
-  { size: 'Treated Wood Poles', length: '18ft', price: 10500 },
+  { size: 'Treated Wood Poles', length: '18ft', price: 11500 },
 ]
 
 export const TIMBER_SIZES: TimberSize[] = [
