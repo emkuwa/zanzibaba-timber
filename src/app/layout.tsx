@@ -64,9 +64,7 @@ export const metadata: Metadata = {
     description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles.',
     images: [ogImage],
   },
-  verification: {
-    google: 'google-site-verification-placeholder',
-  },
+  // Domain-level property verified via DNS TXT record (sc-domain:timber.zanzibaba.com)
 }
 
 export default function RootLayout({
@@ -95,7 +93,7 @@ export default function RootLayout({
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "XXXXXXXXXX");
+            })(window, document, "clarity", "script", "xit00v4eql");
           `}
         </Script>
         <Script id="ga4-conversions" strategy="afterInteractive">
