@@ -207,6 +207,27 @@ export default function MarineBoardZanzibarPage() {
             </div>
 
             <div className="max-w-4xl mx-auto mb-12">
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Related Products</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Link href="/plywood" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+                  <h3 className="font-bold text-primary-600 mb-1">Plywood</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">All thicknesses from 3mm to 18mm.</p>
+                  <p className="text-xs text-gray-400 mt-1">From TZS 18,000 — Prices exclude VAT.</p>
+                </Link>
+                <Link href="/construction-plywood-zanzibar" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+                  <h3 className="font-bold text-primary-600 mb-1">Construction Plywood</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Structural-grade plywood for building projects.</p>
+                  <p className="text-xs text-gray-400 mt-1">FREE Delivery Across Zanzibar.</p>
+                </Link>
+                <Link href="/marine-board-price-zanzibar" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+                  <h3 className="font-bold text-primary-600 mb-1">Marine Board Prices</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Updated pricing for all marine board products.</p>
+                  <p className="text-xs text-gray-400 mt-1">TZS 46,000 — TZS 52,000.</p>
+                </Link>
+              </div>
+            </div>
+
+            <div className="max-w-4xl mx-auto mb-12">
               <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions About Marine Board in Zanzibar</h2>
               <div className="space-y-3">
                 {seoFAQ.map((faq, i) => (

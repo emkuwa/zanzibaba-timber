@@ -35,7 +35,7 @@ export default function PlywoodPriceZanzibarPage() {
   const itemListSchema = getItemListSchema(
     plywoodProducts.map(p => ({
       name: p.name,
-      url: `https://timber.zanzibaba.com/plywood/${p.slug}`,
+      url: `/plywood/${p.slug}`,
     })),
     'Plywood Products Zanzibar'
   )
@@ -172,7 +172,7 @@ export default function PlywoodPriceZanzibarPage() {
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Quote
                 </a>
-                <a href="tel:+255777777777"
+                <a href="tel:+255716002790"
                   className="flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
                   <Phone className="w-5 h-5" />
                   Call Now

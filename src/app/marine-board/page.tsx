@@ -189,6 +189,22 @@ export default function MarineBoardPage() {
               </div>
             </div>
 
+            <div className="max-w-5xl mx-auto mb-12">
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Related Products</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Link href="/plywood" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+                  <h3 className="font-bold text-primary-600 mb-1">Plywood — All Thicknesses</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Construction plywood from 3mm to 18mm. From TZS 18,000 per sheet.</p>
+                  <p className="text-xs text-gray-400 mt-1">Prices exclude VAT. FREE Delivery.</p>
+                </Link>
+                <Link href="/marine-board-zanzibar" className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+                  <h3 className="font-bold text-primary-600 mb-1">Marine Board Zanzibar — Full Guide</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Complete guide to marine board in Zanzibar — pricing, applications, and ordering.</p>
+                  <p className="text-xs text-gray-400 mt-1">Prices exclude VAT. FREE Delivery.</p>
+                </Link>
+              </div>
+            </div>
+
             <div className="max-w-3xl mx-auto mb-12">
               <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
               <div className="space-y-3">

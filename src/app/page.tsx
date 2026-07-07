@@ -244,10 +244,11 @@ export default function Home() {
                   <div className="text-[10px] text-gray-400 mb-1">{product.categoryId === 'marine-board' ? 'Marine Board' : 'Plywood'}</div>
                   <div className="text-lg font-bold text-primary-600 mb-1">{product.thickness}</div>
                   <div className="text-sm font-bold text-green-600 mb-1">{formatTZS(product.finalPrice)}</div>
-                  <div className="text-[10px] text-gray-400">per sheet</div>
+                  <div className="text-[10px] text-gray-400">per sheet — Prices exclude VAT</div>
                 </Link>
               ))}
             </div>
+            <p className="text-center text-xs text-gray-500 dark:text-gray-400 mb-4">FREE Delivery Across Zanzibar on all sheet products.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="/marine-board" className="inline-flex items-center gap-2 bg-primary-600 text-white px-5 py-2 rounded-xl font-semibold hover:bg-primary-700 transition-all shadow text-sm">
                 Marine Board <ArrowRight className="w-4 h-4" />
@@ -360,7 +361,7 @@ export default function Home() {
                 { icon: Warehouse, title: 'Stock Yard & Capacity', desc: 'Kwa Ndevu yard with covered storage, loading area, and large inventories of all standard sizes from 1x6 through 2x6 plus treated poles.' },
                 { icon: Cog, title: 'Treatment Plant', desc: 'In-house pressure treatment and kiln-drying facilities ensuring all timber is professionally treated for Zanzibar\'s tropical coastal climate.' },
                 { icon: Container, title: 'Processing & Cutting', desc: 'Log processing, dimensional cutting, and custom sizing capabilities for special orders and non-standard requirements.' },
-                { icon: Truck, title: 'Delivery Fleet', desc: 'Own fleet covering all Zanzibar locations from Paje to Nungwi. Standard 24-48 hour delivery with cash on payment option.' },
+                { icon: Truck, title: 'Delivery Fleet', desc: 'Own fleet covering all Zanzibar locations from Paje to Nungwi. FREE Delivery Across Zanzibar.' },
                 { icon: Network, title: 'Supply Network', desc: 'Strategic partnerships with mainland Tanzania suppliers ensure consistent quality, competitive pricing, and reliable supply for every order.' },
               ].map((item) => (
                 <div key={item.title} className="flex gap-3 p-3 rounded-lg border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/50 hover:shadow-md hover:border-primary-200 dark:hover:border-primary-800 transition-all">

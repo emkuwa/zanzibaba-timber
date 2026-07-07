@@ -78,6 +78,59 @@ export default function ConcreteFormworkMarineBoardPage() {
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 md:p-8 shadow-sm border border-gray-200 dark:border-gray-700">
+                  <h2 className="text-2xl font-bold mb-4">Marine Board Specifications for Formwork</h2>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse">
+                      <thead>
+                        <tr className="border-b-2 border-primary-600">
+                          <th className="text-left py-3 px-3 text-sm font-semibold">Spec</th>
+                          <th className="text-left py-3 px-3 text-sm font-semibold">Marine Board 18mm</th>
+                          <th className="text-left py-3 px-3 text-sm font-semibold">Marine Board 12mm</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-sm">
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-2 px-3 font-medium">Thickness</td>
+                          <td className="py-2 px-3">18mm</td>
+                          <td className="py-2 px-3">12mm</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+                          <td className="py-2 px-3 font-medium">Sheet Size</td>
+                          <td className="py-2 px-3">1220 × 2440 mm (4ft × 8ft)</td>
+                          <td className="py-2 px-3">1220 × 2440 mm (4ft × 8ft)</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-2 px-3 font-medium">Material</td>
+                          <td className="py-2 px-3">Hardwood + Phenolic Resin</td>
+                          <td className="py-2 px-3">Hardwood + Phenolic Resin</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+                          <td className="py-2 px-3 font-medium">Applications</td>
+                          <td className="py-2 px-3">Heavy formwork, walls, slabs</td>
+                          <td className="py-2 px-3">Light formwork, curves, panels</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <td className="py-2 px-3 font-medium">Moisture Resistance</td>
+                          <td className="py-2 px-3">100% Waterproof</td>
+                          <td className="py-2 px-3">100% Waterproof</td>
+                        </tr>
+                        <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+                          <td className="py-2 px-3 font-medium">Reuse Cycles</td>
+                          <td className="py-2 px-3">8–15 times</td>
+                          <td className="py-2 px-3">8–12 times</td>
+                        </tr>
+                        <tr>
+                          <td className="py-2 px-3 font-medium">Price (TZS)</td>
+                          <td className="py-2 px-3 font-bold text-primary-600">{formatTZS(52000)}</td>
+                          <td className="py-2 px-3 font-bold text-primary-600">{formatTZS(46000)}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-3">Prices exclude VAT. FREE Delivery Across Zanzibar.</p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 md:p-8 shadow-sm border border-gray-200 dark:border-gray-700">
                   <h2 className="text-2xl font-bold mb-4">Marine Board vs Other Formwork Materials</h2>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
@@ -187,7 +240,7 @@ export default function ConcreteFormworkMarineBoardPage() {
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Order
                 </a>
-                <a href="tel:+255777777777"
+                <a href="tel:+255716002790"
                   className="flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
                   <Phone className="w-5 h-5" />
                   Call Now

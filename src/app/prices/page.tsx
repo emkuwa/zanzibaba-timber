@@ -139,7 +139,7 @@ export default function Prices() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-xs text-gray-500 mt-2">Price excludes VAT.</p>
+              <p className="text-xs text-gray-500 mt-2">Prices exclude VAT.</p>
             </div>
 
             <div className="max-w-5xl mx-auto mt-8">
@@ -179,7 +179,7 @@ export default function Prices() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-xs text-gray-500 mt-2">Price excludes VAT.</p>
+              <p className="text-xs text-gray-500 mt-2">Prices exclude VAT.</p>
             </div>
 
             <div className="max-w-5xl mx-auto mt-8">

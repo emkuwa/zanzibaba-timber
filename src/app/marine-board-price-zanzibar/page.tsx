@@ -35,7 +35,7 @@ export default function MarineBoardPriceZanzibarPage() {
   const itemListSchema = getItemListSchema(
     marineProducts.map(p => ({
       name: p.name,
-      url: `https://timber.zanzibaba.com/marine-board/${p.slug}`,
+      url: `/marine-board/${p.slug}`,
     })),
     'Marine Board Products Zanzibar'
   )
@@ -176,7 +176,7 @@ export default function MarineBoardPriceZanzibarPage() {
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Quote
                 </a>
-                <a href="tel:+255777777777"
+                <a href="tel:+255716002790"
                   className="flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
                   <Phone className="w-5 h-5" />
                   Call Now
