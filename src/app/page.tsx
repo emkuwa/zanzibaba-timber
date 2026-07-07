@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -236,40 +235,20 @@ export default function Home() {
               Waterproof marine boards and construction plywood in all thicknesses — 4ft x 8ft sheets delivered across Zanzibar.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto mb-4">
-              {SHEET_PRODUCTS.slice(0, 4).map((product) => {
-                const imgSrc = product.categoryId === 'marine-board'
-                  ? '/images/gallery/marine-board-zanzibar.jpg'
-                  : '/images/gallery/construction-plywood-zanzibar.jpg'
-                const imgAlt = product.categoryId === 'marine-board'
-                  ? 'Marine Board Supplier in Zanzibar'
-                  : 'Construction Plywood Supplier in Zanzibar'
-                return (
-                  <Link
-                    key={product.id}
-                    href={`/${product.categoryId === 'marine-board' ? 'marine-board' : 'plywood'}/${product.slug}`}
-                    className="group bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all overflow-hidden"
-                  >
-                    <div className="relative w-full h-28 sm:h-32">
-                      <Image
-                        src={imgSrc}
-                        alt={imgAlt}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        sizes="(max-width: 640px) 50vw, 25vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                      <div className="absolute bottom-1 left-2 right-2">
-                        <div className="text-[10px] text-white/80">{product.categoryId === 'marine-board' ? 'Marine Board' : 'Plywood'}</div>
-                        <div className="text-sm font-bold text-white">{product.thickness}</div>
-                      </div>
-                    </div>
-                    <div className="p-2 text-center">
-                      <div className="text-sm font-bold text-green-600 mb-0.5">{formatTZS(product.finalPrice)}</div>
-                      <div className="text-[10px] text-gray-400">per sheet — Prices exclude VAT</div>
-                    </div>
-                  </Link>
-                )
-              })}
+              {SHEET_PRODUCTS.slice(0, 4).map((product) => (
+                <Link
+                  key={product.id}
+                  href={`/${product.categoryId === 'marine-board' ? 'marine-board' : 'plywood'}/${product.slug}`}
+                  className="group bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-primary-300 dark:hover:border-primary-700 transition-all text-center"
+                >
+                  <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1 uppercase tracking-wider font-medium">
+                    {product.categoryId === 'marine-board' ? 'Marine Board' : 'Plywood'}
+                  </div>
+                  <div className="text-lg font-bold text-primary-600 dark:text-primary-400 mb-1">{product.thickness}</div>
+                  <div className="text-sm font-bold text-green-600 dark:text-green-400 mb-1">{formatTZS(product.finalPrice)}</div>
+                  <div className="text-[10px] text-gray-400 dark:text-gray-500">per sheet — Prices exclude VAT</div>
+                </Link>
+              ))}
             </div>
             <p className="text-center text-xs text-gray-500 dark:text-gray-400 mb-4">FREE Delivery Across Zanzibar on all sheet products.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
