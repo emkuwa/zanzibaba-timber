@@ -12,6 +12,3 @@ Disallow: /admin/
 
 # Host
 Host: https://timber.zanzibaba.com
-
-# Sitemaps
-Sitemap: https://timber.zanzibaba.com/sitemap.xml

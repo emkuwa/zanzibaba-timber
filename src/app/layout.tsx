@@ -67,13 +67,17 @@ export const metadata: Metadata = {
   // Domain-level property verified via DNS TXT record (sc-domain:timber.zanzibaba.com)
 }
 
+import { headers } from 'next/headers'
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const headersList = headers()
+  const lang = headersList.get('x-path-lang') || 'en'
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=G-BD261DFDL6`}

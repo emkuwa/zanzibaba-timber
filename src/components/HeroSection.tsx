@@ -60,23 +60,29 @@ function CallButton() {
   )
 }
 
-const BENEFITS = [
-  'Premium Treated Pine, Marine Board & Plywood — Kiln-dried & professionally treated',
-  'Delivery Across All Zanzibar — From Paje to Nungwi',
-  'Bulk Order Discounts — Save on large quantities',
-  'Fast WhatsApp Quotes — Response in under 30 minutes',
-  'Cash on Delivery, Mobile Money & Bank Transfer — Flexible payment options',
-]
-
 export default function HeroSection() {
-  const { t } = useBilingual()
+  const { t, locale } = useBilingual()
+
+  const BENEFITS = locale === 'sw' ? [
+    'Mbao Treated Pine, Marine Board na Plywood Premium — Imekaushwa na kutibiwa kitaalamu',
+    'Utoaji Zanzibar Zima — Kutoka Paje hadi Nungwi',
+    'Punguzo la Bei kwa Agizo la Jumla — Okoa kwenye kiasi kikubwa',
+    'Nukuu za WhatsApp Haraka — Jibu chini ya dakika 30',
+    'Malipo Baada ya Kupelekwa, Simu, Benki — Chaguo mbalimbali za malipo',
+  ] : [
+    'Premium Treated Pine, Marine Board & Plywood — Kiln-dried & professionally treated',
+    'Delivery Across All Zanzibar — From Paje to Nungwi',
+    'Bulk Order Discounts — Save on large quantities',
+    'Fast WhatsApp Quotes — Response in under 30 minutes',
+    'Cash on Delivery, Mobile Money & Bank Transfer — Flexible payment options',
+  ]
 
   return (
     <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/images/gallery/zanzibaba-timber-hero-banner.jpg"
-          alt="Zanzibaba Timber yard — premium treated pine timber in Zanzibar"
+          alt={locale === 'sw' ? "Yadi ya Zanzibaba Timber — mbao treated pine premium Zanzibar" : "Zanzibaba Timber yard — premium treated pine timber in Zanzibar"}
           fill
           priority
           className="object-cover scale-105"
@@ -99,7 +105,7 @@ export default function HeroSection() {
             variants={itemVariants}
           >
             <ShieldCheck className="w-3.5 h-3.5" />
-            Zanzibar&apos;s Trusted Timber, Marine Board & Plywood Supplier
+            {locale === 'sw' ? 'Msambazaji wa Mbao, Marine Board na Plywood Anayeaminika Zanzibar' : "Zanzibar&apos;s Trusted Timber, Marine Board & Plywood Supplier"}
           </motion.div>
 
           <motion.h1

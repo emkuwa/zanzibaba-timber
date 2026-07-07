@@ -6,8 +6,10 @@ import { generateWhatsAppLink } from '@/lib/data'
 import { useBilingual } from '@/lib/bilingual'
 
 export default function Footer() {
-  const { t } = useBilingual()
+  const { t, locale } = useBilingual()
   const year = new Date().getFullYear()
+
+  const S = (sw: string, en: string) => locale === 'sw' ? sw : en
 
   const locations = [
     { name: 'Paje', slug: 'paje' },
@@ -33,41 +35,41 @@ export default function Footer() {
       <div className="container-custom px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
           <div>
-            <h3 className="text-lg font-bold mb-4">Company</h3>
+            <h3 className="text-lg font-bold mb-4">{S('Kampuni', 'Company')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-gray-400 hover:text-white text-sm transition-colors">Home</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-white text-sm transition-colors">About</Link></li>
-              <li><Link href="/projects" className="text-gray-400 hover:text-white text-sm transition-colors">Projects</Link></li>
-              <li><Link href="/blog" className="text-gray-400 hover:text-white text-sm transition-colors">Blog</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">Contact</Link></li>
+              <li><Link href="/" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Nyumbani', 'Home')}</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Kuhusu', 'About')}</Link></li>
+              <li><Link href="/projects" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Miradi', 'Projects')}</Link></li>
+              <li><Link href="/blog" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Blogu', 'Blog')}</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Mawasiliano', 'Contact')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Products</h3>
+            <h3 className="text-lg font-bold mb-4">{S('Bidhaa', 'Products')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/timber-sizes" className="text-gray-400 hover:text-white text-sm transition-colors">Timber Sizes</Link></li>
-              <li><Link href="/timber-zanzibar" className="text-gray-400 hover:text-white text-sm transition-colors">Treated Pine Timber</Link></li>
-              <li><Link href="/marine-board" className="text-gray-400 hover:text-white text-sm transition-colors">Marine Board</Link></li>
-              <li><Link href="/plywood" className="text-gray-400 hover:text-white text-sm transition-colors">Plywood</Link></li>
-              <li><Link href="/prices" className="text-gray-400 hover:text-white text-sm transition-colors">Prices</Link></li>
+              <li><Link href="/timber-sizes" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Saizi za Mbao', 'Timber Sizes')}</Link></li>
+              <li><Link href="/timber-zanzibar" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Mbao Treated Pine', 'Treated Pine Timber')}</Link></li>
+              <li><Link href="/marine-board" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Marine Board', 'Marine Board')}</Link></li>
+              <li><Link href="/plywood" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Plywood', 'Plywood')}</Link></li>
+              <li><Link href="/prices" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Bei', 'Prices')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Services</h3>
+            <h3 className="text-lg font-bold mb-4">{S('Huduma', 'Services')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/timber-sizes" className="text-gray-400 hover:text-white text-sm transition-colors">Timber Supply</Link></li>
-              <li><Link href="/hotel-supply" className="text-gray-400 hover:text-white text-sm transition-colors">Hotel Supply</Link></li>
-              <li><Link href="/villa-supply" className="text-gray-400 hover:text-white text-sm transition-colors">Villa Supply</Link></li>
-              <li><Link href="/government-supply" className="text-gray-400 hover:text-white text-sm transition-colors">Government Supply</Link></li>
-              <li><Link href="/wholesale" className="text-gray-400 hover:text-white text-sm transition-colors">Wholesale</Link></li>
-              <li><Link href="/delivery" className="text-gray-400 hover:text-white text-sm transition-colors">Delivery</Link></li>
+              <li><Link href="/timber-sizes" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Usambazaji Mbao', 'Timber Supply')}</Link></li>
+              <li><Link href="/hotel-supply" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Usambazaji Hoteli', 'Hotel Supply')}</Link></li>
+              <li><Link href="/villa-supply" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Usambazaji Villa', 'Villa Supply')}</Link></li>
+              <li><Link href="/government-supply" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Usambazaji Serikali', 'Government Supply')}</Link></li>
+              <li><Link href="/wholesale" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Jumla', 'Wholesale')}</Link></li>
+              <li><Link href="/delivery" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Utoaji', 'Delivery')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Locations</h3>
+            <h3 className="text-lg font-bold mb-4">{S('Maeneo', 'Locations')}</h3>
             <ul className="space-y-2">
               {locations.map((loc) => (
                 <li key={loc.slug}>
@@ -83,11 +85,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Resources</h3>
+            <h3 className="text-lg font-bold mb-4">{S('Nyenzo', 'Resources')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/prices" className="text-gray-400 hover:text-white text-sm transition-colors">FAQ</Link></li>
-              <li><Link href="/sitemap.xml" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link></li>
-              <li><Link href="/sw" className="text-gray-400 hover:text-white text-sm transition-colors">Swahili Version</Link></li>
+              <li><Link href="/prices" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Maswali', 'FAQ')}</Link></li>
+              <li><Link href="/sitemap.xml" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Ramani ya Tovuti', 'Sitemap')}</Link></li>
+              <li><Link href="/sw" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Toleo la Kiswahili', 'Swahili Version')}</Link></li>
             </ul>
           </div>
         </div>

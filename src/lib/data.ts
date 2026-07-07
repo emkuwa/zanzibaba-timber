@@ -308,6 +308,9 @@ export const BLOG_POSTS = [
   { id: '48', title: 'Construction Material Supply Chain Zanzibar', slug: 'construction-material-supply-chain-zanzibar', excerpt: 'Understanding Zanzibar\'s construction material supply chain. How timber gets from mainland Tanzania to your project site.', date: '2024-01-11', category: 'Guides' },
   { id: '49', title: 'Timber Quality Checklist for Zanzibar Buyers', slug: 'timber-quality-checklist-zanzibar-buyers', excerpt: 'Essential quality checklist for buying timber in Zanzibar. What to inspect, questions to ask, and red flags to watch for.', date: '2024-01-08', category: 'Guides' },
   { id: '50', title: 'Future of Timber Construction in Zanzibar', slug: 'future-timber-construction-zanzibar', excerpt: 'Trends and innovations shaping the future of timber construction in Zanzibar. Sustainable building and modern techniques.', date: '2024-01-05', category: 'Guides' },
+  { id: '51', title: 'Bei ya Mbao Zanzibar 2026 — Mwongozo Kamili wa Bei', slug: 'bei-ya-mbao-zanzibar-2026', excerpt: 'Mwongozo kamili wa bei ya mbao Zanzibar 2026. Bei za mbao 2x2, 2x4, 2x6, 1x6, 1x8, 1x10 kwa 12ft na 18ft. Marine board na plywood pia. Punguzo kwa jumla na utoaji bure.', date: '2026-01-15', category: 'Pricing' },
+  { id: '52', title: 'Aina za Mbao za Ujenzi Zanzibar — Mwongozo kwa Mafundi', slug: 'aina-za-mbao-za-ujenzi-zanzibar', excerpt: 'Aina zote za mbao za ujenzi Zanzibar. Mbao treated pine, mbao za dawa, marine board, plywood, na treated poles. Jua tofauti na matumizi ya kila aina kwa mradi wako.', date: '2026-01-10', category: 'Guides' },
+  { id: '53', title: 'Jinsi ya Kununua Mbao Zanzibar — Ushauri kwa Wanunuzi', slug: 'jinsi-ya-kununua-mbao-zanzibar', excerpt: 'Ushauri wa kitaalamu kwa wanunuzi wa mbao Zanzibar. Jinsi ya kuchagua mbao bora, kuangalia ubora, na kupata bei nzuri. Malipo na utoaji Zanzibar.', date: '2026-01-05', category: 'Guides' },
 ]
 
 export const PHONE = '+255716002790'
