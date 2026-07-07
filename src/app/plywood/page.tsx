@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -37,9 +38,24 @@ export default function PlywoodPage() {
               <span className="text-gray-500">Plywood</span>
             </nav>
 
-            <h1 className="text-3xl md:text-5xl font-bold text-center mb-3">
-              Plywood <span className="text-primary-600">Zanzibar</span> — Construction Plywood Sheets
-            </h1>
+            <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mb-6 md:mb-8 shadow-lg">
+              <Image
+                src="/images/gallery/construction-plywood-zanzibar.jpg"
+                alt="Construction Plywood Supplier in Zanzibar"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6">
+                <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+                  Plywood <span className="text-primary-300">Zanzibar</span>
+                </h1>
+                <p className="text-gray-200 mt-1 text-xs sm:text-sm">Construction Plywood Sheets — All Thicknesses — 4ft x 8ft</p>
+              </div>
+            </div>
+
             <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-sm md:text-base">
               Zanzibaba Timber supplies premium construction plywood across Zanzibar in every standard thickness from 3mm to 18mm. Our full range covers structural flooring and roofing projects as well as decorative interior paneling and craft applications — all in standard 4ft x 8ft sheets ready for island-wide delivery.
             </p>

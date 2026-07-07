@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -54,6 +55,17 @@ export default function MarineBoardZanzibarPage() {
             <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-sm md:text-base">
               Marine board is a waterproof plywood engineered with phenolic resin for maximum moisture resistance. The go-to material for concrete formwork, boat building, and construction projects exposed to water or humidity in Zanzibar. Available in 18mm and 12mm thicknesses — 4ft x 8ft sheets.
             </p>
+
+            <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mb-8 shadow-lg max-w-5xl mx-auto">
+              <Image
+                src="/images/gallery/marine-board-zanzibar.jpg"
+                alt="Marine Board Supplier in Zanzibar"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
               <a

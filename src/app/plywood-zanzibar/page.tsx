@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -55,6 +56,17 @@ export default function PlywoodZanzibarPage() {
             <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-sm md:text-base">
               Zanzibaba Timber is Zanzibar&apos;s trusted supplier of construction plywood. We stock all standard thicknesses from 3mm to 18mm in 4ft x 8ft sheets. From structural flooring and roofing to decorative paneling and craft work — we have the right plywood for every project on the island.
             </p>
+
+            <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mb-8 shadow-lg max-w-5xl mx-auto">
+              <Image
+                src="/images/gallery/construction-plywood-zanzibar.jpg"
+                alt="Construction Plywood Supplier in Zanzibar"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div>
 
             <div className="max-w-3xl mx-auto mb-8">
               <PriceNotice />

@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -60,6 +61,16 @@ export default function MarineBoardPriceZanzibarPage() {
               Current marine board prices in Zanzibar. Transparent pricing on all marine board products. 
               No hidden fees — the price you see is the price you pay. FREE Delivery Across Zanzibar.
             </p>
+            <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mt-6 shadow-lg max-w-3xl">
+              <Image
+                src="/images/gallery/marine-board-zanzibar.jpg"
+                alt="Marine Board Supplier in Zanzibar"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div>
           </div>
         </section>
 

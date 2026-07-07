@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -58,6 +59,16 @@ export default function ConstructionPlywoodZanzibarPage() {
               Construction-grade plywood for projects in Zanzibar. Marine board and plywood in all thicknesses from 3mm to 18mm.
               Standard 4ft x 8ft sheets for residential and commercial building. FREE Delivery Across Zanzibar.
             </p>
+            <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mt-6 shadow-lg max-w-3xl">
+              <Image
+                src="/images/gallery/construction-plywood-zanzibar.jpg"
+                alt="Construction Plywood Supplier in Zanzibar"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div>
           </div>
         </section>
 
