@@ -9,8 +9,8 @@ import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Marine Board, Plywood & Timber Prices in Zanzibar - Updated 2026',
-  'Current marine board, plywood and timber prices in Zanzibar. Marine board 18mm and 12mm. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. Timber 2x2, 2x4, 1x6, 1x8, 1x10. Free Delivery Across Zanzibar.',
+  'Marine Board, Plywood, Treated Wood Poles & Timber Prices in Zanzibar - Updated 2026',
+  'Current marine board, plywood, treated wood poles and timber prices in Zanzibar. Marine board 18mm and 12mm. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. Timber 2x2, 2x4, 1x6, 1x8, 1x10. Treated wood poles 2"-6". Free Delivery Across Zanzibar.',
   'en',
   '/prices'
 )

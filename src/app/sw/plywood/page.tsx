@@ -9,8 +9,8 @@ import PriceNotice from '@/components/PriceNotice'
 import { Phone, MessageCircle, Shield, CheckCircle, Layers } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Plywood Zanzibar — Mbao za Tabaka za Ujenzi | Zanzibaba Timber',
-  'Nunua plywood (mbao za tabaka) za ujenzi bora Zanzibar. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, na 3mm. Karatasi 4ft x 8ft kutoka TZS 18,000. Usafiri bure kisiwa kima.',
+  'Plywood Zanzibar — Bei na Mauzo | Zanzibaba Timber',
+  'Nunua plywood za ujenzi Zanzibar. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, na 3mm. Karatasi 4ft x 8ft kutoka TZS 18,000. Usafiri bure Zanzibar zima.',
   'sw',
   '/sw/plywood'
 )
@@ -39,16 +39,16 @@ export default function SwPlywood() {
             </nav>
 
             <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mb-6 md:mb-8 shadow-lg">
-              <Image src="/images/gallery/construction-plywood-zanzibar.jpg" alt="Plywood ya Ujenzi Zanzibar" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw" priority />
+              <Image src="/images/gallery/construction-plywood-zanzibar.jpg" alt="Plywood Zanzibar" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw" priority />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6">
-                <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">Plywood (Mbao za Tabaka) <span className="text-primary-300">Zanzibar</span></h1>
-                <p className="text-gray-200 mt-1 text-xs sm:text-sm">Plywood / Mbao za Tabaka za Ujenzi — 3mm hadi 18mm — Karatasi 4ft x 8ft</p>
+                <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">Plywood <span className="text-primary-300">Zanzibar</span></h1>
+                <p className="text-gray-200 mt-1 text-xs sm:text-sm">Plywood za Ujenzi — 3mm hadi 18mm — Karatasi 4ft x 8ft</p>
               </div>
             </div>
 
             <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-sm md:text-base">
-              Plywood ni nyenzo muhimu ya ujenzi Zanzibar, ikifaa kwa dari, sakafu, kuta, na matumizi mengi ya ujenzi. Tunatoa plywood katika unene wote kutoka 3mm hadi 18mm — karatasi 4ft x 8ft zinafikishwa Zanzibar zima.
+              Plywood ni nyenzo muhimu kwa ujenzi Zanzibar — dari, sakafu, kuta, na matumizi mengi. Tunatoa plywood unene wote kutoka 3mm hadi 18mm. Karatasi 4ft x 8ft zinafikishwa Zanzibar zima.
             </p>
 
             <div className="max-w-3xl mx-auto mb-8"><PriceNotice /></div>

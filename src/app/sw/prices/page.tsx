@@ -9,8 +9,8 @@ import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Bei za Marine Board, Plywood na Mbao Zanzibar - Sasisho 2026',
-  'Bei za sasa za marine board, plywood na mbao Zanzibar. Marine board 18mm na 12mm. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. Mbao 2x2, 2x4, 1x6, 1x8, 1x10. Utoaji BURE Zanzibar Zima.',
+  'Bei za Marine Board, Plywood na Mbao Zanzibar - 2026',
+  'Bei za sasa za marine board, plywood na mbao Zanzibar. Marine board 18mm na 12mm. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. Mbao 2x2, 2x4, 1x6, 1x8, 1x10. Usafiri bure Zanzibar zima.',
   'sw',
   '/sw/prices'
 )
@@ -76,7 +76,7 @@ export default function SwPrices() {
             </nav>
             <h1 className="text-3xl md:text-5xl font-bold text-center mb-3">Bei za Marine Board, Plywood na Mbao Zanzibar</h1>
             <p className="text-center text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto text-sm md:text-base">
-              Bei za sasa za marine board, plywood na mbao Zanzibar. Bei nzuri kwa miradi yote. Punguzo za jumla zinapatikana.
+              Bei za sasa za marine board, plywood na mbao Zanzibar. Bei nzuri kwa miradi yote. Punguzo kwa jumla zinapatikana.
             </p>
             <div className="max-w-5xl mx-auto mb-8"><PriceNotice /></div>
             <div className="max-w-5xl mx-auto">

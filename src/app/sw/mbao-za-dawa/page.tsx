@@ -7,8 +7,8 @@ import Link from 'next/link'
 import { CheckCircle, MessageCircle, Shield, Thermometer, Bug, Droplets } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Mbao za Dawa Zanzibar | Mbao Zilizochemishwa kwa Dawa Treated Pine — Zanzibaba Timber',
-  'Mbao za dawa (mbao zilizochemishwa kwa dawa / treated pine timber) Zanzibar. Mbao zenye dawa za kuzuia mchwa, kuvu, na kuoza. Kiln-dried. Usafiri bure Zanzibar Zima. Piga simu +255 716 002 790.',
+  'Mbao za Dawa Zanzibar | Treated Pine — Zanzibaba Timber',
+  'Mbao za dawa (treated pine) Zanzibar. Mbao zenye dawa za kuzuia mchwa, kuvu, na kuoza. Kiln-dried. Usafiri bure Zanzibar zima. Piga +255 716 002 790.',
   'sw',
   '/sw/mbao-za-dawa'
 )
@@ -19,10 +19,10 @@ const breadcrumb = getBreadcrumbSchema([
 ])
 
 const faqSchema = getFAQSchema([
-  { question: 'Mbao za dawa ni nini?', answer: 'Mbao za dawa (pia huitwa mbao zilizochemishwa kwa dawa au treated pine) ni mbao ambazo zimetibiwa kwa kemikali maalum kuzuia mchwa, kuvu, na kuoza. Hii inamaanisha mbao zina muda mrefu wa matumizi haswa katika hali ya hewa ya tropiki ya Zanzibar.' },
-  { question: 'Je, mbao za dawa ni salama kwa matumizi ya nyumba?', answer: 'Ndiyo, mbao za dawa (treated pine) zinatibiwa kwa viwango vya usalama na zinafaa kwa matumizi ya nyumba, paa, na miundo ya nje. Treated pine inatumika kwa wingi katika ujenzi duniani kote.' },
-  { question: 'Mbao za dawa zinadumu muda gani?', answer: 'Mbao treated pine zinaweza kudumu miaka 15-25 au zaidi zinapotumiwa nje, na hata muda mrefu zaidi kwa matumizi ya ndani. Maisha ya mbao yanategemea mazingira na matengenezo.' },
-  { question: 'Je, mnauza mbao za dawa Zanzibar?', answer: 'Ndiyo, Zanzibaba Timber ni msambazaji mkuu wa mbao za dawa (treated pine) Zanzibar. Tunauza saizi zote: 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6, na treated wood poles. Usafiri bure Zanzibar Zima.' },
+  { question: 'Mbao za dawa ni nini?', answer: '                Mbao za dawa (treated pine) ni mbao zilizotibiwa kwa kemikali maalum kuzuia mchwa, kuvu, na kuoza. Pia huitwa mirunda zilizowekewa dawa au mbao zilizochemishwa kwa dawa. Hii inamaanisha mbao zinadumu muda mrefu hasa katika hali ya hewa ya Zanzibar.' },
+  { question: 'Je, mbao za dawa ni salama kwa matumizi ya nyumba?', answer: 'Ndiyo, mbao za dawa (treated pine) zinatibiwa kwa viwango vya usalama na zinafaa kwa matumizi ya nyumba, paa, na miundo ya nje. Treated pine inatumika kwa wingi katika ujenzi duniani.' },
+  { question: 'Mbao za dawa zinadumu muda gani?', answer: 'Mbao treated pine zinaweza kudumu miaka 15-25 au zaidi nje, na muda mrefu zaidi kwa matumizi ya ndani. Maisha ya mbao yanategemea mazingira na matengenezo.' },
+  { question: 'Je, mnauza mbao za dawa Zanzibar?', answer: 'Ndiyo, Zanzibaba Timber ndio duka la mbao za dawa (treated pine) Zanzibar. Tunauza saizi zote: 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6, na treated wood poles. Usafiri bure Zanzibar zima.' },
 ])
 
 export default function MbaoZaDawa() {
@@ -44,7 +44,7 @@ export default function MbaoZaDawa() {
                 Mbao za Dawa <span className="text-green-400">Zanzibar</span>
               </h1>
               <p className="text-lg md:text-xl text-primary-100 mb-8 max-w-3xl">
-                Mbao zilizochemishwa kwa dawa (treated pine) zenye dawa za kuzuia mchwa, kuvu, na kuoza. Kiln-dried na tayari kwa ujenzi. Usafiri bure Zanzibar Zima.
+                Treated pine zenye dawa za kuzuia mchwa, kuvu, na kuoza. Kiln-dried na tayari kwa ujenzi. Usafiri bure Zanzibar zima.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href={generateWhatsAppLink('Habari, nataka kununua mbao za dawa')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-lg transition-all shadow-lg">

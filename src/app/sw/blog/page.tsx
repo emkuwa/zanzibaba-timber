@@ -16,7 +16,7 @@ const CATEGORY_SW: Record<string, string> = {
   'Timber Guides': 'Mwongozo wa Mbao',
   'Construction': 'Ujenzi',
   'Location Guide': 'Mwongozo wa Maeneo',
-  'Delivery': 'Utoaji',
+  'Delivery': 'Usafiri',
   'General': 'Jumla',
   'Plywood & Marine Board': 'Plywood na Marine Board',
 }
@@ -52,7 +52,7 @@ export default function SwBlog() {
 
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">Blog ya Mbao Zanzibar</h1>
             <p className="text-center text-gray-600 dark:text-gray-300 mb-4 max-w-3xl mx-auto">
-              Mwongozo, vidokezo, na ushauri kuhusu mbao treated pine Zanzibar. Ujenzi, bei, utoaji, na taarifa za maeneo maalum.
+              Mwongozo, vidokezo, na ushauri kuhusu mbao za treated pine Zanzibar. Ujenzi, bei, usafiri, na taarifa za maeneo.
             </p>
 
             <div className="text-center mb-12">
@@ -85,7 +85,7 @@ export default function SwBlog() {
             <div className="mt-12 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center">
               <h2 className="text-2xl font-bold mb-4">Unahitaji Mbao kwa Mradi Wako?</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                Tazama saizi zetu zote za mbao treated pine au wasiliana nasi kwa anda na utoaji wa kisiwa kima na malipo wakati wa kuuza.
+                Tazama saizi zetu zote za mbao treated pine au wasiliana nasi kwa bei na usafiri Zanzibar zima na malipo baada ya kupelekwa.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/sw/timber-sizes" className="inline-block bg-primary-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-700">

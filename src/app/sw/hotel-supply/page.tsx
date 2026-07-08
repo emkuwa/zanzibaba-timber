@@ -6,15 +6,15 @@ import { generateWhatsAppLink } from '@/lib/data'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Usambazaji wa Mbao kwa Hoteli Zanzibar — Mbao Pine kwa Hoteli na Resorts',
-  'Mbao pine kwa hoteli na resorts Zanzibar — Nungwi, Kendwa, Paje, Stone Town. Bei ya jumla, utoaji kisiwa nzima, na malipo baada ya kupelekwa. Piga simu +255 716 002 790.',
+  'Mbao kwa Hoteli Zanzibar — Mbao Pine kwa Hoteli na Resorts',
+  'Mbao pine kwa hoteli na resorts Zanzibar — Nungwi, Kendwa, Paje, Stone Town. Bei ya jumla, usafiri Zanzibar zima, na malipo baada ya kupelekwa. Piga +255 716 002 790.',
   'sw',
   '/sw/hotel-supply'
 )
 
 const breadcrumb = getBreadcrumbSchema([
   { name: 'Nyumbani', url: '/' },
-  { name: 'Usambazaji wa Hoteli', url: '/sw/hotel-supply' },
+  { name: 'Mbao kwa Hoteli', url: '/sw/hotel-supply' },
 ])
 
 export default function SwHotelSupply() {
@@ -27,11 +27,11 @@ export default function SwHotelSupply() {
             <nav className="mb-4 md:mb-6 text-sm" aria-label="Breadcrumb">
               <Link href="/sw" className="text-primary-600 hover:underline">Nyumbani</Link>
               <span className="mx-2 text-gray-400">/</span>
-              <span className="text-gray-500">Usambazaji wa Hoteli</span>
+              <span className="text-gray-500">Mbao kwa Hoteli</span>
             </nav>
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">Usambazaji wa Mbao kwa Hoteli Zanzibar</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">Mbao na Mirunda kwa Hoteli Zanzibar</h1>
             <p className="text-lg text-center text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
-              Tunatoa mbao pine kwa hoteli, resorts, na nyumba za wageni kote Zanzibar — Nungwi, Kendwa, Paje, Stone Town, na Kiwengwa. Bei ya jumla, ukata kulingana na mahitaji yako, na utoaji wa haraka.
+              Tunatoa mbao pine, mirunda, marine board, na plywood kwa hoteli, resorts, na nyumba za wageni kote Zanzibar — Nungwi, Kendwa, Paje, Stone Town, na Kiwengwa. Bei ya jumla, vipimo maalum, na usafiri wa haraka. Malipo baada ya kupelekwa. Pata bei leo kupitia WhatsApp.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -50,7 +50,7 @@ export default function SwHotelSupply() {
                 <h2 className="text-2xl font-bold mb-4">Huduma Zetu</h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">Tunahakikisha hoteli yako inapata mbao bora kwa wakati:</p>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-                  <li>• Utoaji wa haraka kisiwa nzima</li>
+                  <li>• Usafiri wa haraka Zanzibar zima</li>
                   <li>• Malipo baada ya kupelekwa (cash on delivery)</li>
                   <li>• Bei maalum kwa agizo kubwa</li>
                   <li>• Msimamizi maalum wa akaunti kwa hoteli</li>

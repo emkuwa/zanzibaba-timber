@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
   'Timber Delivery Zanzibar - Island-Wide Service | Cash on Delivery, Mobile Money & Bank Transfer | 24-48hr',
-  'Fast timber delivery across all Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu. Cash on delivery, mobile money & bank transfer. Bulk loads. 24-48 hour service.',
+  'Fast timber, treated wood poles, marine board and plywood delivery across all Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu. Cash on delivery, mobile money & bank transfer. Bulk loads welcome. 24-48 hour service. Order via WhatsApp.',
   'en',
   '/delivery'
 )

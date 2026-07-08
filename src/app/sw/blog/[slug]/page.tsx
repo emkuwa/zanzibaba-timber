@@ -30,15 +30,15 @@ function getRelatedPosts(current: BlogPost): BlogPost[] {
 
 function getContentPadding(): string {
   const sizeMentions = TIMBER_SIZES.map(s => `${s.name} (${s.dimensions})`).join(', ')
-  return `Katika Zanzibaba Timber, tunasambaza mbao bora treated pine kote Zanzibar ikiwemo Paje, Nungwi, Kendwa, Stone Town, na maeneo yote. Mbao zetu ni kiln-dried na zinatibiwa kitaalamu kustahimili hali ya hewa ya kitropiki ya Zanzibar, na kuzifanya zinafaa kwa miradi ya ujenzi ya kila aina.
+  return `Katika Zanzibaba Timber, tunauza mbao za treated pine kote Zanzibar — Paje, Nungwi, Kendwa, Stone Town, na maeneo yote. Mbao zetu ni kiln-dried na zinatibiwa kustahimili hali ya hewa ya Zanzibar, zinafaa kwa miradi ya ujenzi ya kila aina.
 
-Tuna saizi mbalimbali ikiwemo ${sizeMentions}. Saizi zote zinapatikana kwa utoaji wa kisiwa kima na malipo wakati wa kuuza. Timu yetu inatoa ushauri wa kitaalamu kuhusu uteuzi wa mbao, kiasi, na mipango ya mradi.
+Tuna saizi mbalimbali ikiwemo ${sizeMentions}. Saizi zote zinapatikana kwa usafiri Zanzibar zima na malipo baada ya kupelekwa. Timu yetu inatoa ushauri kuhusu uteuzi wa mbao, kiasi, na mipango ya mradi.
 
-Kwa maagizo ya jumla, tunatoa bei za jumla za ushindani kwa makandarasi, hoteli, resort, na miradi ya serikali. Saizi maalum zinaweza kuombwa. Wasiliana nasi kwa bei na upatikanaji.
+Kwa maagizo ya jumla, tunatoa bei nafuu kwa makandarasi, hoteli, resort, na miradi ya serikali. Saizi maalum zinaweza kuombwa. Wasiliana nasi kwa bei.
 
-Iwe unajenga villa ya beachfront Paje, resort Nungwi, unarejesha jengo la kihistoria Stone Town, au unafanya kazi ya mradi wa serikali, Zanzibaba Timber ndio msambazaji wako wa mbao anayeaminika Zanzibar.
+Iwe unajenga villa Paje, resort Nungwi, unarejesha jengo la kihistoria Stone Town, au unafanya kazi ya mradi wa serikali, Zanzibaba Timber ndio duka lako la mbao Zanzibar.
 
-Tembelea kiwanda chetu cha mbao Kwa Ndevu, Daraja Bovu, au wasiliana nasi kwa WhatsApp kwa usaidizi wa haraka. Tunajibu ndani ya dakika 30 na tunapanga utoaji ndani ya saa 24-48 kwa bidhaa zilizo stock.`
+Tembelea kiwanda chetu Kwa Ndevu, Daraja Bovu, au wasiliana nasi kwa WhatsApp. Tunajibu ndani ya dakika 30 na tunapanga usafiri ndani ya saa 24-48 kwa bidhaa zilizo stock.`
 }
 
 export default function SwBlogPost({ params }: { params: { slug: string } }) {

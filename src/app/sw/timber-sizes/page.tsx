@@ -8,8 +8,8 @@ import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Saizi za Mbao Pine Zanzibar | 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6 - Futi 12 na 18',
-  'Orodha kamili ya saizi za mbao pine Zanzibar. 1x6, 1x8, 1x10 kwa futi 12. 2x2, 2x3, 2x4, 2x6 kwa futi 12 na futi 18. Mbao bora za ujenzi na usafiri bure kisiwa kima.',
+  'Saizi za Mbao Zanzibar | 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6 - Futi 12 na 18',
+  'Orodha kamili ya saizi za mbao Zanzibar. 1x6, 1x8, 1x10 kwa futi 12. 2x2, 2x3, 2x4, 2x6 kwa futi 12 na futi 18. Mbao za ujenzi na usafiri bure Zanzibar zima.',
   'sw',
   '/sw/timber-sizes'
 )
@@ -34,14 +34,14 @@ export default function SwTimberSizes() {
               <span className="mx-2 text-gray-400">/</span>
               <span className="text-gray-500">Saizi za Mbao</span>
             </nav>
-            <h1 className="text-3xl md:text-5xl font-bold text-center mb-3">Saizi za Mbao Pine Zanzibar</h1>
+            <h1 className="text-3xl md:text-5xl font-bold text-center mb-3">Saizi za Mbao Zanzibar</h1>
             <p className="text-center text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto text-sm md:text-base">
-              Orodha kamili ya saizi za mbao pine wa ubora. Zina disponzwa kwa urefu 18ft na 12ft kwa miradi yote ya ujenzi Zanzibar.
+              Orodha kamili ya saizi za mbao za pine, mirunda na vifaa vya ujenzi Zanzibar. Mbao za 2x2, 2x4, 1x6, 1x8, 1x10, 2x6, 2x8, 1x4 na mirunda. Zinapatikana kwa urefu futi 18 na futi 12. Bei ya mbao na bei za jumla zinapatikana.
             </p>
             <div className="max-w-5xl mx-auto mb-8"><PriceNotice /></div>
 
             <div className="max-w-5xl mx-auto mb-8">
-              <h2 className="text-xl md:text-2xl font-bold mb-4">Saizi Futi 18</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Mbao za Futi 18</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {ft18Variants.map((v) => (
                   <Link key={v.sku} href={`/sw/timber-sizes/${sizeToSlug(v.size)}?length=18ft`} className="group bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
@@ -55,7 +55,7 @@ export default function SwTimberSizes() {
             </div>
 
             <div className="max-w-5xl mx-auto mb-8">
-              <h2 className="text-xl md:text-2xl font-bold mb-4">Saizi Futi 12</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Mbao za Futi 12</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {ft12Variants.map((v) => (
                   <Link key={v.sku} href={`/sw/timber-sizes/${sizeToSlug(v.size)}?length=12ft`} className="group bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">

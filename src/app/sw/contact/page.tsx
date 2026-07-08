@@ -8,8 +8,8 @@ import { MapPin, Phone, Mail, CheckCircle, Star } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Mawasiliano — Msambazaji wa Mbao Zanzibar',
-  'Wasiliana na Zanzibaba Timber kwa usambazaji wa mbao pine bora Zanzibar. Piga +255 716 002 790 au WhatsApp kwa anda ya papo hapo.',
+  'Mawasiliano — Duka la Mbao Zanzibar',
+  'Wasiliana na Zanzibaba Timber kwa mbao za pine Zanzibar. Piga +255 716 002 790 au WhatsApp kwa bei.',
   'sw',
   '/sw/contact'
 )
@@ -36,7 +36,7 @@ export default function SwContact() {
               <div>
                 <ImageWithFallback src="/images/gallery/timber-supplier-team.jpg" alt="Timu ya Zanzibaba Timber" aspectRatio="4/3" className="w-full rounded-lg mb-6" sizes="(max-width: 768px) 100vw, 50vw" />
                 <h2>Wasiliana Nasi</h2>
-                <p className="text-lg mb-6">Tayari kuzungumza mahitaji yako ya mbao? Wasiliana kwa anda ya bure na ushauri.</p>
+                <p className="text-lg mb-6">Tayari kuzungumza mahitaji yako ya mbao? Wasiliana kwa bei na ushauri.</p>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3"><Phone className="w-5 h-5 text-primary-600" /><span>+255 716 002 790</span></div>
                   <div className="flex items-center space-x-3"><MapPin className="w-5 h-5 text-primary-600" /><span>Kwa Ndevu, Daraja Bovu, Zanzibar</span></div>

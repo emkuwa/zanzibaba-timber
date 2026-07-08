@@ -9,8 +9,8 @@ import PriceNotice from '@/components/PriceNotice'
 import { Phone, MessageCircle, Shield, Droplets, CheckCircle, Star, ArrowRight } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Marine Board Zanzibar — Mbao za Tabaka za Maji | Zanzibaba Timber',
-  'Nunua marine board bora Zanzibar. Marine board (mbao za tabaka za maji) kwa formwork ya simenti, ujenzi wa mashua, na ujenzi. Karatasi 18mm na 12mm. Usafiri bure kisiwa kima.',
+  'Marine Board Zanzibar — Bei na Mauzo | Zanzibaba Timber',
+  'Nunua marine board Zanzibar. Marine board kwa formwork ya simenti, ujenzi wa mashua, na ujenzi. Karatasi 18mm na 12mm. Usafiri bure Zanzibar zima.',
   'sw',
   '/sw/marine-board'
 )
@@ -39,16 +39,16 @@ export default function SwMarineBoard() {
             </nav>
 
             <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mb-6 md:mb-8 shadow-lg">
-              <Image src="/images/gallery/marine-board-zanzibar.jpg" alt="Msambazaji wa Marine Board Zanzibar" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw" priority />
+              <Image src="/images/gallery/marine-board-zanzibar.jpg" alt="Marine Board Zanzibar" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw" priority />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6">
                 <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">Marine Board <span className="text-primary-300">Zanzibar</span></h1>
-                <p className="text-gray-200 mt-1 text-xs sm:text-sm">Plywood ya Maji — Formwork ya Simenti — Ujenzi wa Mashua</p>
+                <p className="text-gray-200 mt-1 text-xs sm:text-sm">Marine Board — Formwork ya Simenti — Ujenzi wa Mashua</p>
               </div>
             </div>
 
             <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-sm md:text-base">
-              Marine board ni plywood ya maji iliyotengenezwa kwa resini ya phenolic kwa upinzani mkubwa wa unyevu. Inafaa kwa formwork ya simenti, ujenzi wa mashua, na matumizi yoyote yanayokuwa na maji au unyevu. Inapatikana kwa unene 18mm na 12mm — karatasi 4ft x 8ft zinafikishwa Zanzibar zima.
+              Marine board iko kwa ajili ya formwork ya simenti, ujenzi wa mashua, na matumizi yoyote ya maji au unyevu. Inapatikana 18mm na 12mm — karatasi 4ft x 8ft zinafikishwa Zanzibar zima.
             </p>
 
             <div className="max-w-3xl mx-auto mb-8"><PriceNotice /></div>
@@ -75,7 +75,7 @@ export default function SwMarineBoard() {
 
             <div className="max-w-3xl mx-auto text-center bg-primary-50 dark:bg-gray-800 rounded-xl p-6 md:p-8">
               <h2 className="text-xl md:text-2xl font-bold mb-3">Uko Tayari Kununua Marine Board?</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">Wasiliana nasi kwa WhatsApp kwa bei za haraka, punguzo za jumla, na kupanga utoaji. Tunajibu ndani ya dakika 30.</p>
+              <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">Wasiliana nasi kwa WhatsApp kwa bei za haraka, punguzo kwa wingi, na kupanga usafiri. Tunajibu ndani ya dakika 30.</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a href={generateWhatsAppLink('Habari Zanzibaba Timber, nahitaji marine board kwa mradi wangu wa ujenzi. Tafadhali shiriki bei na chaguo za utoaji.')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
                   <MessageCircle className="w-4 h-4" /> Omba Anda

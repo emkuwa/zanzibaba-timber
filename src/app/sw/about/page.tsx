@@ -6,8 +6,8 @@ import { generateSEOMetadata, getBreadcrumbSchema } from '@/lib/seo'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Kuhusu Zanzibaba Timber — Wataalamu wa Mbao Pine Zanzibar',
-  'Jifunze kuhusu Zanzibaba Timber, msambazaji wa mbao pine wa kuaminika Zanzibar. Tunahudumia wamiliki nyumba, wabunifu, hoteli, na miradi ya serikali kutoka Kwa Ndevu, Daraja Bovu.',
+  'Kuhusu Zanzibaba Timber — Duka la Mbao za Pine Zanzibar',
+  'Jifunze kuhusu Zanzibaba Timber, duka la mbao za pine Zanzibar. Tunahudumia wamiliki nyumba, wabunifu, hoteli, na miradi ya serikali kutoka Kwa Ndevu, Daraja Bovu.',
   'sw',
   '/sw/about'
 )
@@ -35,20 +35,20 @@ export default function SwAbout() {
                 <ImageWithFallback src="/images/gallery/timber-yard-aerial-view.jpg" alt="Yadi ya Mbao Zanzibaba — Kwa Ndevu, Daraja Bovu" aspectRatio="4/3" className="w-full rounded-lg shadow-lg" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
               <div className="prose dark:prose-invert">
-                <p className="text-lg font-semibold">Msambazaji wa mbao pine bora Zanzibar tangu 2010.</p>
-                <p>Kwa Ndevu, Daraja Bovu, Zanzibar, tunasambaza mbao pine bora kwa wamiliki nyumba, wabunifu, hoteli, na miradi ya serikali kote kisiwa.</p>
-                <p>Mbao iliyowekwa juara. Mbao yetu inatolewa kwa uendelevu na kuanguliwa kwa hali ya hewa ya tropiki ya Zanzibar. Kila kipande kinakidhi viwango vikali vya ubora kabla ya kusambazia.</p>
+                <p className="text-lg font-semibold">Duka la mbao, mirunda, marine board na plywood Zanzibar tangu 2010.</p>
+                <p>Kwa Ndevu, Daraja Bovu, Zanzibar, tunauza mbao za pine, mirunda, marine board, na plywood kwa wamiliki nyumba, wabunifu, hoteli, na miradi ya serikali kote kisiwa. Sisi ni wauzaji na wasambazaji wa mbao na vifaa vya ujenzi Zanzibar.</p>
+                <p>Tunatoa mbao za ubora — mbao kavu, mbao nyeupe za pine, mbao za dawa (treated), na mbao zinazodumu muda mrefu. Mbao zetu zinaanguliwa kwa hali ya hewa ya tropiki ya Zanzibar. Kila kipande kinakaguliwa kabla ya kusafirishwa.</p>
                 <h3>Huduma Zetu:</h3>
                 <ul>
-                  <li>Usambazaji wa nyumba na wabunifu</li>
-                  <li>Suluhisho la mbao kwa hoteli na villa</li>
-                  <li>Usambazaji wa miradi ya serikali</li>
+                  <li>Ugavi wa nyumba na wabunifu</li>
+                  <li>Mbao kwa hoteli na villa</li>
+                  <li>Ugavi wa miradi ya serikali</li>
                   <li>Agizo la jumla na bei nafuu</li>
-                  <li>Utoaji Zanzibar Zima</li>
+                  <li>Usafiri Zanzibar Zima</li>
                 </ul>
                 <div className="mt-8">
                   <a href="https://wa.me/255716002790?text=Habari%20Zanzibaba%20Timber" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700">
-                    Pata Anda Bure
+                    Pata Anda
                   </a>
                 </div>
               </div>

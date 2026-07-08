@@ -64,10 +64,10 @@ export default function HeroSection() {
   const { t, locale } = useBilingual()
 
   const BENEFITS = locale === 'sw' ? [
-    'Mbao Treated Pine, Marine Board na Plywood Premium — Imekaushwa na kutibiwa kitaalamu',
-    'Utoaji Zanzibar Zima — Kutoka Paje hadi Nungwi',
-    'Punguzo la Bei kwa Agizo la Jumla — Okoa kwenye kiasi kikubwa',
-    'Nukuu za WhatsApp Haraka — Jibu chini ya dakika 30',
+    'Mbao Treated Pine, Marine Board na Plywood — Imekaushwa na kutibiwa',
+    'Usafiri Bure Zanzibar Zima — Kutoka Paje hadi Nungwi',
+    'Punguzo kwa Agizo la Jumla — Okoa kwenye kiasi kikubwa',
+    'Bei kwa WhatsApp Haraka — Jibu chini ya dakika 30',
     'Malipo Baada ya Kupelekwa, Simu, Benki — Chaguo mbalimbali za malipo',
   ] : [
     'Premium Treated Pine, Marine Board & Plywood — Kiln-dried & professionally treated',
@@ -105,7 +105,7 @@ export default function HeroSection() {
             variants={itemVariants}
           >
             <ShieldCheck className="w-3.5 h-3.5" />
-            {locale === 'sw' ? 'Msambazaji wa Mbao, Marine Board na Plywood Anayeaminika Zanzibar' : "Zanzibar's Trusted Timber, Marine Board & Plywood Supplier"}
+            {locale === 'sw' ? 'Duka la Mbao, Marine Board na Plywood Zanzibar' : "Zanzibar's Trusted Timber, Marine Board & Plywood Supplier"}
           </motion.div>
 
           <motion.h1

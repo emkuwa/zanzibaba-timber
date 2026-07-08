@@ -7,8 +7,8 @@ import { BLOG_POSTS, TIMBER_SIZES, INDUSTRIES, generateWhatsAppLink } from '@/li
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Wholesale Pine Timber Zanzibar - Bulk Pricing from 500m & 1000m+',
-  'Wholesale treated pine timber in Zanzibar with volume discounts. 500m+ = 15% off. 1000m+ = 20% off. Custom sizes available. Dedicated account manager, scheduled delivery, and priority service for bulk buyers.',
+  'Wholesale Pine Timber, Poles, Marine Board & Plywood Zanzibar - Bulk Pricing',
+  'Wholesale treated pine timber, wood poles (mirunda), marine board and plywood in Zanzibar with volume discounts. 500m+ = 15% off. 1000m+ = 20% off. Custom sizes available. Dedicated account manager, scheduled delivery, and priority service for bulk buyers. Free delivery Zanzibar.',
   'en',
   '/wholesale'
 )

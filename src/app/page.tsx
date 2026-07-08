@@ -147,10 +147,10 @@ export default function Home() {
         <section className="bg-primary-800 py-2.5">
           <div className="container-custom">
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs md:text-sm text-primary-100">
-                <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Premium Timber, Marine Board & Plywood</span>
+                <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Premium Timber, Marine Board, Treated Wood Poles & Plywood</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> FREE Delivery Across Zanzibar</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Bulk Order Discounts</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Fast WhatsApp Quotes</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Bulk Order & Wholesale Discounts</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Cash on Delivery, Mobile Money & Bank Transfer</span>
             </div>
           </div>
         </section>

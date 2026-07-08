@@ -39,10 +39,10 @@ export default function SwHome() {
         <section className="bg-primary-800 py-2.5">
           <div className="container-custom">
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs md:text-sm text-primary-100">
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Mbao, Marine Board na Plywood</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Usafiri BURE Zanzibar Zima</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Punguzo bei za Jumla</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> WhatsApp Haraka</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Marine Board, Plywood, Mirunda na Mbao</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Usafiri Bure Zanzibar Zima</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Punguzo kwa Bei za Jumla</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Malipo Baada ya Kupelekwa</span>
             </div>
           </div>
         </section>
@@ -55,19 +55,19 @@ export default function SwHome() {
                   <TrendingUp className="w-8 h-8 text-green-400" />
                   <div>
                     <h2 className="text-base md:text-lg font-bold">Duka la Mbao, Marine Board na Plywood Zanzibar</h2>
-                    <p className="text-primary-200 text-xs">Kuaminika kwa wabunifu, hoteli na miradi ya serikali</p>
+                    <p className="text-primary-200 text-xs">Tunaoaminika na wabunifu, hoteli na miradi ya serikali</p>
                   </div>
                 </div>
                 <p className="text-sm text-primary-100 leading-relaxed">
-                  Zanzibaba Timber ndio duka la mbao la kuaminika Zanzibar. Tuna treatment plant, kiln drying, yadi ya stock, na meli zetu za kusafirisha mbao — pamoja na washirika Tanzania bara.
+                   Zanzibaba Timber ndio duka la mbao la kuaminika Zanzibar. Wauzaji na wasambazaji wa mbao, marine board, plywood, na mirunda Zanzibar. Tuna treatment plant, kiln drying, yadi ya stock, na meli zetu za kusafirisha mbao — pamoja na washirika Tanzania bara. Tunauza mbao kavu, mbao nyeupe za pine, mbao za dawa, na mbao zinazodumu muda mrefu.
                 </p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                 {[
-                  { value: '1,500+', label: 'Maagizo Yaliyotolewa', icon: Package },
-                  { value: '50+', label: 'Miradi Imetolewa', icon: Building2 },
+                  { value: '1,500+', label: 'Maagizo Yaliyokamilika', icon: Package },
+                  { value: '50+', label: 'Miradi Imekamilika', icon: Building2 },
                   { value: '98%', label: 'Usafiri kwa Wakati', icon: Truck },
-                  { value: '<30 min', label: 'Jibu Haraka', icon: Star },
+                  { value: '<30 min', label: 'Jibu la Haraka', icon: Star },
                 ].map((c) => (
                   <div key={c.label} className="bg-white/10 rounded-lg p-3 md:p-4 text-center backdrop-blur-sm border border-white/10">
                     <c.icon className="w-6 h-6 text-green-400 mx-auto mb-1" />
@@ -123,7 +123,7 @@ export default function SwHome() {
           <div className="container-custom">
             <h2 className="text-xl md:text-3xl font-bold text-center mb-2">Bei za Marine Board, Plywood na Mbao</h2>
             <p className="text-center text-sm text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              Bao za maji na plywood za ujenzi katika unene wote — karatasi 4ft x 8ft zinafikishwa Zanzibar zima.
+              Marine Board na Plywood za ujenzi katika unene wote — karatasi 4ft x 8ft zinafikishwa Zanzibar zima.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto mb-4">
               {SHEET_PRODUCTS.slice(0, 4).map((product) => (
@@ -149,7 +149,7 @@ export default function SwHome() {
 
         <section className="py-6 bg-white dark:bg-gray-900 scroll-mt-20">
           <div className="container-custom">
-            <h2 className="text-lg md:text-2xl font-bold text-center mb-3">Wateja Wetu Wanasema Nini Kuhusu Mbao Yetu</h2>
+            <h2 className="text-lg md:text-2xl font-bold text-center mb-3">Wateja Wetu Wanasema Nini</h2>
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3">
               {TESTIMONIALS.slice(0, 3).map((t, i) => (
                 <div key={i} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-3 border border-gray-200 dark:border-gray-700">
@@ -176,7 +176,7 @@ export default function SwHome() {
                 <Percent className="w-3 h-3" /> Pata Nukuu Bure
               </div>
               <h2 className="text-xl md:text-3xl font-bold mb-2">Pata Anda za Marine Board, Plywood na Mbao</h2>
-              <p className="text-primary-100 mb-4 text-sm">Tutumie mahitaji yako. Bei nzuri na jibu la haraka linalohakikishwa.</p>
+              <p className="text-primary-100 mb-4 text-sm">Tutumie mahitaji yako. Bei nzuri na jibu la haraka.</p>
               <div className="flex flex-col sm:flex-row gap-2 justify-center mb-4">
                 <a href="https://wa.me/255716002790?text=Habari%20Zanzibaba%20Timber%2C%20nahitaji%20mbao" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2.5 rounded-lg transition-all hover:scale-105 shadow text-sm">
                   <MessageCircle className="w-4 h-4" />Pata Anda kwa WhatsApp
@@ -192,7 +192,7 @@ export default function SwHome() {
 
         <section id="faq" className="py-6 bg-white dark:bg-gray-900 scroll-mt-20">
           <div className="container-custom">
-            <h2 className="text-lg md:text-2xl font-bold text-center mb-4">Maswali Yanayoulizwa Sana — Mbao, Marine Board na Plywood</h2>
+            <h2 className="text-lg md:text-2xl font-bold text-center mb-4">Maswali — Mbao, Marine Board na Plywood</h2>
             <div className="max-w-4xl mx-auto space-y-2">
               {HOMEPAGE_FAQ.slice(0, 3).map((faq, i) => (
                 <details key={i} className="group bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">

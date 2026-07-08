@@ -55,8 +55,8 @@ export default function SwBati() {
             <p className="text-center text-gray-500 mb-8 max-w-2xl mx-auto">Tunatoa aina mbalimbali za bati za kuezekea kwa ajili ya nyumba, biashara na miradi mikubwa</p>
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
-                { icon: Shield, title: 'Bati G30', desc: 'Bati za kuezekea gauge 30 — bei nafuu na zinazofaa kwa nyumba za makazi. Zinapatikana kwa migongo mikubwa na midogo. Bei shilingi 20,000 kwa pc.' },
-                { icon: Shield, title: 'Bati G28', desc: 'Bati za kuezekea gauge 28 — nene na imara zaidi, zinafaa kwa majengo ya biashara na hoteli. Bei shilingi 34,000 kwa pc.' },
+                { icon: Shield, title: 'Bati G30', desc: 'Bati za kuezekea geji 30 — bei nafuu na zinazofaa kwa nyumba za makazi. Zinapatikana kwa migongo mikubwa na midogo. Bei shilingi 20,000 kwa pc.' },
+                { icon: Shield, title: 'Bati G28', desc: 'Bati za kuezekea geji 28 — nene na imara zaidi, zinafaa kwa majengo ya biashara na hoteli. Bei shilingi 34,000 kwa pc.' },
                 { icon: Sun, title: 'Bati za Rangi', desc: 'Bati za rangi original ambazo hazipauki wala kuchoka. Rangi mbalimbali zinapatikana kwa ajili ya urembo wa nyumba yako.' },
                 { icon: CheckCircle, title: 'Bati za Migongo Mikubwa', desc: 'Migongo mipana inatoa mwonekano mzuri na nguvu zaidi. Zinafaa kwa nyumba za kisasa na majengo ya kifahari.' },
                 { icon: CheckCircle, title: 'Bati za Migongo Midogo', desc: 'Migongo midogo ni bei nafuu na bado inatoa ulinzi bora dhidi ya jua na mvua. Chaguo maarufu kwa nyumba nyingi Zanzibar.' },
