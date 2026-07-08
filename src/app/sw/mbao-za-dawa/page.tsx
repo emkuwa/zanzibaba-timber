@@ -7,8 +7,8 @@ import Link from 'next/link'
 import { CheckCircle, MessageCircle, Shield, Thermometer, Bug, Droplets } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Mbao za Dawa Zanzibar | Mbao Treated Pine — Zanzibaba Timber',
-  'Mbao za dawa (treated pine timber) Zanzibar. Mbao zenye dawa za kuzuia mchwa, kuvu, na kuoza. Kiln-dried. Utoaji Zanzibar Zima. Piga simu +255 716 002 790.',
+  'Mbao za Dawa Zanzibar | Mbao Zilizochemishwa kwa Dawa Treated Pine — Zanzibaba Timber',
+  'Mbao za dawa (mbao zilizochemishwa kwa dawa / treated pine timber) Zanzibar. Mbao zenye dawa za kuzuia mchwa, kuvu, na kuoza. Kiln-dried. Usafiri bure Zanzibar Zima. Piga simu +255 716 002 790.',
   'sw',
   '/sw/mbao-za-dawa'
 )
@@ -19,10 +19,10 @@ const breadcrumb = getBreadcrumbSchema([
 ])
 
 const faqSchema = getFAQSchema([
-  { question: 'Mbao za dawa ni nini?', answer: 'Mbao za dawa ni mbao ambazo zimetibiwa kwa kemikali maalum kuzuia mchwa, kuvu, na kuoza. Hii inamaanisha mbao zina muda mrefu wa matumizi haswa katika hali ya hewa ya tropiki ya Zanzibar.' },
+  { question: 'Mbao za dawa ni nini?', answer: 'Mbao za dawa (pia huitwa mbao zilizochemishwa kwa dawa au treated pine) ni mbao ambazo zimetibiwa kwa kemikali maalum kuzuia mchwa, kuvu, na kuoza. Hii inamaanisha mbao zina muda mrefu wa matumizi haswa katika hali ya hewa ya tropiki ya Zanzibar.' },
   { question: 'Je, mbao za dawa ni salama kwa matumizi ya nyumba?', answer: 'Ndiyo, mbao za dawa (treated pine) zinatibiwa kwa viwango vya usalama na zinafaa kwa matumizi ya nyumba, paa, na miundo ya nje. Treated pine inatumika kwa wingi katika ujenzi duniani kote.' },
   { question: 'Mbao za dawa zinadumu muda gani?', answer: 'Mbao treated pine zinaweza kudumu miaka 15-25 au zaidi zinapotumiwa nje, na hata muda mrefu zaidi kwa matumizi ya ndani. Maisha ya mbao yanategemea mazingira na matengenezo.' },
-  { question: 'Je, mnauza mbao za dawa Zanzibar?', answer: 'Ndiyo, Zanzibaba Timber ni msambazaji mkuu wa mbao za dawa (treated pine) Zanzibar. Tunauza saizi zote: 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6, na treated wood poles. Utoaji BURE Zanzibar Zima.' },
+  { question: 'Je, mnauza mbao za dawa Zanzibar?', answer: 'Ndiyo, Zanzibaba Timber ni msambazaji mkuu wa mbao za dawa (treated pine) Zanzibar. Tunauza saizi zote: 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6, na treated wood poles. Usafiri bure Zanzibar Zima.' },
 ])
 
 export default function MbaoZaDawa() {
@@ -44,7 +44,7 @@ export default function MbaoZaDawa() {
                 Mbao za Dawa <span className="text-green-400">Zanzibar</span>
               </h1>
               <p className="text-lg md:text-xl text-primary-100 mb-8 max-w-3xl">
-                Mbao treated pine zenye dawa za kuzuia mchwa, kuvu, na kuoza. Kiln-dried na tayari kwa ujenzi. Utoaji BURE Zanzibar Zima.
+                Mbao zilizochemishwa kwa dawa (treated pine) zenye dawa za kuzuia mchwa, kuvu, na kuoza. Kiln-dried na tayari kwa ujenzi. Usafiri bure Zanzibar Zima.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href={generateWhatsAppLink('Habari, nataka kununua mbao za dawa')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-lg transition-all shadow-lg">
@@ -84,15 +84,15 @@ export default function MbaoZaDawa() {
         <section className="py-12 bg-gray-50 dark:bg-gray-800">
           <div className="container-custom">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">Saizi za Mbao za Dawa</h2>
-            <p className="text-center text-gray-500 mb-8">Saizi zote za mbao treated pine zinapatikana Zanzibar</p>
+            <p className="text-center text-gray-500 mb-8">Saizi zote za mbao treated pine zinapatikana Zanzibar — bei kwa kila kipande (kwa pic)</p>
             <div className="max-w-4xl mx-auto">
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
                     <tr className="border-b-2 border-primary-600">
                       <th className="text-left py-3 px-3 text-sm">Saizi</th>
-                      <th className="text-left py-3 px-3 text-sm">Urefu</th>
-                      <th className="text-center py-3 px-3 text-sm">Bei (TZS)</th>
+                      <th className="text-left py-3 px-3 text-sm">Urefu (futi)</th>
+                      <th className="text-center py-3 px-3 text-sm">Bei (TZS) kwa pic</th>
                       <th className="text-center py-3 px-3 text-sm">Agiza</th>
                     </tr>
                   </thead>
@@ -112,7 +112,7 @@ export default function MbaoZaDawa() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-xs text-gray-500 mt-2 text-center">Bei hazina VAT. Utoaji BURE Zanzibar Zima.</p>
+              <p className="text-xs text-gray-500 mt-2 text-center">Bei hazina VAT. Usafiri bure Zanzibar Zima.</p>
             </div>
             <div className="text-center mt-8">
               <Link href="/sw/prices" className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-all">
@@ -149,11 +149,11 @@ export default function MbaoZaDawa() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Maswali — Mbao za Dawa</h2>
             <div className="space-y-4">
               {[
-                { q: 'Mbao za dawa ni nini?', a: 'Mbao za dawa (treated pine) ni mbao ambazo zimetibiwa kwa kemikali maalum kuzuia mchwa, kuvu, na kuoza. Hii inamaanisha mbao zina muda mrefu wa matumizi haswa katika hali ya hewa ya tropiki ya Zanzibar. Treated pine ni chaguo bora kwa ujenzi wa kisasa.' },
+                { q: 'Mbao za dawa ni nini?', a: 'Mbao za dawa (pia huitwa mbao zilizochemishwa kwa dawa au treated pine) ni mbao ambazo zimetibiwa kwa kemikali maalum kuzuia mchwa, kuvu, na kuoza. Treated pine ni chaguo bora kwa ujenzi wa kisasa Zanzibar.' },
                 { q: 'Je, mbao za dawa zinatofautianaje na mbao za kawaida?', a: 'Mbao za kawaida hazina dawa za kuzuia mchwa na kuvu. Mbao treated pine zinatibiwa kwa shinikizo la juu (pressure treated) ambapo dawa huingia ndani ya mbao. Hii inazifanya zidumu mara 3-5 zaidi ya mbao za kawaida.' },
                 { q: 'Je, mbao za dawa zinauzwa Zanzibar?', a: 'Ndiyo, Zanzibaba Timber ndio msambazaji mkuu wa mbao za dawa (treated pine) Zanzibar. Tuna yadi yetu Kwa Ndevu, Daraja Bovu, na tunasambaza kote kisiwani. Piga +255 716 002 790 au WhatsApp kwa bei.' },
                 { q: 'Je, mbao treated pine ni salama kwa mazingira?', a: 'Ndiyo, mbao treated pine zinatibiwa kwa kemikali ambazo zimeidhinishwa na viwango vya kimataifa vya usalama. Kemikali zinazotumika ni salama kwa wanadamu na wanyama baada ya kutibiwa. Treated pine inachukuliwa kuwa rafiki wa mazingira kwa sababu inadumu muda mrefu.' },
-                { q: 'Je, mnatoa utoaji bure Zanzibar?', a: 'Ndiyo, tunatoa utoaji BURE kwa maagizo yote Zanzibar Zima. Tunawasilisha kwa maeneo yote ikiwemo Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu, na Ndevu.' },
+                { q: 'Je, mnatoa usafiri bure Zanzibar?', a: 'Ndiyo, tunatoa usafiri bure (free delivery) kwa maagizo yote Zanzibar Zima. Tunawasilisha mbao zako moja kwa moja kwenye tovuti ya ujenzi kwa maeneo yote ikiwemo Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu, na Kwa Ndevu.' },
               ].map((faq, i) => (
                 <details key={i} className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
                   <summary className="px-5 py-4 cursor-pointer font-semibold text-sm hover:text-primary-600 transition-colors">{faq.q}</summary>

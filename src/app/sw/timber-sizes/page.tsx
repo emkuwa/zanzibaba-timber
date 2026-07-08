@@ -8,8 +8,8 @@ import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Saizi za Mbao Pine Zanzibar | 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6 - 12ft na 18ft',
-  'Orodha kamili ya saizi za mbao pine Zanzibar. 1x6, 1x8, 1x10 kwa 12ft. 2x2, 2x3, 2x4, 2x6 kwa 12ft na 18ft. Mbao bora za ujenzi na utoaji wa kisiwa kima.',
+  'Saizi za Mbao Pine Zanzibar | 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6 - Futi 12 na 18',
+  'Orodha kamili ya saizi za mbao pine Zanzibar. 1x6, 1x8, 1x10 kwa futi 12. 2x2, 2x3, 2x4, 2x6 kwa futi 12 na futi 18. Mbao bora za ujenzi na usafiri bure kisiwa kima.',
   'sw',
   '/sw/timber-sizes'
 )
@@ -41,7 +41,7 @@ export default function SwTimberSizes() {
             <div className="max-w-5xl mx-auto mb-8"><PriceNotice /></div>
 
             <div className="max-w-5xl mx-auto mb-8">
-              <h2 className="text-xl md:text-2xl font-bold mb-4">Saizi 18ft</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Saizi Futi 18</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {ft18Variants.map((v) => (
                   <Link key={v.sku} href={`/sw/timber-sizes/${sizeToSlug(v.size)}?length=18ft`} className="group bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
@@ -55,7 +55,7 @@ export default function SwTimberSizes() {
             </div>
 
             <div className="max-w-5xl mx-auto mb-8">
-              <h2 className="text-xl md:text-2xl font-bold mb-4">Saizi 12ft</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Saizi Futi 12</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {ft12Variants.map((v) => (
                   <Link key={v.sku} href={`/sw/timber-sizes/${sizeToSlug(v.size)}?length=12ft`} className="group bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">

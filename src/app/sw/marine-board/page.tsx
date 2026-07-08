@@ -9,8 +9,8 @@ import PriceNotice from '@/components/PriceNotice'
 import { Phone, MessageCircle, Shield, Droplets, CheckCircle, Star, ArrowRight } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Marine Board Zanzibar — Msambazaji wa Plywood ya Maji | Zanzibaba',
-  'Nunua marine board bora Zanzibar. Marine board ya maji kwa formwork ya simenti, ujenzi wa mashua, na ujenzi. Karatasi 18mm na 12mm. Utoaji wa kisiwa kima.',
+  'Marine Board Zanzibar — Mbao za Tabaka za Maji | Zanzibaba Timber',
+  'Nunua marine board bora Zanzibar. Marine board (mbao za tabaka za maji) kwa formwork ya simenti, ujenzi wa mashua, na ujenzi. Karatasi 18mm na 12mm. Usafiri bure kisiwa kima.',
   'sw',
   '/sw/marine-board'
 )

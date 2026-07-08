@@ -9,8 +9,8 @@ import PriceNotice from '@/components/PriceNotice'
 import { Phone, MessageCircle, Shield, CheckCircle, Layers } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Plywood Zanzibar — Msambazaji wa Plywood ya Ujenzi | Zanzibaba',
-  'Nunua plywood ya ujenzi bora Zanzibar. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, na 3mm. Karatasi 4ft x 8ft kutoka TZS 18,000. Utoaji wa kisiwa kima.',
+  'Plywood Zanzibar — Mbao za Tabaka za Ujenzi | Zanzibaba Timber',
+  'Nunua plywood (mbao za tabaka) za ujenzi bora Zanzibar. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, na 3mm. Karatasi 4ft x 8ft kutoka TZS 18,000. Usafiri bure kisiwa kima.',
   'sw',
   '/sw/plywood'
 )
@@ -42,8 +42,8 @@ export default function SwPlywood() {
               <Image src="/images/gallery/construction-plywood-zanzibar.jpg" alt="Plywood ya Ujenzi Zanzibar" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw" priority />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6">
-                <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">Plywood <span className="text-primary-300">Zanzibar</span></h1>
-                <p className="text-gray-200 mt-1 text-xs sm:text-sm">Plywood ya Ujenzi — 3mm hadi 18mm — Karatasi 4ft x 8ft</p>
+                <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">Plywood (Mbao za Tabaka) <span className="text-primary-300">Zanzibar</span></h1>
+                <p className="text-gray-200 mt-1 text-xs sm:text-sm">Plywood / Mbao za Tabaka za Ujenzi — 3mm hadi 18mm — Karatasi 4ft x 8ft</p>
               </div>
             </div>
 

@@ -6,8 +6,8 @@ import { LOCATIONS, generateWhatsAppLink } from '@/lib/data'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Utoaji Mbao Zanzibar — Utoaji Kisiwa Nzima | Malipo Baada ya Kupelekwa',
-  'Utoaji wa mbao kote Zanzibar — Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu. Malipo baada ya kupelekwa. Saa 24-48. Piga simu +255 716 002 790.',
+  'Utoaji Mbao Zanzibar — Usafiri Bure Kisiwa Nzima | Malipo Baada ya Kupelekwa',
+  'Usafiri bure wa mbao kote Zanzibar — Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu. Malipo baada ya kupelekwa. Saa 24-48. Piga simu +255 716 002 790.',
   'sw',
   '/sw/delivery'
 )
@@ -31,7 +31,7 @@ export default function SwDelivery() {
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">Utoaji Mbao Zanzibar</h1>
             <p className="text-lg text-center text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
-              Tunawasilisha mbao kote Zanzibar kwa haraka na uhakika. Malipo baada ya kupelekwa yanakubalika. Saa 24-48 kwa bidhaa za kawaida.
+              Usafiri bure kwa maagizo yote Zanzibar zima. Tunawasilisha mbao kote kisiwani kwa haraka na uhakika. Malipo baada ya kupelekwa yanakubalika. Saa 24-48 kwa bidhaa za kawaida.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -47,8 +47,9 @@ export default function SwDelivery() {
               <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
                 <h2 className="text-2xl font-bold mb-4">Huduma za Utoaji</h2>
                 <ul className="space-y-3 text-gray-600 dark:text-gray-300">
+                  <li><strong>Usafiri Bure:</strong> Tunatoa usafiri bure kwa maagizo yote Zanzibar zima</li>
                   <li><strong>Kasi:</strong> Utoaji ndani ya saa 24-48 kwa bidhaa za kawaida</li>
-                  <li><strong>Malipo:</strong> Malipo baada ya kupelekwa (cash on delivery)</li>
+                  <li><strong>Malipo:</strong> Malipo baada ya kupelekwa (cash on delivery, M-Pesa, Tigo Pesa)</li>
                   <li><strong>Mizigo Mikubwa:</strong> Tunaweza kubeba mizigo mikubwa kwa gari maalum</li>
                   <li><strong>Kuegesha:</strong> Tunakuja mpaka kwenye tovuti yako ya ujenzi</li>
                 </ul>

@@ -6,8 +6,8 @@ import { generateWhatsAppLink } from '@/lib/data'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Mbao Jumla Zanzibar — Bei Maalum kwa Agizo Kubwa | Zanzibaba Timber',
-  'Mbao jumla Zanzibar — punguzo la 15% kwa agizo la m 500+, 20% kwa m 1000+. Meneja maalum wa akaunti, utoaji uliopangwa, na huduma ya kipaumbele. Piga simu +255 716 002 790.',
+  'Mbao Jumla Zanzibar — Bei za Wingi kwa Agizo Kubwa | Zanzibaba Timber',
+  'Mbao jumla Zanzibar — bei za wingi (wholesale) kwa wafanyabiashara. Punguzo la 15% kwa agizo la m 500+, 20% kwa m 1000+. Meneja maalum wa akaunti, usafiri bure, malipo baada ya kupelekwa. Piga simu +255 716 002 790.',
   'sw',
   '/sw/wholesale'
 )
@@ -29,9 +29,9 @@ export default function SwWholesale() {
               <span className="mx-2 text-gray-400">/</span>
               <span className="text-gray-500">Mbao Jumla</span>
             </nav>
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">Mbao Jumla Zanzibar</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">Mbao Jumla Zanzibar — Bei za Wingi</h1>
             <p className="text-lg text-center text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
-              Punguzo kubwa kwa agizo la mbao jumla Zanzibar. Tunatoa bei maalum kwa wafanyabiashara, wakandarasi, na wasambazaji wanaohitaji mbao kwa wingi.
+              Punguzo kubwa kwa agizo la mbao jumla Zanzibar. Bei za wingi kwa wafanyabiashara, wakandarasi, na wasambazaji wanaohitaji mbao kwa wingi. Usafiri bure Zanzibar zima.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">

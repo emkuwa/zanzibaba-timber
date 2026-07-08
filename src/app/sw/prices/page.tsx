@@ -32,8 +32,8 @@ function PriceTable({ length, title }: { length: string; title: string }) {
             <tr className="border-b-2 border-primary-600">
               <th className="text-left py-3 px-3 text-sm">Saizi</th>
               <th className="text-left py-3 px-3 text-sm">Viwango</th>
-              <th className="text-center py-3 px-3 text-sm">Urefu</th>
-              <th className="text-right py-3 px-3 text-sm">Bei</th>
+              <th className="text-center py-3 px-3 text-sm">Urefu (futi)</th>
+              <th className="text-right py-3 px-3 text-sm">Bei (TZS) kwa pic</th>
               <th className="text-center py-3 px-3 text-sm">Agiza</th>
             </tr>
           </thead>
@@ -80,8 +80,8 @@ export default function SwPrices() {
             </p>
             <div className="max-w-5xl mx-auto mb-8"><PriceNotice /></div>
             <div className="max-w-5xl mx-auto">
-              <PriceTable length="18ft" title="Bei za Mbao 18ft Zanzibar" />
-              <PriceTable length="12ft" title="Bei za Mbao 12ft Zanzibar" />
+              <PriceTable length="18ft" title="Bei za Mbao Futi 18 Zanzibar" />
+              <PriceTable length="12ft" title="Bei za Mbao Futi 12 Zanzibar" />
             </div>
             <div className="max-w-5xl mx-auto mt-8">
               <h2 className="text-xl md:text-2xl font-bold mb-4">Bei za Marine Board Zanzibar</h2>
