@@ -105,7 +105,7 @@ export default function Wholesale() {
 
                 <h2 className="text-2xl font-bold mb-4">Why Buy Wholesale from Zanzibaba Timber</h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Contractors, retailers, and developers across Zanzibar choose Zanzibaba Timber for wholesale supply because we offer <strong>genuine volume discounts</strong>, <strong>consistent stock availability</strong>, and <strong>reliable delivery logistics</strong>. Our treated pine timber is sourced from sustainable plantations and processed to meet international quality standards. With our Kwa Ndevu yard serving as Zanzibar&apos;s central timber hub, we can fulfill large orders quickly and efficiently.
+                  Contractors, retailers, and developers across Zanzibar choose Zanzibaba Timber for wholesale supply because we offer <strong>genuine volume discounts</strong>, <strong>consistent stock availability</strong>, and <strong>reliable delivery logistics</strong>. Our treated pine timber is sourced from sustainable plantations and processed to meet international quality standards. With our Kwa Ndevu yard serving as Zanzibar's central timber hub, we can fulfill large orders quickly and efficiently.
                 </p>
 
                 {/* FAQ Section */}

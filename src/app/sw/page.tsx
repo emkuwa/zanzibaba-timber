@@ -40,7 +40,7 @@ export default function SwHome() {
           <div className="container-custom">
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs md:text-sm text-primary-100">
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Mbao, Marine Board na Plywood</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Utoaji BURE Zanzibar Zima</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Usafiri BURE Zanzibar Zima</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Punguzo bei za Jumla</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> WhatsApp Haraka</span>
             </div>
@@ -54,19 +54,19 @@ export default function SwHome() {
                 <div className="flex items-center gap-3 shrink-0">
                   <TrendingUp className="w-8 h-8 text-green-400" />
                   <div>
-                    <h2 className="text-base md:text-lg font-bold">Msambazaji wa Mbao, Marine Board na Plywood Zanzibar</h2>
+                    <h2 className="text-base md:text-lg font-bold">Duka la Mbao, Marine Board na Plywood Zanzibar</h2>
                     <p className="text-primary-200 text-xs">Kuaminika kwa wabunifu, hoteli na miradi ya serikali</p>
                   </div>
                 </div>
                 <p className="text-sm text-primary-100 leading-relaxed">
-                  Zanzibaba Timber ni mtandao kamili wa usambazaji ujenzi wenye viwanda vyetu vya treatment, kiln drying, yadi ya stock, na meli za utoaji — pamoja na ushirikiano na washirika wa Tanzania bara.
+                  Zanzibaba Timber ndio duka la mbao la kuaminika Zanzibar. Tuna treatment plant, kiln drying, yadi ya stock, na meli zetu za kusafirisha mbao — pamoja na washirika Tanzania bara.
                 </p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                 {[
                   { value: '1,500+', label: 'Maagizo Yaliyotolewa', icon: Package },
                   { value: '50+', label: 'Miradi Imetolewa', icon: Building2 },
-                  { value: '98%', label: 'Utoaji kwa Wakati', icon: Truck },
+                  { value: '98%', label: 'Usafiri kwa Wakati', icon: Truck },
                   { value: '<30 min', label: 'Jibu Haraka', icon: Star },
                 ].map((c) => (
                   <div key={c.label} className="bg-white/10 rounded-lg p-3 md:p-4 text-center backdrop-blur-sm border border-white/10">
@@ -96,14 +96,14 @@ export default function SwHome() {
                     </div>
                     {SIZE_USE_CASE[v.size] && <div className="text-[10px] text-gray-400 leading-tight mb-1">{SIZE_USE_CASE[v.size]}</div>}
                     {v.price && <div className="text-sm font-bold text-primary-700 dark:text-primary-400 mb-1">{formatTZS(v.price)}</div>}
-                    <span className="text-xs font-semibold text-primary-600 group-hover:underline">Tazama &gt;&gt;&gt;</span>
+                    <span className="text-xs font-semibold text-primary-600 group-hover:underline">Angalia &gt;&gt;&gt;</span>
                   </Link>
                 ))}
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="/sw/prices" className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-2.5 rounded-xl font-semibold hover:bg-green-700 transition-all shadow-lg text-sm">
-                Tazama Bei Zote <ArrowRight className="w-4 h-4" />
+                Angalia Bei Zote <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function SwHome() {
           <div className="container-custom">
             <div className="flex items-center justify-center gap-2 text-white text-sm font-semibold">
               <Truck className="w-4 h-4" />
-              Utoaji BURE Zanzibar Zima kwa mbao zote
+              Usafiri BURE Zanzibar Zima kwa mbao zote
               <Link href="/sw/delivery" className="underline text-green-200 hover:text-white">Soma zaidi</Link>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function SwHome() {
                 </Link>
               ))}
             </div>
-            <p className="text-center text-xs text-gray-500 mb-4">Utoaji BURE Zanzibar Zima kwa bidhaa zote za karatasi.</p>
+            <p className="text-center text-xs text-gray-500 mb-4">Usafiri BURE Zanzibar Zima kwa bidhaa zote za karatasi.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="/sw/marine-board" className="inline-flex items-center gap-2 bg-primary-600 text-white px-5 py-2 rounded-xl font-semibold hover:bg-primary-700 transition-all shadow text-sm">
                 Marine Board <ArrowRight className="w-4 h-4" />
@@ -173,7 +173,7 @@ export default function SwHome() {
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-1.5 bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded-full text-xs font-semibold mb-3">
-                <Percent className="w-3 h-3" /> Pata Anda Yako Bure
+                <Percent className="w-3 h-3" /> Pata Nukuu Bure
               </div>
               <h2 className="text-xl md:text-3xl font-bold mb-2">Pata Anda za Marine Board, Plywood na Mbao</h2>
               <p className="text-primary-100 mb-4 text-sm">Tutumie mahitaji yako. Bei nzuri na jibu la haraka linalohakikishwa.</p>

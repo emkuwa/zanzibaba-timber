@@ -132,7 +132,7 @@ export default function MarineBoardPage() {
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Marine & Boat Building</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-                    For Zanzibar&apos;s coastal boat building industry, marine board provides the waterproof performance needed for hull construction, deck structures, and interior fittings that will be continuously exposed to saltwater conditions and tropical humidity.
+                    For Zanzibar's coastal boat building industry, marine board provides the waterproof performance needed for hull construction, deck structures, and interior fittings that will be continuously exposed to saltwater conditions and tropical humidity.
                   </p>
                   <ul className="space-y-2">
                     {['Boat hull and deck construction', 'Marine interior paneling', 'Dock and pier structures', 'Waterfront furniture and fixtures'].map((item) => (

@@ -54,12 +54,12 @@ export default function TimberSizes() {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
                   Treated Pine Timber Sizes <span className="text-primary-300">Zanzibar</span>
                 </h1>
-                <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">1x6, 1x8, 1x10 in 12ft • 2x2, 2x3, 2x4, 2x6 in 12ft &amp; 18ft</p>
+                <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">1x6, 1x8, 1x10 in 12ft • 2x2, 2x3, 2x4, 2x6 in 12ft & 18ft</p>
               </div>
             </div>
 
             <p className="text-center text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto text-sm md:text-base px-2">
-              High quality treated pine timber available in all standard sizes. Kiln-dried and professionally treated for Zanzibar&apos;s tropical climate.
+              High quality treated pine timber available in all standard sizes. Kiln-dried and professionally treated for Zanzibar's tropical climate.
             </p>
 
             <div className="max-w-3xl mx-auto mb-8 md:mb-10 px-2">

@@ -105,7 +105,7 @@ export default function HeroSection() {
             variants={itemVariants}
           >
             <ShieldCheck className="w-3.5 h-3.5" />
-            {locale === 'sw' ? 'Msambazaji wa Mbao, Marine Board na Plywood Anayeaminika Zanzibar' : "Zanzibar&apos;s Trusted Timber, Marine Board & Plywood Supplier"}
+            {locale === 'sw' ? 'Msambazaji wa Mbao, Marine Board na Plywood Anayeaminika Zanzibar' : "Zanzibar's Trusted Timber, Marine Board & Plywood Supplier"}
           </motion.div>
 
           <motion.h1

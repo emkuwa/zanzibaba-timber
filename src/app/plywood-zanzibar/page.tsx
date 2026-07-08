@@ -55,7 +55,7 @@ export default function PlywoodZanzibarPage() {
               Plywood <span className="text-primary-600">Zanzibar</span> — Construction Plywood Supplier
             </h1>
             <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-sm md:text-base">
-              Zanzibaba Timber is Zanzibar&apos;s trusted supplier of construction plywood. We stock all standard thicknesses from 3mm to 18mm in 4ft x 8ft sheets. From structural flooring and roofing to decorative paneling and craft work — we have the right plywood for every project on the island.
+              Zanzibaba Timber is Zanzibar's trusted supplier of construction plywood. We stock all standard thicknesses from 3mm to 18mm in 4ft x 8ft sheets. From structural flooring and roofing to decorative paneling and craft work — we have the right plywood for every project on the island.
             </p>
 
             <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mb-8 shadow-lg max-w-5xl mx-auto">

@@ -213,7 +213,7 @@ export default function PlywoodProductPage({ params }: { params: { thickness: st
                     <Info className="w-5 h-5 text-blue-500" /> Storage Tips
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">
-                    Store plywood sheets flat on a level surface with spacers between sheets to allow air circulation. Keep sheets off the ground using timber bearers. Store indoors or under cover to protect from rain and direct sunlight. In Zanzibar&apos;s humid climate, proper storage prevents warping and moisture absorption.
+                    Store plywood sheets flat on a level surface with spacers between sheets to allow air circulation. Keep sheets off the ground using timber bearers. Store indoors or under cover to protect from rain and direct sunlight. In Zanzibar's humid climate, proper storage prevents warping and moisture absorption.
                   </p>
                 </div>
 
