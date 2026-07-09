@@ -101,34 +101,47 @@ export const getLocalBusinessSchema = () => ({
   },
 })
 
-export const getServiceAreaSchema = () => ({
+export const getBlogPostingSchema = (post: { title: string; excerpt: string; date: string; slug: string }) => ({
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://timber.zanzibaba.com/#servicearea',
-  name: 'Zanzibaba Timber',
-  url: 'https://timber.zanzibaba.com',
-  telephone: '+255716002790',
-  areaServed: [
-    { '@type': 'City', name: 'Paje', sameAs: 'https://en.wikipedia.org/wiki/Paje' },
-    { '@type': 'City', name: 'Nungwi', sameAs: 'https://en.wikipedia.org/wiki/Nungwi' },
-    { '@type': 'City', name: 'Kendwa' },
-    { '@type': 'City', name: 'Jambiani' },
-    { '@type': 'City', name: 'Kiwengwa' },
-    { '@type': 'City', name: 'Matemwe' },
-    { '@type': 'City', name: 'Stone Town', sameAs: 'https://en.wikipedia.org/wiki/Stone_Town' },
-    { '@type': 'City', name: 'Fumba' },
-    { '@type': 'City', name: 'Bububu' },
-    { '@type': 'City', name: 'Chukwani' },
-    { '@type': 'City', name: 'Ndevu' },
-  ],
-  serviceArea: {
-    '@type': 'GeoCircle',
-    geoMidpoint: {
-      '@type': 'GeoCoordinates',
-      latitude: -6.1918,
-      longitude: 39.2056,
+  '@type': 'BlogPosting',
+  headline: post.title,
+  description: post.excerpt,
+  image: OG_IMAGE,
+  author: {
+    '@type': 'Organization',
+    name: 'Zanzibaba Timber',
+    url: 'https://timber.zanzibaba.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Zanzibaba Timber',
+    logo: {
+      '@type': 'ImageObject',
+      url: OG_IMAGE,
     },
-    geoRadius: '50000',
+  },
+  datePublished: post.date,
+  dateModified: post.date,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://timber.zanzibaba.com/blog/${post.slug}`,
+  },
+})
+
+export const getWebSiteSchema = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://timber.zanzibaba.com/#website',
+  url: 'https://timber.zanzibaba.com',
+  name: 'Zanzibaba Timber',
+  description: 'Premium pine timber supplier in Zanzibar. High quality treated timber and poles for construction.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Zanzibaba Timber',
+    logo: {
+      '@type': 'ImageObject',
+      url: OG_IMAGE,
+    },
   },
 })
 

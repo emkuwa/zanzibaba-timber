@@ -10,7 +10,7 @@ import { Phone, MessageCircle, Shield, CheckCircle, Layers } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
   'Plywood Zanzibar — Bei na Mauzo | Zanzibaba Timber',
-  'Nunua plywood za ujenzi Zanzibar. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, na 3mm. Karatasi 4ft x 8ft kutoka TZS 18,000. Usafiri bure Zanzibar zima.',
+  'Nunua plywood za ujenzi Zanzibar. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, na 3mm. Karatasi 4ft x 8ft kutoka 18,000. Usafiri bure Zanzibar zima.',
   'sw',
   '/sw/plywood'
 )

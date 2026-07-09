@@ -10,7 +10,7 @@ import { Truck, Phone, MessageCircle, Shield, CheckCircle, Layers } from 'lucide
 
 export const metadata = generateSEOMetadata(
   'Plywood Zanzibar — Construction Plywood Supplier | Zanzibaba',
-  'Buy quality construction plywood in Zanzibar. 18mm, 15mm, 12mm, 9mm, 6mm, and 3mm plywood sheets. 4ft x 8ft sheets from TZS 18,000. Island-wide delivery.',
+  'Buy quality construction plywood in Zanzibar. 18mm, 15mm, 12mm, 9mm, 6mm, and 3mm plywood sheets. 4ft x 8ft sheets from 18,000. Island-wide delivery.',
   'en',
   '/plywood'
 )

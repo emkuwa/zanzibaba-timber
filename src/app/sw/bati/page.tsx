@@ -103,8 +103,8 @@ export default function SwBati() {
                         <td className="py-3 px-3 font-semibold text-sm">{b.name}</td>
                         <td className="py-3 px-3 text-sm text-gray-500">{b.gauge}</td>
                         <td className="py-3 px-3 text-center text-sm text-gray-500">{b.width}</td>
-                        <td className="py-3 px-3 text-center font-bold text-sm">TZS {b.pc.toLocaleString()}</td>
-                        <td className="py-3 px-3 text-center text-sm">{b.bundle ? `TZS ${b.bundle.toLocaleString()}` : '-'}</td>
+                        <td className="py-3 px-3 text-center font-bold text-sm">{b.pc.toLocaleString()}</td>
+                        <td className="py-3 px-3 text-center text-sm">{b.bundle ? b.bundle.toLocaleString() : '-'}</td>
                         <td className="py-3 px-3 text-center">
                           <a href={generateWhatsAppLink(`Nataka ${b.name}`)} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 text-xs font-semibold">
                             <MessageCircle className="w-3 h-3 inline mr-1" />WhatsApp

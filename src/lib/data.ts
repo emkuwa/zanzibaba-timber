@@ -403,7 +403,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does Marine Board 18mm cost in Zanzibar?',
-        answer: 'Marine Board 18mm is available at Zanzibaba Timber for TZS 52,000 per sheet. Contact us for bulk order discounts. FREE Delivery Across Zanzibar.',
+        answer: 'Marine Board 18mm is available at Zanzibaba Timber for 52,000 per sheet. Contact us for bulk order discounts. FREE Delivery Across Zanzibar.',
       },
       {
         question: 'Is Marine Board 18mm waterproof?',
@@ -418,8 +418,8 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
         answer: 'Yes, Zanzibaba Timber delivers Marine Board 18mm across all Zanzibar locations including Stone Town, Paje, Nungwi, Kendwa, Jambiani, Matemwe, Kiwengwa, Fumba, Chwaka, Kizimkazi, and Makunduchi. We offer cash on delivery, mobile money, or bank transfer and 24-48 hour service for stock items.',
       },
     ],
-    seoTitle: 'Marine Board 18mm Zanzibar | Waterproof Marine Plywood | TZS 52,000/Sheet',
-    seoDescription: 'Buy Marine Board 18mm in Zanzibar at TZS 52,000 per sheet. Waterproof marine-grade plywood for concrete formwork, boat building, and construction. 4ft x 8ft sheets. Island-wide delivery.',
+    seoTitle: 'Marine Board 18mm Zanzibar | Waterproof Marine Plywood | 52,000/Sheet',
+    seoDescription: 'Buy Marine Board 18mm in Zanzibar at 52,000 per sheet. Waterproof marine-grade plywood for concrete formwork, boat building, and construction. 4ft x 8ft sheets. Island-wide delivery.',
     keywords: ['marine board zanzibar', 'marine board price zanzibar', 'marine board supplier zanzibar', 'waterproof marine board zanzibar', 'concrete formwork marine board', '18mm marine board zanzibar', 'marine plywood zanzibar'],
   },
   {
@@ -479,15 +479,15 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does Marine Board 12mm cost in Zanzibar?',
-        answer: 'Marine Board 12mm is available at Zanzibaba Timber for TZS 46,000 per sheet. Contact us for bulk pricing. FREE Delivery Across Zanzibar.',
+        answer: 'Marine Board 12mm is available at Zanzibaba Timber for 46,000 per sheet. Contact us for bulk pricing. FREE Delivery Across Zanzibar.',
       },
       {
         question: 'What is the difference between 12mm and 18mm Marine Board?',
         answer: 'The main difference is thickness and rigidity. 18mm provides greater structural strength for heavy formwork loads, while 12mm is lighter and more affordable for lighter applications. Both use the same waterproof phenolic resin and provide excellent moisture resistance.',
       },
     ],
-    seoTitle: 'Marine Board 12mm Zanzibar | Waterproof Marine Plywood | TZS 46,000/Sheet',
-    seoDescription: 'Buy Marine Board 12mm in Zanzibar at TZS 46,000 per sheet. Waterproof marine-grade plywood for light formwork, interior paneling, and construction. 4ft x 8ft sheets. Island-wide delivery.',
+    seoTitle: 'Marine Board 12mm Zanzibar | Waterproof Marine Plywood | 46,000/Sheet',
+    seoDescription: 'Buy Marine Board 12mm in Zanzibar at 46,000 per sheet. Waterproof marine-grade plywood for light formwork, interior paneling, and construction. 4ft x 8ft sheets. Island-wide delivery.',
     keywords: ['marine board 12mm zanzibar', 'marine board price zanzibar', 'waterproof plywood 12mm zanzibar', 'marine board supplier zanzibar'],
   },
   // PLYWOOD
@@ -548,7 +548,7 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 18mm plywood cost in Zanzibar?',
-        answer: '18mm plywood is available at Zanzibaba Timber for TZS 50,000 per sheet. Contact us for bulk order discounts. FREE Delivery Across Zanzibar.',
+        answer: '18mm plywood is available at Zanzibaba Timber for 50,000 per sheet. Contact us for bulk order discounts. FREE Delivery Across Zanzibar.',
       },
       {
         question: 'Is 18mm plywood waterproof?',
@@ -563,8 +563,8 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
         answer: 'Yes, Zanzibaba Timber delivers plywood across all Zanzibar locations. We cover Stone Town, Paje, Nungwi, Kendwa, Jambiani, Matemwe, Kiwengwa, Fumba, Chwaka, Kizimkazi, Makunduchi, and every location across the island.',
       },
     ],
-    seoTitle: '18mm Plywood Zanzibar | Construction Plywood | TZS 50,000/Sheet',
-    seoDescription: 'Buy 18mm Plywood in Zanzibar at TZS 50,000 per sheet. Construction-grade plywood for flooring, roofing, formwork, and structural applications. 4ft x 8ft sheets. Island-wide delivery.',
+    seoTitle: '18mm Plywood Zanzibar | Construction Plywood | 50,000/Sheet',
+    seoDescription: 'Buy 18mm Plywood in Zanzibar at 50,000 per sheet. Construction-grade plywood for flooring, roofing, formwork, and structural applications. 4ft x 8ft sheets. Island-wide delivery.',
     keywords: ['18mm plywood zanzibar', 'plywood price zanzibar', 'construction plywood zanzibar', 'plywood supplier zanzibar'],
   },
   {
@@ -624,15 +624,15 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 15mm plywood cost in Zanzibar?',
-        answer: '15mm plywood is available at Zanzibaba Timber for TZS 46,000 per sheet. This price includes transport. We deliver across all Zanzibar locations with cash on delivery, mobile money, or bank transfer.',
+        answer: '15mm plywood is available at Zanzibaba Timber for 46,000 per sheet. This price includes transport. We deliver across all Zanzibar locations with cash on delivery, mobile money, or bank transfer.',
       },
       {
         question: 'Is 15mm plywood strong enough for flooring?',
         answer: 'For light-duty residential flooring with adequate joist spacing, 15mm plywood can be suitable. For heavy-load flooring or commercial applications, we recommend 18mm plywood or marine board for greater structural integrity.',
       },
     ],
-    seoTitle: '15mm Plywood Zanzibar | Construction Plywood | TZS 46,000/Sheet',
-    seoDescription: 'Buy 15mm Plywood in Zanzibar at TZS 46,000 per sheet. Versatile construction plywood for wall sheathing, ceilings, and partitioning. 4ft x 8ft sheets. Island-wide delivery.',
+    seoTitle: '15mm Plywood Zanzibar | Construction Plywood | 46,000/Sheet',
+    seoDescription: 'Buy 15mm Plywood in Zanzibar at 46,000 per sheet. Versatile construction plywood for wall sheathing, ceilings, and partitioning. 4ft x 8ft sheets. Island-wide delivery.',
     keywords: ['15mm plywood zanzibar', 'plywood price zanzibar', 'construction plywood zanzibar', 'wall sheathing plywood zanzibar'],
   },
   {
@@ -692,15 +692,15 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 12mm plywood cost in Zanzibar?',
-        answer: '12mm plywood is available at Zanzibaba Timber for TZS 43,000 per sheet. FREE Delivery Across Zanzibar.',
+        answer: '12mm plywood is available at Zanzibaba Timber for 43,000 per sheet. FREE Delivery Across Zanzibar.',
       },
       {
         question: 'Can 12mm plywood be used for flooring?',
         answer: '12mm plywood is generally not recommended for flooring applications as it may not provide sufficient structural support for foot traffic. For flooring, we recommend 18mm plywood or marine board.',
       },
     ],
-    seoTitle: '12mm Plywood Zanzibar | Construction Plywood | TZS 43,000/Sheet',
-    seoDescription: 'Buy 12mm Plywood in Zanzibar at TZS 43,000 per sheet. Lightweight plywood for interior lining, furniture, and decorative applications. 4ft x 8ft sheets. Island-wide delivery.',
+    seoTitle: '12mm Plywood Zanzibar | Construction Plywood | 43,000/Sheet',
+    seoDescription: 'Buy 12mm Plywood in Zanzibar at 43,000 per sheet. Lightweight plywood for interior lining, furniture, and decorative applications. 4ft x 8ft sheets. Island-wide delivery.',
     keywords: ['12mm plywood zanzibar', 'plywood price zanzibar', 'interior plywood zanzibar', 'lightweight plywood zanzibar'],
   },
   {
@@ -760,11 +760,11 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 9mm plywood cost in Zanzibar?',
-        answer: '9mm plywood is available at Zanzibaba Timber for TZS 40,000 per sheet. Contact us for bulk discounts. FREE Delivery Across Zanzibar.',
+        answer: '9mm plywood is available at Zanzibaba Timber for 40,000 per sheet. Contact us for bulk discounts. FREE Delivery Across Zanzibar.',
       },
     ],
-    seoTitle: '9mm Plywood Zanzibar | Lightweight Plywood | TZS 40,000/Sheet',
-    seoDescription: 'Buy 9mm Plywood in Zanzibar at TZS 40,000 per sheet. Lightweight plywood for interior decoration, cabinet backing, and craft projects. 4ft x 8ft sheets. Island-wide delivery.',
+    seoTitle: '9mm Plywood Zanzibar | Lightweight Plywood | 40,000/Sheet',
+    seoDescription: 'Buy 9mm Plywood in Zanzibar at 40,000 per sheet. Lightweight plywood for interior decoration, cabinet backing, and craft projects. 4ft x 8ft sheets. Island-wide delivery.',
     keywords: ['9mm plywood zanzibar', 'plywood price zanzibar', 'lightweight plywood zanzibar', 'interior plywood zanzibar'],
   },
   {
@@ -824,11 +824,11 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 6mm plywood cost in Zanzibar?',
-        answer: '6mm plywood is available at Zanzibaba Timber for TZS 28,000 per sheet. This is the most affordable plywood option. FREE Delivery Across Zanzibar.',
+        answer: '6mm plywood is available at Zanzibaba Timber for 28,000 per sheet. This is the most affordable plywood option. FREE Delivery Across Zanzibar.',
       },
     ],
-    seoTitle: '6mm Plywood Zanzibar | Thin Flexible Plywood | TZS 28,000/Sheet',
-    seoDescription: 'Buy 6mm Plywood in Zanzibar at TZS 28,000 per sheet. Thin flexible plywood for curved features, decorative linings, and craft projects. 4ft x 8ft sheets. Island-wide delivery.',
+    seoTitle: '6mm Plywood Zanzibar | Thin Flexible Plywood | 28,000/Sheet',
+    seoDescription: 'Buy 6mm Plywood in Zanzibar at 28,000 per sheet. Thin flexible plywood for curved features, decorative linings, and craft projects. 4ft x 8ft sheets. Island-wide delivery.',
     keywords: ['6mm plywood zanzibar', 'thin plywood zanzibar', 'flexible plywood zanzibar', 'plywood price zanzibar'],
   },
   {
@@ -888,11 +888,11 @@ export const SHEET_PRODUCTS: SheetProduct[] = [
       },
       {
         question: 'How much does 3mm plywood cost in Zanzibar?',
-        answer: '3mm plywood is available at Zanzibaba Timber for TZS 18,000 per sheet. This is the most affordable plywood product. FREE Delivery Across Zanzibar.',
+        answer: '3mm plywood is available at Zanzibaba Timber for 18,000 per sheet. This is the most affordable plywood product. FREE Delivery Across Zanzibar.',
       },
     ],
-    seoTitle: '3mm Plywood Zanzibar | Ultra-Thin Craft Plywood | TZS 18,000/Sheet',
-    seoDescription: 'Buy 3mm Plywood in Zanzibar at TZS 18,000 per sheet. Ultra-thin plywood for model making, crafts, templates, and decorative applications. 4ft x 8ft sheets. Island-wide delivery.',
+    seoTitle: '3mm Plywood Zanzibar | Ultra-Thin Craft Plywood | 18,000/Sheet',
+    seoDescription: 'Buy 3mm Plywood in Zanzibar at 18,000 per sheet. Ultra-thin plywood for model making, crafts, templates, and decorative applications. 4ft x 8ft sheets. Island-wide delivery.',
     keywords: ['3mm plywood zanzibar', 'thin plywood zanzibar', 'craft plywood zanzibar', 'plywood price zanzibar'],
   },
 ]

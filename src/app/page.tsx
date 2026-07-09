@@ -4,12 +4,12 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import HeroSection from '@/components/HeroSection'
 import ImageWithFallback from '@/components/ImageWithFallback'
-import QuoteForm from '@/components/QuoteForm'
+import OrderBuilder from '@/components/OrderBuilder'
 import PriceNotice from '@/components/PriceNotice'
-import { getLocalBusinessSchema, getFAQSchema, getReviewSchema } from '@/lib/seo'
+import { getLocalBusinessSchema, getFAQSchema, getReviewSchema, getWebSiteSchema } from '@/lib/seo'
 import { PRODUCT_VARIANTS, TIMBER_SIZES, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug, formatTZS, formatVariantLabel, SHEET_PRODUCTS } from '@/lib/data'
 import Link from 'next/link'
-import { MessageCircle, Phone, ArrowRight, Truck, Star, Package, Factory, Cog, Network, Warehouse, Container, ShieldCheck, Building2, MapPin, Percent, CheckCircle, Zap, TrendingUp } from 'lucide-react'
+import { MessageCircle, Phone, ArrowRight, Truck, Star, Package, Factory, Cog, Network, Warehouse, Container, ShieldCheck, Building2, MapPin, CheckCircle, Zap, TrendingUp } from 'lucide-react'
 import { useBilingual } from '@/lib/bilingual'
 
 const POPULAR_SIZES = new Set(TIMBER_SIZES.filter(s => s.popular).map(s => s.name))
@@ -304,21 +304,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 8. Quote Form — after social proof */}
-        <section id="quote" className="py-6 bg-gradient-to-r from-primary-600 to-primary-800 text-white scroll-mt-20">
+        {/* 8. Order Builder — Quote Form Replacement */}
+        <section id="quote" className="py-6 md:py-10 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 scroll-mt-20">
           <div className="container-custom">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-1.5 bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded-full text-xs font-semibold mb-3">
-                <Percent className="w-3 h-3" /> Get Your Free Quote
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center gap-1.5 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 border border-primary-200 dark:border-primary-800 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                <Package className="w-3 h-3" /> Build Your Order
               </div>
-              <h2 className="text-xl md:text-3xl font-bold mb-2">Get Your Marine Board, Plywood & Timber Quote</h2>
-              <p className="text-primary-100 mb-4 text-sm">Send your timber requirements. Competitive pricing and fast response guaranteed.</p>
-              <div className="flex flex-col sm:flex-row gap-2 justify-center mb-4">
-                <WhatsAppButton message="Hello Zanzibaba Timber, I need timber prices for my project" label="Get Quote via WhatsApp" />
-                <CallButton />
-              </div>
-              <QuoteForm />
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">Timber &amp; Plywood Order Builder</h2>
+              <p className="text-sm text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">Select products, set quantities, and send your complete order to WhatsApp — or generate a PDF quote.</p>
             </div>
+            <OrderBuilder />
           </div>
         </section>
 
@@ -440,6 +436,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getLocalBusinessSchema()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebSiteSchema()) }}
       />
       <script
         type="application/ld+json"

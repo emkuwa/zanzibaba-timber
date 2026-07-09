@@ -2,7 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import ImageWithFallback from '@/components/ImageWithFallback'
-import QuoteForm from '@/components/QuoteForm'
+import OrderBuilder from '@/components/OrderBuilder'
 import { generateSEOMetadata, getLocalBusinessSchema, getReviewSchema, getBreadcrumbSchema } from '@/lib/seo'
 import { MapPin, Phone, Mail, CheckCircle, Star } from 'lucide-react'
 
@@ -90,8 +90,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <h2>Request Quote</h2>
-                <QuoteForm />
+                <h2 className="text-2xl font-bold mb-4">Build Your Order</h2>
+                <p className="text-gray-600 dark:text-gray-300 mb-6">Select products, set quantities, and send your complete order to WhatsApp.</p>
+                <OrderBuilder />
               </div>
             </div>
 

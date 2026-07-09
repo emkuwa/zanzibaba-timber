@@ -64,6 +64,7 @@ export const metadata: Metadata = {
     description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles.',
     images: [ogImage],
   },
+  themeColor: '#0052cc',
   // Domain-level property verified via DNS TXT record (sc-domain:timber.zanzibaba.com)
 }
 

@@ -12,7 +12,7 @@ const plywoodProducts = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood')
 
 export const metadata: Metadata = generateSEOMetadata(
   'Construction Plywood Zanzibar — Structural Grade Plywood Sheets',
-  'Construction-grade plywood and marine board in Zanzibar. All thicknesses from 3mm to 18mm. 4ft x 8ft sheets for structural and commercial projects. TZS 18,000 to TZS 50,000. FREE Delivery.',
+  'Construction-grade plywood and marine board in Zanzibar. All thicknesses from 3mm to 18mm. 4ft x 8ft sheets for structural and commercial projects. 18,000 to 50,000. FREE Delivery.',
   'en',
   '/construction-plywood-zanzibar'
 )

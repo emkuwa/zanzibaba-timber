@@ -10,7 +10,7 @@ import { MessageCircle, Phone, CheckCircle, Layers, Truck, Shield } from 'lucide
 
 export const metadata = generateSEOMetadata(
   'Plywood Zanzibar — Construction Plywood Supplier | Zanzibaba Timber',
-  'Zanzibaba Timber — Zanzibar\'s trusted plywood supplier. Construction plywood in 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. 4ft x 8ft sheets. From TZS 18,000. Island-wide delivery.',
+  'Zanzibaba Timber — Zanzibar\'s trusted plywood supplier. Construction plywood in 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. 4ft x 8ft sheets. From 18,000. Island-wide delivery.',
   'en',
   '/plywood-zanzibar',
   '/plywood'
@@ -30,7 +30,7 @@ const itemList = getItemListSchema(
 const seoFAQ = [
   { question: 'Where can I buy plywood in Zanzibar?', answer: 'Zanzibaba Timber stocks construction plywood in all standard thicknesses (3mm to 18mm) at our Kwa Ndevu yard in Zanzibar. We deliver across all locations including Stone Town, Paje, Nungwi, Kendwa, and every area across the island.' },
   { question: 'What plywood thicknesses are available in Zanzibar?', answer: 'Zanzibaba Timber stocks plywood in 18mm, 15mm, 12mm, 9mm, 6mm, and 3mm thicknesses. All sheets are standard 4ft x 8ft (1220mm x 2440mm). From structural 18mm for flooring and roofing to thin 3mm for crafts and templates.' },
-  { question: 'How much does plywood cost in Zanzibar?', answer: 'Plywood prices in Zanzibar at Zanzibaba Timber: 18mm at TZS 50,000, 15mm at TZS 46,000, 12mm at TZS 43,000, 9mm at TZS 40,000, 6mm at TZS 28,000, and 3mm at TZS 18,000 per sheet. Prices exclude VAT. FREE Delivery Across Zanzibar.' },
+  { question: 'How much does plywood cost in Zanzibar?', answer: 'Plywood prices in Zanzibar at Zanzibaba Timber: 18mm at 50,000, 15mm at 46,000, 12mm at 43,000, 9mm at 40,000, 6mm at 28,000, and 3mm at 18,000 per sheet. Prices exclude VAT. FREE Delivery Across Zanzibar.' },
   { question: 'What is the standard plywood sheet size in Zanzibar?', answer: 'All plywood sheets at Zanzibaba Timber are standard construction size: 4ft x 8ft (1220mm x 2440mm). This is the most widely used size for construction projects across Zanzibar and Tanzania.' },
   { question: 'Can I get plywood delivered to my site in Zanzibar?', answer: 'Yes, Zanzibaba Timber delivers plywood and all construction timber products to every location across Zanzibar. We cover Stone Town, Paje, Nungwi, Kendwa, Jambiani, Matemwe, Kiwengwa, Fumba, and all other areas. FREE Delivery Across Zanzibar.' },
   { question: 'What is the difference between plywood and marine board?', answer: 'Standard plywood provides moderate moisture resistance suitable for interior and covered applications. Marine board uses waterproof phenolic resin for full water resistance, making it ideal for concrete formwork, boat building, and wet areas. Marine board costs more but performs better in wet conditions.' },

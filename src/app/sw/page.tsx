@@ -3,9 +3,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import HeroSection from '@/components/HeroSection'
-import QuoteForm from '@/components/QuoteForm'
+import OrderBuilder from '@/components/OrderBuilder'
 import PriceNotice from '@/components/PriceNotice'
-import { getLocalBusinessSchema, getFAQSchema, getReviewSchema, getBreadcrumbSchema } from '@/lib/seo'
+import { getLocalBusinessSchema, getFAQSchema, getReviewSchema, getBreadcrumbSchema, getWebSiteSchema } from '@/lib/seo'
 import { PRODUCT_VARIANTS, TIMBER_SIZES, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug, formatTZS, formatVariantLabel, SHEET_PRODUCTS } from '@/lib/data'
 import Link from 'next/link'
 import { MessageCircle, Phone, ArrowRight, Truck, Star, Package, Factory, Cog, Network, Warehouse, Container, ShieldCheck, Building2, MapPin, Percent, CheckCircle, Zap, TrendingUp } from 'lucide-react'
@@ -169,24 +169,16 @@ export default function SwHome() {
           </div>
         </section>
 
-        <section id="quote" className="py-6 bg-gradient-to-r from-primary-600 to-primary-800 text-white scroll-mt-20">
+        <section id="quote" className="py-6 md:py-10 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 scroll-mt-20">
           <div className="container-custom">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-1.5 bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded-full text-xs font-semibold mb-3">
-                <Percent className="w-3 h-3" /> Pata Nukuu Bure
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center gap-1.5 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 border border-primary-200 dark:border-primary-800 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                <Package className="w-3 h-3" /> Jenga Oda Yako
               </div>
-              <h2 className="text-xl md:text-3xl font-bold mb-2">Pata Anda za Marine Board, Plywood na Mbao</h2>
-              <p className="text-primary-100 mb-4 text-sm">Tutumie mahitaji yako. Bei nzuri na jibu la haraka.</p>
-              <div className="flex flex-col sm:flex-row gap-2 justify-center mb-4">
-                <a href="https://wa.me/255716002790?text=Habari%20Zanzibaba%20Timber%2C%20nahitaji%20mbao" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2.5 rounded-lg transition-all hover:scale-105 shadow text-sm">
-                  <MessageCircle className="w-4 h-4" />Pata Anda kwa WhatsApp
-                </a>
-                <a href="tel:+255716002790" className="inline-flex items-center gap-1.5 bg-primary-600 hover:bg-primary-700 text-white font-semibold px-4 py-2.5 rounded-lg transition-all hover:scale-105 shadow text-sm">
-                  <Phone className="w-4 h-4" />Piga Sasa
-                </a>
-              </div>
-              <QuoteForm />
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">Jenga Oda ya Mbao na Plywood</h2>
+              <p className="text-sm text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">Chagua bidhaa, weka idadi, na tuma oda yako kamili kwa WhatsApp — au tengeneza PDF.</p>
             </div>
+            <OrderBuilder />
           </div>
         </section>
 
@@ -212,6 +204,7 @@ export default function SwHome() {
         </section>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getLocalBusinessSchema()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebSiteSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(HOMEPAGE_FAQ)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getReviewSchema('Zanzibaba Timber', TESTIMONIALS.map(t => ({ author: t.name, text: t.text, rating: t.rating })))) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />

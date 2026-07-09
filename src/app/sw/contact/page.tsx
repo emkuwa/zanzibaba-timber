@@ -2,7 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import ImageWithFallback from '@/components/ImageWithFallback'
-import QuoteForm from '@/components/QuoteForm'
+import OrderBuilder from '@/components/OrderBuilder'
 import { generateSEOMetadata, getLocalBusinessSchema, getReviewSchema, getBreadcrumbSchema } from '@/lib/seo'
 import { MapPin, Phone, Mail, CheckCircle, Star } from 'lucide-react'
 import Link from 'next/link'
@@ -48,8 +48,9 @@ export default function SwContact() {
                 </div>
               </div>
               <div>
-                <h2>Omba Anda</h2>
-                <QuoteForm />
+                <h2 className="text-2xl font-bold mb-4">Jenga Oda Yako</h2>
+                <p className="text-gray-600 dark:text-gray-300 mb-6">Chagua bidhaa, weka idadi, na tuma oda yako kamili kwa WhatsApp.</p>
+                <OrderBuilder />
               </div>
             </div>
           </div>

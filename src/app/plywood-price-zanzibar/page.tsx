@@ -14,7 +14,7 @@ const cheapestMarineBoard = SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-
 
 export const metadata: Metadata = generateSEOMetadata(
   'Plywood Price Zanzibar 2026 | All Thicknesses',
-  'Current plywood prices in Zanzibar. 18mm TZS 50,000, 15mm TZS 46,000, 12mm TZS 43,000, 9mm TZS 40,000, 6mm TZS 28,000, 3mm TZS 18,000. FREE Delivery.',
+  'Current plywood prices in Zanzibar. 18mm 50,000, 15mm 46,000, 12mm 43,000, 9mm 40,000, 6mm 28,000, 3mm 18,000. FREE Delivery.',
   'en',
   '/plywood-price-zanzibar'
 )
@@ -26,8 +26,8 @@ const breadcrumbs = [
 ]
 
 const faqData = [
-  { question: 'What are the current plywood prices in Zanzibar?', answer: 'Zanzibaba Timber offers Plywood 18mm at TZS 50,000, 15mm at TZS 46,000, 12mm at TZS 43,000, 9mm at TZS 40,000, 6mm at TZS 28,000, and 3mm at TZS 18,000 per sheet. All prices exclude VAT. FREE Delivery Across Zanzibar.' },
-  { question: 'Which plywood thickness offers the best value?', answer: 'The best value depends on your application. For general construction, 12mm plywood at TZS 43,000 offers excellent strength at a moderate price. For budget projects, 6mm at TZS 28,000 is the most affordable structural option.' },
+  { question: 'What are the current plywood prices in Zanzibar?', answer: 'Zanzibaba Timber offers Plywood 18mm at 50,000, 15mm at 46,000, 12mm at 43,000, 9mm at 40,000, 6mm at 28,000, and 3mm at 18,000 per sheet. All prices exclude VAT. FREE Delivery Across Zanzibar.' },
+  { question: 'Which plywood thickness offers the best value?', answer: 'The best value depends on your application. For general construction, 12mm plywood at 43,000 offers excellent strength at a moderate price. For budget projects, 6mm at 28,000 is the most affordable structural option.' },
   { question: 'Do you offer bulk discounts on plywood?', answer: 'Yes, we offer competitive bulk discounts for large plywood orders. Contact us via WhatsApp or phone for custom bulk pricing on orders of any size.' },
   { question: 'What is the standard plywood sheet size?', answer: 'All plywood sheets at Zanzibaba Timber are standard 4ft x 8ft (1220mm x 2440mm), which is the most widely used size for construction projects in Zanzibar.' },
 ]

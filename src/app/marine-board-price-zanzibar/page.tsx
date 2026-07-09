@@ -14,7 +14,7 @@ const cheapestPlywood = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood').s
 
 export const metadata: Metadata = generateSEOMetadata(
   'Marine Board Price Zanzibar 2026 | Updated Pricing',
-  'Current marine board prices in Zanzibar. Marine Board 18mm at TZS 52,000, 12mm at TZS 46,000 per sheet. FREE Delivery Across Zanzibar.',
+  'Current marine board prices in Zanzibar. Marine Board 18mm at 52,000, 12mm at 46,000 per sheet. FREE Delivery Across Zanzibar.',
   'en',
   '/marine-board-price-zanzibar'
 )
@@ -26,7 +26,7 @@ const breadcrumbs = [
 ]
 
 const faqData = [
-  { question: 'What are the current marine board prices in Zanzibar?', answer: 'Zanzibaba Timber stocks Marine Board 18mm at TZS 52,000 per sheet and Marine Board 12mm at TZS 46,000 per sheet. All prices exclude VAT. FREE Delivery Across Zanzibar.' },
+  { question: 'What are the current marine board prices in Zanzibar?', answer: 'Zanzibaba Timber stocks Marine Board 18mm at 52,000 per sheet and Marine Board 12mm at 46,000 per sheet. All prices exclude VAT. FREE Delivery Across Zanzibar.' },
   { question: 'Why do marine board prices vary between suppliers?', answer: 'Marine board prices vary based on resin quality, core material, supplier margins, and transport costs. Zanzibaba Timber offers transparent fixed pricing with no hidden fees.' },
   { question: 'Do you offer bulk discounts on marine board?', answer: 'Yes, we offer competitive bulk discounts for large orders. Contact us via WhatsApp or phone for custom bulk pricing on marine board orders of any size.' },
   { question: 'How often do marine board prices change?', answer: 'Prices are updated regularly to reflect current market conditions. The prices listed on our website are the latest available. Contact us to confirm current pricing before ordering.' },

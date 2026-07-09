@@ -14,7 +14,7 @@ const cheapestTimber = PRODUCT_PRICES.filter(p => p.size !== 'Treated Wood Poles
 
 export const metadata: Metadata = generateSEOMetadata(
   'Concrete Formwork Marine Board Zanzibar — Waterproof Shuttering',
-  'Premium marine board for concrete formwork in Zanzibar. Reusable shuttering panels, clean concrete finishes. 18mm at TZS 52,000 and 12mm at TZS 46,000. FREE Delivery.',
+  'Premium marine board for concrete formwork in Zanzibar. Reusable shuttering panels, clean concrete finishes. 18mm at 52,000 and 12mm at 46,000. FREE Delivery.',
   'en',
   '/concrete-formwork-marine-board'
 )

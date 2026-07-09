@@ -2,7 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import { BLOG_POSTS, generateWhatsAppLink, TIMBER_SIZES } from '@/lib/data'
-import { generateSEOMetadata, getBreadcrumbSchema } from '@/lib/seo'
+import { generateSEOMetadata, getBreadcrumbSchema, getBlogPostingSchema } from '@/lib/seo'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { BlogPost } from '@/types'
@@ -178,6 +178,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getBlogPostingSchema(post)) }}
       />
       <Footer />
       <FloatingButtons />

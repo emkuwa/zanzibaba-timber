@@ -86,6 +86,24 @@ export type SheetProductCategory = {
   shortDescription: string
 }
 
+export type OrderItem = {
+  id: string
+  category: 'timber' | 'sheet'
+  label: string
+  sizeOrThickness: string
+  length: string
+  quantity: number
+  unitPrice: number
+  sku: string
+}
+
+export type OrderCustomer = {
+  name: string
+  phone: string
+  location: string
+  notes: string
+}
+
 export type SheetProduct = {
   id: string
   categoryId: string

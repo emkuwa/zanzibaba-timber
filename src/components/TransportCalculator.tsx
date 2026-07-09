@@ -38,7 +38,7 @@ export default function TransportCalculator() {
   const transportCost = freeDelivery ? 0 : distance * RATE_PER_KM
 
   const handleWhatsApp = () => {
-    const msg = `Hello Zanzibaba Timber,%0A%0AI would like to order timber.%0A%0ALocation: ${mode === 'location' ? selectedLocation : `${manualKm} km from Stone Town`}%0ADistance: ${distance} km%0ATransport Cost: ${freeDelivery ? 'FREE DELIVERY' : `${transportCost.toLocaleString()} TZS`}%0A%0APlease send me a quote.`
+    const msg = `Hello Zanzibaba Timber,%0A%0AI would like to order timber.%0A%0ALocation: ${mode === 'location' ? selectedLocation : `${manualKm} km from Stone Town`}%0ADistance: ${distance} km%0ATransport Cost: ${freeDelivery ? 'FREE DELIVERY' : `${transportCost.toLocaleString()}`}%0A%0APlease send me a quote.`
     window.open(`https://wa.me/255716002790?text=${msg}`, '_blank')
   }
 
@@ -117,7 +117,7 @@ export default function TransportCalculator() {
           )}
           {!freeDelivery && (
             <div className="text-[10px] text-gray-400">
-              {distance} km × {RATE_PER_KM.toLocaleString()} TZS/km
+              {distance} km × {RATE_PER_KM.toLocaleString()}/km
             </div>
           )}
         </div>
