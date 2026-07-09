@@ -49,7 +49,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">{S('Bidhaa', 'Products')}</h3>
             <ul className="space-y-2">
               <li><Link href="/timber-sizes" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Saizi za Mbao', 'Timber Sizes')}</Link></li>
-              <li><Link href="/treated-wood-poles" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Mirunda', 'Treated Wood Poles')}</Link></li>
+              <li><Link href="/treated-wood-poles" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Miti ya Mitiki', 'Teak Wood Poles')}</Link></li>
               <li><Link href="/timber-zanzibar" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Mbao Treated Pine', 'Treated Pine Timber')}</Link></li>
               <li><Link href="/marine-board" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Marine Board', 'Marine Board')}</Link></li>
               <li><Link href="/plywood" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Plywood', 'Plywood')}</Link></li>
@@ -89,7 +89,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">{S('Nyenzo', 'Resources')}</h3>
             <ul className="space-y-2">
               <li><Link href="/prices" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Maswali', 'FAQ')}</Link></li>
-              <li><Link href="/sw/mirunda" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Mirunda Zanzibar', 'Mirunda (Wood Poles)')}</Link></li>
+              <li><Link href="/sw/mirunda" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Miti ya Mitiki Zanzibar', 'Teak Wood Poles (Mitiki)')}</Link></li>
               <li><Link href="/sitemap.xml" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Ramani ya Tovuti', 'Sitemap')}</Link></li>
               <li><Link href="/sw" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Toleo la Kiswahili', 'Swahili Version')}</Link></li>
             </ul>

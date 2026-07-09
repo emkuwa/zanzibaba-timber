@@ -6,8 +6,8 @@ import { generateWhatsAppLink } from '@/lib/data'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Mbao kwa Hoteli Zanzibar — Mbao Pine kwa Hoteli na Resorts',
-  'Mbao pine kwa hoteli na resorts Zanzibar — Nungwi, Kendwa, Paje, Stone Town. Bei ya jumla, usafiri Zanzibar zima, na malipo baada ya kupelekwa. Piga +255 716 002 790.',
+  'Mbao na Miti ya Mitiki kwa Hoteli Zanzibar — Mbao kwa Hoteli na Resorts',
+  'Mbao na miti ya mitiki (mirunda) kwa hoteli na resorts Zanzibar — Nungwi, Kendwa, Paje, Stone Town. Bei ya jumla, usafiri Zanzibar zima, na malipo baada ya kupelekwa. Piga +255 716 002 790.',
   'sw',
   '/sw/hotel-supply'
 )

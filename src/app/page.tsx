@@ -53,7 +53,7 @@ function CallButton({ fullWidth }: { fullWidth?: boolean }) {
 
 function StockBadge({ v }: { v: typeof PRODUCT_VARIANTS[0] }) {
   const limitedStock = ['2x8', '1x4']
-  const isLimited = limitedStock.includes(v.size) || (v.size === 'Treated Wood Poles')
+  const isLimited = limitedStock.includes(v.size) || (v.size === 'Wood Poles')
   if (isLimited) {
     return <span className="text-[10px] bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 px-1.5 py-0.5 rounded-full">Limited Stock</span>
   }
@@ -147,7 +147,7 @@ export default function Home() {
         <section className="bg-primary-800 py-2.5">
           <div className="container-custom">
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs md:text-sm text-primary-100">
-                <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Premium Timber, Marine Board, Treated Wood Poles & Plywood</span>
+                <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Premium Timber, Marine Board, Wood Poles & Plywood</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> FREE Delivery Across Zanzibar</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Bulk Order & Wholesale Discounts</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Cash on Delivery, Mobile Money & Bank Transfer</span>
@@ -355,8 +355,8 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-6xl mx-auto">
               {[
-                { icon: Factory, title: 'Treated Pine Production', desc: 'Daily production capacity of premium treated pine timber at our Kwa Ndevu yard. Consistent quality with reliable supply for projects of any scale.' },
-                { icon: Warehouse, title: 'Stock Yard & Capacity', desc: 'Kwa Ndevu yard with covered storage, loading area, and large inventories of all standard sizes from 1x6 through 2x6 plus treated poles.' },
+                { icon: Factory, title: 'Timber Production', desc: 'Daily production capacity of premium timber at our Kwa Ndevu yard. Consistent quality with reliable supply for projects of any scale.' },
+                { icon: Warehouse, title: 'Stock Yard & Capacity', desc: 'Kwa Ndevu yard with covered storage, loading area, and large inventories of all standard sizes from 1x6 through 2x6 plus wood poles.' },
                 { icon: Cog, title: 'Treatment Plant', desc: 'In-house pressure treatment and kiln-drying facilities ensuring all timber is professionally treated for Zanzibar\'s tropical coastal climate.' },
                 { icon: Container, title: 'Processing & Cutting', desc: 'Log processing, dimensional cutting, and custom sizing capabilities for special orders and non-standard requirements.' },
                 { icon: Truck, title: 'Delivery Fleet', desc: 'Own fleet covering all Zanzibar locations from Paje to Nungwi. FREE Delivery Across Zanzibar.' },

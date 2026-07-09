@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 const marineBoard = SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board')
 const cheapestPlywood = SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood').sort((a, b) => a.finalPrice - b.finalPrice)[0]
-const cheapestTimber = PRODUCT_PRICES.filter(p => p.size !== 'Treated Wood Poles').sort((a, b) => a.price - b.price)[0]
+const cheapestTimber = PRODUCT_PRICES.filter(p => p.size !== 'Wood Poles').sort((a, b) => a.price - b.price)[0]
 
 export const metadata: Metadata = generateSEOMetadata(
   'Concrete Formwork Marine Board Zanzibar — Waterproof Shuttering',

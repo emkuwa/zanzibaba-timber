@@ -123,7 +123,7 @@ export default function Contact() {
                   <ul className="space-y-3">
                     {[
                       'Treated pine timber: 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6',
-                      'Treated poles: 2" to 6" diameter, 18ft length',
+                      'Teak wood poles (Mitiki): 2" to 6" diameter, 18ft length',
                       'Kiln-dried construction timber',
                       '12ft and 18ft lengths available',
                       'Custom sizes on request',

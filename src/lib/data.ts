@@ -2,7 +2,7 @@ import { TimberSize, Location, ProductVariant, ProductPrice, SheetProductCategor
 
 export function sizeToSlug(size: string): string {
   const map: Record<string, string> = {
-    'Treated Wood Poles': 'treated-wood-poles',
+    'Wood Poles': 'treated-wood-poles',
   }
   return map[size] ?? size.toLowerCase().replace(/\s+/g, '-')
 }
@@ -46,11 +46,11 @@ export const PRODUCT_PRICES: ProductPrice[] = [
   { size: '1x8', length: '18ft', price: 28000 },
   { size: '1x10', length: '18ft', price: 41000 },
   // Treated Wood Poles (18ft)
-  { size: 'Treated Wood Poles', length: '18ft', price: 11500 },
+  { size: 'Wood Poles', length: '18ft', price: 11500 },
 ]
 
 export const TIMBER_SIZES: TimberSize[] = [
-  { id: 'treated-wood-poles', name: 'Treated Wood Poles', dimensions: '2-6" diameter', popular: true, description: 'Treated Pine Poles 2-6 inch diameter, 18ft length — ideal for construction, fencing, and structural applications' },
+  { id: 'treated-wood-poles', name: 'Wood Poles', dimensions: '2-6" diameter', popular: true, description: 'Teak wood poles (Mitiki) 2-6 inch diameter, 18ft length — naturally durable, termite-resistant, ideal for construction, fencing, and structural applications' },
   { id: '1x6', name: '1x6', dimensions: '25x150mm', popular: true, description: 'Treated Pine Timber 1x6 — 25x150mm, ideal for roofing, fencing and light framing' },
   { id: '1x8', name: '1x8', dimensions: '25x200mm', popular: true, description: 'Treated Pine Timber 1x8 — 25x200mm, perfect for decking, shelving and joinery' },
   { id: '1x10', name: '1x10', dimensions: '25x250mm', popular: true, description: 'Treated Pine Timber 1x10 — 25x250mm, wide board for cladding and heavy shelving' },
@@ -63,7 +63,7 @@ export const TIMBER_SIZES: TimberSize[] = [
 ]
 
 export const SIZE_USE_CASE: Record<string, string> = {
-  'Treated Wood Poles': 'Poles, Fencing & Support',
+  'Wood Poles': 'Poles, Fencing & Support',
   '2x2': 'Ceilings & Light Framing',
   '2x3': 'Roof Battens & Framing',
   '2x4': 'Roof Trusses & Construction',
@@ -76,7 +76,7 @@ export const SIZE_USE_CASE: Record<string, string> = {
 }
 
 export const SIZE_USES: Record<string, string[]> = {
-  'treated-wood-poles': ['Construction poles', 'Fencing posts', 'Structural supports', 'Landscaping', 'Utility poles'],
+  'treated-wood-poles': ['Building poles (nguzo za kujengea)', 'Fence posts (nguzo za uzio)', 'Timber poles for construction', 'Farm poles (miti ya shamba)', 'Beachfront and resort structures'],
   '1x6': ['Roofing battens and purlins', 'Fencing and boundary walls', 'Light framing and partitioning', 'Furniture and shelving', 'Garden structures'],
   '1x8': ['Decking boards and walkways', 'Shelving and storage systems', 'Joinery and cabinet making', 'Cladding and wall lining', 'Signage and display'],
   '1x10': ['Wide decking and platforms', 'Heavy shelving and workbenches', 'Cladding and exterior finishing', 'Counter tops and bench surfaces', 'Cabinet and wardrobe construction'],
@@ -90,9 +90,9 @@ export const SIZE_USES: Record<string, string[]> = {
 
 export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }>> = {
   'treated-wood-poles': [
-    { question: 'What are treated wood poles used for?', answer: 'Treated wood poles (2-6 inch diameter) are used for construction posts, fencing, utility poles, landscaping, and structural supports in Zanzibar.' },
-    { question: 'Are treated wood poles available in Zanzibar?', answer: 'Yes, treated wood poles are available in 18ft length at Zanzibaba Timber. We stock diameters from 2 inches to 6 inches.' },
-    { question: 'Can I get treated wood poles delivered to my site?', answer: 'Yes, we deliver treated wood poles across all Zanzibar locations including Paje, Nungwi, Stone Town and Kendwa.' },
+    { question: 'What are teak wood poles used for in Zanzibar?', answer: 'Teak wood poles (Mitiki) are used for building construction, fencing, farm structures, beachfront resorts, and utility applications across Zanzibar. Teak is naturally resistant to termites, rot, and coastal humidity — making it ideal for Zanzibar\'s tropical climate without chemical treatment.' },
+    { question: 'Are teak wood poles available in Zanzibar?', answer: 'Yes, teak wood poles are available in 18ft length at Zanzibaba Timber. We stock diameters from 2 inches to 6 inches at our Kwa Ndevu yard. Also known locally as mirunda, milunda, or miti ya mitiki.' },
+    { question: 'Can I get teak wood poles delivered to my site in Zanzibar?', answer: 'Yes, we deliver teak wood poles across all Zanzibar locations including Paje, Nungwi, Stone Town, Kendwa, and all areas. Free delivery island-wide with cash on payment option.' },
   ],
   '1x6': [
     { question: 'What is 1x6 pine timber used for?', answer: '1x6 (25x150mm) treated pine timber is commonly used for roofing battens, fencing, light framing, shelving, and garden structures in Zanzibar construction.' },
@@ -172,8 +172,8 @@ export const PRODUCT_VARIANTS: ProductVariant[] = [
   { size: '1x6', length: '18ft', dimensions: '25x150mm', sku: '1X6-18FT', price: PRICE_MAP.get('1x6|18ft') },
   { size: '1x8', length: '18ft', dimensions: '25x200mm', sku: '1X8-18FT', price: PRICE_MAP.get('1x8|18ft') },
   { size: '1x10', length: '18ft', dimensions: '25x250mm', sku: '1X10-18FT', price: PRICE_MAP.get('1x10|18ft') },
-  // 18ft only - Treated Wood Poles
-  { size: 'Treated Wood Poles', length: '18ft', dimensions: '2-6" diameter', sku: 'POLE-18FT', price: PRICE_MAP.get('Treated Wood Poles|18ft') },
+  // 18ft only - Wood Poles
+  { size: 'Wood Poles', length: '18ft', dimensions: '2-6" diameter', sku: 'POLE-18FT', price: PRICE_MAP.get('Wood Poles|18ft') },
 ]
 
 export const LOCATIONS: Location[] = [
@@ -264,7 +264,7 @@ export const BLOG_POSTS = [
   { id: '4', title: 'Why Treated Pine is Best for Zanzibar Construction', slug: 'why-treated-pine-best-zanzibar-construction', excerpt: 'Discover why treated pine timber is the preferred choice for construction across Zanzibar\'s unique tropical environment.', date: '2024-05-22', category: 'Guides' },
   { id: '5', title: 'Hotel Construction Timber: A Guide for Zanzibar Developers', slug: 'hotel-construction-timber-zanzibar-developers', excerpt: 'Comprehensive guide for hotel developers on selecting the right timber for Zanzibar hospitality projects.', date: '2024-05-19', category: 'Hotels' },
   { id: '6', title: 'Timber Delivery Zanzibar: What to Expect', slug: 'timber-delivery-zanzibar-expect', excerpt: 'Everything about timber delivery across Zanzibar. Timelines, costs, cash on delivery, and how to prepare for your timber shipment.', date: '2024-05-16', category: 'Delivery' },
-  { id: '7', title: 'Mbao Zanzibar: Understanding Local Timber Terms', slug: 'mbao-zanzibar-understanding-local-timber-terms', excerpt: 'A guide to Swahili timber terminology used in Zanzibar\'s construction industry. Learn about mbao, treated wood poles, and more.', date: '2024-05-13', category: 'Guides' },
+  { id: '7', title: 'Mbao Zanzibar: Understanding Local Timber Terms', slug: 'mbao-zanzibar-understanding-local-timber-terms', excerpt: 'A guide to Swahili timber terminology used in Zanzibar\'s construction industry. Learn about mbao, teak wood poles (mitiki), mirunda, and more.', date: '2024-05-13', category: 'Guides' },
   { id: '8', title: 'Paje Construction Boom: Timber Supply Guide', slug: 'paje-construction-timber-supply', excerpt: 'How Paje\'s rapid development is driving timber demand and what contractors need to know about supply in this growing area.', date: '2024-05-10', category: 'Locations' },
   { id: '9', title: 'Nungwi Resort Development: Timber Requirements', slug: 'nungwi-resort-timber-requirements', excerpt: 'Understanding the timber needs for Nungwi\'s expanding resort and hospitality sector. Sizes, quantities, and delivery logistics.', date: '2024-05-07', category: 'Locations' },
   { id: '10', title: 'Roofing Timber Zanzibar: Sizes and Specifications', slug: 'roofing-timber-zanzibar-sizes-specifications', excerpt: 'Complete guide to roofing timber in Zanzibar. Standard sizes, load requirements, and treated pine options for roof construction.', date: '2024-05-04', category: 'Construction' },
@@ -908,18 +908,23 @@ export const SHEET_PRODUCT_FAQ = [
 
 export const SEO_KEYWORDS = [
   'timber supplier zanzibar',
-  'treated pine timber zanzibar',
-  'treated poles zanzibar',
-  'treated wood poles zanzibar',
+  'teak wood poles zanzibar',
+  'teak poles zanzibar',
+  'wood poles zanzibar',
+  'timber poles zanzibar',
+  'wooden poles zanzibar',
+  'fence poles zanzibar',
+  'building poles zanzibar',
+  'miti ya mitiki zanzibar',
+  'nguzo za mitiki zanzibar',
+  'mirunda zanzibar',
+  'milunda zanzibar',
   'construction timber zanzibar',
   'timber prices zanzibar',
   'timber delivery zanzibar',
-  'treated timber nungwi',
-  'treated timber paje',
   'pole supplier zanzibar',
-  'pine timber zanzibar',
   'mbao zanzibar',
-  'mbao za pine zanzibar',
+  'miti ya kujengea zanzibar',
   'building materials zanzibar',
   'wood supplier zanzibar',
   'timber yard zanzibar',

@@ -16,7 +16,7 @@ const INITIAL_PRICES = {
     '1x6': { wholesale: 15000, margin: 3000, selling: 18000, stock: 'In Stock' },
     '1x8': { wholesale: 25000, margin: 3000, selling: 28000, stock: 'In Stock' },
     '1x10': { wholesale: 38000, margin: 3000, selling: 41000, stock: 'In Stock' },
-    'Treated Wood Poles': { wholesale: 8500, margin: 3000, selling: 11500, stock: 'In Stock' },
+    'Wood Poles': { wholesale: 8500, margin: 3000, selling: 11500, stock: 'In Stock' },
   },
   '12ft': {
     '2x2': { wholesale: 5000, margin: 3000, selling: 8000, stock: 'In Stock' },

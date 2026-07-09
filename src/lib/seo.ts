@@ -48,7 +48,7 @@ export const getLocalBusinessSchema = () => ({
   '@id': 'https://timber.zanzibaba.com/#localbusiness',
   url: 'https://timber.zanzibaba.com',
   telephone: '+255716002790',
-  description: 'Premium pine timber supplier in Zanzibar. High quality treated timber and poles for construction, delivered across the island.',
+  description: 'Premium timber and teak wood poles supplier in Zanzibar. High quality timber, marine board, plywood, and wood poles (mirunda) for construction, delivered across the island.',
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
@@ -134,7 +134,7 @@ export const getWebSiteSchema = () => ({
   '@id': 'https://timber.zanzibaba.com/#website',
   url: 'https://timber.zanzibaba.com',
   name: 'Zanzibaba Timber',
-  description: 'Premium pine timber supplier in Zanzibar. High quality treated timber and poles for construction.',
+  description: 'Premium timber and teak wood poles supplier in Zanzibar. High quality timber, marine board, plywood, and wood poles (mirunda) for construction.',
   publisher: {
     '@type': 'Organization',
     name: 'Zanzibaba Timber',

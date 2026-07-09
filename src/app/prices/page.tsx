@@ -9,8 +9,8 @@ import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Marine Board, Plywood, Treated Wood Poles & Timber Prices in Zanzibar - Updated 2026',
-  'Current marine board, plywood, treated wood poles and timber prices in Zanzibar. Marine board 18mm and 12mm. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. Timber 2x2, 2x4, 1x6, 1x8, 1x10. Treated wood poles 2"-6". Free Delivery Across Zanzibar.',
+  'Marine Board, Plywood, Teak Wood Poles & Timber Prices in Zanzibar - Updated 2026',
+  'Current marine board, plywood, teak wood poles and timber prices in Zanzibar. Marine board 18mm and 12mm. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. Timber 2x2, 2x4, 1x6, 1x8, 1x10. Teak wood poles 2"-6". Free Delivery Across Zanzibar.',
   'en',
   '/prices'
 )
@@ -22,7 +22,7 @@ const breadcrumb = getBreadcrumbSchema([
 
 function PriceTable({ length, title }: { length: string; title: string }) {
   const variants = PRODUCT_VARIANTS.filter(v => v.length === length && v.price)
-  const poles = length === '18ft' ? PRODUCT_VARIANTS.filter(v => v.size === 'Treated Wood Poles') : []
+  const poles = length === '18ft' ? PRODUCT_VARIANTS.filter(v => v.size === 'Wood Poles') : []
 
   return (
     <div className="mb-8">
@@ -63,13 +63,13 @@ function PriceTable({ length, title }: { length: string; title: string }) {
             ))}
             {poles.length > 0 && (
               <tr className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 bg-amber-50/50 dark:bg-amber-900/10">
-                <td className="py-3 px-3 font-semibold text-sm">Treated Wood Poles</td>
+                <td className="py-3 px-3 font-semibold text-sm">Wood Poles (Teak)</td>
                 <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">2-6" diameter</td>
                 <td className="py-3 px-3 text-center text-sm">{length}</td>
                 <td className="py-3 px-3 text-right font-bold text-sm">{poles[0]?.price ? formatTZS(poles[0].price) : '-'}</td>
                 <td className="py-3 px-3 text-center">
                   <a
-                    href="https://wa.me/255716002790?text=Hello%20Zanzibaba%20Timber,%20I%20need%20Treated%20Wood%20Poles"
+                    href="https://wa.me/255716002790?text=Hello%20Zanzibaba%20Timber,%20I%20need%20Wood%20Poles"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-green-600 hover:text-green-700 text-xs font-semibold"

@@ -7,8 +7,8 @@ import { BLOG_POSTS, TIMBER_SIZES, INDUSTRIES, generateWhatsAppLink } from '@/li
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Hotel Timber & Wood Poles Supply Zanzibar - Bulk Treated Pine for Resorts & Lodges',
-  'Specialized bulk treated pine timber, wood poles (mirunda), marine board and plywood supply for Zanzibar hotels resorts and lodges. Serving Nungwi, Kendwa, Paje, Stone Town & Kiwengwa. Custom cutting, pressure-treated, island-wide delivery with cash on delivery. Bulk wholesale pricing available.',
+  'Hotel Timber & Teak Wood Poles Supply Zanzibar - Bulk Supply for Resorts & Lodges',
+  'Specialized bulk timber, teak wood poles (mitiki/mirunda), marine board and plywood supply for Zanzibar hotels resorts and lodges. Serving Nungwi, Kendwa, Paje, Stone Town & Kiwengwa. Custom cutting, kiln-dried, island-wide delivery with cash on delivery. Bulk wholesale pricing available.',
   'en',
   '/hotel-supply'
 )

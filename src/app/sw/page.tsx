@@ -39,7 +39,7 @@ export default function SwHome() {
         <section className="bg-primary-800 py-2.5">
           <div className="container-custom">
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs md:text-sm text-primary-100">
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Marine Board, Plywood, Mirunda na Mbao</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Marine Board, Plywood, Miti ya Mitiki na Mbao</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Usafiri Bure Zanzibar Zima</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Punguzo kwa Bei za Jumla</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-green-400" /> Malipo Baada ya Kupelekwa</span>

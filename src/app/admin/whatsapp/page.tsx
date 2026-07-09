@@ -20,7 +20,7 @@ export default function AdminWhatsapp() {
       '1x6': 18000,
       '1x8': 28000,
       '1x10': 41000,
-      'Treated Wood Poles': 11500,
+      'Wood Poles': 11500,
     },
     '12ft': {
       '2x2': 8000,
