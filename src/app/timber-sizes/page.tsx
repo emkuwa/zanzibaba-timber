@@ -8,16 +8,15 @@ import PriceNotice from '@/components/PriceNotice'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Timber Sizes Zanzibar | Mninga, Mkongo, Mvule Hardwood & Treated Pine',
-  'Complete range of timber sizes in Zanzibar. Natural hardwood: mninga, mkongo, mvule, mbawa — 1x4, 1x6, 1x8, 1x10. Treated pine: 2x2, 2x3, 2x4, 2x6, 2x8. Teak wood poles (mitiki) 2-6 inch. Free delivery across Zanzibar.',
+  'Timber Sizes Zanzibar | Treated Pine & Teak Wood Poles',
+  'Complete range of timber sizes in Zanzibar. Treated pine: 2x2, 2x3, 2x4, 2x6, 2x8. Teak wood poles (mitiki) 2-6 inch. Free delivery across Zanzibar.',
   'en',
   '/timber-sizes',
   undefined,
   [
-    'timber zanzibar', 'mninga timber', 'mkongo timber', 'mvule timber', 'mbawa timber',
-    'hardwood zanzibar', 'natural hardwood', 'treated pine', 'teak poles', 'mitiki',
-    'construction timber', '1x6 timber', '1x8 timber', '1x10 timber', '2x4 timber',
-    'mbao za mninga', 'mbao za miti', 'mbao za ujenzi', 'mbao za dawa',
+    'timber zanzibar', 'treated pine', 'teak poles', 'mitiki',
+    'construction timber', '2x4 timber', '2x6 timber',
+    'mbao za pine', 'mbao za ujenzi', 'mbao za dawa',
   ]
 )
 
@@ -51,7 +50,7 @@ export default function TimberSizes() {
             <div className="relative w-full h-48 sm:h-64 md:h-80 rounded-xl overflow-hidden mb-8 md:mb-12 shadow-lg">
               <Image
                 src="/images/gallery/timber-sizes-display.jpg"
-                alt="Complete display of timber sizes at Zanzibaba Timber yard — mninga hardwood, treated pine, and teak poles"
+                alt="Complete display of timber sizes at Zanzibaba Timber yard — treated pine and teak poles"
                 fill
                 className="object-cover"
                 priority
@@ -62,12 +61,12 @@ export default function TimberSizes() {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
                   Timber Sizes <span className="text-primary-300">Zanzibar</span>
                 </h1>
-                <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">Mninga Hardwood • Treated Pine • Teak Wood Poles</p>
+                <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">Treated Pine • Teak Wood Poles</p>
               </div>
             </div>
 
             <p className="text-center text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto text-sm md:text-base px-2">
-              Premium timber for every project. Natural hardwood — mninga, mkongo, mvule, mbawa. Treated pine for framing. Teak poles for construction. Free delivery across Zanzibar.
+              Premium timber for every project. Treated pine for framing. Teak poles for construction. Free delivery across Zanzibar.
             </p>
 
             <div className="max-w-3xl mx-auto mb-8 md:mb-10 px-2">

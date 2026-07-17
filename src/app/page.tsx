@@ -53,7 +53,7 @@ const HOW_IT_WORKS = [
 
 const FEATURED_PRODUCTS = [
   { name: '2x4 Pine', desc: 'Most popular framing timber', price: '11,500', badge: 'In Stock', href: '/timber-sizes/2x4', image: '/images/gallery/treated-pine-timber.jpg' },
-  { name: '1x8 Mninga', desc: 'Premium hardwood decking', price: '16,000', badge: 'Wholesale', href: '/timber-sizes/1x8', image: '/images/gallery/hardwood-mninga-timber.jpg' },
+  { name: '2x6 Pine', desc: 'Heavy-duty structural beams', price: '31,000', badge: 'Popular', href: '/timber-sizes/2x6', image: '/images/gallery/treated-pine-timber.jpg' },
   { name: '18mm Marine Board', desc: 'Waterproof formwork', price: '52,000', badge: 'Imported', href: '/marine-board/18mm-marine-board', image: '/images/gallery/marine-board-zanzibar.jpg' },
   { name: 'Teak Poles 4"', desc: 'Natural termite-resistant', price: '11,500', badge: 'Free Delivery', href: '/treated-wood-poles', image: '/images/gallery/teak-wood-poles-mitiki.jpg' },
 ]

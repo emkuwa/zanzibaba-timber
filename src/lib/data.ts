@@ -32,34 +32,23 @@ export const PRODUCT_PRICES: ProductPrice[] = [
   // 12ft
   { size: '2x2', length: '12ft', price: 8000, woodType: 'pine' },
   { size: '2x4', length: '12ft', price: 11500, woodType: 'pine' },
-  { size: '1x6', length: '12ft', price: 13000, woodType: 'hardwood' },
-  { size: '1x8', length: '12ft', price: 16000, woodType: 'hardwood' },
-  { size: '1x10', length: '12ft', price: 25000, woodType: 'hardwood' },
   // 18ft
   { size: '2x2', length: '18ft', price: 11500, woodType: 'pine' },
   { size: '2x3', length: '18ft', price: 18000, woodType: 'pine' },
   { size: '2x4', length: '18ft', price: 19500, woodType: 'pine' },
   { size: '2x6', length: '18ft', price: 31000, woodType: 'pine' },
   { size: '2x8', length: '18ft', price: 48000, woodType: 'pine' },
-  { size: '1x4', length: '18ft', price: 9000, woodType: 'hardwood' },
-  { size: '1x6', length: '18ft', price: 18000, woodType: 'hardwood' },
-  { size: '1x8', length: '18ft', price: 28000, woodType: 'hardwood' },
-  { size: '1x10', length: '18ft', price: 41000, woodType: 'hardwood' },
   // Treated Wood Poles (18ft)
   { size: 'Wood Poles', length: '18ft', price: 11500, woodType: 'teak' },
 ]
 
 export const TIMBER_SIZES: TimberSize[] = [
   { id: 'treated-wood-poles', name: 'Wood Poles', dimensions: '2-6" diameter', popular: true, description: 'Teak wood poles (Mitiki) 2-6 inch diameter, 18ft length — naturally durable, termite-resistant, ideal for construction, fencing, and structural applications', woodType: 'teak' },
-  { id: '1x6', name: '1x6', dimensions: '25x150mm', popular: true, description: 'Hardwood (Mninga) 1x6 — 25x150mm, ideal for roofing, fencing and light framing', woodType: 'hardwood' },
-  { id: '1x8', name: '1x8', dimensions: '25x200mm', popular: true, description: 'Hardwood (Mninga) 1x8 — 25x200mm, perfect for decking, shelving and joinery', woodType: 'hardwood' },
-  { id: '1x10', name: '1x10', dimensions: '25x250mm', popular: true, description: 'Hardwood (Mninga) 1x10 — 25x250mm, wide board for cladding and heavy shelving', woodType: 'hardwood' },
   { id: '2x2', name: '2x2', dimensions: '50x50mm', popular: true, description: 'Treated Pine Timber 2x2 — 50x50mm, structural timber for framing and supports', woodType: 'pine' },
   { id: '2x3', name: '2x3', dimensions: '50x75mm', popular: true, description: 'Treated Pine Timber 2x3 — 50x75mm, robust timber for framing and structural work', woodType: 'pine' },
   { id: '2x4', name: '2x4', dimensions: '50x100mm', popular: true, description: 'Treated Pine Timber 2x4 — 50x100mm, the most popular size for construction framing', woodType: 'pine' },
   { id: '2x6', name: '2x6', dimensions: '50x150mm', popular: true, description: 'Treated Pine Timber 2x6 — 50x150mm, heavy-duty timber for beams and large structures', woodType: 'pine' },
   { id: '2x8', name: '2x8', dimensions: '50x200mm', popular: false, description: 'Treated Pine Timber 2x8 — 50x200mm, extra-heavy timber for large beams and structural applications', woodType: 'pine' },
-  { id: '1x4', name: '1x4', dimensions: '25x100mm', popular: false, description: 'Hardwood (Mninga) 1x4 — 25x100mm, lightweight timber for light framing, battens and furring', woodType: 'hardwood' },
 ]
 
 export type WoodTypeGroup = {
@@ -67,17 +56,10 @@ export type WoodTypeGroup = {
   name: string
   description: string
   image: string
-  woodType: 'pine' | 'hardwood' | 'teak'
+  woodType: 'pine' | 'teak'
 }
 
 export const WOOD_TYPE_GROUPS: WoodTypeGroup[] = [
-  {
-    id: 'hardwood',
-    name: 'Mninga / Hardwood Timber',
-    description: 'Premium natural hardwood timber from indigenous trees — mninga, mkongo, mvule, mbawa. Grown naturally in Tanzania, not plantation. Durable, termite-resistant, ideal for furniture, joinery, decking and high-end construction.',
-    image: '/images/gallery/hardwood-mninga-timber.jpg',
-    woodType: 'hardwood',
-  },
   {
     id: 'pine',
     name: 'Treated Pine Timber',
@@ -100,24 +82,16 @@ export const SIZE_USE_CASE: Record<string, string> = {
   '2x3': 'Roof Battens & Framing',
   '2x4': 'Roof Trusses & Construction',
   '2x6': 'Heavy Duty Structures',
-  '1x6': 'Ceilings & Interior Works',
-  '1x8': 'Finishing & Furniture',
-  '1x10': 'Premium Joinery & Doors',
   '2x8': 'Heavy Beams & Large Structures',
-  '1x4': 'Battens & Light Framing',
 }
 
 export const SIZE_USES: Record<string, string[]> = {
   'treated-wood-poles': ['Building poles (nguzo za kujengea)', 'Fence posts (nguzo za uzio)', 'Timber poles for construction', 'Farm poles (miti ya shamba)', 'Beachfront and resort structures'],
-  '1x6': ['Roofing battens and purlins', 'Fencing and boundary walls', 'Light framing and partitioning', 'Furniture and shelving', 'Garden structures'],
-  '1x8': ['Decking boards and walkways', 'Shelving and storage systems', 'Joinery and cabinet making', 'Cladding and wall lining', 'Signage and display'],
-  '1x10': ['Wide decking and platforms', 'Heavy shelving and workbenches', 'Cladding and exterior finishing', 'Counter tops and bench surfaces', 'Cabinet and wardrobe construction'],
   '2x2': ['Wall framing and studwork', 'Furniture frames and supports', 'Garden structures and pergolas', 'Fencing posts and rails', 'General structural supports'],
   '2x3': ['Load-bearing wall framing', 'Roof trusses and rafters', 'Floor joists and supports', 'Structural bracing and ties', 'Heavy-duty shelving frames'],
   '2x4': ['Construction wall framing', 'Roof and ceiling supports', 'Floor framing systems', 'Deck and patio structures', 'General building framework'],
   '2x6': ['Main structural beams', 'Heavy roof trusses', 'Floor joists for large spans', 'Pergola and gazebo beams', 'Commercial construction framing'],
   '2x8': ['Extra-large structural beams', 'Heavy-duty roof trusses', 'Large-span floor joists', 'Commercial and industrial framing', 'Bridge and deck components'],
-  '1x4': ['Roofing battens and purlins', 'Furring strips and strapping', 'Light framing and partitioning', 'Paneling and wall lining', 'Crating and packaging'],
 }
 
 export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }>> = {
@@ -125,21 +99,6 @@ export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }
     { question: 'What are teak wood poles used for in Zanzibar?', answer: 'Teak wood poles (Mitiki) are used for building construction, fencing, farm structures, beachfront resorts, and utility applications across Zanzibar. Teak is naturally resistant to termites, rot, and coastal humidity — making it ideal for Zanzibar\'s tropical climate without chemical treatment.' },
     { question: 'Are teak wood poles available in Zanzibar?', answer: 'Yes, teak wood poles are available in 18ft length at Zanzibaba Timber. We stock diameters from 2 inches to 6 inches at our Kwa Ndevu yard. Also known locally as mirunda, milunda, or miti ya mitiki.' },
     { question: 'Can I get teak wood poles delivered to my site in Zanzibar?', answer: 'Yes, we deliver teak wood poles across all Zanzibar locations including Paje, Nungwi, Stone Town, Kendwa, and all areas. Free delivery island-wide with cash on payment option.' },
-  ],
-  '1x6': [
-    { question: 'What is 1x6 hardwood timber used for?', answer: '1x6 (25x150mm) hardwood mninga timber is commonly used for roofing battens, fencing, light framing, shelving, and garden structures in Zanzibar construction.' },
-    { question: 'Is 1x6 timber available in 12ft and 18ft?', answer: 'Yes, 1x6 hardwood mninga timber is available in both 12ft and 18ft lengths from Zanzibaba Timber.' },
-    { question: 'Can I get 1x6 timber delivered to Paje or Nungwi?', answer: 'Yes, we deliver 1x6 hardwood mninga timber to all Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, and across the island.' },
-  ],
-  '1x8': [
-    { question: 'What is 1x8 hardwood timber used for?', answer: '1x8 (25x200mm) hardwood mninga timber is ideal for decking boards, shelving, joinery, cladding, and cabinet making in Zanzibar construction projects.' },
-    { question: 'Is 1x8 timber available in 12ft and 18ft?', answer: 'Yes, 1x8 hardwood mninga timber is available in both 12ft and 18ft lengths from Zanzibaba Timber. We stock large quantities at our Kwa Ndevu yard.' },
-    { question: 'Can I order 1x8 timber for my hotel project?', answer: 'Absolutely. We supply 1x8 hardwood mninga timber to hotels and resorts across Zanzibar including Nungwi, Kendwa, Paje and Kiwengwa.' },
-  ],
-  '1x10': [
-    { question: 'What is 1x10 hardwood timber used for?', answer: '1x10 (25x250mm) hardwood mninga timber is used for wide decking, heavy shelving, cladding, counter tops, and wardrobe construction in Zanzibar.' },
-    { question: 'Is 1x10 timber available in 12ft and 18ft?', answer: 'Yes, 1x10 hardwood mninga timber is available in both 12ft and 18ft lengths from Zanzibaba Timber. Contact us for custom orders.' },
-    { question: 'Do you deliver 1x10 timber to Stone Town?', answer: 'Yes, we deliver 1x10 hardwood mninga timber to Stone Town, historical restoration projects, and all areas of Zanzibar with cash on delivery, mobile money, or bank transfer.' },
   ],
   '2x2': [
     { question: 'What is 2x2 pine timber used for?', answer: '2x2 (50x50mm) treated pine timber is used for wall framing, furniture frames, garden structures, pergolas, fencing posts and general supports.' },
@@ -166,11 +125,6 @@ export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }
     { question: 'Is 2x8 available in 18ft?', answer: 'Yes, 2x8 pine timber is available in 18ft length from Zanzibaba Timber for heavy-duty construction projects.' },
     { question: 'Do you offer wholesale pricing on 2x8 timber?', answer: 'Yes, we offer competitive wholesale pricing on 2x8 and all timber sizes for contractors and large projects across Zanzibar.' },
   ],
-  '1x4': [
-    { question: 'What is 1x4 hardwood timber used for?', answer: '1x4 (25x100mm) hardwood mninga timber is used for roofing battens, furring strips, light framing, paneling, and crating applications in Zanzibar construction.' },
-    { question: 'Is 1x4 available in 18ft?', answer: 'Yes, 1x4 hardwood mninga timber is available in 18ft length from Zanzibaba Timber.' },
-    { question: 'Can I get 1x4 timber delivered to my site?', answer: 'Yes, we deliver 1x4 hardwood mninga timber across all Zanzibar locations with cash on delivery, mobile money, or bank transfer.' },
-  ],
 }
 
 export const POLES: ProductVariant[] = [
@@ -184,10 +138,6 @@ export const POLES: ProductVariant[] = [
 const PRICE_MAP = new Map(PRODUCT_PRICES.map(p => [`${p.size}|${p.length}`, p.price]))
 
 export const PRODUCT_VARIANTS: ProductVariant[] = [
-  // 12ft only - 1x6, 1x8, 1x10
-  { size: '1x6', length: '12ft', dimensions: '25x150mm', sku: '1X6-12FT', price: PRICE_MAP.get('1x6|12ft') },
-  { size: '1x8', length: '12ft', dimensions: '25x200mm', sku: '1X8-12FT', price: PRICE_MAP.get('1x8|12ft') },
-  { size: '1x10', length: '12ft', dimensions: '25x250mm', sku: '1X10-12FT', price: PRICE_MAP.get('1x10|12ft') },
   // both lengths - 2x2, 2x3, 2x4, 2x6
   { size: '2x2', length: '12ft', dimensions: '50x50mm', sku: '2X2-12FT', price: PRICE_MAP.get('2x2|12ft') },
   { size: '2x2', length: '18ft', dimensions: '50x50mm', sku: '2X2-18FT', price: PRICE_MAP.get('2x2|18ft') },
@@ -197,13 +147,8 @@ export const PRODUCT_VARIANTS: ProductVariant[] = [
   { size: '2x4', length: '18ft', dimensions: '50x100mm', sku: '2X4-18FT', price: PRICE_MAP.get('2x4|18ft') },
   { size: '2x6', length: '12ft', dimensions: '50x150mm', sku: '2X6-12FT' },
   { size: '2x6', length: '18ft', dimensions: '50x150mm', sku: '2X6-18FT', price: PRICE_MAP.get('2x6|18ft') },
-  // 18ft only - 2x8, 1x4
+  // 18ft only - 2x8
   { size: '2x8', length: '18ft', dimensions: '50x200mm', sku: '2X8-18FT', price: PRICE_MAP.get('2x8|18ft') },
-  { size: '1x4', length: '18ft', dimensions: '25x100mm', sku: '1X4-18FT', price: PRICE_MAP.get('1x4|18ft') },
-  // 18ft only - 1x6, 1x8, 1x10
-  { size: '1x6', length: '18ft', dimensions: '25x150mm', sku: '1X6-18FT', price: PRICE_MAP.get('1x6|18ft') },
-  { size: '1x8', length: '18ft', dimensions: '25x200mm', sku: '1X8-18FT', price: PRICE_MAP.get('1x8|18ft') },
-  { size: '1x10', length: '18ft', dimensions: '25x250mm', sku: '1X10-18FT', price: PRICE_MAP.get('1x10|18ft') },
   // 18ft only - Wood Poles
   { size: 'Wood Poles', length: '18ft', dimensions: '2-6" diameter', sku: 'POLE-18FT', price: PRICE_MAP.get('Wood Poles|18ft') },
 ]
@@ -328,7 +273,6 @@ export const BLOG_POSTS = [
   { id: '36', title: 'Hospital Timber Supply: Zanzibar Healthcare Projects', slug: 'hospital-timber-supply-zanzibar-healthcare', excerpt: 'Timber requirements for healthcare facility construction in Zanzibar. Specifications, volumes, and procurement for hospital projects.', date: '2024-02-16', category: 'Government' },
   { id: '37', title: 'Timber Treatment Standards in Tanzania', slug: 'timber-treatment-standards-tanzania', excerpt: 'Understanding timber treatment standards and certifications in Tanzania. What to look for when buying treated pine.', date: '2024-02-13', category: 'Guides' },
   { id: '38', title: 'Pergola Construction Zanzibar: Timber Guide', slug: 'pergola-construction-zanzibar-timber-guide', excerpt: 'Building timber pergolas in Zanzibar. Design ideas, material selection, and construction tips for outdoor structures.', date: '2024-02-10', category: 'Construction' },
-  { id: '39', title: 'Timber for Construction: Pine vs Hardwood in Zanzibar', slug: 'timber-pine-vs-hardwood-zanzibar', excerpt: 'Comparing pine timber and hardwood for Zanzibar construction. Cost, durability, and application differences explained.', date: '2024-02-07', category: 'Guides' },
   { id: '40', title: 'Bulk Timber Orders Zanzibar: Volume Planning Guide', slug: 'bulk-timber-orders-zanzibar-planning', excerpt: 'How to plan and execute bulk timber orders in Zanzibar. Quantity estimation, delivery scheduling, and cost optimization.', date: '2024-02-04', category: 'Contractors' },
   { id: '41', title: 'Timber for Roof Trusses: Zanzibar Engineering Guide', slug: 'timber-roof-trusses-zanzibar-engineering', excerpt: 'Engineering considerations for timber roof trusses in Zanzibar. Load calculations, timber sizes, and construction methods.', date: '2024-02-01', category: 'Construction' },
   { id: '42', title: 'Ndevu Timber Yard: Zanzibar\'s Central Timber Hub', slug: 'ndevu-timber-yard-zanzibar-hub', excerpt: 'Why Kwa Ndevu has become Zanzibar\'s central timber yard location. Accessibility, stock capacity, and distribution advantages.', date: '2024-01-29', category: 'Locations' },

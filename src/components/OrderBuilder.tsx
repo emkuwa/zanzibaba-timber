@@ -29,7 +29,6 @@ const genId = () => `item_${++idCounter}`
 
 const WOOD_TYPE_LABELS: Record<string, string> = {
   pine: 'Pine',
-  hardwood: 'Mninga Hardwood',
   teak: 'Teak',
 }
 

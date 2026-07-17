@@ -17,21 +17,18 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   if (!location) return {}
 
   return generateSEOMetadata(
-    `Timber Delivery ${location.name} Zanzibar - Mninga/Hardwood & Treated Pine Supplier`,
-    `${location.description}. Buy premium timber in ${location.name}, Zanzibar. 1x6, 1x8, 1x10 in Mninga/Hardwood. 2x2, 2x3, 2x4, 2x6 in Treated Pine. Cash on delivery, mobile money & bank transfer. Order your construction timber in ${location.name} today.`,
+    `Timber Delivery ${location.name} Zanzibar - Treated Pine & Teak Wood Poles Supplier`,
+    `${location.description}. Buy premium timber in ${location.name}, Zanzibar. 2x2, 2x3, 2x4, 2x6, 2x8 in Treated Pine. Teak wood poles 2-6 inch. Cash on delivery, mobile money & bank transfer. Order your construction timber in ${location.name} today.`,
     'en',
     `/locations/${location.slug}`,
     undefined,
     [
       `timber delivery ${location.name}`,
-      `mninga timber ${location.name}`,
-      `mkongo timber ${location.name}`,
-      `mvule timber ${location.name}`,
-      `hardwood zanzibar`,
       `treated pine zanzibar`,
-      `mbao za mninga`,
-      `mbao za miti`,
+      `teak poles zanzibar`,
       `construction timber zanzibar`,
+      `mbao za pine`,
+      `mbao za dawa`,
     ]
   )
 }

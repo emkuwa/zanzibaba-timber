@@ -11,7 +11,7 @@ export type ProductPrice = {
   size: string
   length: string
   price: number
-  woodType: 'pine' | 'hardwood' | 'teak'
+  woodType: 'pine' | 'teak'
 }
 
 export type Locale = 'en' | 'sw'
@@ -23,7 +23,7 @@ export type TimberSize = {
   description?: string
   pricePerMeter?: string
   popular?: boolean
-  woodType: 'pine' | 'hardwood' | 'teak'
+  woodType: 'pine' | 'teak'
 }
 
 export type Location = {
