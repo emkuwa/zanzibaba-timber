@@ -19,17 +19,37 @@ export function generateMetadata({ params }: { params: { size: string } }) {
   const timber = TIMBER_SIZES.find((s) => s.id === params.size)
   if (!timber) return {}
 
+  const isHardwood = timber.woodType === 'hardwood'
+  const isTeak = timber.woodType === 'teak'
+  const woodType = isHardwood ? 'Mninga/Hardwood' : isTeak ? 'Teak (Mitiki)' : 'Pine'
+
+  const hardwoodKeywords = isHardwood
+    ? ['mninga timber', 'mkongo timber', 'mvule timber', 'mbawa timber', 'hardwood zanzibar', 'natural hardwood', 'mbao za mninga', 'mbao za miti']
+    : []
+
+  const baseKeywords = [
+    `${timber.name} timber zanzibar`,
+    `${timber.name} ${woodType.toLowerCase()}`,
+    'construction timber',
+    'delivery zanzibar',
+  ]
+
   return generateSEOMetadata(
-    `${timber.name} (${timber.dimensions}) Pine Timber Zanzibar - Treated Pine Timber Supplier`,
-    `Premium ${timber.name} (${timber.dimensions}) treated pine timber in Zanzibar. ${timber.description}. Quality kiln-dried timber for construction, delivery across Zanzibar. Cash on delivery, mobile money & bank transfer.`,
+    `${timber.name} (${timber.dimensions}) ${woodType} Timber Zanzibar - ${isHardwood ? 'Mninga Hardwood' : isTeak ? 'Teak Wood Poles' : 'Treated Pine Timber'} Supplier`,
+    `Premium ${timber.name} (${timber.dimensions}) ${isHardwood ? 'mninga hardwood' : isTeak ? 'teak wood poles' : 'treated pine timber'} in Zanzibar. ${timber.description}. Quality timber for construction, delivery across Zanzibar. Cash on delivery, mobile money & bank transfer.`,
     'en',
-    `/timber-sizes/${timber.id}`
+    `/timber-sizes/${timber.id}`,
+    undefined,
+    [...baseKeywords, ...hardwoodKeywords]
   )
 }
 
 export default function TimberSizePage({ params }: { params: { size: string } }) {
   const timber = TIMBER_SIZES.find((s) => s.id === params.size)
   if (!timber) notFound()
+
+  const isHardwood = timber.description?.includes('Hardwood') || timber.description?.includes('Mninga')
+  const woodType = isHardwood ? 'Mninga/Hardwood' : 'Pine'
 
   const uses = SIZE_USES[timber.id] || []
   const faqs = SIZE_FAQ[timber.id] || []
@@ -41,7 +61,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
   const breadcrumb = getBreadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Timber Sizes', url: '/timber-sizes' },
-    { name: `${timber.name} Pine Timber`, url: `/timber-sizes/${timber.id}` },
+    { name: `${timber.name} ${woodType} Timber`, url: `/timber-sizes/${timber.id}` },
   ])
 
   return (
@@ -53,7 +73,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
             <div className="relative w-full h-48 sm:h-56 md:h-72 rounded-lg md:rounded-xl overflow-hidden mb-6 md:mb-8 shadow-lg">
               <Image
                 src="/images/gallery/timber-sizes-display.jpg"
-                alt={`${timber.name} (${timber.dimensions}) treated pine timber at Zanzibaba Timber yard`}
+                alt={`${timber.name} (${timber.dimensions}) ${isHardwood ? 'mninga hardwood' : 'treated pine timber'} at Zanzibaba Timber yard`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
@@ -61,9 +81,9 @@ export default function TimberSizePage({ params }: { params: { size: string } })
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6">
                 <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
-                  {formatSizeName(timber.name)} Pine Timber <span className="text-primary-300">Zanzibar</span>
+                  {formatSizeName(timber.name)} {woodType} Timber <span className="text-primary-300">Zanzibar</span>
                 </h1>
-                <p className="text-gray-200 mt-1 text-xs sm:text-sm">{timber.dimensions} — Treated Pine</p>
+                <p className="text-gray-200 mt-1 text-xs sm:text-sm">{timber.dimensions} — {isHardwood ? 'Mninga Hardwood' : 'Treated Pine'}</p>
               </div>
             </div>
 
@@ -78,7 +98,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                 </nav>
 
                 <h2 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
-                  {formatSizeName(timber.name)} Treated Pine in Zanzibar
+                  {formatSizeName(timber.name)} {woodType} Timber in Zanzibar
                 </h2>
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-2">
                   <strong>Dimensions:</strong> {timber.dimensions}
@@ -222,7 +242,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getProductSchema(`${timber.name} Pine Timber`, timber.description!, timber.name)),
+          __html: JSON.stringify(getProductSchema(`${timber.name} ${woodType} Timber`, timber.description!, timber.name)),
         }}
       />
       <script

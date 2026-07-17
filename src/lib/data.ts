@@ -50,16 +50,48 @@ export const PRODUCT_PRICES: ProductPrice[] = [
 ]
 
 export const TIMBER_SIZES: TimberSize[] = [
-  { id: 'treated-wood-poles', name: 'Wood Poles', dimensions: '2-6" diameter', popular: true, description: 'Teak wood poles (Mitiki) 2-6 inch diameter, 18ft length — naturally durable, termite-resistant, ideal for construction, fencing, and structural applications' },
-  { id: '1x6', name: '1x6', dimensions: '25x150mm', popular: true, description: 'Treated Pine Timber 1x6 — 25x150mm, ideal for roofing, fencing and light framing' },
-  { id: '1x8', name: '1x8', dimensions: '25x200mm', popular: true, description: 'Treated Pine Timber 1x8 — 25x200mm, perfect for decking, shelving and joinery' },
-  { id: '1x10', name: '1x10', dimensions: '25x250mm', popular: true, description: 'Treated Pine Timber 1x10 — 25x250mm, wide board for cladding and heavy shelving' },
-  { id: '2x2', name: '2x2', dimensions: '50x50mm', popular: true, description: 'Treated Pine Timber 2x2 — 50x50mm, structural timber for framing and supports' },
-  { id: '2x3', name: '2x3', dimensions: '50x75mm', popular: true, description: 'Treated Pine Timber 2x3 — 50x75mm, robust timber for framing and structural work' },
-  { id: '2x4', name: '2x4', dimensions: '50x100mm', popular: true, description: 'Treated Pine Timber 2x4 — 50x100mm, the most popular size for construction framing' },
-  { id: '2x6', name: '2x6', dimensions: '50x150mm', popular: true, description: 'Treated Pine Timber 2x6 — 50x150mm, heavy-duty timber for beams and large structures' },
-  { id: '2x8', name: '2x8', dimensions: '50x200mm', popular: false, description: 'Treated Pine Timber 2x8 — 50x200mm, extra-heavy timber for large beams and structural applications' },
-  { id: '1x4', name: '1x4', dimensions: '25x100mm', popular: false, description: 'Treated Pine Timber 1x4 — 25x100mm, lightweight timber for light framing, battens and furring' },
+  { id: 'treated-wood-poles', name: 'Wood Poles', dimensions: '2-6" diameter', popular: true, description: 'Teak wood poles (Mitiki) 2-6 inch diameter, 18ft length — naturally durable, termite-resistant, ideal for construction, fencing, and structural applications', woodType: 'teak' },
+  { id: '1x6', name: '1x6', dimensions: '25x150mm', popular: true, description: 'Hardwood (Mninga) 1x6 — 25x150mm, ideal for roofing, fencing and light framing', woodType: 'hardwood' },
+  { id: '1x8', name: '1x8', dimensions: '25x200mm', popular: true, description: 'Hardwood (Mninga) 1x8 — 25x200mm, perfect for decking, shelving and joinery', woodType: 'hardwood' },
+  { id: '1x10', name: '1x10', dimensions: '25x250mm', popular: true, description: 'Hardwood (Mninga) 1x10 — 25x250mm, wide board for cladding and heavy shelving', woodType: 'hardwood' },
+  { id: '2x2', name: '2x2', dimensions: '50x50mm', popular: true, description: 'Treated Pine Timber 2x2 — 50x50mm, structural timber for framing and supports', woodType: 'pine' },
+  { id: '2x3', name: '2x3', dimensions: '50x75mm', popular: true, description: 'Treated Pine Timber 2x3 — 50x75mm, robust timber for framing and structural work', woodType: 'pine' },
+  { id: '2x4', name: '2x4', dimensions: '50x100mm', popular: true, description: 'Treated Pine Timber 2x4 — 50x100mm, the most popular size for construction framing', woodType: 'pine' },
+  { id: '2x6', name: '2x6', dimensions: '50x150mm', popular: true, description: 'Treated Pine Timber 2x6 — 50x150mm, heavy-duty timber for beams and large structures', woodType: 'pine' },
+  { id: '2x8', name: '2x8', dimensions: '50x200mm', popular: false, description: 'Treated Pine Timber 2x8 — 50x200mm, extra-heavy timber for large beams and structural applications', woodType: 'pine' },
+  { id: '1x4', name: '1x4', dimensions: '25x100mm', popular: false, description: 'Hardwood (Mninga) 1x4 — 25x100mm, lightweight timber for light framing, battens and furring', woodType: 'hardwood' },
+]
+
+export type WoodTypeGroup = {
+  id: string
+  name: string
+  description: string
+  image: string
+  woodType: 'pine' | 'hardwood' | 'teak'
+}
+
+export const WOOD_TYPE_GROUPS: WoodTypeGroup[] = [
+  {
+    id: 'hardwood',
+    name: 'Mninga / Hardwood Timber',
+    description: 'Premium natural hardwood timber from indigenous trees — mninga, mkongo, mvule, mbawa. Grown naturally in Tanzania, not plantation. Durable, termite-resistant, ideal for furniture, joinery, decking and high-end construction.',
+    image: '/images/gallery/hardwood-mninga-timber.jpg',
+    woodType: 'hardwood',
+  },
+  {
+    id: 'pine',
+    name: 'Treated Pine Timber',
+    description: 'Kiln-dried and pressure-treated pine timber for construction framing, roofing, fencing and structural work. Chemically treated to resist termites and rot in tropical climates.',
+    image: '/images/gallery/treated-pine-timber.jpg',
+    woodType: 'pine',
+  },
+  {
+    id: 'teak',
+    name: 'Teak Wood Poles (Mitiki)',
+    description: 'Natural teak wood poles — mirunda, mitiki. Naturally durable, termite-resistant, ideal for construction poles, fencing and structural applications without chemical treatment.',
+    image: '/images/gallery/teak-wood-poles-mitiki.jpg',
+    woodType: 'teak',
+  },
 ]
 
 export const SIZE_USE_CASE: Record<string, string> = {
@@ -95,19 +127,19 @@ export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }
     { question: 'Can I get teak wood poles delivered to my site in Zanzibar?', answer: 'Yes, we deliver teak wood poles across all Zanzibar locations including Paje, Nungwi, Stone Town, Kendwa, and all areas. Free delivery island-wide with cash on payment option.' },
   ],
   '1x6': [
-    { question: 'What is 1x6 pine timber used for?', answer: '1x6 (25x150mm) treated pine timber is commonly used for roofing battens, fencing, light framing, shelving, and garden structures in Zanzibar construction.' },
-    { question: 'Is 1x6 timber available in 12ft and 18ft?', answer: 'Yes, 1x6 pine timber is available in both 12ft and 18ft lengths from Zanzibaba Timber.' },
-    { question: 'Can I get 1x6 timber delivered to Paje or Nungwi?', answer: 'Yes, we deliver 1x6 treated pine timber to all Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, and across the island.' },
+    { question: 'What is 1x6 hardwood timber used for?', answer: '1x6 (25x150mm) hardwood mninga timber is commonly used for roofing battens, fencing, light framing, shelving, and garden structures in Zanzibar construction.' },
+    { question: 'Is 1x6 timber available in 12ft and 18ft?', answer: 'Yes, 1x6 hardwood mninga timber is available in both 12ft and 18ft lengths from Zanzibaba Timber.' },
+    { question: 'Can I get 1x6 timber delivered to Paje or Nungwi?', answer: 'Yes, we deliver 1x6 hardwood mninga timber to all Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, and across the island.' },
   ],
   '1x8': [
-    { question: 'What is 1x8 pine timber used for?', answer: '1x8 (25x200mm) treated pine timber is ideal for decking boards, shelving, joinery, cladding, and cabinet making in Zanzibar construction projects.' },
-    { question: 'Is 1x8 timber available in 12ft and 18ft?', answer: 'Yes, 1x8 pine timber is available in both 12ft and 18ft lengths from Zanzibaba Timber. We stock large quantities at our Kwa Ndevu yard.' },
-    { question: 'Can I order 1x8 timber for my hotel project?', answer: 'Absolutely. We supply 1x8 treated pine timber to hotels and resorts across Zanzibar including Nungwi, Kendwa, Paje and Kiwengwa.' },
+    { question: 'What is 1x8 hardwood timber used for?', answer: '1x8 (25x200mm) hardwood mninga timber is ideal for decking boards, shelving, joinery, cladding, and cabinet making in Zanzibar construction projects.' },
+    { question: 'Is 1x8 timber available in 12ft and 18ft?', answer: 'Yes, 1x8 hardwood mninga timber is available in both 12ft and 18ft lengths from Zanzibaba Timber. We stock large quantities at our Kwa Ndevu yard.' },
+    { question: 'Can I order 1x8 timber for my hotel project?', answer: 'Absolutely. We supply 1x8 hardwood mninga timber to hotels and resorts across Zanzibar including Nungwi, Kendwa, Paje and Kiwengwa.' },
   ],
   '1x10': [
-    { question: 'What is 1x10 pine timber used for?', answer: '1x10 (25x250mm) treated pine timber is used for wide decking, heavy shelving, cladding, counter tops, and wardrobe construction in Zanzibar.' },
-    { question: 'Is 1x10 timber available in 12ft and 18ft?', answer: 'Yes, 1x10 pine timber is available in both 12ft and 18ft lengths from Zanzibaba Timber. Contact us for custom orders.' },
-    { question: 'Do you deliver 1x10 timber to Stone Town?', answer: 'Yes, we deliver 1x10 treated pine timber to Stone Town, historical restoration projects, and all areas of Zanzibar with cash on delivery, mobile money, or bank transfer.' },
+    { question: 'What is 1x10 hardwood timber used for?', answer: '1x10 (25x250mm) hardwood mninga timber is used for wide decking, heavy shelving, cladding, counter tops, and wardrobe construction in Zanzibar.' },
+    { question: 'Is 1x10 timber available in 12ft and 18ft?', answer: 'Yes, 1x10 hardwood mninga timber is available in both 12ft and 18ft lengths from Zanzibaba Timber. Contact us for custom orders.' },
+    { question: 'Do you deliver 1x10 timber to Stone Town?', answer: 'Yes, we deliver 1x10 hardwood mninga timber to Stone Town, historical restoration projects, and all areas of Zanzibar with cash on delivery, mobile money, or bank transfer.' },
   ],
   '2x2': [
     { question: 'What is 2x2 pine timber used for?', answer: '2x2 (50x50mm) treated pine timber is used for wall framing, furniture frames, garden structures, pergolas, fencing posts and general supports.' },
@@ -135,9 +167,9 @@ export const SIZE_FAQ: Record<string, Array<{ question: string; answer: string }
     { question: 'Do you offer wholesale pricing on 2x8 timber?', answer: 'Yes, we offer competitive wholesale pricing on 2x8 and all timber sizes for contractors and large projects across Zanzibar.' },
   ],
   '1x4': [
-    { question: 'What is 1x4 pine timber used for?', answer: '1x4 (25x100mm) treated pine timber is used for roofing battens, furring strips, light framing, paneling, and crating applications in Zanzibar construction.' },
-    { question: 'Is 1x4 available in 18ft?', answer: 'Yes, 1x4 pine timber is available in 18ft length from Zanzibaba Timber.' },
-    { question: 'Can I get 1x4 timber delivered to my site?', answer: 'Yes, we deliver 1x4 treated pine timber across all Zanzibar locations with cash on delivery, mobile money, or bank transfer.' },
+    { question: 'What is 1x4 hardwood timber used for?', answer: '1x4 (25x100mm) hardwood mninga timber is used for roofing battens, furring strips, light framing, paneling, and crating applications in Zanzibar construction.' },
+    { question: 'Is 1x4 available in 18ft?', answer: 'Yes, 1x4 hardwood mninga timber is available in 18ft length from Zanzibaba Timber.' },
+    { question: 'Can I get 1x4 timber delivered to my site?', answer: 'Yes, we deliver 1x4 hardwood mninga timber across all Zanzibar locations with cash on delivery, mobile money, or bank transfer.' },
   ],
 }
 

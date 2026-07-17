@@ -65,9 +65,9 @@ export default function QuoteForm() {
           className="w-full px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
         >
           <option value="">{t('pages.quoteForm.selectSize')}</option>
-          <option value="1x6">1x6 Pine</option>
-          <option value="1x8">1x8 Pine</option>
-          <option value="1x10">1x10 Pine</option>
+          <option value="1x6">1x6 Mninga/Hardwood</option>
+          <option value="1x8">1x8 Mninga/Hardwood</option>
+          <option value="1x10">1x10 Mninga/Hardwood</option>
           <option value="2x2">2x2 Pine</option>
           <option value="2x3">2x3 Pine</option>
           <option value="2x4">2x4 Pine</option>

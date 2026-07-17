@@ -22,6 +22,7 @@ export type TimberSize = {
   description?: string
   pricePerMeter?: string
   popular?: boolean
+  woodType: 'pine' | 'hardwood' | 'teak'
 }
 
 export type Location = {

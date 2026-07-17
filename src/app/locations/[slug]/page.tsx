@@ -17,10 +17,22 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   if (!location) return {}
 
   return generateSEOMetadata(
-    `Pine Timber Delivery ${location.name} Zanzibar - Treated Timber Supplier`,
-    `${location.description}. Buy premium treated pine timber in ${location.name}, Zanzibar. Sizes: 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6. Cash on delivery, mobile money & bank transfer. Order your construction timber in ${location.name} today.`,
+    `Timber Delivery ${location.name} Zanzibar - Mninga/Hardwood & Treated Pine Supplier`,
+    `${location.description}. Buy premium timber in ${location.name}, Zanzibar. 1x6, 1x8, 1x10 in Mninga/Hardwood. 2x2, 2x3, 2x4, 2x6 in Treated Pine. Cash on delivery, mobile money & bank transfer. Order your construction timber in ${location.name} today.`,
     'en',
-    `/locations/${location.slug}`
+    `/locations/${location.slug}`,
+    undefined,
+    [
+      `timber delivery ${location.name}`,
+      `mninga timber ${location.name}`,
+      `mkongo timber ${location.name}`,
+      `mvule timber ${location.name}`,
+      `hardwood zanzibar`,
+      `treated pine zanzibar`,
+      `mbao za mninga`,
+      `mbao za miti`,
+      `construction timber zanzibar`,
+    ]
   )
 }
 
@@ -53,7 +65,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
             <div className="grid md:grid-cols-5 gap-8 md:gap-12">
               <div className="md:col-span-3">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Pine Timber Delivery in <span className="text-primary-600">{location.name}</span>
+                  Timber Delivery in <span className="text-primary-600">{location.name}</span>
                 </h1>
 
                 <div className="prose dark:prose-invert max-w-none mb-8">
@@ -66,7 +78,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                   )}
 
                   <h2>Timber Sizes Available in {location.name}</h2>
-                  <p>We deliver all premium treated pine timber sizes to {location.name}. Here are the standard sizes we supply:</p>
+                  <p>We deliver all premium timber sizes to {location.name}. 1x6, 1x8, 1x10 in Mninga/Hardwood. 2x2, 2x3, 2x4, 2x6 in Treated Pine. Here are the standard sizes we supply:</p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 my-6">
                     {TIMBER_SIZES.map((s) => (
                       <Link
@@ -112,7 +124,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                       },
                       {
                         question: `What timber sizes are available in ${location.name}?`,
-                        answer: `All standard treated pine timber sizes are available for delivery to ${location.name}: 1x6 (25x150mm), 1x8 (25x200mm), 1x10 (25x250mm), 2x2 (50x50mm), 2x3 (50x75mm), 2x4 (50x100mm), and 2x6 (50x150mm) — in 12ft and 18ft lengths.`,
+                        answer: `All standard timber sizes are available for delivery to ${location.name}: 1x6 (25x150mm), 1x8 (25x200mm), 1x10 (25x250mm) in Mninga/Hardwood, and 2x2 (50x50mm), 2x3 (50x75mm), 2x4 (50x100mm), and 2x6 (50x150mm) in Treated Pine — in 12ft and 18ft lengths.`,
                       },
                       {
                         question: `What payment options are available in ${location.name}?`,

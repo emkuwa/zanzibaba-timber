@@ -122,7 +122,8 @@ export default function Contact() {
                   <h2 className="text-2xl font-bold mb-4">Products We Supply</h2>
                   <ul className="space-y-3">
                     {[
-                      'Treated pine timber: 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6',
+                      'Mninga/Hardwood: 1x6, 1x8, 1x10',
+                      'Treated pine timber: 2x2, 2x3, 2x4, 2x6',
                       'Teak wood poles (Mitiki): 2" to 6" diameter, 18ft length',
                       'Kiln-dried construction timber',
                       '12ft and 18ft lengths available',
@@ -187,8 +188,8 @@ export default function Contact() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getReviewSchema('Zanzibaba Timber Treated Pine Timber', [
-          { author: 'Ali H.', text: 'Reliable timber supplier with consistent quality. Their treated pine is perfect for Zanzibar\'s climate.', rating: 5 },
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getReviewSchema('Zanzibaba Timber', [
+          { author: 'Ali H.', text: 'Reliable timber supplier with consistent quality. Their timber is perfect for Zanzibar\'s climate.', rating: 5 },
           { author: 'Sarah M.', text: 'Professional bulk timber supplier for hotel projects. Delivery is always on time.', rating: 5 },
           { author: 'James K.', text: 'Great quality timber and fair prices. Helpful team for choosing the right sizes.', rating: 5 },
         ])) }}

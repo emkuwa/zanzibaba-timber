@@ -131,8 +131,8 @@ export default function MbaoZaDawa() {
                 { title: 'Paa na Miundo', desc: 'Mbao 2x4 na 2x6 treated pine ndio bora kwa ajili ya paa, miundo ya kuezekea, na framing. Zinastahimili mzigo na hali ya hewa.' },
                 { title: 'Veranda na Deck', desc: 'Treated pine inafaa kwa deck, veranda, na matumizi ya nje. Inastahimili jua, mvua, na unyevu bila kuoza.' },
                 { title: 'Nguzo na Uzio', desc: 'Nguzo za mbao treated pine na treated wood poles ni bora kwa ua na uzio. Zinadumu kwa miaka mingi bila kuharibika.' },
-                { title: 'Kuta na Dari', desc: 'Mbao 1x6 na 1x8 treated pine zinafaa kwa ajili ya kuta, dari, na mapambo ya ndani. Zina mwonekano mzuri na ni imara.' },
-                { title: 'Samani na Makabati', desc: 'Mbao 1x8 na 1x10 zinafaa kwa samani, makabati, na meza. Treated pine ni imara na ina muda mrefu wa matumizi.' },
+                { title: 'Kuta na Dari', desc: 'Mbao 1x6 na 1x8 Mninga/Hardwood zinafaa kwa ajili ya kuta, dari, na mapambo ya ndani. Zina mwonekano mzuri na ni imara.' },
+                { title: 'Samani na Makabati', desc: 'Mbao 1x8 na 1x10 Mninga/Hardwood zinafaa kwa samani, makabati, na meza. Mninga ni imara na ina muda mrefu wa matumizi.' },
                 { title: 'Miradi ya Biashara', desc: 'Hoteli, resort, na miradi ya serikali hutumia treated pine kwa wingi kwa ajili ya ujenzi wa kibiashara. Tuna uwezo wa kusambaza kwa wingi.' },
               ].map((u) => (
                 <div key={u.title} className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">

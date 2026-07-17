@@ -97,7 +97,7 @@ export default function VillaSupply() {
                   {[
                     { title: 'Custom Timber Supply', desc: 'Sizes and lengths tailored to your villa plans. We stock all standard sizes and accommodate custom orders.' },
                     { title: 'Traditional Joinery Timber', desc: 'Specialist timber for Swahili-style joinery, carved doors, window frames, and decorative elements.' },
-                    { title: 'Decking & Flooring', desc: 'High-quality 1x8 and 1x10 treated pine for villa decks, verandas, and interior flooring applications.' },
+                    { title: 'Decking & Flooring', desc: 'High-quality 1x8 and 1x10 Mninga/Hardwood for villa decks, verandas, and interior flooring applications.' },
                     { title: 'Roofing Timber', desc: '2x4 and 2x6 for roof framing, trusses, and pergolas. Treated to withstand Zanzibar sun and rain.' },
                     { title: 'Landscaping Timber', desc: 'Timber for garden structures, boundary fencing, pergolas, and outdoor living spaces around your villa.' },
                     { title: 'Island-Wide Delivery', desc: 'Direct delivery to your villa site with cash on payment. Fast 24-48 hour service for stock items.' },

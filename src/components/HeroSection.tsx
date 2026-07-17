@@ -2,143 +2,103 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { MessageCircle, Phone, MapPin, ShieldCheck, CheckCircle } from 'lucide-react'
+import { MessageCircle, Search } from 'lucide-react'
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useBilingual } from '@/lib/bilingual'
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.2,
-    },
+    transition: { staggerChildren: 0.1, delayChildren: 0.15 },
   },
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
-  },
-}
-
-function WhatsAppButton({ message }: { message?: string }) {
-  const msg = message || 'Hello Zanzibaba Timber, I need a quote'
-  const handleClick = () => {
-    ;(window as any).gtag?.('event', 'whatsapp_click', { event_category: 'engagement' })
-  }
-  return (
-    <a
-      href={`https://wa.me/255716002790?text=${encodeURIComponent(msg)}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={handleClick}
-      className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-500 text-white font-semibold px-5 py-3 rounded-lg transition-all hover:scale-105 shadow-lg text-sm"
-    >
-      <MessageCircle className="w-4 h-4" />
-      Get Quote
-    </a>
-  )
-}
-
-function CallButton() {
-  const handleClick = () => {
-    ;(window as any).gtag?.('event', 'call_click', { event_category: 'engagement' })
-  }
-  return (
-    <a
-      href="tel:+255716002790"
-      onClick={handleClick}
-      className="inline-flex items-center gap-1.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold px-5 py-3 rounded-lg transition-all hover:scale-105 shadow-lg text-sm"
-    >
-      <Phone className="w-4 h-4" />
-      Call Now
-    </a>
-  )
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 }
 
 export default function HeroSection() {
   const { t, locale } = useBilingual()
+  const [query, setQuery] = useState('')
+  const router = useRouter()
 
-  const BENEFITS = locale === 'sw' ? [
-    'Mbao Treated Pine, Marine Board na Plywood — Imekaushwa na kutibiwa',
-    'Usafiri Bure Zanzibar Zima — Kutoka Paje hadi Nungwi',
-    'Punguzo kwa Agizo la Jumla — Okoa kwenye kiasi kikubwa',
-    'Bei kwa WhatsApp Haraka — Jibu chini ya dakika 30',
-    'Malipo Baada ya Kupelekwa, Simu, Benki — Chaguo mbalimbali za malipo',
-  ] : [
-    'Premium Treated Pine, Marine Board & Plywood — Kiln-dried & professionally treated',
-    'Delivery Across All Zanzibar — From Paje to Nungwi',
-    'Bulk Order Discounts — Save on large quantities',
-    'Fast WhatsApp Quotes — Response in under 30 minutes',
-    'Cash on Delivery, Mobile Money & Bank Transfer — Flexible payment options',
-  ]
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (query.trim()) {
+      router.push(`/timber-sizes?search=${encodeURIComponent(query.trim())}`)
+    }
+  }
+
+  const msg = 'Hello Zanzibaba Timber, I need a quote'
 
   return (
-    <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/images/gallery/zanzibaba-timber-hero-banner.jpg"
-          alt={locale === 'sw' ? "Yadi ya Zanzibaba Timber — mbao treated pine premium Zanzibar" : "Zanzibaba Timber yard — premium treated pine timber in Zanzibar"}
+          alt="Zanzibaba Timber yard — premium timber, plywood, marine board in Zanzibar"
           fill
           priority
-          className="object-cover scale-105"
+          className="object-cover"
           sizes="100vw"
         />
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
       <motion.div
-        className="container-custom py-12 md:py-20 relative z-10"
+        className="container-custom py-10 md:py-16 relative z-10"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <div className="max-w-4xl">
-          <motion.div
-            className="inline-flex items-center gap-1.5 bg-green-600/20 text-green-300 border border-green-500/30 px-3 py-1 rounded-full text-xs font-semibold mb-4"
-            variants={itemVariants}
-          >
-            <ShieldCheck className="w-3.5 h-3.5" />
-            {locale === 'sw' ? 'Duka la Mbao, Marine Board na Plywood Zanzibar' : "Zanzibar's Trusted Timber, Marine Board & Plywood Supplier"}
-          </motion.div>
-
+        <div className="max-w-3xl">
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 text-white leading-tight"
             variants={itemVariants}
           >
-            {t('hero.title')}
+            Buy Timber, Plywood, MDF, Marine Board & Building Materials in Zanzibar
           </motion.h1>
 
-          <motion.div className="space-y-1.5 mb-5" variants={itemVariants}>
-            {BENEFITS.map((b) => (
-              <div key={b} className="flex items-start gap-1.5 text-sm md:text-base text-gray-200">
-                <CheckCircle className="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" />
-                <span>{b}</span>
-              </div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            className="flex flex-col sm:flex-row gap-3 mb-4"
+          <motion.p
+            className="text-base md:text-lg text-gray-200 mb-5"
             variants={itemVariants}
           >
-            <WhatsAppButton message="Hello Zanzibaba Timber, I need timber prices for my project" />
-            <CallButton />
+            Wholesale &amp; Retail &bull; Same-Day Quotations &bull; Island-wide Delivery
+          </motion.p>
+
+          <motion.div className="flex flex-col sm:flex-row gap-3 mb-6" variants={itemVariants}>
+            <a
+              href="#quote"
+              className="inline-flex items-center justify-center gap-1.5 bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105 shadow-lg text-sm"
+            >
+              Get Quote
+            </a>
+            <a
+              href={`https://wa.me/255716002790?text=${encodeURIComponent(msg)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105 shadow-lg text-sm"
+            >
+              <MessageCircle className="w-4 h-4" />
+              WhatsApp
+            </a>
           </motion.div>
 
-          <motion.div
-            className="flex items-center text-gray-400 text-xs"
-            variants={itemVariants}
-          >
-            <MapPin className="w-3 h-3 mr-1.5 shrink-0" />
-            <span>Kwa Ndevu, Daraja Bovu, Zanzibar</span>
-          </motion.div>
+          <motion.form onSubmit={handleSearch} className="relative max-w-xl" variants={itemVariants}>
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search timber, plywood, MDF, marine board..."
+              className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/95 dark:bg-gray-800/95 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+            />
+          </motion.form>
         </div>
       </motion.div>
     </section>
