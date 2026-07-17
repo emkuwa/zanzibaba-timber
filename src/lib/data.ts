@@ -30,23 +30,23 @@ export const PRICE_NOTES = [
 
 export const PRODUCT_PRICES: ProductPrice[] = [
   // 12ft
-  { size: '2x2', length: '12ft', price: 8000 },
-  { size: '2x4', length: '12ft', price: 11500 },
-  { size: '1x6', length: '12ft', price: 13000 },
-  { size: '1x8', length: '12ft', price: 16000 },
-  { size: '1x10', length: '12ft', price: 25000 },
+  { size: '2x2', length: '12ft', price: 8000, woodType: 'pine' },
+  { size: '2x4', length: '12ft', price: 11500, woodType: 'pine' },
+  { size: '1x6', length: '12ft', price: 13000, woodType: 'hardwood' },
+  { size: '1x8', length: '12ft', price: 16000, woodType: 'hardwood' },
+  { size: '1x10', length: '12ft', price: 25000, woodType: 'hardwood' },
   // 18ft
-  { size: '2x2', length: '18ft', price: 11500 },
-  { size: '2x3', length: '18ft', price: 18000 },
-  { size: '2x4', length: '18ft', price: 19500 },
-  { size: '2x6', length: '18ft', price: 31000 },
-  { size: '2x8', length: '18ft', price: 48000 },
-  { size: '1x4', length: '18ft', price: 9000 },
-  { size: '1x6', length: '18ft', price: 18000 },
-  { size: '1x8', length: '18ft', price: 28000 },
-  { size: '1x10', length: '18ft', price: 41000 },
+  { size: '2x2', length: '18ft', price: 11500, woodType: 'pine' },
+  { size: '2x3', length: '18ft', price: 18000, woodType: 'pine' },
+  { size: '2x4', length: '18ft', price: 19500, woodType: 'pine' },
+  { size: '2x6', length: '18ft', price: 31000, woodType: 'pine' },
+  { size: '2x8', length: '18ft', price: 48000, woodType: 'pine' },
+  { size: '1x4', length: '18ft', price: 9000, woodType: 'hardwood' },
+  { size: '1x6', length: '18ft', price: 18000, woodType: 'hardwood' },
+  { size: '1x8', length: '18ft', price: 28000, woodType: 'hardwood' },
+  { size: '1x10', length: '18ft', price: 41000, woodType: 'hardwood' },
   // Treated Wood Poles (18ft)
-  { size: 'Wood Poles', length: '18ft', price: 11500 },
+  { size: 'Wood Poles', length: '18ft', price: 11500, woodType: 'teak' },
 ]
 
 export const TIMBER_SIZES: TimberSize[] = [

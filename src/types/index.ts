@@ -11,6 +11,7 @@ export type ProductPrice = {
   size: string
   length: string
   price: number
+  woodType: 'pine' | 'hardwood' | 'teak'
 }
 
 export type Locale = 'en' | 'sw'

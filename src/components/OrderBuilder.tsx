@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback } from 'react'
 import { Plus, Trash2, ShoppingCart, MessageCircle, FileText, Minus, MapPin, Package, AlertCircle } from 'lucide-react'
-import { PRODUCT_PRICES, SHEET_PRODUCTS, formatTZS, WHATSAPP_NUMBER, PRICE_NOTES, LOCATIONS } from '@/lib/data'
+import { PRODUCT_PRICES, SHEET_PRODUCTS, TIMBER_SIZES, formatTZS, WHATSAPP_NUMBER, PRICE_NOTES, LOCATIONS } from '@/lib/data'
 import { useBilingual } from '@/lib/bilingual'
 
 type Category = 'timber' | 'marine-board' | 'plywood'
@@ -27,12 +27,19 @@ type CustomerInfo = {
 let idCounter = Date.now()
 const genId = () => `item_${++idCounter}`
 
+const WOOD_TYPE_LABELS: Record<string, string> = {
+  pine: 'Pine',
+  hardwood: 'Mninga Hardwood',
+  teak: 'Teak',
+}
+
 const TIMBER_OPTIONS = PRODUCT_PRICES.map(p => ({
   key: `${p.size}|${p.length}`,
-  label: `${p.size} Pine — ${p.length}`,
+  label: `${p.size} ${WOOD_TYPE_LABELS[p.woodType]} — ${p.length}`,
   size: p.size,
   length: p.length,
   price: p.price,
+  woodType: p.woodType,
 }))
 
 const MARINE_OPTIONS = SHEET_PRODUCTS
@@ -268,7 +275,7 @@ export default function OrderBuilder() {
                   onChange={e => { setCategory(e.target.value as Category); setSelectedProduct('') }}
                   className={selectStyle}
                 >
-                  <option value="timber">Treated Pine Timber</option>
+                  <option value="timber">Timber</option>
                   <option value="marine-board">Marine Board</option>
                   <option value="plywood">Plywood</option>
                 </select>
