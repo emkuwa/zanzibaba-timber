@@ -76,15 +76,15 @@ export function formatSizeName(name: string): string {
 }
 
 export function formatVariantLabel(v: ProductVariant): string {
-  if (!/^\d+x\d+$/.test(v.size)) return `${v.size} × ${v.length.replace('ft', 'feet')}`
+  if (!/^\d+x\d+$/.test(v.size)) return `${v.size} × ${v.length.replace('ft', ' feet')}`
   const size = v.size.split('x').map(part => `${part}"`).join('x')
-  return `${size}x${v.length.replace('ft', 'feet')}`
+  return `${size}x${v.length.replace('ft', ' feet')} Softwood`
 }
 
 export function formatHardwoodSize(size: string): string {
   const parts = size.split('x')
   if (parts.length !== 3) return size
-  return `${parts[0]}"x${parts[1]}"x${parts[2]}feet`
+  return `${parts[0]}"x${parts[1]}"x${parts[2]} feet`
 }
 
 export const PRICE_NOTES = [

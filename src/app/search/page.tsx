@@ -12,7 +12,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
   const normalizedQuery = query.toLowerCase()
   const matches = (text: string) => !normalizedQuery || text.toLowerCase().includes(normalizedQuery)
   const softwoodResults = TIMBER_SIZES.map((product) => ({
-    name: `${product.name.replace(/(\d+)x(\d+)/, '$1"x$2"')} Treated Pine Timber`, description: product.description,
+    name: `${product.name.replace(/(\d+)x(\d+)/, '$1"x$2"')} Treated Softwood`, description: product.description,
     details: PRODUCT_VARIANTS.filter(variant => variant.size === product.name).map(formatVariantLabel).join(' · ') || `${product.dimensions} × 18feet`,
     href: `/timber-sizes/${product.id}`, searchText: `${product.name} ${product.dimensions} ${product.description} softwood treated pine`,
   })).filter((result) => matches(result.searchText))

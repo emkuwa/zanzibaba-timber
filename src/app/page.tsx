@@ -51,8 +51,8 @@ const HOW_IT_WORKS = [
 ]
 
 const FEATURED_PRODUCTS = [
-  { name: '2"x4"x12feet Pine', desc: 'Most popular framing timber', price: '11,500', badge: 'In Stock', href: '/timber-sizes/2x4?length=12ft', image: '/images/gallery/treated-pine-timber.jpg' },
-  { name: '2"x6"x18feet Pine', desc: 'Heavy-duty structural beams', price: '31,000', badge: 'Popular', href: '/timber-sizes/2x6?length=18ft', image: '/images/gallery/treated-pine-timber.jpg' },
+  { name: '2"x4"x12 feet Softwood', desc: 'Most popular framing timber', price: '11,500', badge: 'In Stock', href: '/timber-sizes/2x4?length=12ft', image: '/images/gallery/treated-pine-timber.jpg' },
+  { name: '2"x6"x18 feet Softwood', desc: 'Heavy-duty structural beams', price: '31,000', badge: 'Popular', href: '/timber-sizes/2x6?length=18ft', image: '/images/gallery/treated-pine-timber.jpg' },
   { name: '18mm Marine Board', desc: 'Waterproof formwork', price: '52,000', badge: 'Imported', href: '/marine-board/18mm-marine-board', image: '/images/gallery/marine-board-zanzibar.jpg' },
   { name: 'Teak Poles 4"', desc: 'Natural termite-resistant', price: '11,500', badge: 'Free Delivery', href: '/treated-wood-poles', image: '/images/gallery/teak-wood-poles-mitiki.jpg' },
   { name: 'Mninga Hardwood', desc: 'Premium furniture and joinery timber', price: '95,000', badge: 'Hardwood', href: '/hardwood/mninga-hardwood-timber-zanzibar', image: '/images/products/mninga-hardwood-timber-zanzibar.jpg' },

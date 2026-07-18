@@ -27,14 +27,9 @@ type CustomerInfo = {
 let idCounter = Date.now()
 const genId = () => `item_${++idCounter}`
 
-const WOOD_TYPE_LABELS: Record<string, string> = {
-  pine: 'Pine',
-  teak: 'Teak',
-}
-
 const TIMBER_OPTIONS = PRODUCT_PRICES.map(p => ({
   key: `${p.size}|${p.length}`,
-  label: `${formatVariantLabel({ ...p, sku: `${p.size}-${p.length}` })} ${WOOD_TYPE_LABELS[p.woodType]}`,
+  label: formatVariantLabel({ ...p, sku: `${p.size}-${p.length}` }),
   size: p.size,
   length: p.length,
   price: p.price,
@@ -45,7 +40,7 @@ const HARDWOOD_OPTIONS = HARDWOOD_PRODUCTS.flatMap(product => product.variants.m
   key: variant.sku,
   label: `${formatHardwoodSize(variant.size)} ${product.name} Hardwood`,
   size: formatHardwoodSize(variant.size),
-  length: '8feet',
+  length: '8 feet',
   price: variant.sellingPrice,
 })))
 
