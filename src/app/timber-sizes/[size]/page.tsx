@@ -86,7 +86,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                 </p>
 
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-4">
-                  {timber.description}. Professionally treated for Zanzibar's tropical climate.
+                  {timber.description}. Professionally treated for Zanzibar’s tropical climate.
                 </p>
 
                 {uses.length > 0 && (

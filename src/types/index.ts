@@ -6,6 +6,28 @@ export type ProductVariant = {
   sku: string
 }
 
+export type HardwoodProduct = {
+  id: string
+  slug: string
+  name: string
+  botanicalName: string
+  description: string
+  metaTitle: string
+  metaDescription: string
+  imageAlt: string
+  features: string[]
+  uses: string[]
+  image: string
+  faq: Array<{ question: string; answer: string }>
+  variants: Array<{
+    size: '2x6x8' | '2x8x8' | '4x4x8'
+    buyingPrice: number
+    margin: number
+    sellingPrice: number
+    sku: string
+  }>
+}
+
 export type Locale = 'en' | 'sw'
 
 export type TimberSize = {

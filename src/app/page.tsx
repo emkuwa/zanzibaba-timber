@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import QuoteForm from '@/components/QuoteForm'
 import { getLocalBusinessSchema, getFAQSchema, getReviewSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, LOCATIONS, INDUSTRIES, DELIVERY_PROCESS, HOMEPAGE_FAQ, TESTIMONIALS } from '@/lib/data'
+import { PRODUCT_VARIANTS, HARDWOOD_PRODUCTS, LOCATIONS, INDUSTRIES, DELIVERY_PROCESS, HOMEPAGE_FAQ, TESTIMONIALS } from '@/lib/data'
 import Link from 'next/link'
 import { CheckCircle, MapPin, MessageCircle, Phone, ArrowRight, Package, Truck, ShieldCheck, Leaf, TrendingUp, Clock, Star, Award, Rss, Users, Images, Zap } from 'lucide-react'
 import { useBilingual } from '@/lib/bilingual'
@@ -178,6 +178,22 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="py-24 bg-white dark:bg-gray-900">
+          <div className="container-custom">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Premium Hardwood Timber</h2>
+            <p className="text-center text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">Mninga, Mvule and Mkongo hardwood, each available in 2x6x8, 2x8x8 and 4x4x8.</p>
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {HARDWOOD_PRODUCTS.map(product => (
+                <Link key={product.id} href={`/hardwood/${product.slug}`} className="group rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-lg hover:-translate-y-1 transition bg-white dark:bg-gray-800">
+                  <img src={product.image} alt={product.imageAlt} className="w-full h-56 object-cover" loading="lazy" />
+                  <div className="p-6"><h3 className="text-2xl font-bold text-primary-600">{product.name}</h3><p className="text-sm italic text-gray-500 mb-3">{product.botanicalName}</p><p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">{product.description}</p><div className="flex justify-between items-center"><strong>TZS 95,000+</strong><span className="text-primary-600 font-semibold group-hover:underline">View sizes →</span></div></div>
+                </Link>
+              ))}
+            </div>
+            <div className="text-center mt-10"><Link href="/hardwood" className="inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-primary-700">View All Hardwood <ArrowRight className="w-5 h-5" /></Link></div>
+          </div>
+        </section>
+
         <SectionDivider />
 
         {/* 3. Why Choose Treated Pine Timber */}
@@ -187,7 +203,7 @@ export default function Home() {
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Treated Pine Timber?</h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                  Our premium treated pine timber is specifically engineered for Zanzibar's tropical climate and construction needs.
+                  Our premium treated pine timber is specifically engineered for Zanzibar’s tropical climate and construction needs.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <IconCard icon={ShieldCheck} title="Termite Resistance" description="Pressure-treated to resist termites and wood-boring insects" />

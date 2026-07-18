@@ -1,23 +1,37 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Lock, LogOut, Home, DollarSign, Package, Users, MessageSquare, FileText, BarChart3, Copy } from 'lucide-react'
-
-const ADMIN_PASSWORD = 'zanzibaba-admin-2024'
+import { Lock } from 'lucide-react'
 
 export default function AdminLogin() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const router = useRouter()
 
-  const handleLogin = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false)
+
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (password === ADMIN_PASSWORD) {
-      localStorage.setItem('admin_auth', 'true')
+    setSubmitting(true)
+    setError('')
+    try {
+      const response = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      })
+      const result = await response.json()
+      if (!response.ok) {
+        setError(result.error || 'Unable to sign in.')
+        return
+      }
       router.push('/admin/dashboard')
-    } else {
-      setError('Invalid password')
+      router.refresh()
+    } catch {
+      setError('Unable to reach the server. Please try again.')
+    } finally {
+      setSubmitting(false)
     }
   }
 
@@ -31,6 +45,7 @@ export default function AdminLogin() {
         </div>
         <form onSubmit={handleLogin} className="space-y-4">
           <input
+            aria-label="Admin password"
             type="password"
             placeholder="Enter password"
             value={password}
@@ -41,9 +56,10 @@ export default function AdminLogin() {
           {error && <p className="text-red-500 text-sm">{error}</p>}
           <button
             type="submit"
+            disabled={submitting}
             className="w-full bg-primary-600 text-white py-2 rounded-lg font-semibold hover:bg-primary-700"
           >
-            Login
+            {submitting ? 'Signing in…' : 'Login'}
           </button>
         </form>
       </div>

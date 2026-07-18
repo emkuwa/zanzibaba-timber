@@ -1,9 +1,9 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { LogOut, Save, DollarSign } from 'lucide-react'
+import { Save, DollarSign } from 'lucide-react'
+import AdminLogoutButton from '@/components/admin/AdminLogoutButton'
 
 const INITIAL_PRICES = {
   '18ft': {
@@ -28,17 +28,18 @@ const INITIAL_PRICES = {
 }
 
 export default function AdminPrices() {
-  const router = useRouter()
   const [prices, setPrices] = useState(INITIAL_PRICES)
   const [saved, setSaved] = useState(false)
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && localStorage.getItem('admin_auth') !== 'true') {
-      router.push('/admin')
-    }
     const stored = localStorage.getItem('timber_prices')
-    if (stored) setPrices(JSON.parse(stored))
-  }, [router])
+    if (!stored) return
+    try {
+      setPrices(JSON.parse(stored))
+    } catch {
+      localStorage.removeItem('timber_prices')
+    }
+  }, [])
 
   const updatePrice = (length: '18ft' | '12ft', size: string, field: string, value: number | string) => {
     const newPrices = { ...prices } as typeof prices
@@ -64,9 +65,7 @@ export default function AdminPrices() {
             <DollarSign className="w-5 h-5 text-primary-600" />
             <h1 className="text-xl font-bold">Timber Prices</h1>
           </div>
-          <button onClick={() => { localStorage.removeItem('admin_auth'); router.push('/admin') }} className="flex items-center gap-2 text-gray-600">
-            <LogOut className="w-4 h-4" /> Logout
-          </button>
+          <AdminLogoutButton />
         </div>
       </header>
 

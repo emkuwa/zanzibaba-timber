@@ -1,22 +1,15 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
-import { LogOut, Users, Search } from 'lucide-react'
+import { Users, Search } from 'lucide-react'
+import AdminLogoutButton from '@/components/admin/AdminLogoutButton'
 
 export default function AdminLeads() {
-  const router = useRouter()
   const [leads, setLeads] = useState([
     { id: 1, name: 'Ahmed Said', phone: '+25571234567', size: '2x4 (18ft)', message: 'Need timber for house', date: '2024-06-08', status: 'New' },
     { id: 2, name: 'Fatma Ali', phone: '+25579876543', size: '1x8 (12ft)', message: 'Inquiry for villa project', date: '2024-06-07', status: 'Contacted' },
   ])
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && localStorage.getItem('admin_auth') !== 'true') {
-      router.push('/admin')
-    }
-  }, [router])
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -26,9 +19,7 @@ export default function AdminLeads() {
             <Users className="w-5 h-5 text-primary-600" />
             <h1 className="text-xl font-bold">Leads</h1>
           </div>
-          <button onClick={() => { localStorage.removeItem('admin_auth'); router.push('/admin') }} className="flex items-center gap-2 text-gray-600">
-            <LogOut className="w-4 h-4" /> Logout
-          </button>
+          <AdminLogoutButton />
         </div>
       </header>
 

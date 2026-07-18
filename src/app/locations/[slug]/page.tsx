@@ -73,7 +73,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                       </Link>
                     ))}
                   </div>
-                  <p>Each size is available in 12ft and/or 18ft lengths. All timber is kiln-dried, treated pine — perfect for {location.name}'s tropical climate. Contact us for pricing and availability.</p>
+                  <p>Each size is available in 12ft and/or 18ft lengths. All timber is kiln-dried, treated pine — perfect for {location.name}’s tropical climate. Contact us for pricing and availability.</p>
 
                   <h2>Our Services in {location.name}</h2>
                   <ul>
@@ -87,7 +87,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
 
                   <h2>Why Choose Zanzibaba Timber for {location.name}</h2>
                   <ul>
-                    <li><strong>High Quality Treated Timber</strong> — Professionally treated pine for Zanzibar's tropical climate</li>
+                    <li><strong>High Quality Treated Timber</strong> — Professionally treated pine for Zanzibar’s tropical climate</li>
                     <li><strong>Reliable Delivery</strong> — Fast, scheduled delivery to {location.name} and surrounding areas</li>
                     <li><strong>Cash on Delivery</strong> — Pay only when you receive your timber</li>
                     <li><strong>Large Stock</strong> — All standard sizes always available at our Kwa Ndevu yard</li>
