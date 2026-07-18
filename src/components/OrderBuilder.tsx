@@ -2,10 +2,10 @@
 
 import { useState, useMemo, useCallback } from 'react'
 import { Plus, Trash2, ShoppingCart, MessageCircle, FileText, Minus, MapPin, Package, AlertCircle } from 'lucide-react'
-import { PRODUCT_PRICES, SHEET_PRODUCTS, TIMBER_SIZES, formatTZS, WHATSAPP_NUMBER, PRICE_NOTES, LOCATIONS } from '@/lib/data'
+import { PRODUCT_PRICES, SHEET_PRODUCTS, HARDWOOD_PRODUCTS, formatTZS, formatVariantLabel, formatHardwoodSize, WHATSAPP_NUMBER, PRICE_NOTES, LOCATIONS } from '@/lib/data'
 import { useBilingual } from '@/lib/bilingual'
 
-type Category = 'timber' | 'marine-board' | 'plywood'
+type Category = 'timber' | 'hardwood' | 'marine-board' | 'plywood'
 
 type CartItem = {
   id: string
@@ -34,12 +34,20 @@ const WOOD_TYPE_LABELS: Record<string, string> = {
 
 const TIMBER_OPTIONS = PRODUCT_PRICES.map(p => ({
   key: `${p.size}|${p.length}`,
-  label: `${p.size} ${WOOD_TYPE_LABELS[p.woodType]} — ${p.length}`,
+  label: `${formatVariantLabel({ ...p, sku: `${p.size}-${p.length}` })} ${WOOD_TYPE_LABELS[p.woodType]}`,
   size: p.size,
   length: p.length,
   price: p.price,
   woodType: p.woodType,
 }))
+
+const HARDWOOD_OPTIONS = HARDWOOD_PRODUCTS.flatMap(product => product.variants.map(variant => ({
+  key: variant.sku,
+  label: `${formatHardwoodSize(variant.size)} ${product.name} Hardwood`,
+  size: formatHardwoodSize(variant.size),
+  length: '8feet',
+  price: variant.sellingPrice,
+})))
 
 const MARINE_OPTIONS = SHEET_PRODUCTS
   .filter(s => s.categoryId === 'marine-board')
@@ -64,7 +72,7 @@ const PLYWOOD_OPTIONS = SHEET_PRODUCTS
 const DELIVERY_LOCATIONS = LOCATIONS.map(l => ({ name: l.name, id: l.id }))
 
 function formatOrderItem(item: CartItem): string {
-  if (item.category === 'timber') {
+  if (item.category === 'timber' || item.category === 'hardwood') {
     return `${item.label} × ${item.quantity} pcs @ ${formatTZS(item.unitPrice)} = ${formatTZS(item.unitPrice * item.quantity)}`
   }
   return `${item.label} × ${item.quantity} sheets @ ${formatTZS(item.unitPrice)} = ${formatTZS(item.unitPrice * item.quantity)}`
@@ -89,6 +97,7 @@ export default function OrderBuilder() {
   const currentOptions = useMemo(() => {
     switch (category) {
       case 'timber': return TIMBER_OPTIONS
+      case 'hardwood': return HARDWOOD_OPTIONS
       case 'marine-board': return MARINE_OPTIONS
       case 'plywood': return PLYWOOD_OPTIONS
     }
@@ -149,8 +158,7 @@ export default function OrderBuilder() {
 
     items.forEach((item, i) => {
       msg += `*${i + 1}. ${item.label}*\n`
-      msg += `   Size: ${item.size}\n`
-      msg += `   Length: ${item.length}\n`
+      msg += `   Full dimensions: ${item.category === 'timber' ? item.label.split(' Pine')[0].split(' Teak')[0] : item.size}\n`
       msg += `   Qty: ${item.quantity}\n`
       msg += `   Unit Price: ${formatTZS(item.unitPrice)}\n`
       msg += `   Subtotal: ${formatTZS(item.unitPrice * item.quantity)}\n\n`
@@ -275,6 +283,7 @@ export default function OrderBuilder() {
                   className={selectStyle}
                 >
                   <option value="timber">Timber</option>
+                  <option value="hardwood">Hardwood</option>
                   <option value="marine-board">Marine Board</option>
                   <option value="plywood">Plywood</option>
                 </select>

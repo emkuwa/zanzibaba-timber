@@ -46,7 +46,7 @@ function PriceTable({ length, title }: { length: string; title: string }) {
                   </Link>
                 </td>
                 <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">{v.dimensions}</td>
-                <td className="py-3 px-3 text-center text-sm">{v.length}</td>
+                <td className="py-3 px-3 text-center text-sm">{v.length.replace('ft', 'feet')}</td>
                 <td className="py-3 px-3 text-right font-bold text-sm">{v.price ? formatTZS(v.price) : '-'}</td>
                 <td className="py-3 px-3 text-center">
                   <a href={`https://wa.me/255716002790?text=Habari%20Zanzibaba%20Timber%2C%20nahitaji%20${v.size}%20${v.length}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-green-600 hover:text-green-700 text-xs font-semibold">

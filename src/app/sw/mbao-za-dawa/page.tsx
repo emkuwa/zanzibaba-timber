@@ -2,7 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import { generateSEOMetadata, getBreadcrumbSchema, getFAQSchema, getProductSchema } from '@/lib/seo'
-import { TIMBER_SIZES, generateWhatsAppLink, formatTZS, PRODUCT_VARIANTS } from '@/lib/data'
+import { TIMBER_SIZES, generateWhatsAppLink, formatTZS, formatVariantLabel, PRODUCT_VARIANTS } from '@/lib/data'
 import Link from 'next/link'
 import { CheckCircle, MessageCircle, Shield, Thermometer, Bug, Droplets } from 'lucide-react'
 
@@ -99,8 +99,8 @@ export default function MbaoZaDawa() {
                   <tbody>
                     {variants.map((v) => (
                       <tr key={v.sku} className="border-b border-gray-200 dark:border-gray-700">
-                        <td className="py-3 px-3 font-semibold text-sm">{v.size}</td>
-                        <td className="py-3 px-3 text-sm text-gray-500">{v.length}</td>
+                        <td className="py-3 px-3 font-semibold text-sm">{formatVariantLabel(v)}</td>
+                        <td className="py-3 px-3 text-sm text-gray-500">{v.length.replace('ft', 'feet')}</td>
                         <td className="py-3 px-3 text-center font-bold text-sm">{v.price ? formatTZS(v.price) : '-'}</td>
                         <td className="py-3 px-3 text-center">
                           <a href={generateWhatsAppLink(`Nataka ${v.size} ${v.length} mbao za dawa`)} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 text-xs font-semibold">

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
-import { HARDWOOD_PRODUCTS, TIMBER_SIZES } from '@/lib/data'
+import { HARDWOOD_PRODUCTS, TIMBER_SIZES, PRODUCT_VARIANTS, formatVariantLabel, formatHardwoodSize } from '@/lib/data'
 import { generateSEOMetadata } from '@/lib/seo'
 
 export const metadata = generateSEOMetadata('Search Timber Products', 'Search Zanzibaba Timber softwood and hardwood products.', 'en', '/search')
@@ -12,12 +12,13 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
   const normalizedQuery = query.toLowerCase()
   const matches = (text: string) => !normalizedQuery || text.toLowerCase().includes(normalizedQuery)
   const softwoodResults = TIMBER_SIZES.map((product) => ({
-    name: `${product.name} Treated Pine Timber`, description: product.description, details: product.dimensions,
+    name: `${product.name.replace(/(\d+)x(\d+)/, '$1"x$2"')} Treated Pine Timber`, description: product.description,
+    details: PRODUCT_VARIANTS.filter(variant => variant.size === product.name).map(formatVariantLabel).join(' · ') || `${product.dimensions} × 18feet`,
     href: `/timber-sizes/${product.id}`, searchText: `${product.name} ${product.dimensions} ${product.description} softwood treated pine`,
   })).filter((result) => matches(result.searchText))
   const hardwoodResults = HARDWOOD_PRODUCTS.map((product) => ({
     name: `${product.name} Hardwood Timber`, description: product.description,
-    details: `${product.botanicalName} · 2x6x8, 2x8x8, 4x4x8`, href: `/hardwood/${product.slug}`,
+    details: `${product.botanicalName} · ${product.variants.map(variant => formatHardwoodSize(variant.size)).join(' · ')}`, href: `/hardwood/${product.slug}`,
     searchText: [product.name, product.botanicalName, product.description, ...product.features, ...product.uses, 'hardwood'].join(' '),
   })).filter((result) => matches(result.searchText))
   const totalResults = softwoodResults.length + hardwoodResults.length

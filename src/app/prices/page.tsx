@@ -51,7 +51,7 @@ function PriceTable({ length, title }: { length: string; title: string }) {
                 <td className="py-3 px-3 text-right font-bold text-sm">{v.price ? formatTZS(v.price) : '-'}</td>
                 <td className="py-3 px-3 text-center">
                   <a
-                    href={`https://wa.me/255716002790?text=Hello%20Zanzibaba%20Timber,%20I%20need%20${v.size}%20${v.length}`}
+                    href={`https://wa.me/255716002790?text=${encodeURIComponent(`Hello Zanzibaba Timber, I would like to order ${formatVariantLabel(v)}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-green-600 hover:text-green-700 text-xs font-semibold"
@@ -117,7 +117,7 @@ export default function Prices() {
                       <td className="py-3 px-3 font-semibold text-sm"><Link href={`/hardwood/${product.slug}`} className="text-primary-600 hover:underline">{product.name}</Link></td>
                       <td className="py-3 px-3 text-sm">{formatHardwoodSize(variant.size)}</td>
                       <td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(variant.sellingPrice)}</td>
-                      <td className="py-3 px-3 text-center"><a href={`https://wa.me/255716002790?text=${encodeURIComponent(`Hello Zanzibaba Timber, I would like to order ${product.name} ${variant.size}`)}`} className="text-green-600 text-xs font-semibold" target="_blank" rel="noopener noreferrer">Add to Order</a></td>
+                      <td className="py-3 px-3 text-center"><a href={`https://wa.me/255716002790?text=${encodeURIComponent(`Hello Zanzibaba Timber, I would like to order ${product.name} ${formatHardwoodSize(variant.size)}`)}`} className="text-green-600 text-xs font-semibold" target="_blank" rel="noopener noreferrer">Add to Order</a></td>
                     </tr>
                   )))}</tbody>
                 </table>

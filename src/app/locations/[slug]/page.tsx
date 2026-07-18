@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { LOCATIONS, TIMBER_SIZES, PRODUCT_VARIANTS, BLOG_POSTS, generateWhatsAppLink } from '@/lib/data'
+import { LOCATIONS, TIMBER_SIZES, PRODUCT_VARIANTS, BLOG_POSTS, generateWhatsAppLink, formatVariantLabel } from '@/lib/data'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -83,7 +83,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                         href={`/timber-sizes/${s.id}`}
                         className="block p-4 bg-primary-50 dark:bg-gray-800 rounded-lg border border-primary-100 dark:border-gray-700 hover:border-primary-300 hover:shadow-md transition-all text-center"
                       >
-                        <div className="font-bold text-primary-600 text-lg">{s.name}</div>
+                        <div className="font-bold text-primary-600 text-lg">{PRODUCT_VARIANTS.filter(variant => variant.size === s.name).map(formatVariantLabel).join(' / ') || s.name}</div>
                         <div className="text-xs text-gray-500 dark:text-gray-400">{s.dimensions}</div>
                       </Link>
                     ))}
@@ -179,7 +179,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                         href={`/timber-sizes/${s.id}`}
                         className="text-sm bg-primary-50 dark:bg-gray-700 text-primary-600 px-3 py-1 rounded-full hover:bg-primary-100"
                       >
-                        {s.name}
+                        {PRODUCT_VARIANTS.filter(variant => variant.size === s.name).map(formatVariantLabel).join(' / ') || s.name}
                       </Link>
                     ))}
                   </div>

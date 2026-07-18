@@ -183,7 +183,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                         href={`/timber-sizes/${s.id}`}
                         className="block p-2 md:p-3 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-primary-300 transition-all"
                       >
-                        <div className="font-semibold text-primary-600 text-xs md:text-sm">{s.name}</div>
+                        <div className="font-semibold text-primary-600 text-xs md:text-sm">{PRODUCT_VARIANTS.filter(variant => variant.size === s.name).map(formatVariantLabel).join(' / ') || formatSizeName(s.name)}</div>
                         <div className="text-xs text-gray-500">{s.dimensions}</div>
                       </Link>
                     ))}

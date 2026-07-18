@@ -62,7 +62,7 @@ export default function HardwoodProductPage({ params }: { params: { species: str
     brand: { '@type': 'Brand', name: 'Zanzibaba Timber' },
     offers: product.variants.map((variant) => ({
       '@type': 'Offer',
-      name: `${product.name} ${variant.size}`,
+      name: `${product.name} ${formatHardwoodSize(variant.size)}`,
       sku: variant.sku,
       price: variant.sellingPrice,
       priceCurrency: 'TZS',
