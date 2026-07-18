@@ -26,6 +26,7 @@ export default function Header() {
 
   const productLinks = [
     { href: '/timber-sizes', label: t('navigation.timberSizes') },
+    { href: '/hardwood', label: 'Hardwood' },
     { href: '/treated-wood-poles', label: t('navigation.treatedWoodPoles') },
     { href: '/marine-board', label: 'Marine Board' },
     { href: '/plywood', label: 'Plywood' },

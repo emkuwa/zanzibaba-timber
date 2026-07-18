@@ -9,11 +9,12 @@ import PriceNotice from '@/components/PriceNotice'
 import { getLocalBusinessSchema, getFAQSchema, getReviewSchema, getWebSiteSchema } from '@/lib/seo'
 import { PRODUCT_VARIANTS, TIMBER_SIZES, WOOD_TYPE_GROUPS, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug, formatTZS, formatVariantLabel, SHEET_PRODUCTS, SHEET_PRODUCT_CATEGORIES } from '@/lib/data'
 import Link from 'next/link'
-import { MessageCircle, Search, Star, Package, Truck, Clock, ShieldCheck, MapPin, CheckCircle, ArrowRight, Upload, TreePine, Layers, Anchor, LayoutGrid, DoorOpen, HardHat, Wrench } from 'lucide-react'
+import Image from 'next/image'
+import { MessageCircle, Search, Star, Package, Truck, Clock, ShieldCheck, MapPin, CheckCircle, ArrowRight, Upload, TreePine, Layers, Anchor } from 'lucide-react'
 import { useState } from 'react'
 
 function WhatsAppButton({ message, label, fullWidth }: { message?: string; label?: string; fullWidth?: boolean }) {
-  const msg = message || 'Hello Zanzibaba Timber, I need a quote'
+  const msg = message || 'Hello Zanzibaba Timber, I would like to start an order'
   return (
     <a
       href={`https://wa.me/255716002790?text=${encodeURIComponent(msg)}`}
@@ -28,13 +29,11 @@ function WhatsAppButton({ message, label, fullWidth }: { message?: string; label
 }
 
 const CATEGORIES = [
-  { name: 'Timber', href: '/timber-sizes', icon: TreePine },
+  { name: 'Softwood', href: '/timber-sizes', icon: TreePine },
+  { name: 'Hardwood', href: '/hardwood', icon: TreePine },
+  { name: 'Treated Poles', href: '/treated-wood-poles', icon: TreePine },
   { name: 'Plywood', href: '/plywood', icon: Layers },
   { name: 'Marine Board', href: '/marine-board', icon: Anchor },
-  { name: 'MDF', href: '/plywood', icon: LayoutGrid },
-  { name: 'Doors', href: '/timber-sizes', icon: DoorOpen },
-  { name: 'Roofing', href: '/timber-sizes', icon: HardHat },
-  { name: 'Hardware', href: '/timber-sizes', icon: Wrench },
 ]
 
 const STATS = [
@@ -46,7 +45,7 @@ const STATS = [
 
 const HOW_IT_WORKS = [
   { step: 1, title: 'Search', desc: 'Browse our products or tell us what you need.' },
-  { step: 2, title: 'Request Quote', desc: 'Get instant pricing via WhatsApp or call.' },
+  { step: 2, title: 'Add to Order', desc: 'Choose products and quantities for your order.' },
   { step: 3, title: 'Confirm Order', desc: 'Confirm quantity, delivery date & payment.' },
   { step: 4, title: 'Delivery', desc: 'We deliver to your site across Zanzibar.' },
 ]
@@ -56,6 +55,7 @@ const FEATURED_PRODUCTS = [
   { name: '2x6 Pine', desc: 'Heavy-duty structural beams', price: '31,000', badge: 'Popular', href: '/timber-sizes/2x6', image: '/images/gallery/treated-pine-timber.jpg' },
   { name: '18mm Marine Board', desc: 'Waterproof formwork', price: '52,000', badge: 'Imported', href: '/marine-board/18mm-marine-board', image: '/images/gallery/marine-board-zanzibar.jpg' },
   { name: 'Teak Poles 4"', desc: 'Natural termite-resistant', price: '11,500', badge: 'Free Delivery', href: '/treated-wood-poles', image: '/images/gallery/teak-wood-poles-mitiki.jpg' },
+  { name: 'Mninga Hardwood', desc: 'Premium furniture and joinery timber', price: '95,000', badge: 'Hardwood', href: '/hardwood/mninga-hardwood-timber-zanzibar', image: '/images/products/mninga-hardwood-timber-zanzibar.jpg' },
 ]
 
 export default function Home() {
@@ -73,7 +73,7 @@ export default function Home() {
           className="flex items-center justify-center gap-2 py-3 text-white font-semibold text-sm"
         >
           <MessageCircle className="w-5 h-5" />
-          Chat on WhatsApp — Get a Quote
+          Start Your Order on WhatsApp
         </a>
       </div>
 
@@ -183,9 +183,11 @@ export default function Home() {
                   className="group bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all overflow-hidden"
                 >
                   <div className="relative h-32 md:h-40 overflow-hidden bg-gray-100 dark:bg-gray-700">
-                    <img
+                    <Image
                       src={p.image}
                       alt={p.name}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <span className="absolute top-2 left-2 text-[10px] bg-primary-600 text-white px-2 py-0.5 rounded-full font-medium">
@@ -319,7 +321,7 @@ export default function Home() {
                 <Upload className="w-4 h-4" />
                 Upload BOQ
               </a>
-              <WhatsAppButton message="Hello Zanzibaba Timber, I need timber for my project" label="Request Quote" />
+              <WhatsAppButton message="Hello Zanzibaba Timber, I would like to order timber for my project" label="Start Order" />
               <a
                 href="tel:+255716002790"
                 className="inline-flex items-center justify-center gap-1.5 bg-primary-500 hover:bg-primary-400 text-white font-semibold px-6 py-3 rounded-lg transition-all shadow text-sm"

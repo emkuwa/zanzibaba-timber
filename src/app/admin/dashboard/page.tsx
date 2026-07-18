@@ -1,24 +1,10 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
 import Link from 'next/link'
-import { DollarSign, Package, Users, MessageSquare, FileText, LogOut } from 'lucide-react'
+import { Package, Users, MessageSquare, FileText } from 'lucide-react'
+import AdminLogoutButton from '@/components/admin/AdminLogoutButton'
 
 export default function AdminDashboard() {
-  const router = useRouter()
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && localStorage.getItem('admin_auth') !== 'true') {
-      router.push('/admin')
-    }
-  }, [router])
-
-  const handleLogout = () => {
-    localStorage.removeItem('admin_auth')
-    router.push('/admin')
-  }
-
   const stats = [
     { label: 'Total Leads', value: '127', icon: Users, color: 'blue' },
     { label: 'Quote Requests', value: '42', icon: FileText, color: 'green' },
@@ -31,9 +17,7 @@ export default function AdminDashboard() {
       <header className="bg-white dark:bg-gray-800 shadow">
         <div className="px-4 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold">Admin Dashboard</h1>
-          <button onClick={handleLogout} className="flex items-center gap-2 text-gray-600 hover:text-primary-600">
-            <LogOut className="w-4 h-4" /> Logout
-          </button>
+          <AdminLogoutButton />
         </div>
       </header>
 

@@ -22,6 +22,7 @@ build/
 .DS_Store
 *.tsbuildinfo
 .env*
+!.env.example
 .env.local
 .env.development
 .env.production

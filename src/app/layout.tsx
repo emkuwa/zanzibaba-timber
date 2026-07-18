@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -64,9 +64,10 @@ export const metadata: Metadata = {
     description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles.',
     images: [ogImage],
   },
-  themeColor: '#0052cc',
   // Domain-level property verified via DNS TXT record (sc-domain:timber.zanzibaba.com)
 }
+
+export const viewport: Viewport = { themeColor: '#0052cc' }
 
 import { headers } from 'next/headers'
 

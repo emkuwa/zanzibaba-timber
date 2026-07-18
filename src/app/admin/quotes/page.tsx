@@ -1,22 +1,15 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
-import { LogOut, FileText, Search } from 'lucide-react'
+import { FileText, Search } from 'lucide-react'
+import AdminLogoutButton from '@/components/admin/AdminLogoutButton'
 
 export default function AdminQuotes() {
-  const router = useRouter()
   const [quotes, setQuotes] = useState([
     { id: 1, name: 'Ali Hassan', email: 'ali@example.com', phone: '+25571234567', message: 'Need 50 pieces 2x4', date: '2024-06-08' },
     { id: 2, name: 'Sophie M.', email: 'sophie@example.com', phone: '+25579876543', message: 'Villa project inquiry', date: '2024-06-07' },
   ])
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && localStorage.getItem('admin_auth') !== 'true') {
-      router.push('/admin')
-    }
-  }, [router])
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -26,9 +19,7 @@ export default function AdminQuotes() {
             <FileText className="w-5 h-5 text-primary-600" />
             <h1 className="text-xl font-bold">Quote Requests</h1>
           </div>
-          <button onClick={() => { localStorage.removeItem('admin_auth'); router.push('/admin') }} className="flex items-center gap-2 text-gray-600">
-            <LogOut className="w-4 h-4" /> Logout
-          </button>
+          <AdminLogoutButton />
         </div>
       </header>
 

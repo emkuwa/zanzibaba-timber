@@ -10,7 +10,7 @@ export default function QuoteForm() {
     name: '',
     phone: '',
     product: '',
-    length: '18ft',
+    length: '',
     message: '',
   })
 
@@ -26,7 +26,7 @@ export default function QuoteForm() {
       event_category: 'conversion',
       event_label: 'quote_form'
     })
-    const text = `New Quote:%0AName: ${formData.name}%0APhone: ${formData.phone}%0AProduct: ${formData.product} ${formData.length}%0AMessage: ${formData.message}`
+    const text = `New Order:\nName: ${formData.name}\nPhone: ${formData.phone}\nProduct: ${formData.product} ${formData.length}\nMessage: ${formData.message}`
     window.open(`https://wa.me/255716002790?text=${encodeURIComponent(text)}`, '_blank')
   }
 
@@ -62,16 +62,18 @@ export default function QuoteForm() {
           name="product"
           value={formData.product}
           onChange={handleChange}
+          required
           className="w-full px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
         >
           <option value="">{t('pages.quoteForm.selectSize')}</option>
-          <option value="1x6">1x6 Mninga/Hardwood</option>
-          <option value="1x8">1x8 Mninga/Hardwood</option>
-          <option value="1x10">1x10 Mninga/Hardwood</option>
           <option value="2x2">2x2 Pine</option>
           <option value="2x3">2x3 Pine</option>
           <option value="2x4">2x4 Pine</option>
           <option value="2x6">2x6 Pine</option>
+          <option value="2x8">2x8 Pine</option>
+          <option value="Mninga Hardwood">Mninga Hardwood</option>
+          <option value="Mvule Hardwood">Mvule Hardwood</option>
+          <option value="Mkongo Hardwood">Mkongo Hardwood</option>
           <option value="Marine Board 18mm">Marine Board 18mm</option>
           <option value="Marine Board 12mm">Marine Board 12mm</option>
           <option value="18mm Plywood">18mm Plywood</option>
@@ -80,16 +82,22 @@ export default function QuoteForm() {
           <option value="9mm Plywood">9mm Plywood</option>
           <option value="6mm Plywood">6mm Plywood</option>
           <option value="3mm Plywood">3mm Plywood</option>
-          <option value="Mirunda">Mirunda</option>
+          <option value="Wood Poles">Treated Wood Poles</option>
         </select>
         <select
           name="length"
           value={formData.length}
           onChange={handleChange}
+          required
           className="w-full px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
         >
+          <option value="">Select size / length</option>
           <option value="18ft">{t('pages.quoteForm.lengths.18ft')}</option>
           <option value="12ft">{t('pages.quoteForm.lengths.12ft')}</option>
+          <option value="2x6x8">2x6x8 (Hardwood)</option>
+          <option value="2x8x8">2x8x8 (Hardwood)</option>
+          <option value="4x4x8">4x4x8 (Hardwood)</option>
+          <option value="Sheet">Sheet</option>
         </select>
       </div>
 

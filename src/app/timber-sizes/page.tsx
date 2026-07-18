@@ -8,7 +8,7 @@ import PriceNotice from '@/components/PriceNotice'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Timber Sizes Zanzibar | Treated Pine & Teak Wood Poles',
+  'Softwood Timber Sizes Zanzibar | Treated Pine & Teak Wood Poles',
   'Complete range of timber sizes in Zanzibar. Treated pine: 2x2, 2x3, 2x4, 2x6, 2x8. Teak wood poles (mitiki) 2-6 inch. Free delivery across Zanzibar.',
   'en',
   '/timber-sizes',
@@ -23,7 +23,7 @@ export const metadata = generateSEOMetadata(
 export default function TimberSizes() {
   const breadcrumb = getBreadcrumbSchema([
     { name: 'Home', url: '/' },
-    { name: 'Timber Sizes', url: '/timber-sizes' },
+    { name: 'Softwood', url: '/timber-sizes' },
   ])
 
   const itemList = getItemListSchema(
@@ -44,7 +44,7 @@ export default function TimberSizes() {
             <nav className="mb-4 md:mb-6 text-sm" aria-label="Breadcrumb">
               <Link href="/" className="text-primary-600 hover:underline">Home</Link>
               <span className="mx-2 text-gray-400">/</span>
-              <span className="text-gray-500">Timber Sizes</span>
+              <span className="text-gray-500">Softwood</span>
             </nav>
 
             <div className="relative w-full h-48 sm:h-64 md:h-80 rounded-xl overflow-hidden mb-8 md:mb-12 shadow-lg">
@@ -59,7 +59,7 @@ export default function TimberSizes() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
-                  Timber Sizes <span className="text-primary-300">Zanzibar</span>
+                  Softwood Timber <span className="text-primary-300">Zanzibar</span>
                 </h1>
                 <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">Treated Pine • Teak Wood Poles</p>
               </div>
@@ -68,6 +68,7 @@ export default function TimberSizes() {
             <p className="text-center text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto text-sm md:text-base px-2">
               Premium timber for every project. Treated pine for framing. Teak poles for construction. Free delivery across Zanzibar.
             </p>
+            <p className="text-center mb-8"><Link href="/hardwood" className="text-primary-600 font-semibold hover:underline">Looking for Mninga, Mvule or Mkongo? Browse Hardwood →</Link></p>
 
             <div className="max-w-3xl mx-auto mb-8 md:mb-10 px-2">
               <PriceNotice />
@@ -91,9 +92,11 @@ export default function TimberSizes() {
 
                   {/* Header Image */}
                   <div className="w-full rounded-xl overflow-hidden mb-6 shadow-lg bg-gray-100 dark:bg-gray-800">
-                    <img
+                    <Image
                       src={group.image}
                       alt={group.name}
+                      width={1600}
+                      height={600}
                       className="w-full h-auto"
                     />
                   </div>

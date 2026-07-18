@@ -37,9 +37,12 @@
 ### Setup
 ```bash
 npm install
+cp .env.example .env.local
 npm run dev
 npm run build
 ```
+
+Set `ADMIN_PASSWORD` to a strong private password and `ADMIN_SESSION_SECRET` to at least 32 random characters before using the admin panel. Set `NEXT_PUBLIC_CLARITY_PROJECT_ID` only when a real Microsoft Clarity project is configured.
 
 ### Keywords Targeted
 - timber supplier zanzibar

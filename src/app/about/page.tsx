@@ -46,7 +46,7 @@ export default function About() {
                   to homeowners, contractors, hotels, resorts, and government projects across the island.
                 </p>
                 <p>
-                  High Quality Treated Timber. Our timber is sustainably sourced and kiln-dried for Zanzibar's tropical climate.
+                  High Quality Treated Timber. Our timber is sustainably sourced and kiln-dried for Zanzibar’s tropical climate.
                   Every piece meets strict quality standards before delivery.
                 </p>
                 <h3>Our Services:</h3>
@@ -64,7 +64,7 @@ export default function About() {
                     rel="noopener noreferrer"
                     className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700"
                   >
-                    Get Free Quote
+                    Start Your Order
                   </a>
                 </div>
               </div>

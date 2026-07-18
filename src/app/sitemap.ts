@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { BLOG_POSTS, LOCATIONS, TIMBER_SIZES, SHEET_PRODUCTS } from '@/lib/data'
+import { BLOG_POSTS, LOCATIONS, TIMBER_SIZES, SHEET_PRODUCTS, HARDWOOD_PRODUCTS } from '@/lib/data'
 
 const BASE_URL = 'https://timber.zanzibaba.com'
 
@@ -24,6 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ['/', 'daily'],
     ['/prices'],
     ['/timber-sizes'],
+    ['/hardwood'],
     ['/marine-board'],
     ['/plywood'],
     ['/treated-wood-poles'],
@@ -92,6 +93,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   for (const size of TIMBER_SIZES) {
     entries.push(e(`/timber-sizes/${size.id}`, 0.90, 'weekly'))
+  }
+
+  for (const product of HARDWOOD_PRODUCTS) {
+    entries.push(e(`/hardwood/${product.slug}`, 0.90, 'weekly'))
   }
 
   for (const product of SHEET_PRODUCTS) {

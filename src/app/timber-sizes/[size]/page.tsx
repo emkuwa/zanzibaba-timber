@@ -103,7 +103,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                 </p>
 
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-4">
-                  {timber.description}. Professionally treated for Zanzibar's tropical climate.
+                  {timber.description}. Professionally treated for Zanzibar’s tropical climate.
                 </p>
 
                 {variants.length > 0 && (
@@ -148,7 +148,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-4 md:px-6 py-2 md:py-3 rounded-lg transition-colors text-xs md:text-sm"
                   >
-                    Get Quote: {timber.name}
+                    Add to Order: {timber.name}
                   </a>
                   <a
                     href="tel:+255716002790"

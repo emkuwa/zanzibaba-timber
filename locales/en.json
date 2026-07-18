@@ -2,7 +2,7 @@
   "navigation": {
     "home": "Home",
     "about": "About",
-    "timberSizes": "Timber Sizes",
+    "timberSizes": "Softwood",
     "prices": "Prices",
     "projects": "Projects",
     "hotelSupply": "Hotel Supply",
@@ -21,20 +21,20 @@
   "hero": {
     "title": "Premium Timber, Marine Board & Plywood Supplier in Zanzibar",
     "subtitle": "Zanzibaba Timber is Zanzibar's leading supplier of premium treated pine timber, marine board, plywood, construction timber and treated poles. Serving Paje, Nungwi, Stone Town and all Zanzibar with cash on delivery and island-wide delivery.",
-    "cta": "Get Free Quote",
-    "whatsappQuote": "WhatsApp Quote",
+    "cta": "Start Your Order",
+    "whatsappQuote": "Order on WhatsApp",
     "callNow": "Call +255 716 002 790",
     "location": "Kwa Ndevu, Daraja Bovu, Zanzibar"
   },
   "common": {
     "call": "Call Now",
     "whatsapp": "WhatsApp",
-    "requestQuote": "Request Quote",
+    "requestQuote": "Add to Order",
     "learnMore": "Learn More",
     "viewGallery": "View Gallery",
     "viewAll": "View All",
     "send": "Send",
-    "sendToWhatsApp": "Send to WhatsApp"
+    "sendToWhatsApp": "Add to Order via WhatsApp"
   },
   "footer": {
     "description": "Leading supplier of timber, marine board and plywood in Zanzibar. Serving homeowners, contractors, hotels, resorts, villas, and government projects.",

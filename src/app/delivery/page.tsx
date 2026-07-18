@@ -121,7 +121,7 @@ export default function Delivery() {
                 <div className="grid md:grid-cols-5 gap-4 mb-8">
                   {[
                     { step: 1, title: 'Contact Us', desc: 'Reach out via WhatsApp with your timber requirements.' },
-                    { step: 2, title: 'Get a Quote', desc: 'We respond within 30 minutes with competitive pricing.' },
+                    { step: 2, title: 'Confirm Order Price', desc: 'We confirm current prices and availability within 30 minutes.' },
                     { step: 3, title: 'Confirm Order', desc: 'Choose your delivery date and confirm your order.' },
                     { step: 4, title: 'Quality Check', desc: 'Your timber is inspected and loaded at our Kwa Ndevu yard.' },
                     { step: 5, title: 'Delivery & Pay', desc: 'Timber arrives at your site. Inspect and pay on delivery.' },
@@ -244,7 +244,7 @@ export default function Delivery() {
                 </div>
 
                 <div className="p-6 bg-primary-50 dark:bg-gray-800 rounded-xl">
-                  <h3 className="font-bold text-lg mb-3">Quick Quote</h3>
+                  <h3 className="font-bold text-lg mb-3">Quick Order</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                     Message us on WhatsApp for instant pricing and availability.
                   </p>

@@ -1,4 +1,64 @@
-import { TimberSize, Location, ProductVariant, ProductPrice, SheetProductCategory, SheetProduct } from '@/types'
+import { TimberSize, Location, ProductVariant, ProductPrice, SheetProductCategory, SheetProduct, HardwoodProduct } from '@/types'
+
+const HARDWOOD_VARIANTS = [
+  { size: '2x6x8' as const, buyingPrice: 80000, margin: 15000, sellingPrice: 95000 },
+  { size: '2x8x8' as const, buyingPrice: 135000, margin: 15000, sellingPrice: 150000 },
+  { size: '4x4x8' as const, buyingPrice: 135000, margin: 15000, sellingPrice: 150000 },
+]
+
+export const HARDWOOD_PRODUCTS: HardwoodProduct[] = [
+  {
+    id: 'mninga', slug: 'mninga-hardwood-timber-zanzibar', name: 'Mninga', botanicalName: 'Pterocarpus angolensis',
+    description: 'Premium East African hardwood valued for its warm colour, attractive grain and dependable strength.',
+    metaTitle: 'Mninga Hardwood Timber Zanzibar | Sizes & Prices',
+    metaDescription: 'Buy Mninga hardwood timber in Zanzibar in 2x6x8, 2x8x8 and 4x4x8 sizes from TZS 95,000. Quality timber for doors, furniture and joinery with island-wide delivery.',
+    imageAlt: 'Stacked Mninga hardwood timber for furniture and joinery in Zanzibar',
+    features: ['Durable and strong', 'Attractive natural grain', 'Machines and finishes well', 'Suitable for quality joinery'],
+    uses: ['Doors and frames', 'Furniture', 'Cabinetry', 'Stairs and interior joinery'],
+    image: '/images/products/mninga-hardwood-timber-zanzibar.jpg',
+    faq: [
+      { question: 'What is Mninga hardwood used for?', answer: 'Mninga hardwood is ideal for doors, frames, furniture, cabinetry, stairs and detailed interior joinery.' },
+      { question: 'What Mninga timber sizes are available?', answer: 'Zanzibaba Timber supplies Mninga in 2x6x8, 2x8x8 and 4x4x8 sizes.' },
+      { question: 'How much does Mninga timber cost in Zanzibar?', answer: 'Mninga prices start at TZS 95,000 for 2x6x8. The 2x8x8 and 4x4x8 sizes are TZS 150,000 each.' },
+      { question: 'Can Mninga hardwood be delivered across Zanzibar?', answer: 'Yes. We arrange delivery of Mninga hardwood across Zanzibar.' },
+    ],
+    variants: HARDWOOD_VARIANTS.map(v => ({ ...v, sku: `MNINGA-${v.size.toUpperCase()}` })),
+  },
+  {
+    id: 'mvule', slug: 'mvule-hardwood-timber-zanzibar', name: 'Mvule', botanicalName: 'Milicia excelsa',
+    description: 'Dense, naturally durable African hardwood suited to demanding construction and architectural applications.',
+    metaTitle: 'Mvule Hardwood Timber Zanzibar | Sizes & Prices',
+    metaDescription: 'Buy durable Mvule hardwood timber in Zanzibar in 2x6x8, 2x8x8 and 4x4x8 sizes from TZS 95,000. Ideal for beams, decking, doors and windows.',
+    imageAlt: 'Premium Mvule hardwood timber inspected for construction use in Zanzibar',
+    features: ['High natural durability', 'Termite resistant', 'Excellent structural strength', 'Stable in tropical conditions'],
+    uses: ['Structural beams', 'Doors and windows', 'Decking', 'Heavy-duty furniture'],
+    image: '/images/products/mvule-hardwood-timber-zanzibar.jpg',
+    faq: [
+      { question: 'What is Mvule hardwood used for?', answer: 'Mvule is suitable for structural beams, doors, windows, decking and heavy-duty furniture.' },
+      { question: 'What Mvule timber sizes are available?', answer: 'Zanzibaba Timber supplies Mvule in 2x6x8, 2x8x8 and 4x4x8 sizes.' },
+      { question: 'How much does Mvule timber cost in Zanzibar?', answer: 'Mvule prices start at TZS 95,000 for 2x6x8. The 2x8x8 and 4x4x8 sizes are TZS 150,000 each.' },
+      { question: 'Is Mvule suitable for outdoor projects?', answer: 'Yes. Its natural durability makes Mvule suitable for demanding tropical applications.' },
+    ],
+    variants: HARDWOOD_VARIANTS.map(v => ({ ...v, sku: `MVULE-${v.size.toUpperCase()}` })),
+  },
+  {
+    id: 'mkongo', slug: 'mkongo-hardwood-timber-zanzibar', name: 'Mkongo', botanicalName: 'Afzelia quanzensis',
+    description: 'Heavy premium hardwood known for strength, stability and long service life in interior and exterior work.',
+    metaTitle: 'Mkongo Hardwood Timber Zanzibar | Sizes & Prices',
+    metaDescription: 'Buy strong Mkongo hardwood timber in Zanzibar in 2x6x8, 2x8x8 and 4x4x8 sizes from TZS 95,000. Premium wood for flooring, decking, doors and furniture.',
+    imageAlt: 'Mkongo hardwood timber prepared for flooring and structural joinery in Zanzibar',
+    features: ['Very strong and hard-wearing', 'Excellent dimensional stability', 'Rich natural appearance', 'Long service life'],
+    uses: ['Flooring and decking', 'Doors', 'Fine furniture', 'Structural and marine joinery'],
+    image: '/images/products/mkongo-hardwood-timber-zanzibar.jpg',
+    faq: [
+      { question: 'What is Mkongo hardwood used for?', answer: 'Mkongo is used for flooring, decking, doors, fine furniture, structural work and marine joinery.' },
+      { question: 'What Mkongo timber sizes are available?', answer: 'Zanzibaba Timber supplies Mkongo in 2x6x8, 2x8x8 and 4x4x8 sizes.' },
+      { question: 'How much does Mkongo timber cost in Zanzibar?', answer: 'Mkongo prices start at TZS 95,000 for 2x6x8. The 2x8x8 and 4x4x8 sizes are TZS 150,000 each.' },
+      { question: 'Why choose Mkongo hardwood?', answer: 'Mkongo offers excellent strength, dimensional stability and a long service life.' },
+    ],
+    variants: HARDWOOD_VARIANTS.map(v => ({ ...v, sku: `MKONGO-${v.size.toUpperCase()}` })),
+  },
+]
 
 export function sizeToSlug(size: string): string {
   const map: Record<string, string> = {

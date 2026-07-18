@@ -1,12 +1,11 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
-import { LogOut, Copy, MessageCircle } from 'lucide-react'
+import { Copy, MessageCircle } from 'lucide-react'
+import AdminLogoutButton from '@/components/admin/AdminLogoutButton'
 
 export default function AdminWhatsapp() {
-  const router = useRouter()
   const [copied, setCopied] = useState(false)
   
   const prices = {
@@ -44,12 +43,6 @@ export default function AdminWhatsapp() {
     return text
   }
 
-  useEffect(() => {
-    if (typeof window !== 'undefined' && localStorage.getItem('admin_auth') !== 'true') {
-      router.push('/admin')
-    }
-  }, [router])
-
   const copyToClipboard = () => {
     navigator.clipboard.writeText(generatePriceList())
     setCopied(true)
@@ -64,9 +57,7 @@ export default function AdminWhatsapp() {
             <MessageCircle className="w-5 h-5 text-primary-600" />
             <h1 className="text-xl font-bold">WhatsApp Price List</h1>
           </div>
-          <button onClick={() => { localStorage.removeItem('admin_auth'); router.push('/admin') }} className="flex items-center gap-2 text-gray-600">
-            <LogOut className="w-4 h-4" /> Logout
-          </button>
+          <AdminLogoutButton />
         </div>
       </header>
 

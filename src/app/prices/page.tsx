@@ -4,7 +4,7 @@ import FloatingButtons from '@/components/FloatingButtons'
 import PriceNotice from '@/components/PriceNotice'
 import TransportCalculator from '@/components/TransportCalculator'
 import { generateSEOMetadata, getBreadcrumbSchema } from '@/lib/seo'
-import { PRODUCT_PRICES, PRODUCT_VARIANTS, TIMBER_SIZES, formatTZS, sizeToSlug, formatVariantLabel, SHEET_PRODUCTS } from '@/lib/data'
+import { PRODUCT_PRICES, PRODUCT_VARIANTS, TIMBER_SIZES, formatTZS, sizeToSlug, formatVariantLabel, SHEET_PRODUCTS, HARDWOOD_PRODUCTS } from '@/lib/data'
 import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 
@@ -105,6 +105,23 @@ export default function Prices() {
             <div className="max-w-5xl mx-auto">
               <PriceTable length="18ft" title="18ft Timber Prices in Zanzibar" />
               <PriceTable length="12ft" title="12ft Timber Prices in Zanzibar" />
+            </div>
+
+            <div className="max-w-5xl mx-auto mt-8">
+              <h2 className="text-xl md:text-2xl font-bold mb-4">Hardwood Prices in Zanzibar</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead><tr className="border-b-2 border-primary-600"><th className="text-left py-3 px-3 text-sm">Species</th><th className="text-left py-3 px-3 text-sm">Size</th><th className="text-right py-3 px-3 text-sm">Price (TZS)</th><th className="text-center py-3 px-3 text-sm">Order</th></tr></thead>
+                  <tbody>{HARDWOOD_PRODUCTS.flatMap(product => product.variants.map(variant => (
+                    <tr key={variant.sku} className="border-b border-gray-200 dark:border-gray-700">
+                      <td className="py-3 px-3 font-semibold text-sm"><Link href={`/hardwood/${product.slug}`} className="text-primary-600 hover:underline">{product.name}</Link></td>
+                      <td className="py-3 px-3 text-sm">{variant.size}</td>
+                      <td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(variant.sellingPrice)}</td>
+                      <td className="py-3 px-3 text-center"><a href={`https://wa.me/255716002790?text=${encodeURIComponent(`Hello Zanzibaba Timber, I would like to order ${product.name} ${variant.size}`)}`} className="text-green-600 text-xs font-semibold" target="_blank" rel="noopener noreferrer">Add to Order</a></td>
+                    </tr>
+                  )))}</tbody>
+                </table>
+              </div>
             </div>
 
             <div className="max-w-5xl mx-auto mt-8">
