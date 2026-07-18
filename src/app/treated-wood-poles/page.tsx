@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { CheckCircle, MessageCircle, Ruler, TreePine, Fence, Building2, Warehouse, Shield, Thermometer, Droplets, Bug } from 'lucide-react'
 
 export const metadata = generateSEOMetadata(
-  'Teak Wood Poles Zanzibar | Fence Posts, Building Poles & Timber Poles — Zanzibaba Timber',
+  'Wood Poles Zanzibar | Fence Posts, Building Poles & Timber Poles — Zanzibaba Timber',
   'Premium teak wood poles (Mitiki) in Zanzibar — naturally termite-resistant, durable, and perfect for construction, fencing, and farm use. 2" to 6" diameter, 18ft length. Free island-wide delivery with cash on delivery.',
   'en',
   '/treated-wood-poles'
@@ -15,7 +15,7 @@ export const metadata = generateSEOMetadata(
 
 const breadcrumb = getBreadcrumbSchema([
   { name: 'Home', url: '/' },
-  { name: 'Teak Wood Poles', url: '/treated-wood-poles' },
+  { name: 'Wood Poles', url: '/treated-wood-poles' },
 ])
 
 const FAQS = [
@@ -28,7 +28,7 @@ const FAQS = [
 ]
 
 const poleBenefits = [
-  { icon: TreePine, title: 'Teak Wood Poles (Mitiki)', desc: 'Naturally durable teak wood poles — resistant to termites, rot, and fungal decay without chemical treatment. Ideal for Zanzibar\'s tropical coastal climate.' },
+  { icon: TreePine, title: 'Wood Poles (Mitiki)', desc: 'Naturally durable wood poles — resistant to termites, rot, and fungal decay without chemical treatment. Ideal for Zanzibar\'s tropical coastal climate.' },
   { icon: Shield, title: 'Naturally Termite-Resistant', desc: 'Teak contains natural oils that repel termites and borers. No pressure treatment needed — the wood protects itself, making it safer for farms, homes, and the environment.' },
   { icon: Building2, title: 'Building & Construction Poles', desc: 'Strong, durable round poles for building construction, roof supports, and structural frameworks. Teak\'s natural strength and longevity make it ideal for permanent structures.' },
   { icon: Warehouse, title: 'Bulk Supply & Free Delivery', desc: 'Large stock of teak wood poles at our Kwa Ndevu yard. Free delivery across Zanzibar with cash on payment option.' },
@@ -53,11 +53,11 @@ export default function TreatedWoodPolesPage() {
             <nav className="mb-4 text-sm text-primary-200" aria-label="Breadcrumb">
               <Link href="/" className="text-primary-300 hover:underline">Home</Link>
               <span className="mx-2">/</span>
-              <span className="text-primary-100">Teak Wood Poles</span>
+              <span className="text-primary-100">Wood Poles</span>
             </nav>
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Teak Wood Poles <span className="text-amber-400">Zanzibar</span>
+                Wood Poles <span className="text-amber-400">Zanzibar</span>
               </h1>
               <p className="text-lg md:text-xl text-primary-100 mb-8 max-w-3xl">
                 Premium teak wood poles — known locally as <strong className="text-white">mitiki, mirunda, or milunda</strong> — for construction, fencing, farm, and structural applications across Zanzibar. Naturally termite-resistant. 2" to 6" diameter, 18ft length. Free island-wide delivery.
@@ -76,7 +76,7 @@ export default function TreatedWoodPolesPage() {
 
         <section className="py-12 bg-white dark:bg-gray-900">
           <div className="container-custom">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">Teak Wood Poles — Available Now</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">Wood Poles — Available Now</h2>
             <p className="text-center text-gray-500 mb-8 max-w-2xl mx-auto">Teak wood poles (Mitiki) for construction, fencing, and farm applications. In stock at our Kwa Ndevu yard.</p>
             <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {poleBenefits.map((b) => (
@@ -153,7 +153,7 @@ export default function TreatedWoodPolesPage() {
 
         <section className="py-12 bg-gray-50 dark:bg-gray-800">
           <div className="container-custom max-w-5xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">Applications of Teak Wood Poles in Zanzibar</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">Applications of Wood Poles in Zanzibar</h2>
             <p className="text-center text-gray-500 mb-8">How teak wood poles (mitiki/mirunda) are used across construction, agriculture, and hospitality</p>
             <div className="grid md:grid-cols-2 gap-6">
               {poleUses.map((u) => (
@@ -188,7 +188,7 @@ export default function TreatedWoodPolesPage() {
 
         <section className="py-12 bg-gray-50 dark:bg-gray-800">
           <div className="container-custom max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">FAQs — Teak Wood Poles</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">FAQs — Wood Poles</h2>
             <div className="space-y-4">
               {FAQS.map((faq, i) => (
                 <details key={i} className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
@@ -202,7 +202,7 @@ export default function TreatedWoodPolesPage() {
 
         <section className="py-12 bg-primary-700 text-white text-center">
           <div className="container-custom">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Need Teak Wood Poles or Timber for Your Project?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Need Wood Poles or Timber for Your Project?</h2>
             <p className="text-primary-100 mb-6 max-w-2xl mx-auto">Get your free quote within 30 minutes. We deliver teak poles, fence posts, and all timber sizes across Zanzibar.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href={generateWhatsAppLink('Hello Zanzibaba Timber, I need teak wood poles. Please advise on available diameters and pricing.')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-semibold px-6 py-3 rounded-lg transition-all shadow-lg">
@@ -216,7 +216,7 @@ export default function TreatedWoodPolesPage() {
         </section>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getProductSchema('Teak Wood Poles Zanzibar', 'Premium teak wood poles for construction, fencing and farm applications. 2" to 6" diameter, 18ft length. Naturally termite-resistant teak (Mitiki).', '2"-6" x 18ft')) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getProductSchema('Wood Poles Zanzibar', 'Premium wood poles for construction, fencing and farm applications. 2" to 6" diameter, 18ft length. Naturally termite-resistant (Mitiki).', '2"-6" x 18ft')) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(FAQS)) }} />
       <Footer />
       <FloatingButtons />

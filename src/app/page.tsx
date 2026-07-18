@@ -51,11 +51,11 @@ const HOW_IT_WORKS = [
 ]
 
 const FEATURED_PRODUCTS = [
-  { name: '2"x4"x12 feet Softwood', desc: 'Most popular framing timber', price: '11,500', badge: 'In Stock', href: '/timber-sizes/2x4?length=12ft', image: '/images/gallery/treated-pine-timber.jpg' },
-  { name: '2"x6"x18 feet Softwood', desc: 'Heavy-duty structural beams', price: '31,000', badge: 'Popular', href: '/timber-sizes/2x6?length=18ft', image: '/images/gallery/treated-pine-timber.jpg' },
-  { name: '18mm Marine Board', desc: 'Waterproof formwork', price: '52,000', badge: 'Imported', href: '/marine-board/18mm-marine-board', image: '/images/gallery/marine-board-zanzibar.jpg' },
-  { name: 'Teak Poles 4"', desc: 'Natural termite-resistant', price: '11,500', badge: 'Free Delivery', href: '/treated-wood-poles', image: '/images/gallery/teak-wood-poles-mitiki.jpg' },
-  { name: 'Mninga Hardwood', desc: 'Premium furniture and joinery timber', price: '95,000', badge: 'Hardwood', href: '/hardwood/mninga-hardwood-timber-zanzibar', image: '/images/products/mninga-hardwood-timber-zanzibar.jpg' },
+  { name: '2"x4"x12 feet Softwood', desc: 'Most popular framing timber', price: '11,500', href: '/timber-sizes/2x4?length=12ft', image: '/images/gallery/treated-pine-timber.jpg' },
+  { name: '18mm Plywood', desc: 'Strong construction-grade sheet', price: '50,000', href: '/plywood/18mm', image: '/images/gallery/construction-plywood-zanzibar.jpg' },
+  { name: '18mm Marine Board', desc: 'Waterproof formwork', price: '52,000', href: '/marine-board/18mm', image: '/images/gallery/marine-board-zanzibar.jpg' },
+  { name: 'Wood Poles 2–6" x 18 feet', desc: 'Natural termite-resistant poles', price: '11,500', href: '/treated-wood-poles', image: '/images/gallery/teak-wood-poles-mitiki.jpg' },
+  { name: 'Mninga Hardwood', desc: 'Premium furniture and joinery timber', price: '95,000', href: '/hardwood/mninga-hardwood-timber-zanzibar', image: '/images/gallery/hardwood-mninga-timber.jpg' },
 ]
 
 export default function Home() {
@@ -190,9 +190,6 @@ export default function Home() {
                       sizes="(max-width: 768px) 50vw, 25vw"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <span className="absolute top-2 left-2 text-[10px] bg-primary-600 text-white px-2 py-0.5 rounded-full font-medium">
-                      {p.badge}
-                    </span>
                   </div>
                   <div className="p-3">
                     <h3 className="font-bold text-sm text-gray-900 dark:text-white">{p.name}</h3>

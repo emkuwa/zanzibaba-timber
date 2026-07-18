@@ -10,8 +10,8 @@ import { MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 
 export const metadata = generateSEOMetadata(
-  'Marine Board, Plywood, Teak Wood Poles & Timber Prices in Zanzibar - Updated 2026',
-  'Current marine board, plywood, teak wood poles and timber prices in Zanzibar. Marine board 18mm and 12mm. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. Timber 2x2, 2x4, 1x6, 1x8, 1x10. Teak wood poles 2"-6". Free Delivery Across Zanzibar.',
+  'Marine Board, Plywood, Wood Poles & Timber Prices in Zanzibar - Updated 2026',
+  'Current marine board, plywood, wood poles and timber prices in Zanzibar. Marine board 18mm and 12mm. Plywood 18mm, 15mm, 12mm, 9mm, 6mm, 3mm. Treated softwood and wood poles 2"-6". Free Delivery Across Zanzibar.',
   'en',
   '/prices'
 )
@@ -164,14 +164,14 @@ export default function Prices() {
             <div className="max-w-5xl mx-auto mt-12">
               <CategoryHeader
                 id="wood-poles"
-                title="Teak Wood Poles (Mitiki / Mirunda)"
+                title="Wood Poles (Mitiki / Mirunda)"
                 image="/images/gallery/teak-wood-poles-mitiki.jpg"
                 description="Naturally durable round teak poles available in 2–6 inch diameters and 18 feet length. Their natural resistance makes them reliable for exposed and ground-contact applications."
                 features={['Naturally termite resistant', 'Strong round structural form', 'Suitable for tropical outdoor use', 'Available in multiple diameters']}
                 uses={['Building and veranda posts', 'Fencing and farm structures', 'Pergolas and shade structures', 'Landscape and resort construction']}
               />
               <h2 className="text-xl md:text-2xl font-bold mb-4">Wood Pole Prices in Zanzibar</h2>
-              <div className="overflow-x-auto"><table className="w-full border-collapse"><thead><tr className="border-b-2 border-primary-600"><th className="text-left py-3 px-3 text-sm">Product</th><th className="text-left py-3 px-3 text-sm">Full Dimensions</th><th className="text-right py-3 px-3 text-sm">Price (TZS)</th><th className="text-center py-3 px-3 text-sm">Order</th></tr></thead><tbody><tr className="border-b border-gray-200 dark:border-gray-700"><td className="py-3 px-3 font-semibold text-sm"><Link href="/treated-wood-poles" className="text-primary-600 hover:underline">Teak Wood Poles</Link></td><td className="py-3 px-3 text-sm">2–6&quot; diameter x 18 feet</td><td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(PRODUCT_VARIANTS.find(v => v.size === 'Wood Poles')?.price || 11500)}</td><td className="py-3 px-3 text-center"><a href="https://wa.me/255716002790?text=Hello%20Zanzibaba%20Timber%2C%20I%20would%20like%20to%20order%20wood%20poles" target="_blank" rel="noopener noreferrer" className="text-green-600 text-xs font-semibold">Add to Order</a></td></tr></tbody></table></div>
+              <div className="overflow-x-auto"><table className="w-full border-collapse"><thead><tr className="border-b-2 border-primary-600"><th className="text-left py-3 px-3 text-sm">Product</th><th className="text-left py-3 px-3 text-sm">Full Dimensions</th><th className="text-right py-3 px-3 text-sm">Price (TZS)</th><th className="text-center py-3 px-3 text-sm">Order</th></tr></thead><tbody><tr className="border-b border-gray-200 dark:border-gray-700"><td className="py-3 px-3 font-semibold text-sm"><Link href="/treated-wood-poles" className="text-primary-600 hover:underline">Wood Poles</Link></td><td className="py-3 px-3 text-sm">2–6&quot; diameter x 18 feet</td><td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(PRODUCT_VARIANTS.find(v => v.size === 'Wood Poles')?.price || 11500)}</td><td className="py-3 px-3 text-center"><a href="https://wa.me/255716002790?text=Hello%20Zanzibaba%20Timber%2C%20I%20would%20like%20to%20order%20wood%20poles" target="_blank" rel="noopener noreferrer" className="text-green-600 text-xs font-semibold">Add to Order</a></td></tr></tbody></table></div>
             </div>
 
             <div className="max-w-5xl mx-auto mt-12">

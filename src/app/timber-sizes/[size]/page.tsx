@@ -30,7 +30,7 @@ export function generateMetadata({ params }: { params: { size: string } }) {
   ]
 
   return generateSEOMetadata(
-    `${timber.name} (${timber.dimensions}) ${woodType} Timber Zanzibar - ${isTeak ? 'Teak Wood Poles' : 'Treated Pine Timber'} Supplier`,
+    `${timber.name} (${timber.dimensions}) ${woodType} Timber Zanzibar - ${isTeak ? 'Wood Poles' : 'Treated Softwood'} Supplier`,
     `Premium ${timber.name} (${timber.dimensions}) ${isTeak ? 'teak wood poles' : 'treated pine timber'} in Zanzibar. ${timber.description}. Quality timber for construction, delivery across Zanzibar. Cash on delivery, mobile money & bank transfer.`,
     'en',
     `/timber-sizes/${timber.id}`,
@@ -78,7 +78,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                 <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
                   {formatSizeName(timber.name)} {woodType} Timber <span className="text-primary-300">Zanzibar</span>
                 </h1>
-                <p className="text-gray-200 mt-1 text-xs sm:text-sm">{timber.dimensions} — {isTeak ? 'Teak Wood Poles' : 'Treated Pine'}</p>
+                <p className="text-gray-200 mt-1 text-xs sm:text-sm">{timber.dimensions} — {isTeak ? 'Wood Poles' : 'Treated Softwood'}</p>
               </div>
             </div>
 

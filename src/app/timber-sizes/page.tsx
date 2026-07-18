@@ -8,7 +8,7 @@ import PriceNotice from '@/components/PriceNotice'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Treated Softwood Timber Sizes Zanzibar | Treated Pine & Teak Wood Poles',
+  'Treated Softwood Timber Sizes Zanzibar | Treated Pine & Wood Poles',
   'Complete range of timber sizes in Zanzibar. Treated pine: 2x2, 2x3, 2x4, 2x6, 2x8. Teak wood poles (mitiki) 2-6 inch. Free delivery across Zanzibar.',
   'en',
   '/timber-sizes',
@@ -61,7 +61,7 @@ export default function TimberSizes() {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
                   Treated Softwood Timber <span className="text-primary-300">Zanzibar</span>
                 </h1>
-                <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">Treated Pine • Teak Wood Poles</p>
+                <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">Treated Softwood • Wood Poles</p>
               </div>
             </div>
 
