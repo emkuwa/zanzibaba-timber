@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
-import { HARDWOOD_PRODUCTS, generateWhatsAppLink } from '@/lib/data'
+import { HARDWOOD_PRODUCTS, generateWhatsAppLink, formatHardwoodSize } from '@/lib/data'
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo'
 
 const siteUrl = 'https://timber.zanzibaba.com'
@@ -107,7 +107,7 @@ export default function HardwoodProductPage({ params }: { params: { species: str
 
           <section className="mb-14" aria-labelledby="sizes-prices">
             <h2 id="sizes-prices" className="text-3xl font-bold mb-6">{product.name} Sizes & Prices</h2>
-            <div className="overflow-x-auto"><table className="w-full border-collapse"><thead><tr className="bg-primary-600 text-white"><th className="text-left p-4">Size</th><th className="text-left p-4">Length</th><th className="text-right p-4">Selling Price</th><th className="text-center p-4">Order</th></tr></thead><tbody>{product.variants.map((variant) => <tr id={variant.sku.toLowerCase()} key={variant.sku} className="border-b dark:border-gray-700"><td className="p-4 font-bold">{variant.size}</td><td className="p-4">8ft</td><td className="p-4 text-right text-xl font-bold">TZS {variant.sellingPrice.toLocaleString()}</td><td className="p-4 text-center"><a target="_blank" rel="noopener noreferrer" className="text-green-600 font-semibold hover:underline" href={generateWhatsAppLink(`Hello Zanzibaba Timber, please add ${product.name} ${variant.size} at TZS ${variant.sellingPrice.toLocaleString()} to my order`)}>Add to Order</a></td></tr>)}</tbody></table></div>
+            <div className="overflow-x-auto"><table className="w-full border-collapse"><thead><tr className="bg-primary-600 text-white"><th className="text-left p-4">Full Dimensions</th><th className="text-right p-4">Selling Price</th><th className="text-center p-4">Order</th></tr></thead><tbody>{product.variants.map((variant) => <tr id={variant.sku.toLowerCase()} key={variant.sku} className="border-b dark:border-gray-700"><td className="p-4 font-bold">{formatHardwoodSize(variant.size)}</td><td className="p-4 text-right text-xl font-bold">TZS {variant.sellingPrice.toLocaleString()}</td><td className="p-4 text-center"><a target="_blank" rel="noopener noreferrer" className="text-green-600 font-semibold hover:underline" href={generateWhatsAppLink(`Hello Zanzibaba Timber, please add ${product.name} ${formatHardwoodSize(variant.size)} at TZS ${variant.sellingPrice.toLocaleString()} to my order`)}>Add to Order</a></td></tr>)}</tbody></table></div>
           </section>
 
           <section className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 mb-14"><h2 className="text-2xl font-bold mb-2">Recommended Applications for {product.name}</h2><p className="text-sm text-gray-500 dark:text-gray-400 mb-4">These are examples of how this timber can be used—not separate product categories.</p><div className="flex flex-wrap gap-3">{product.uses.map((use) => <span key={use} className="bg-white dark:bg-gray-700 shadow-sm px-4 py-2 rounded-full">{use}</span>)}</div></section>

@@ -8,7 +8,7 @@ import PriceNotice from '@/components/PriceNotice'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Softwood Timber Sizes Zanzibar | Treated Pine & Teak Wood Poles',
+  'Treated Softwood Timber Sizes Zanzibar | Treated Pine & Teak Wood Poles',
   'Complete range of timber sizes in Zanzibar. Treated pine: 2x2, 2x3, 2x4, 2x6, 2x8. Teak wood poles (mitiki) 2-6 inch. Free delivery across Zanzibar.',
   'en',
   '/timber-sizes',
@@ -23,7 +23,7 @@ export const metadata = generateSEOMetadata(
 export default function TimberSizes() {
   const breadcrumb = getBreadcrumbSchema([
     { name: 'Home', url: '/' },
-    { name: 'Softwood', url: '/timber-sizes' },
+    { name: 'Treated Softwood', url: '/timber-sizes' },
   ])
 
   const itemList = getItemListSchema(
@@ -44,7 +44,7 @@ export default function TimberSizes() {
             <nav className="mb-4 md:mb-6 text-sm" aria-label="Breadcrumb">
               <Link href="/" className="text-primary-600 hover:underline">Home</Link>
               <span className="mx-2 text-gray-400">/</span>
-              <span className="text-gray-500">Softwood</span>
+              <span className="text-gray-500">Treated Softwood</span>
             </nav>
 
             <div className="relative w-full h-48 sm:h-64 md:h-80 rounded-xl overflow-hidden mb-8 md:mb-12 shadow-lg">
@@ -59,7 +59,7 @@ export default function TimberSizes() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
-                  Softwood Timber <span className="text-primary-300">Zanzibar</span>
+                  Treated Softwood Timber <span className="text-primary-300">Zanzibar</span>
                 </h1>
                 <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">Treated Pine • Teak Wood Poles</p>
               </div>

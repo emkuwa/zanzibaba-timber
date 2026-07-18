@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { HardwoodProduct } from '@/types'
+import { formatHardwoodSize } from '@/lib/data'
 
 export default function HardwoodCatalogue({ products }: { products: HardwoodProduct[] }) {
   const [query, setQuery] = useState('')
@@ -39,9 +40,9 @@ export default function HardwoodCatalogue({ products }: { products: HardwoodProd
           className="px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800"
         >
           <option value="all">All sizes</option>
-          <option value="2x6x8">2x6x8</option>
-          <option value="2x8x8">2x8x8</option>
-          <option value="4x4x8">4x4x8</option>
+          <option value="2x6x8">{formatHardwoodSize('2x6x8')}</option>
+          <option value="2x8x8">{formatHardwoodSize('2x8x8')}</option>
+          <option value="4x4x8">{formatHardwoodSize('4x4x8')}</option>
         </select>
       </div>
 

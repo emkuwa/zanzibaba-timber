@@ -4,7 +4,7 @@ import FloatingButtons from '@/components/FloatingButtons'
 import PriceNotice from '@/components/PriceNotice'
 import TransportCalculator from '@/components/TransportCalculator'
 import { generateSEOMetadata, getBreadcrumbSchema } from '@/lib/seo'
-import { PRODUCT_PRICES, PRODUCT_VARIANTS, TIMBER_SIZES, formatTZS, sizeToSlug, formatVariantLabel, SHEET_PRODUCTS, HARDWOOD_PRODUCTS } from '@/lib/data'
+import { PRODUCT_PRICES, PRODUCT_VARIANTS, TIMBER_SIZES, formatTZS, sizeToSlug, formatVariantLabel, formatHardwoodSize, SHEET_PRODUCTS, HARDWOOD_PRODUCTS } from '@/lib/data'
 import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 
@@ -47,7 +47,7 @@ function PriceTable({ length, title }: { length: string; title: string }) {
                   </Link>
                 </td>
                 <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">{v.dimensions}</td>
-                <td className="py-3 px-3 text-center text-sm">{v.length}</td>
+                <td className="py-3 px-3 text-center text-sm">{v.length.replace('ft', 'feet')}</td>
                 <td className="py-3 px-3 text-right font-bold text-sm">{v.price ? formatTZS(v.price) : '-'}</td>
                 <td className="py-3 px-3 text-center">
                   <a
@@ -65,7 +65,7 @@ function PriceTable({ length, title }: { length: string; title: string }) {
               <tr className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 bg-amber-50/50 dark:bg-amber-900/10">
                 <td className="py-3 px-3 font-semibold text-sm">Wood Poles (Teak)</td>
                 <td className="py-3 px-3 text-sm text-gray-600 dark:text-gray-300">2-6" diameter</td>
-                <td className="py-3 px-3 text-center text-sm">{length}</td>
+                <td className="py-3 px-3 text-center text-sm">{length.replace('ft', 'feet')}</td>
                 <td className="py-3 px-3 text-right font-bold text-sm">{poles[0]?.price ? formatTZS(poles[0].price) : '-'}</td>
                 <td className="py-3 px-3 text-center">
                   <a
@@ -115,7 +115,7 @@ export default function Prices() {
                   <tbody>{HARDWOOD_PRODUCTS.flatMap(product => product.variants.map(variant => (
                     <tr key={variant.sku} className="border-b border-gray-200 dark:border-gray-700">
                       <td className="py-3 px-3 font-semibold text-sm"><Link href={`/hardwood/${product.slug}`} className="text-primary-600 hover:underline">{product.name}</Link></td>
-                      <td className="py-3 px-3 text-sm">{variant.size}</td>
+                      <td className="py-3 px-3 text-sm">{formatHardwoodSize(variant.size)}</td>
                       <td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(variant.sellingPrice)}</td>
                       <td className="py-3 px-3 text-center"><a href={`https://wa.me/255716002790?text=${encodeURIComponent(`Hello Zanzibaba Timber, I would like to order ${product.name} ${variant.size}`)}`} className="text-green-600 text-xs font-semibold" target="_blank" rel="noopener noreferrer">Add to Order</a></td>
                     </tr>

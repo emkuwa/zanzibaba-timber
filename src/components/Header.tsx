@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Phone, MessageCircle, Menu, X, ChevronDown } from 'lucide-react'
+import { MessageCircle, Menu, X, ChevronDown } from 'lucide-react'
 import { generateWhatsAppLink } from '@/lib/data'
 import { useBilingual } from '@/lib/bilingual'
 import { useState, useEffect, useRef, useCallback } from 'react'
@@ -209,7 +209,6 @@ export default function Header() {
             href="tel:+255716002790"
             className="inline-flex items-center gap-1.5 text-gray-600 dark:text-gray-300 hover:text-primary-600 text-sm font-medium transition-colors min-h-[40px]"
           >
-            <Phone className="w-3.5 h-3.5" />
             <span className="inline whitespace-nowrap">+255 716 002 790</span>
           </a>
 
@@ -340,7 +339,6 @@ export default function Header() {
               href="tel:+255716002790"
               className="flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-3 rounded-lg transition-all min-h-[48px]"
             >
-              <Phone className="w-4 h-4" />
               <span>+255 716 002 790</span>
             </a>
           </div>

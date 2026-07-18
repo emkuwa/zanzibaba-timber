@@ -29,7 +29,7 @@ function WhatsAppButton({ message, label, fullWidth }: { message?: string; label
 }
 
 const CATEGORIES = [
-  { name: 'Softwood', href: '/timber-sizes', icon: TreePine },
+  { name: 'Treated Softwood', href: '/timber-sizes', icon: TreePine },
   { name: 'Hardwood', href: '/hardwood', icon: TreePine },
   { name: 'Treated Poles', href: '/treated-wood-poles', icon: TreePine },
   { name: 'Plywood', href: '/plywood', icon: Layers },
@@ -124,8 +124,8 @@ export default function Home() {
                   {cat.name}
                 </Link>
               ))}
-              <Link href="/timber-sizes" className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 font-semibold text-sm px-3 py-2">
-                View All <ArrowRight className="w-3 h-3" />
+              <Link href="/prices" className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 font-semibold text-sm px-3 py-2">
+                View All Products & Prices <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
           </div>
@@ -171,8 +171,8 @@ export default function Home() {
           <div className="container-custom">
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-lg md:text-xl font-bold">Featured Products</h2>
-              <Link href="/timber-sizes" className="text-primary-600 hover:text-primary-700 font-semibold text-sm">
-                View All Products →
+              <Link href="/prices" className="text-primary-600 hover:text-primary-700 font-semibold text-sm">
+                View All Products & Prices →
               </Link>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
