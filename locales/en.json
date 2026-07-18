@@ -17,20 +17,20 @@
   "hero": {
     "title": "Treated Pine Timber Supplier in Zanzibar",
     "subtitle": "High Quality Treated Timber & Poles for construction — delivered across Zanzibar",
-    "cta": "Get Free Quote",
-    "whatsappQuote": "WhatsApp Quote",
+    "cta": "Start Your Order",
+    "whatsappQuote": "Order on WhatsApp",
     "callNow": "Call +255 716 002 790",
     "location": "Kwa Ndevu, Daraja Bovu, Zanzibar"
   },
   "common": {
     "call": "Call Now",
     "whatsapp": "WhatsApp",
-    "requestQuote": "Request Quote",
+    "requestQuote": "Add to Order",
     "learnMore": "Learn More",
     "viewGallery": "View Gallery",
     "viewAll": "View All",
     "send": "Send",
-    "sendToWhatsApp": "Send to WhatsApp"
+    "sendToWhatsApp": "Add to Order via WhatsApp"
   },
   "footer": {
     "description": "Leading pine timber supplier in Zanzibar serving homeowners, contractors, hotels, resorts, villas, and government projects.",
@@ -45,8 +45,8 @@
       "sizesSubtitle": "Kiln-dried, ready for construction",
       "ft18": "18ft Lengths Available",
       "ft12": "12ft Lengths Available",
-      "quoteTitle": "Get Instant Quote via WhatsApp",
-      "quoteSubtitle": "Send us your requirements. We respond within 30 minutes during business hours.",
+      "quoteTitle": "Start Your Order via WhatsApp",
+      "quoteSubtitle": "Add your timber requirements to an order. We confirm prices and availability within 30 minutes during business hours.",
       "locationsTitle": "We Supply Across Zanzibar",
       "whyChoose": "Why Zanzibar Trusts Us for Timber",
       "ft1": "High Quality Treated Timber",
@@ -113,7 +113,7 @@
       "readyToDiscuss": "Ready to discuss your timber needs? Contact us for a free quote and consultation.",
       "businessHours": "Business Hours",
       "hours": "Monday - Saturday: 8:00 AM - 5:00 PM<br />Sunday: Closed",
-      "requestQuote": "Request Quote"
+      "requestQuote": "Start Order"
     },
     "delivery": {
       "title": "Delivery Across Zanzibar",

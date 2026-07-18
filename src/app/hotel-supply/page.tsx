@@ -129,7 +129,7 @@ export default function HotelSupply() {
                 <div className="mt-8 text-center bg-primary-50 dark:bg-gray-800 p-8 rounded-xl">
                   <h3 className="text-xl font-bold mb-3">Ready to Order Hotel Timber?</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Contact us on WhatsApp for a quick quote. We respond within 30 minutes.
+                    Start your order on WhatsApp. We confirm prices and availability within 30 minutes.
                   </p>
                   <a
                     href={generateWhatsAppLink('Hello Zanzibaba Timber, I need bulk timber for my hotel project in Zanzibar. Please share pricing and availability.')}
@@ -137,7 +137,7 @@ export default function HotelSupply() {
                     rel="noopener noreferrer"
                     className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700"
                   >
-                    Get Hotel Supply Quote
+                    Start Hotel Supply Order
                   </a>
                 </div>
 
@@ -212,7 +212,7 @@ export default function HotelSupply() {
                 </div>
 
                 <div className="p-6 bg-primary-50 dark:bg-gray-800 rounded-xl">
-                  <h3 className="font-bold text-lg mb-3">Quick Quote</h3>
+                  <h3 className="font-bold text-lg mb-3">Quick Order</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                     Message us on WhatsApp for instant pricing and availability.
                   </p>

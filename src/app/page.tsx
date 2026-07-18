@@ -10,7 +10,7 @@ import { CheckCircle, MapPin, MessageCircle, Phone, ArrowRight, Package, Truck, 
 import { useBilingual } from '@/lib/bilingual'
 
 function WhatsAppButton({ message }: { message?: string }) {
-  const msg = message || 'Hello Zanzibaba Timber, I need a quote'
+  const msg = message || 'Hello Zanzibaba Timber, I want to start an order'
   const handleClick = () => {
     ;(window as any).gtag?.('event', 'whatsapp_click', { event_category: 'engagement' })
   }
@@ -140,7 +140,7 @@ export default function Home() {
                 {t('hero.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <WhatsAppButton message="Hello Zanzibaba Timber, I need a quote" />
+                <WhatsAppButton message="Hello Zanzibaba Timber, I want to start a timber order" />
                 <CallButton />
               </div>
               <div className="flex items-center text-gray-300">
@@ -156,7 +156,8 @@ export default function Home() {
           <div className="container-custom">
             <div className="flex flex-wrap justify-center gap-3 md:gap-6 text-sm">
               <a href="#sizes" className="text-primary-600 hover:underline font-medium">Timber Sizes</a>
-              <a href="#quote" className="text-primary-600 hover:underline font-medium">Get Quote</a>
+              <a href="#hardwood" className="text-primary-600 hover:underline font-medium">Hardwood</a>
+              <a href="#quote" className="text-primary-600 hover:underline font-medium">Start Order</a>
               <a href="#delivery" className="text-primary-600 hover:underline font-medium">Delivery</a>
               <a href="#locations" className="text-primary-600 hover:underline font-medium">Locations</a>
             </div>
@@ -167,8 +168,8 @@ export default function Home() {
         <section id="quote" className="py-16 bg-gradient-to-r from-primary-600 to-primary-800 text-white scroll-mt-20">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-3">Get Your Quote in 30 Minutes</h2>
-              <p className="text-primary-100 mb-8">Send us your timber requirements. Fast response guaranteed.</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-3">Start Your Timber Order</h2>
+              <p className="text-primary-100 mb-8">Add the products you need. We confirm prices and availability within 30 minutes.</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
                 <WhatsAppButton message="Hello Zanzibaba Timber, I need timber prices for my project" />
                 <CallButton />
@@ -178,7 +179,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-24 bg-white dark:bg-gray-900">
+        <section id="hardwood" className="py-24 bg-white dark:bg-gray-900 scroll-mt-20">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Premium Hardwood Timber</h2>
             <p className="text-center text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">Mninga, Mvule and Mkongo hardwood, each available in 2x6x8, 2x8x8 and 4x4x8.</p>

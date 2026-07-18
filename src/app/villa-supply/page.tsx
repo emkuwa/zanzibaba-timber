@@ -137,7 +137,7 @@ export default function VillaSupply() {
                     rel="noopener noreferrer"
                     className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700"
                   >
-                    Request Villa Supply Quote
+                    Start Villa Supply Order
                   </a>
                 </div>
 
@@ -212,7 +212,7 @@ export default function VillaSupply() {
                 </div>
 
                 <div className="p-6 bg-primary-50 dark:bg-gray-800 rounded-xl">
-                  <h3 className="font-bold text-lg mb-3">Quick Quote</h3>
+                  <h3 className="font-bold text-lg mb-3">Quick Order</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                     Message us on WhatsApp for instant pricing and availability.
                   </p>

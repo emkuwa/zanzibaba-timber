@@ -36,7 +36,7 @@ export default function QuoteForm() {
       product: formData.product,
       length: formData.length
     })
-    const text = `New Quote:\nName: ${formData.name}\nPhone: ${formData.phone}\nProduct: ${formData.product} ${formData.length}\nMessage: ${formData.message}`
+    const text = `New Order:\nName: ${formData.name}\nPhone: ${formData.phone}\nProduct: ${formData.product} ${formData.length}\nMessage: ${formData.message}`
     window.open(generateWhatsAppLink(text), '_blank', 'noopener,noreferrer')
   }
 

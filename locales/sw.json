@@ -17,20 +17,20 @@
   "hero": {
     "title": "Wasambazaji wa Mbao Treated Pine Zanzibar",
     "subtitle": "Mbao Treated Pine na Treated Poles za ubora kwa ujenzi — tunasambaza Zanzibar zima",
-    "cta": "Pata Anda",
-    "whatsappQuote": "WhatsApp Anda",
+    "cta": "Anza Oda Yako",
+    "whatsappQuote": "Oda kwa WhatsApp",
     "callNow": "Piga +255 716 002 790",
     "location": "Kwa Ndevu, Daraja Bovu, Zanzibar"
   },
   "common": {
     "call": "Piga Simu",
     "whatsapp": "WhatsApp",
-    "requestQuote": "Omba Anda",
+    "requestQuote": "Ongeza kwenye Oda",
     "learnMore": "Soma Zaidi",
     "viewGallery": "Tazama Galeria",
     "viewAll": "Tazama Zote",
     "send": "Tuma",
-    "sendToWhatsApp": "Tuma kwa WhatsApp"
+    "sendToWhatsApp": "Ongeza kwenye Oda kwa WhatsApp"
   },
   "footer": {
     "description": "Wasambazaji mkuu wa mbao wa pine Zanzibar unao hudumia wamiliki nyumba, wabunifu, hoteli, villa, na miradi ya serikali.",
@@ -45,8 +45,8 @@
       "sizesSubtitle": "Mbao iliyoanguliwa kwa majeraha, tayari kwa ujenzi",
       "ft18": "Urefu 18ft",
       "ft12": "Urefu 12ft",
-      "quoteTitle": "Pata Anda kwa WhatsApp",
-      "quoteSubtitle": "Tutumie mahitaji yako. Tunajibu ndani ya dakika 30 wakati wa saa za biashara.",
+      "quoteTitle": "Anza Oda kwa WhatsApp",
+      "quoteSubtitle": "Ongeza mahitaji yako ya mbao kwenye oda. Tunathibitisha bei na upatikanaji ndani ya dakika 30 wakati wa saa za biashara.",
       "locationsTitle": "Tunawasambazia Zanzibar Zima",
       "whyChoose": "Kwa Nini Zanzibar Inaaminika Mbao Zetu",
       "ft1": "High Quality Treated Timber",
@@ -110,7 +110,7 @@
       "readyToDiscuss": "Tayari kuzungumza mahitaji yako ya mbao? Wasiliana kwa anda ya bure na ushauri.",
       "businessHours": "Saa za Biashara",
       "hours": "Jumatatu - Jumasatu: 8:00 AM - 5:00 PM<br />Jumapili: Imefunga",
-      "requestQuote": "Omba Anda"
+      "requestQuote": "Anza Oda"
     },
     "delivery": {
       "title": "Utoaji Zanzibar Zima",
@@ -253,7 +253,7 @@
     "hotel3": "Hoteli za boutique Paje",
     "hotel4": "Mali rasmi za heritage Stone Town",
     "hotel5": "Hoteli za pwani Kiwengwa",
-    "cta": "Pata Anda ya Hoteli"
+    "cta": "Anza Oda ya Hoteli"
   },
   "villaSupply": {
     "title": "Usambazaji Villa",
@@ -264,7 +264,7 @@
     "service3": "Mbao wa decking na flooring",
     "service4": "Vifaa vya msingi",
     "service5": "Mbao wa landscape",
-    "cta": "Pata Anda ya Villa"
+    "cta": "Anza Oda ya Villa"
   },
   "governmentSupply": {
     "title": "Usambazaji Serikali",
@@ -275,7 +275,7 @@
     "service3": "Maendeleo ya miundombinu",
     "service4": "Miradi ya mtaa",
     "service5": "Huduma za usambazaji kubwa",
-    "cta": "Pata Anda ya Serikali"
+    "cta": "Anza Oda ya Serikali"
   },
   "locations": {
     "title": "Maeneo ya Utoaji",
