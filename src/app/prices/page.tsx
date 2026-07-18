@@ -8,6 +8,7 @@ import { PRODUCT_VARIANTS, formatTZS, sizeToSlug, formatVariantLabel, formatHard
 import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 import Image from 'next/image'
+import CatalogueFilters from '@/components/CatalogueFilters'
 
 export const metadata = generateSEOMetadata(
   'Marine Board, Plywood, Wood Poles & Timber Prices in Zanzibar - Updated 2026',
@@ -67,7 +68,7 @@ function PriceTable({ length, title }: { length: string; title: string }) {
           </thead>
           <tbody>
             {variants.map((v) => (
-              <tr key={v.sku} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
+              <tr key={v.sku} data-catalog-product={`${formatVariantLabel(v)} treated softwood pine ${v.dimensions}`} data-price={v.price} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
                 <td className="py-3 px-3 font-semibold text-sm">
                   <Link href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`} className="text-primary-600 hover:underline">
                     {formatVariantLabel(v)}
@@ -111,6 +112,8 @@ export default function Prices() {
               <PriceNotice />
             </div>
 
+            <CatalogueFilters />
+
             <nav aria-label="Product categories" className="max-w-5xl mx-auto mb-10 flex flex-wrap justify-center gap-2">
               {[
                 ['treated-softwood', 'Treated Softwood'], ['hardwood', 'Hardwood'], ['wood-poles', 'Wood Poles'],
@@ -118,7 +121,7 @@ export default function Prices() {
               ].map(([id, label]) => <a key={id} href={`#${id}`} className="rounded-full border border-primary-200 bg-primary-50 px-4 py-2 text-sm font-semibold text-primary-700 hover:bg-primary-100 dark:border-primary-800 dark:bg-primary-900/20 dark:text-primary-300">{label}</a>)}
             </nav>
 
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto" data-catalog-category="treated-softwood">
               <CategoryHeader
                 id="treated-softwood"
                 title="Treated Softwood (Pine)"
@@ -131,7 +134,7 @@ export default function Prices() {
               <PriceTable length="12ft" title="12ft Timber Prices in Zanzibar" />
             </div>
 
-            <div className="max-w-5xl mx-auto mt-12">
+            <div className="max-w-5xl mx-auto mt-12" data-catalog-category="hardwood">
               <CategoryHeader
                 id="hardwood"
                 title="Hardwood — Mninga, Mvule & Mkongo"
@@ -150,7 +153,7 @@ export default function Prices() {
                 <table className="w-full border-collapse">
                   <thead><tr className="border-b-2 border-primary-600"><th className="text-left py-3 px-3 text-sm">Available Species</th><th className="text-left py-3 px-3 text-sm">Full Dimensions</th><th className="text-right py-3 px-3 text-sm">Shared Price (TZS)</th><th className="text-center py-3 px-3 text-sm">Order</th></tr></thead>
                   <tbody>{HARDWOOD_PRODUCTS[0].variants.map(variant => (
-                    <tr key={variant.sku} className="border-b border-gray-200 dark:border-gray-700">
+                    <tr key={variant.sku} data-catalog-product={`Mninga Mvule Mkongo hardwood ${formatHardwoodSize(variant.size)}`} data-price={variant.sellingPrice} className="border-b border-gray-200 dark:border-gray-700">
                       <td className="py-3 px-3 font-semibold text-sm">Mninga · Mvule · Mkongo</td>
                       <td className="py-3 px-3 text-sm">{formatHardwoodSize(variant.size)}</td>
                       <td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(variant.sellingPrice)}</td>
@@ -161,7 +164,7 @@ export default function Prices() {
               </div>
             </div>
 
-            <div className="max-w-5xl mx-auto mt-12">
+            <div className="max-w-5xl mx-auto mt-12" data-catalog-category="wood-poles">
               <CategoryHeader
                 id="wood-poles"
                 title="Wood Poles (Mitiki / Mirunda)"
@@ -171,10 +174,10 @@ export default function Prices() {
                 uses={['Building and veranda posts', 'Fencing and farm structures', 'Pergolas and shade structures', 'Landscape and resort construction']}
               />
               <h2 className="text-xl md:text-2xl font-bold mb-4">Wood Pole Prices in Zanzibar</h2>
-              <div className="overflow-x-auto"><table className="w-full border-collapse"><thead><tr className="border-b-2 border-primary-600"><th className="text-left py-3 px-3 text-sm">Product</th><th className="text-left py-3 px-3 text-sm">Full Dimensions</th><th className="text-right py-3 px-3 text-sm">Price (TZS)</th><th className="text-center py-3 px-3 text-sm">Order</th></tr></thead><tbody><tr className="border-b border-gray-200 dark:border-gray-700"><td className="py-3 px-3 font-semibold text-sm"><Link href="/treated-wood-poles" className="text-primary-600 hover:underline">Wood Poles</Link></td><td className="py-3 px-3 text-sm">2–6&quot; diameter x 18 feet</td><td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(PRODUCT_VARIANTS.find(v => v.size === 'Wood Poles')?.price || 11500)}</td><td className="py-3 px-3 text-center"><a href="https://wa.me/255716002790?text=Hello%20Zanzibaba%20Timber%2C%20I%20would%20like%20to%20order%20wood%20poles" target="_blank" rel="noopener noreferrer" className="text-green-600 text-xs font-semibold">Add to Order</a></td></tr></tbody></table></div>
+              <div className="overflow-x-auto"><table className="w-full border-collapse"><thead><tr className="border-b-2 border-primary-600"><th className="text-left py-3 px-3 text-sm">Product</th><th className="text-left py-3 px-3 text-sm">Full Dimensions</th><th className="text-right py-3 px-3 text-sm">Price (TZS)</th><th className="text-center py-3 px-3 text-sm">Order</th></tr></thead><tbody><tr data-catalog-product="wood poles mitiki mirunda 2 3 4 5 6 inch 18 feet" data-price="11500" className="border-b border-gray-200 dark:border-gray-700"><td className="py-3 px-3 font-semibold text-sm"><Link href="/treated-wood-poles" className="text-primary-600 hover:underline">Wood Poles</Link></td><td className="py-3 px-3 text-sm">2–6&quot; diameter x 18 feet</td><td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(PRODUCT_VARIANTS.find(v => v.size === 'Wood Poles')?.price || 11500)}</td><td className="py-3 px-3 text-center"><a href="https://wa.me/255716002790?text=Hello%20Zanzibaba%20Timber%2C%20I%20would%20like%20to%20order%20wood%20poles" target="_blank" rel="noopener noreferrer" className="text-green-600 text-xs font-semibold">Add to Order</a></td></tr></tbody></table></div>
             </div>
 
-            <div className="max-w-5xl mx-auto mt-12">
+            <div className="max-w-5xl mx-auto mt-12" data-catalog-category="marine-board">
               <CategoryHeader
                 id="marine-board"
                 title="Marine Board"
@@ -197,7 +200,7 @@ export default function Prices() {
                   </thead>
                   <tbody>
                     {SHEET_PRODUCTS.filter(p => p.categoryId === 'marine-board').map((product) => (
-                      <tr key={product.id} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
+                      <tr key={product.id} data-catalog-product={`${product.name} marine board ${product.thickness} ${product.sheetSize}`} data-price={product.finalPrice} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
                         <td className="py-3 px-3 font-semibold text-sm">
                           <Link href={`/marine-board/${product.slug}`} className="text-primary-600 hover:underline">{product.name}</Link>
                         </td>
@@ -222,7 +225,7 @@ export default function Prices() {
               <p className="text-xs text-gray-500 mt-2">Prices Excluding VAT • Free Delivery Across Zanzibar</p>
             </div>
 
-            <div className="max-w-5xl mx-auto mt-12">
+            <div className="max-w-5xl mx-auto mt-12" data-catalog-category="plywood">
               <CategoryHeader
                 id="plywood"
                 title="Construction Plywood"
@@ -245,7 +248,7 @@ export default function Prices() {
                   </thead>
                   <tbody>
                     {SHEET_PRODUCTS.filter(p => p.categoryId === 'plywood').map((product) => (
-                      <tr key={product.id} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
+                      <tr key={product.id} data-catalog-product={`${product.name} plywood ${product.thickness} ${product.sheetSize}`} data-price={product.finalPrice} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
                         <td className="py-3 px-3 font-semibold text-sm">
                           <Link href={`/plywood/${product.slug}`} className="text-primary-600 hover:underline">{product.name}</Link>
                         </td>
