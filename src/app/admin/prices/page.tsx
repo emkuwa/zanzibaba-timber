@@ -7,23 +7,23 @@ import AdminLogoutButton from '@/components/admin/AdminLogoutButton'
 
 const INITIAL_PRICES = {
   '18ft': {
-    'Mirunda': { wholesale: 8000, margin: 0, selling: 8000, stock: 'In Stock' },
-    '2x2': { wholesale: 8000, margin: 0, selling: 8000, stock: 'In Stock' },
-    '2x3': { wholesale: 10000, margin: 0, selling: 10000, stock: 'In Stock' },
-    '2x4': { wholesale: 14000, margin: 0, selling: 14000, stock: 'In Stock' },
-    '2x6': { wholesale: 24000, margin: 0, selling: 24000, stock: 'In Stock' },
-    '1x6': { wholesale: 15000, margin: 0, selling: 15000, stock: 'In Stock' },
-    '1x8': { wholesale: 22000, margin: 0, selling: 22000, stock: 'In Stock' },
-    '1x10': { wholesale: 35000, margin: 0, selling: 35000, stock: 'In Stock' },
+    '2x2': { wholesale: 8500, margin: 3000, selling: 11500, stock: 'In Stock' },
+    '2x3': { wholesale: 15000, margin: 3000, selling: 18000, stock: 'In Stock' },
+    '2x4': { wholesale: 16500, margin: 3000, selling: 19500, stock: 'In Stock' },
+    '2x6': { wholesale: 28000, margin: 3000, selling: 31000, stock: 'In Stock' },
+    '2x8': { wholesale: 45000, margin: 3000, selling: 48000, stock: 'In Stock' },
+    '1x4': { wholesale: 6000, margin: 3000, selling: 9000, stock: 'In Stock' },
+    '1x6': { wholesale: 15000, margin: 3000, selling: 18000, stock: 'In Stock' },
+    '1x8': { wholesale: 25000, margin: 3000, selling: 28000, stock: 'In Stock' },
+    '1x10': { wholesale: 38000, margin: 3000, selling: 41000, stock: 'In Stock' },
+    'Wood Poles': { wholesale: 8500, margin: 3000, selling: 11500, stock: 'In Stock' },
   },
   '12ft': {
-    '2x2': { wholesale: 5000, margin: 0, selling: 5000, stock: 'In Stock' },
-    '2x3': { wholesale: 7000, margin: 0, selling: 7000, stock: 'In Stock' },
-    '2x4': { wholesale: 10000, margin: 0, selling: 10000, stock: 'In Stock' },
-    '2x6': { wholesale: 18000, margin: 0, selling: 18000, stock: 'In Stock' },
-    '1x6': { wholesale: 8000, margin: 0, selling: 8000, stock: 'In Stock' },
-    '1x8': { wholesale: 11000, margin: 0, selling: 11000, stock: 'In Stock' },
-    '1x10': { wholesale: 18000, margin: 0, selling: 18000, stock: 'In Stock' },
+    '2x2': { wholesale: 5000, margin: 3000, selling: 8000, stock: 'In Stock' },
+    '2x4': { wholesale: 8500, margin: 3000, selling: 11500, stock: 'In Stock' },
+    '1x6': { wholesale: 10000, margin: 3000, selling: 13000, stock: 'In Stock' },
+    '1x8': { wholesale: 13000, margin: 3000, selling: 16000, stock: 'In Stock' },
+    '1x10': { wholesale: 22000, margin: 3000, selling: 25000, stock: 'In Stock' },
   },
 }
 
@@ -94,7 +94,7 @@ export default function AdminPrices() {
                   placeholder="Wholesale"
                 />
                 <span className="text-center text-gray-500">→</span>
-                <span className="font-bold text-primary-600">{data.selling.toLocaleString()} TZS</span>
+                <span className="font-bold text-primary-600">{data.selling.toLocaleString()}</span>
               </div>
             ))}
           </div>
@@ -114,7 +114,7 @@ export default function AdminPrices() {
                   placeholder="Wholesale"
                 />
                 <span className="text-center text-gray-500">→</span>
-                <span className="font-bold text-primary-600">{data.selling.toLocaleString()} TZS</span>
+                <span className="font-bold text-primary-600">{data.selling.toLocaleString()}</span>
               </div>
             ))}
           </div>

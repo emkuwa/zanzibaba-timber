@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -6,12 +6,15 @@ import { BilingualProvider } from '@/lib/bilingual'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const baseUrl = 'https://timber.zanzibaba.com'
+const ogImage = `${baseUrl}/images/gallery/zanzibaba-timber-hero-banner.jpg`
+
 export const metadata: Metadata = {
   title: {
-    default: 'Zanzibaba Timber - Premium Treated Pine Timber Supplier in Zanzibar',
-    template: '%s | Zanzibaba Timber - Premium Pine Timber Supplier Zanzibar',
+    default: 'Timber, Marine Board & Plywood Supplier | Zanzibaba Zanzibar',
+    template: '%s | Timber, Marine Board & Plywood | Zanzibaba',
   },
-  description: 'Zanzibaba Timber: Zanzibar\'s leading supplier of high quality treated pine timber, poles & construction timber. Serving Paje, Nungwi, Stone Town & all Zanzibar. Cash on delivery, island-wide delivery. Quality timber for hotels, villas, residential & government projects.',
+    description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles. Serving Paje, Nungwi, Stone Town and all Zanzibar. Cash on delivery, mobile money & bank transfer accepted. FREE island-wide delivery.',
   keywords: [
     'timber supplier zanzibar',
     'pine timber zanzibar',
@@ -21,8 +24,14 @@ export const metadata: Metadata = {
     'timber prices zanzibar',
     'timber delivery zanzibar',
     'treated poles zanzibar',
-    'mirunda zanzibar',
+    'treated wood poles zanzibar',
     'building materials zanzibar',
+    'marine board zanzibar',
+    'marine board price zanzibar',
+    'plywood zanzibar',
+    'plywood price zanzibar',
+    'construction plywood zanzibar',
+    'concrete formwork marine board',
     'timber nungwi',
     'timber paje',
     'timber stone town',
@@ -33,16 +42,44 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: baseUrl,
+    languages: {
+      'en': baseUrl,
+      'sw': `${baseUrl}/sw`,
+    },
+  },
+  openGraph: {
+    title: 'Timber, Marine Board & Plywood Supplier | Zanzibaba Zanzibar',
+  description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles. Serving Paje, Nungwi, Stone Town and all Zanzibar. Cash on delivery, mobile money & bank transfer accepted. FREE island-wide delivery.',
+    url: baseUrl,
+    siteName: 'Zanzibaba Timber',
+    images: [{ url: ogImage, width: 1200, height: 630, alt: 'Zanzibaba Timber — Premium Treated Pine Supplier in Zanzibar' }],
+    locale: 'en_TZ',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Timber, Marine Board & Plywood Supplier | Zanzibaba Zanzibar',
+    description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles.',
+    images: [ogImage],
+  },
+  // Domain-level property verified via DNS TXT record (sc-domain:timber.zanzibaba.com)
 }
+
+export const viewport: Viewport = { themeColor: '#0052cc' }
+
+import { headers } from 'next/headers'
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID
+  const headersList = headers()
+  const lang = headersList.get('x-path-lang') || 'en'
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=G-BD261DFDL6`}
@@ -56,17 +93,48 @@ export default function RootLayout({
             gtag('config', 'G-BD261DFDL6');
           `}
         </Script>
-        {clarityProjectId && <Script id="clarity-init" strategy="afterInteractive">
+        <Script id="clarity-init" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", ${JSON.stringify(clarityProjectId)});
+            })(window, document, "clarity", "script", "xit00v4eql");
           `}
-        </Script>}
+        </Script>
+        <Script id="ga4-conversions" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            document.addEventListener('click', function(e) {
+              var el = e.target.closest('a[href^="tel:"]');
+              if (el) {
+                gtag('event', 'phone_call', {
+                  event_category: 'conversion',
+                  event_label: el.href
+                });
+              }
+            });
+
+            document.addEventListener('click', function(e) {
+              var el = e.target.closest('a[href*="wa.me"]');
+              if (el) {
+                gtag('event', 'whatsapp_click', {
+                  event_category: 'conversion',
+                  event_label: 'whatsapp'
+                });
+              }
+            });
+          `}
+        </Script>
       </head>
       <body className={inter.className}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if(location.pathname.startsWith('/sw')){document.documentElement.lang='sw'}`
+          }}
+        />
         <BilingualProvider>
           {children}
         </BilingualProvider>

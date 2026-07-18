@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
 import { BLOG_POSTS, TIMBER_SIZES, INDUSTRIES, generateWhatsAppLink } from '@/lib/data'
 import Link from 'next/link'
@@ -19,7 +20,7 @@ const faq = [
   },
   {
     question: 'Do you deliver timber to villa construction sites?',
-    answer: 'Yes, we deliver directly to villa construction sites across Zanzibar including Paje, Nungwi, Kendwa, Matemwe, and Jambiani. Cash on delivery is available. Typical delivery is within 24-48 hours for stock items.',
+    answer: 'Yes, we deliver directly to villa construction sites across Zanzibar including Paje, Nungwi, Kendwa, Matemwe, and Jambiani. Cash on delivery, mobile money, or bank transfer available. Typical delivery is within 24-48 hours for stock items.',
   },
   {
     question: 'Can you supply timber for traditional Swahili-style villas?',
@@ -58,11 +59,12 @@ export default function VillaSupply() {
                   Luxury villas across Zanzibar trust Zanzibaba Timber for their construction needs. From <strong>beachfront developments in Paje</strong> to <strong>high-end residences in Kendwa</strong>, we supply premium treated pine timber that combines structural integrity with the natural aesthetic the island is famous for.
                 </p>
 
-                <img
+                <ImageWithFallback
                   src="/images/gallery/villa-construction-zanzibar.jpg"
                   alt="Luxury villa construction using Zanzibaba Timber in Zanzibar"
+                  aspectRatio="16/9"
                   className="w-full rounded-xl shadow-lg mb-8"
-                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 66vw"
                 />
 
                 <h2 className="text-2xl font-bold mb-4">Premium Timber for Luxury Villa Developments</h2>
@@ -95,7 +97,7 @@ export default function VillaSupply() {
                   {[
                     { title: 'Custom Timber Supply', desc: 'Sizes and lengths tailored to your villa plans. We stock all standard sizes and accommodate custom orders.' },
                     { title: 'Traditional Joinery Timber', desc: 'Specialist timber for Swahili-style joinery, carved doors, window frames, and decorative elements.' },
-                    { title: 'Decking & Flooring', desc: 'High-quality 1x8 and 1x10 treated pine for villa decks, verandas, and interior flooring applications.' },
+                    { title: 'Decking & Flooring', desc: 'High-quality 1x8 and 1x10 Mninga/Hardwood for villa decks, verandas, and interior flooring applications.' },
                     { title: 'Roofing Timber', desc: '2x4 and 2x6 for roof framing, trusses, and pergolas. Treated to withstand Zanzibar sun and rain.' },
                     { title: 'Landscaping Timber', desc: 'Timber for garden structures, boundary fencing, pergolas, and outdoor living spaces around your villa.' },
                     { title: 'Island-Wide Delivery', desc: 'Direct delivery to your villa site with cash on payment. Fast 24-48 hour service for stock items.' },

@@ -3,27 +3,35 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import Image from 'next/image'
 import { generateSEOMetadata, getFAQSchema, getItemListSchema, getBreadcrumbSchema } from '@/lib/seo'
-import { PRODUCT_VARIANTS, TIMBER_SIZES, LOCATIONS, HOMEPAGE_FAQ, generateWhatsAppLink } from '@/lib/data'
+import { PRODUCT_VARIANTS, TIMBER_SIZES, WOOD_TYPE_GROUPS, LOCATIONS, HOMEPAGE_FAQ, generateWhatsAppLink, sizeToSlug, formatTZS, formatVariantLabel, formatSizeName } from '@/lib/data'
+import PriceNotice from '@/components/PriceNotice'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Treated Pine Timber Sizes Zanzibar | 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6 - 12ft & 18ft',
-  'Complete range of treated pine timber sizes in Zanzibar. 1x6, 1x8, 1x10 in 12ft. 2x2, 2x3, 2x4, 2x6 in 12ft & 18ft. High quality construction timber with island-wide delivery.',
+  'Softwood Timber Sizes Zanzibar | Treated Pine & Teak Wood Poles',
+  'Complete range of timber sizes in Zanzibar. Treated pine: 2x2, 2x3, 2x4, 2x6, 2x8. Teak wood poles (mitiki) 2-6 inch. Free delivery across Zanzibar.',
   'en',
-  '/timber-sizes'
+  '/timber-sizes',
+  undefined,
+  [
+    'timber zanzibar', 'treated pine', 'teak poles', 'mitiki',
+    'construction timber', '2x4 timber', '2x6 timber',
+    'mbao za pine', 'mbao za ujenzi', 'mbao za dawa',
+  ]
 )
 
 export default function TimberSizes() {
-  const ft18Variants = PRODUCT_VARIANTS.filter(v => v.length === '18ft')
-  const ft12Variants = PRODUCT_VARIANTS.filter(v => v.length === '12ft')
-
   const breadcrumb = getBreadcrumbSchema([
     { name: 'Home', url: '/' },
-    { name: 'Softwood Timber', url: '/timber-sizes' },
+    { name: 'Softwood', url: '/timber-sizes' },
   ])
 
   const itemList = getItemListSchema(
-    TIMBER_SIZES.map(s => ({ name: `${s.name} Pine Timber (${s.dimensions})`, url: `/timber-sizes/${s.id}` })),
+    TIMBER_SIZES.map(s => {
+      const group = WOOD_TYPE_GROUPS.find(g => g.woodType === s.woodType)
+      const woodLabel = group?.name || 'Timber'
+      return { name: `${s.name} ${woodLabel} (${s.dimensions})`, url: `/timber-sizes/${s.id}` }
+    }),
     'Product'
   )
 
@@ -36,13 +44,13 @@ export default function TimberSizes() {
             <nav className="mb-4 md:mb-6 text-sm" aria-label="Breadcrumb">
               <Link href="/" className="text-primary-600 hover:underline">Home</Link>
               <span className="mx-2 text-gray-400">/</span>
-              <span className="text-gray-500">Softwood Timber</span>
+              <span className="text-gray-500">Softwood</span>
             </nav>
 
             <div className="relative w-full h-48 sm:h-64 md:h-80 rounded-xl overflow-hidden mb-8 md:mb-12 shadow-lg">
               <Image
                 src="/images/gallery/timber-sizes-display.jpg"
-                alt="Complete display of treated pine timber sizes at Zanzibaba Timber yard including 2x4, 2x6, 1x6, and 1x8 lumber"
+                alt="Complete display of timber sizes at Zanzibaba Timber yard — treated pine and teak poles"
                 fill
                 className="object-cover"
                 priority
@@ -53,104 +61,89 @@ export default function TimberSizes() {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
                   Softwood Timber <span className="text-primary-300">Zanzibar</span>
                 </h1>
-                <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">1x6, 1x8, 1x10 in 12ft • 2x2, 2x3, 2x4, 2x6 in 12ft &amp; 18ft</p>
+                <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">Treated Pine • Teak Wood Poles</p>
               </div>
             </div>
 
-            <p className="text-center text-gray-600 dark:text-gray-300 mb-8 md:mb-12 max-w-3xl mx-auto text-sm md:text-base px-2">
-              Our softwood range consists of treated pine boards and Mirunda treated poles. Hardwood species are listed separately under the Hardwood category.
+            <p className="text-center text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto text-sm md:text-base px-2">
+              Premium timber for every project. Treated pine for framing. Teak poles for construction. Free delivery across Zanzibar.
             </p>
+            <p className="text-center mb-8"><Link href="/hardwood" className="text-primary-600 font-semibold hover:underline">Looking for Mninga, Mvule or Mkongo? Browse Hardwood →</Link></p>
 
-            <div className="mb-8 md:mb-12">
-              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">Softwood — 18ft Sizes</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 md:gap-4">
-                {ft18Variants.map((v) => (
-                  <Link
-                    key={v.sku}
-                    href={`/timber-sizes/${v.size === 'Mirunda' ? 'mirunda' : v.size}?length=${v.length}`}
-                    className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all hover:border-primary-300 bg-white dark:bg-gray-800"
-                  >
-                    <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{v.size}</div>
-                    <div className="text-xs md:text-sm text-gray-500 mb-1">18ft</div>
-                    <div className="text-xs text-gray-400">{v.dimensions}</div>
-                  </Link>
-                ))}
-              </div>
+            <div className="max-w-3xl mx-auto mb-8 md:mb-10 px-2">
+              <PriceNotice />
             </div>
 
-            <div className="mb-8 md:mb-12">
-              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">Softwood — 12ft Sizes</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-4">
-                {ft12Variants.map((v) => (
-                  <Link
-                    key={v.sku}
-                    href={`/timber-sizes/${v.size}?length=${v.length}`}
-                    className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all hover:border-primary-300 bg-white dark:bg-gray-800"
-                  >
-                    <div className="text-lg md:text-2xl font-bold text-primary-600 mb-1">{v.size}</div>
-                    <div className="text-xs md:text-sm text-gray-500 mb-1">12ft</div>
-                    <div className="text-xs text-gray-400">{v.dimensions}</div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            {/* Wood Type Groups with Header Images */}
+            {WOOD_TYPE_GROUPS.map((group) => {
+              const groupSizes = TIMBER_SIZES.filter(s => s.woodType === group.woodType)
+              const groupVariants = PRODUCT_VARIANTS.filter(v => {
+                const size = TIMBER_SIZES.find(s => s.id === sizeToSlug(v.size))
+                return size?.woodType === group.woodType
+              })
 
-            <div className="mb-8 md:mb-12">
-              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">Softwood Specifications & Uses</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-                {TIMBER_SIZES.map((s) => (
-                  <Link
-                    key={s.id}
-                    href={`/timber-sizes/${s.id === 'Mirunda' ? 'mirunda' : s.id}`}
-                    className="p-3 md:p-5 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg transition-all bg-white dark:bg-gray-800 flex flex-col h-full"
-                  >
-                    <h3 className="font-bold text-base md:text-lg text-primary-600">{s.name}</h3>
-                    <p className="text-xs md:text-sm text-gray-500 mb-1">{s.dimensions}</p>
-                    <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 flex-1">{s.description}</p>
-                  </Link>
-                ))}
-              </div>
-            </div>
+              return (
+                <div key={group.id} className="mb-10 md:mb-16">
+                  {/* Text above image */}
+                  <div className="mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">{group.name}</h2>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base max-w-3xl">{group.description}</p>
+                  </div>
 
-            <div className="mb-8 md:mb-12 bg-primary-50 dark:bg-gray-800 rounded-xl overflow-hidden">
-              <div className="flex flex-col md:flex-row">
-                <div className="p-4 md:p-8 flex flex-col justify-center">
-                  <h2 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Need a Different Size?</h2>
-                  <p className="text-gray-600 dark:text-gray-300 mb-3 md:mb-4 text-sm md:text-base">
-                    Special Sizes Available. Contact us for custom orders and non-standard dimensions.
-                  </p>
-                  <a
-                    href={generateWhatsAppLink('Hello Zanzibaba Timber, I need a custom timber size inquiry. Please advise on availability.')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-primary-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-primary-700 text-center text-sm md:text-base"
-                  >
-                    Request Custom Size
-                  </a>
+                  {/* Header Image */}
+                  <div className="w-full rounded-xl overflow-hidden mb-6 shadow-lg bg-gray-100 dark:bg-gray-800">
+                    <Image
+                      src={group.image}
+                      alt={group.name}
+                      width={1600}
+                      height={600}
+                      className="w-full h-auto"
+                    />
+                  </div>
+
+                  {/* Group Products Grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
+                    {groupVariants.map((v) => (
+                      <Link
+                        key={v.sku}
+                        href={`/timber-sizes/${sizeToSlug(v.size)}?length=${v.length}`}
+                        className="p-3 md:p-4 border border-gray-200 dark:border-gray-700 rounded-lg text-center hover:shadow-lg transition-all hover:border-primary-300 bg-white dark:bg-gray-800"
+                      >
+                        <div className="text-base md:text-lg font-bold text-primary-600 mb-1">{formatVariantLabel(v)}</div>
+                        <div className="text-xs text-gray-400 mb-1">{v.dimensions}</div>
+                        {v.price && <div className="text-xs font-semibold text-green-600 mt-1">{formatTZS(v.price)}</div>}
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* View All Link */}
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {groupSizes.map(s => (
+                      <Link
+                        key={s.id}
+                        href={`/timber-sizes/${s.id}`}
+                        className="text-xs md:text-sm text-primary-600 hover:underline"
+                      >
+                        {formatSizeName(s.name)} →
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-<div className="relative h-40 sm:h-48 md:h-auto md:flex-1">
-                   <Image
-                     src="/images/gallery/contractor-inspecting-timber.jpg"
-                     alt="Contractor inspecting quality of treated pine timber at Zanzibaba yard before purchase"
-                     fill
-                     className="object-cover"
-                     sizes="(max-width: 768px) 100vw, 50vw"
-                   />
-                 </div>
-              </div>
-            </div>
+              )
+            })}
 
+            {/* Delivery & CTA */}
             <div className="mb-8 md:mb-12 bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden">
               <div className="flex flex-col md:flex-row">
-<div className="relative h-40 sm:h-48 md:h-auto md:flex-1 order-2 md:order-1">
-                   <Image
-                     src="/images/gallery/timber-delivery-zanzibar.jpg"
-                     alt="Bulk timber delivery truck transporting treated pine across Zanzibar island from Kwa Ndevu yard"
-                     fill
-                     className="object-cover"
-                     sizes="(max-width: 768px) 100vw, 50vw"
-                   />
-                 </div>
+                <div className="relative h-40 sm:h-48 md:h-auto md:flex-1 order-2 md:order-1">
+                  <Image
+                    src="/images/gallery/timber-delivery-zanzibar.jpg"
+                    alt="Bulk timber delivery truck transporting timber across Zanzibar island from Kwa Ndevu yard"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
                 <div className="p-4 md:p-8 flex flex-col justify-center order-1 md:order-2">
                   <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">We Deliver Timber Across Zanzibar</h2>
                   <p className="text-gray-600 dark:text-gray-300 mb-3 md:mb-4 text-sm md:text-base">All timber sizes available with island-wide delivery. Cash on payment option available.</p>
@@ -169,6 +162,7 @@ export default function TimberSizes() {
               </div>
             </div>
 
+            {/* FAQs */}
             <div className="mt-6 md:mt-12">
               <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">FAQs About Timber Sizes in Zanzibar</h2>
               <div className="space-y-3 md:space-y-4">

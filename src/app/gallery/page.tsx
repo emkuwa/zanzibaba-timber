@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import { generateSEOMetadata } from '@/lib/seo'
 
 export const metadata = generateSEOMetadata(
@@ -32,12 +33,13 @@ export default function Gallery() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {images.map((img) => (
-                <img
+                <ImageWithFallback
                   key={img.id}
                   src={img.src}
                   alt={img.alt}
-                  className="aspect-square object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
-                  loading="lazy"
+                  aspectRatio="1/1"
+                  className="rounded-lg shadow-md hover:scale-105 transition-transform"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
                 />
               ))}
             </div>

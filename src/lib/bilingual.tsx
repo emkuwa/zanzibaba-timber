@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { usePathname } from 'next/navigation'
 import en from '../../locales/en.json'
 import sw from '../../locales/sw.json'
 
@@ -17,20 +18,18 @@ const BilingualContext = createContext<BilingualContextType | undefined>(undefin
 const translations: Record<Locale, any> = { en, sw }
 
 export function BilingualProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>('en')
+  const pathname = usePathname()
+  const [locale, setLocaleState] = useState<Locale>(
+    pathname?.startsWith('/sw') ? 'sw' : 'en'
+  )
 
   useEffect(() => {
-    const detectBrowserLocale = () => {
-      if (typeof window === 'undefined') return 'en'
-      const browserLang = navigator.language.toLowerCase()
-      return browserLang.startsWith('sw') ? 'sw' : 'en'
-    }
-
+    const pathLocale = pathname?.startsWith('/sw') ? 'sw' : 'en'
     const saved = localStorage.getItem('locale') as Locale | null
-    const initialLocale = saved || detectBrowserLocale()
+    const initialLocale = saved || pathLocale
     setLocaleState(initialLocale)
     document.documentElement.lang = initialLocale
-  }, [])
+  }, [pathname])
 
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale)

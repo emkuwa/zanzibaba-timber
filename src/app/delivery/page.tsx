@@ -1,13 +1,14 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
 import { TIMBER_SIZES, INDUSTRIES, LOCATIONS, BLOG_POSTS, generateWhatsAppLink } from '@/lib/data'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Timber Delivery Zanzibar - Island-Wide Service | Cash on Delivery | 24-48hr',
-  'Fast timber delivery across all Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu. Cash on delivery. Bulk loads. 24-48 hour service.',
+  'Timber Delivery Zanzibar - Island-Wide Service | Cash on Delivery, Mobile Money & Bank Transfer | 24-48hr',
+  'Fast timber, treated wood poles, marine board and plywood delivery across all Zanzibar locations including Paje, Nungwi, Kendwa, Stone Town, Jambiani, Matemwe, Kiwengwa, Fumba, Chukwani, Bububu. Cash on delivery, mobile money & bank transfer. Bulk loads welcome. 24-48 hour service. Order via WhatsApp.',
   'en',
   '/delivery'
 )
@@ -18,8 +19,8 @@ const faq = [
     answer: 'We offer 24-48 hour delivery for stock items across Zanzibar. Larger bulk orders may require additional processing time. Contact us to confirm availability and schedule your delivery.',
   },
   {
-    question: 'Do you offer cash on delivery for timber?',
-    answer: 'Yes, cash on delivery is available for all timber orders across Zanzibar. You only pay when your timber arrives at your site. We accept cash and mobile money payments.',
+    question: 'What payment options do you offer?',
+    answer: 'We accept cash on delivery, mobile money, and bank transfer payments. Pay via the method that suits you best — cash when your timber arrives, mobile money transfer, or direct bank deposit.',
   },
   {
     question: 'What areas of Zanzibar do you deliver to?',
@@ -69,14 +70,15 @@ export default function Delivery() {
               <div className="lg:col-span-2">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">Timber Delivery Across Zanzibar</h1>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                  Zanzibaba Timber offers <strong>fast, reliable timber delivery</strong> to every corner of Zanzibar. With <strong>cash on delivery</strong>, <strong>24-48 hour service</strong>, and a fleet capable of handling bulk loads, we make getting timber to your project site simple and hassle-free.
+                  Zanzibaba Timber offers <strong>fast, reliable timber delivery</strong> to every corner of Zanzibar. With <strong>flexible payment options</strong> (cash on delivery, mobile money, bank transfer), <strong>24-48 hour service</strong>, and a fleet capable of handling bulk loads, we make getting timber to your project site simple and hassle-free.
                 </p>
 
-                <img
+                <ImageWithFallback
                   src="/images/gallery/timber-delivery-zanzibar.jpg"
                   alt="Timber delivery truck delivering to a construction site in Zanzibar"
+                  aspectRatio="16/9"
                   className="w-full rounded-xl shadow-lg mb-8"
-                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 66vw"
                 />
 
                 <h2 className="text-2xl font-bold mb-4">Island-Wide Timber Delivery Service</h2>
@@ -102,7 +104,7 @@ export default function Delivery() {
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
                   {[
                     { title: 'Fast Delivery', desc: '24-48 hour delivery for stock items. We prioritize speed without compromising quality.' },
-                    { title: 'Cash on Delivery', desc: 'Pay when your timber arrives. No advance payment needed for standard orders.' },
+                    { title: 'Flexible Payment', desc: 'Pay via cash on delivery, mobile money, or bank transfer. Choose the option that works best for you.' },
                     { title: 'Island-Wide Coverage', desc: 'We deliver to all 11 locations across Zanzibar. From north to south, east to west.' },
                     { title: 'Bulk Loads', desc: 'Our fleet handles orders of any size. Full truckloads for major construction projects.' },
                     { title: 'Quality Inspection', desc: 'Inspect your timber before payment. We ensure every piece meets our quality standards.' },
@@ -199,19 +201,29 @@ export default function Delivery() {
               {/* Sidebar */}
               <aside className="space-y-6">
                 <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl">
-                  <h3 className="font-bold text-lg mb-4">Our Timber Sizes</h3>
+                  <h3 className="font-bold text-lg mb-4">Our Products</h3>
                   <div className="space-y-3">
-                    {TIMBER_SIZES.map((size) => (
-                      <Link
-                        key={size.id}
-                        href={`/timber-sizes/${size.id}`}
-                        className="block p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition-all"
-                      >
-                        <div className="font-semibold text-primary-600">{size.name}</div>
-                        <div className="text-sm text-gray-500">{size.dimensions}</div>
-                        <div className="text-xs text-gray-400 mt-1">{size.description}</div>
-                      </Link>
-                    ))}
+                    <Link
+                      href="/timber-sizes"
+                      className="block p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition-all"
+                    >
+                      <div className="font-semibold text-primary-600">Treated Pine Timber</div>
+                      <div className="text-sm text-gray-500">1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6</div>
+                    </Link>
+                    <Link
+                      href="/marine-board"
+                      className="block p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition-all"
+                    >
+                      <div className="font-semibold text-primary-600">Marine Board</div>
+                      <div className="text-sm text-gray-500">18mm & 12mm waterproof sheets</div>
+                    </Link>
+                    <Link
+                      href="/plywood"
+                      className="block p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition-all"
+                    >
+                      <div className="font-semibold text-primary-600">Plywood</div>
+                      <div className="text-sm text-gray-500">3mm to 18mm construction sheets</div>
+                    </Link>
                   </div>
                 </div>
 

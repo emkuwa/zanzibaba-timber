@@ -12,11 +12,15 @@
     "delivery": "Delivery",
     "gallery": "Gallery",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "timberZanzibar": "Timber Zanzibar",
+    "locations": "Delivery Locations",
+    "mirunda": "Mirunda (Wood Poles)",
+    "treatedWoodPoles": "Treated Wood Poles"
   },
   "hero": {
-    "title": "Treated Pine Timber Supplier in Zanzibar",
-    "subtitle": "High Quality Treated Timber & Poles for construction — delivered across Zanzibar",
+    "title": "Premium Timber, Marine Board & Plywood Supplier in Zanzibar",
+    "subtitle": "Zanzibaba Timber is Zanzibar's leading supplier of premium treated pine timber, marine board, plywood, construction timber and treated poles. Serving Paje, Nungwi, Stone Town and all Zanzibar with cash on delivery and island-wide delivery.",
     "cta": "Start Your Order",
     "whatsappQuote": "Order on WhatsApp",
     "callNow": "Call +255 716 002 790",
@@ -33,7 +37,7 @@
     "sendToWhatsApp": "Add to Order via WhatsApp"
   },
   "footer": {
-    "description": "Leading pine timber supplier in Zanzibar serving homeowners, contractors, hotels, resorts, villas, and government projects.",
+    "description": "Leading supplier of timber, marine board and plywood in Zanzibar. Serving homeowners, contractors, hotels, resorts, villas, and government projects.",
     "contact": "Contact Us",
     "quickLinks": "Quick Links",
     "followUs": "Follow Us",
@@ -41,12 +45,12 @@
   },
   "pages": {
     "home": {
-      "sizesTitle": "Softwood: Treated Pine & Poles",
-      "sizesSubtitle": "Treated softwood, ready for construction",
+      "sizesTitle": "Marine Board, Plywood & Pine Timber Prices",
+      "sizesSubtitle": "Current prices for timber, marine board and plywood — kiln-dried and construction-grade",
       "ft18": "18ft Lengths Available",
       "ft12": "12ft Lengths Available",
-      "quoteTitle": "Start Your Order via WhatsApp",
-      "quoteSubtitle": "Add your timber requirements to an order. We confirm prices and availability within 30 minutes during business hours.",
+      "quoteTitle": "Get Marine Board, Plywood & Timber Quotes",
+      "quoteSubtitle": "Send your requirements. We respond within 30 minutes during business hours.",
       "locationsTitle": "We Supply Across Zanzibar",
       "whyChoose": "Why Zanzibar Trusts Us for Timber",
       "ft1": "High Quality Treated Timber",
@@ -113,7 +117,7 @@
       "readyToDiscuss": "Ready to discuss your timber needs? Contact us for a free quote and consultation.",
       "businessHours": "Business Hours",
       "hours": "Monday - Saturday: 8:00 AM - 5:00 PM<br />Sunday: Closed",
-      "requestQuote": "Start Order"
+      "requestQuote": "Request Quote"
     },
     "delivery": {
       "title": "Delivery Across Zanzibar",

@@ -1,13 +1,14 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
 import { BLOG_POSTS, TIMBER_SIZES, INDUSTRIES, generateWhatsAppLink } from '@/lib/data'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Wholesale Pine Timber Zanzibar - Bulk Pricing from 500m & 1000m+',
-  'Wholesale treated pine timber in Zanzibar with volume discounts. 500m+ = 15% off. 1000m+ = 20% off. Custom sizes available. Dedicated account manager, scheduled delivery, and priority service for bulk buyers.',
+  'Wholesale Pine Timber, Poles, Marine Board & Plywood Zanzibar - Bulk Pricing',
+  'Wholesale treated pine timber, wood poles (mirunda), marine board and plywood in Zanzibar with volume discounts. 500m+ = 15% off. 1000m+ = 20% off. Custom sizes available. Dedicated account manager, scheduled delivery, and priority service for bulk buyers. Free delivery Zanzibar.',
   'en',
   '/wholesale'
 )
@@ -23,7 +24,7 @@ const faq = [
   },
   {
     question: 'Do you offer scheduled delivery for wholesale buyers?',
-    answer: 'Yes, wholesale buyers receive priority scheduled delivery. We work with your project timeline to ensure timber arrives when you need it. Cash on delivery is available for all wholesale orders.',
+    answer: 'Yes, wholesale buyers receive priority scheduled delivery. We work with your project timeline to ensure timber arrives when you need it. Cash on delivery, mobile money, or bank transfer available for all wholesale orders.',
   },
   {
     question: 'What is the minimum order for wholesale pricing?',
@@ -58,11 +59,12 @@ export default function Wholesale() {
                   Zanzibaba Timber offers the most competitive <strong>wholesale pricing</strong> for treated pine timber in Zanzibar. Whether you are a contractor building multiple projects, a retailer stocking your yard, or a developer managing large-scale construction, our tiered wholesale discounts help you maximize your budget.
                 </p>
 
-                <img
+                <ImageWithFallback
                   src="/images/gallery/timber-loading-truck.jpg"
                   alt="Wholesale timber loading truck at Zanzibaba Timber yard"
+                  aspectRatio="16/9"
                   className="w-full rounded-xl shadow-lg mb-8"
-                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 66vw"
                 />
 
                 <h2 className="text-2xl font-bold mb-4">Bulk Pricing Tiers</h2>
@@ -103,7 +105,7 @@ export default function Wholesale() {
 
                 <h2 className="text-2xl font-bold mb-4">Why Buy Wholesale from Zanzibaba Timber</h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Contractors, retailers, and developers across Zanzibar choose Zanzibaba Timber for wholesale supply because we offer <strong>genuine volume discounts</strong>, <strong>consistent stock availability</strong>, and <strong>reliable delivery logistics</strong>. Our treated pine timber is sourced from sustainable plantations and processed to meet international quality standards. With our Kwa Ndevu yard serving as Zanzibar&apos;s central timber hub, we can fulfill large orders quickly and efficiently.
+                  Contractors, retailers, and developers across Zanzibar choose Zanzibaba Timber for wholesale supply because we offer <strong>genuine volume discounts</strong>, <strong>consistent stock availability</strong>, and <strong>reliable delivery logistics</strong>. Our treated pine timber is sourced from sustainable plantations and processed to meet international quality standards. With our Kwa Ndevu yard serving as Zanzibar's central timber hub, we can fulfill large orders quickly and efficiently.
                 </p>
 
                 {/* FAQ Section */}

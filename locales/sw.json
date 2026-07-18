@@ -12,18 +12,22 @@
     "delivery": "Utoaji",
     "gallery": "Galeria",
     "blog": "Blog",
-    "contact": "Mawasiliano"
+    "contact": "Mawasiliano",
+    "timberZanzibar": "Timber Zanzibar",
+    "locations": "Maeneo ya Utoaji",
+    "mirunda": "Mirunda",
+    "treatedWoodPoles": "Treated Wood Poles"
   },
   "hero": {
-    "title": "Wasambazaji wa Mbao Treated Pine Zanzibar",
-    "subtitle": "Mbao Treated Pine na Treated Poles za ubora kwa ujenzi — tunasambaza Zanzibar zima",
-    "cta": "Anza Oda Yako",
+    "title": "Mbao, Marine Board na Plywood Zanzibar — Duka la Mbao",
+    "subtitle": "Zanzibaba Timber ndio duka la mbao treated pine, marine board, plywood, mbao za ujenzi na treated poles Zanzibar. Tunahudumia Paje, Nungwi, Stone Town na Zanzibar zima kwa usafiri na malipo wakati wa kuuza.",
+    "cta": "Pata Anda",
     "whatsappQuote": "Oda kwa WhatsApp",
     "callNow": "Piga +255 716 002 790",
     "location": "Kwa Ndevu, Daraja Bovu, Zanzibar"
   },
   "common": {
-    "call": "Piga Simu",
+    "call": "Piga",
     "whatsapp": "WhatsApp",
     "requestQuote": "Ongeza kwenye Oda",
     "learnMore": "Soma Zaidi",
@@ -33,7 +37,7 @@
     "sendToWhatsApp": "Ongeza kwenye Oda kwa WhatsApp"
   },
   "footer": {
-    "description": "Wasambazaji mkuu wa mbao wa pine Zanzibar unao hudumia wamiliki nyumba, wabunifu, hoteli, villa, na miradi ya serikali.",
+    "description": "Duka la mbao, marine board na plywood Zanzibar. Tunahudumia wamiliki nyumba, wabunifu, hoteli, villa, na miradi ya serikali.",
     "contact": "Wasiliana Nasi",
     "quickLinks": "Viambatisho",
     "followUs": "Fuatakini",
@@ -41,28 +45,28 @@
   },
   "pages": {
     "home": {
-      "sizesTitle": "Softwood: Treated Pine na Poles",
-      "sizesSubtitle": "Softwood iliyotibiwa, tayari kwa ujenzi",
+      "sizesTitle": "Bei za Marine Board, Plywood na Mbao",
+      "sizesSubtitle": "Bei za sasa za mbao, marine board na plywood — iliyoanguliwa na ya ujenzi",
       "ft18": "Urefu 18ft",
       "ft12": "Urefu 12ft",
-      "quoteTitle": "Anza Oda kwa WhatsApp",
-      "quoteSubtitle": "Ongeza mahitaji yako ya mbao kwenye oda. Tunathibitisha bei na upatikanaji ndani ya dakika 30 wakati wa saa za biashara.",
+      "quoteTitle": "Pata Anda za Marine Board, Plywood na Mbao",
+      "quoteSubtitle": "Tutumie mahitaji yako. Tunajibu ndani ya dakika 30 wakati wa saa za biashara.",
       "locationsTitle": "Tunawasambazia Zanzibar Zima",
-      "whyChoose": "Kwa Nini Zanzibar Inaaminika Mbao Zetu",
+      "whyChoose": "Kwa Nini Wateja Wanatuamini",
       "ft1": "High Quality Treated Timber",
-      "ft1Desc": "Mbao treated pine wa ubora ulioanguliwa kwa ajili ya hali ya hewa ya Zanzibar",
+      "ft1Desc": "Mbao za treated pine za ubora kwa hali ya hewa ya Zanzibar",
       "ft2": "Treated Poles",
       "ft2Desc": "Treated poles 2\" hadi 6\" kipenyo, urefu 18ft kwa ujenzi na uzio",
       "ft3": "Special Sizes Available",
       "ft3Desc": "Saizi maalum zinaweza kupangwa kwa mahitaji ya mradi wako",
       "ft4": "Cash on Delivery",
-      "ft4Desc": "Lipa wakati unapokea. Malipo salama na rahisi wakati wa utoaji",
+      "ft4Desc": "Lipa wakati unapokea. Salama na rahisi wakati wa usafiri",
       "ft5": "Delivery Across Zanzibar",
       "ft5Desc": "Utoaji wa haraka na wa kuaminika kwa maeneo yote Zanzibar"
     },
     "sizes": {
       "title": "Saizi za Mbao",
-      "subtitle": "Mbao wa pine wa ubora. Zina disponzwa kwa urefu 18ft na 12ft.",
+      "subtitle": "Mbao za pine za ubora. Zinapatikana kwa urefu 18ft na 12ft.",
       "ft18Title": "Saizi 18ft",
       "ft12Title": "Saizi 12ft",
       "customTitle": "Una Hitaji Saizi Tofauti?",
@@ -84,19 +88,19 @@
     },
     "about": {
       "title": "Kuhusu Zanzibaba Timber",
-      "subtitle": "Wasambazaji mbao wa ubora Zanzibar tangu 2010",
-      "basedIn": "Iko Kwa {location}, tunawasambazia mbao wa ubora wa pine kwa wamiliki nyumba, wabunifu, hoteli, villa, na miradi ya serikali kote kisiwa.",
-      "quality": "Mbao iliyowekwa juara. Mbao yetu inakidhi viwango vyote vya ubora kabla ya kusambazia.",
+      "subtitle": "Duka la mbao za ubora Zanzibar tangu 2010",
+      "basedIn": "Iko Kwa {location}, tunahudumia wamiliki nyumba, wabunifu, hoteli, villa, na miradi ya serikali kote kisiwa.",
+      "quality": "Tunatoa mbao za ubora. Mbao zetu zinakidhi viwango vyote kabla ya kusafirishwa.",
       "servicesTitle": "Huduma Zetu:",
-      "service1": "Usambazaji wa nyumba na wabunifu",
-      "service2": "Suluhisho la mbao kwa hoteli na villa",
-      "service3": "Usambazaji wa miradi ya serikali",
+      "service1": "Ugavi wa nyumba na wabunifu",
+      "service2": "Mbao kwa hoteli na villa",
+      "service3": "Ugavi wa miradi ya serikali",
       "service4": "Agizo la jumla na bei nafuu",
-      "service5": "Utoaji Zanzibar Zima"
+      "service5": "Usafiri Zanzibar Zima"
     },
     "prices": {
-      "title": "Bei za Mbao",
-      "subtitle": "Bei nafuu kwa miradi yote. Punguza bei kwa ununuzi wa jumla.",
+      "title": "Bei za Mbao Zanzibar",
+      "subtitle": "Bei nafuu kwa miradi yote. Punguzo kwa ununuzi wa jumla.",
       "size": "Saizi",
       "dimensions": "Viwango",
       "priceMeter": "Bei/Mita",
@@ -105,40 +109,40 @@
     },
     "contact": {
       "title": "Wasiliana Nasi",
-      "subtitle": "Wasiliana kwa anda, utoaji, au maswali",
+      "subtitle": "Wasiliana kwa bei, usafiri, au maswali",
       "getInTouch": "Wasiliana Nasi",
-      "readyToDiscuss": "Tayari kuzungumza mahitaji yako ya mbao? Wasiliana kwa anda ya bure na ushauri.",
+      "readyToDiscuss": "Tayari kuzungumza mahitaji yako ya mbao? Wasiliana kwa bei na ushauri bure.",
       "businessHours": "Saa za Biashara",
       "hours": "Jumatatu - Jumasatu: 8:00 AM - 5:00 PM<br />Jumapili: Imefunga",
-      "requestQuote": "Anza Oda"
+      "requestQuote": "Omba Anda"
     },
     "delivery": {
-      "title": "Utoaji Zanzibar Zima",
-      "subtitle": "Malipo kwa uzoaji. Utoaji wa haraka na kuaminika.",
-      "includes": "Tunawasambazia mbao Zanzibar ikiwa ni pamoja na:",
-      "deliveryTime": "Muda wa Utoaji:",
-      "timeframe": "Masaa 24-48 kwa vitu vyenye stock",
-      "arrangeDelivery": "Panga Utoaji"
+      "title": "Usafiri Bure Zanzibar Zima",
+      "subtitle": "Malipo baada ya kupelekwa. Usafiri wa haraka na wa kuaminika.",
+      "includes": "Tunasafirishia mbao Zanzibar ikiwa ni pamoja na:",
+      "deliveryTime": "Muda wa Usafiri:",
+      "timeframe": "Masaa 24-48 kwa bidhaa zilizo stock",
+      "arrangeDelivery": "Panga Usafiri"
     },
     "wholesale": {
-      "title": "Usambazaji wa Jumla",
-      "subtitle": "Tunawasidia wabunifu, wauzaji, na wanjiaji wa mbao.",
-      "bulk": "Punguza bei kwa Agizo Refu",
+      "title": "Bei za Jumla",
+      "subtitle": "Tunahudumia wabunifu, wauzaji, na wakandarasi wa mbao.",
+      "bulk": "Punguzo kwa Agizo Kubwa",
       "desc": "Wasiliana kwa bei nafuu za jumla kwa saizi zote za mbao.",
-      "wholesaleInfo": "Info ya Jumla",
+      "wholesaleInfo": "Maelezo ya Jumla",
       "disc500": "15% punguzo",
       "disc1000": "20% punguzo",
-      "customSizes": "Saizi Maalum Zina Ruhusa",
+      "customSizes": "Saizi Maalum Zinapatikana",
       "getPriceList": "Pata Orodha ya Bei za Jumla"
     },
     "projects": {
       "title": "Miradi Yetu",
-      "subtitle": "Tazama miradi ya mbao yetu iliyokamilika kote Zanzibar. Hoteli, villa, majengo ya serikali na miundombinu ya makazi.",
+      "subtitle": "Tazama miradi ya mbao iliyokamilika kote Zanzibar. Hoteli, villa, majengo ya serikali na nyumba za makazi.",
       "startProject": "Anza Mradi Wako"
     },
     "gallery": {
       "title": "Galeria ya Miradi",
-      "subtitle": "Miradi ya mbao iliyowekwa juara Zanzibar zima",
+      "subtitle": "Miradi ya mbao Zanzibar zima",
       "alt1": "Eneo la mbao Kwa Ndevu",
       "alt2": "Mbao wa pine 2x4",
       "alt3": "Mradi wa hoteli Nungwi",
@@ -160,57 +164,57 @@
   "homeSections": {
     "about": {
       "heading": "Kuhusu Zanzibaba Timber",
-      "who": "Zanzibaba Timber imekuwa msambazaji mkuu wa mbao Zanzibar tangu 2010, ikisambaza mbao treated pine kwa wamiliki nyumba, wabunifu, hoteli, na miradi ya serikali.",
-      "stock": "Kwa uwezo mkubwa wa stock katika yadi yetu Kwa Ndevu, tunahifadhi saizi zote za mbao na treated poles — tayari kwa utoaji haraka.",
-      "supply": "Tunapata mbao bora za pine moja kwa moja kutoka Tanzania bara, kuhakikisha ubora thabiti na bei nafuu kwa kila mradi.",
-      "coverage": "Kutoka Paje hadi Nungwi, Stone Town hadi Kendwa — mtandao wetu wa utoaji unafikia kila kona ya Zanzibar kwa huduma ya haraka na ya kuaminika."
+      "who": "Zanzibaba Timber ni duka la mbao Zanzibar tangu 2010, tukihudumia wamiliki nyumba, wabunifu, hoteli, na miradi ya serikali.",
+      "stock": "Kwa stock kubwa kwenye yadi yetu Kwa Ndevu, tuna saizi zote za mbao na treated poles — tayari kwa usafiri haraka.",
+      "supply": "Tunapata mbao bora za pine moja kwa moja kutoka Tanzania bara, kuhakikisha ubora na bei nafuu kwa kila mradi.",
+      "coverage": "Kutoka Paje hadi Nungwi, Stone Town hadi Kendwa — mtandao wetu wa usafiri unafikia kila kona ya Zanzibar."
     },
     "yard": {
-      "heading": "Yadi Yetu ya Mbao na Stock",
-      "stock1": "Yadi yetu ya mbao Kwa Ndevu ni moja ya kubwa na kujaa stock Zanzibar, ikiwa na orodha kamili ya mbao treated pine na poles tayari kwa mauzo na utoaji.",
-      "stock2": "Iwe unahitaji vipande vichache kwa mradi wa nyumba au mamia kwa hoteli, tuna uwezo wa kutimiza agizo lako bila kuchelewa.",
+      "heading": "Yadi Yetu ya Mbao",
+      "stock1": "Yadi yetu Kwa Ndevu ni kubwa na imejaa stock — mbao za treated pine na poles tayari kuuzwa na kusafirishwa.",
+      "stock2": "Iwe unahitaji vipande vichache kwa mradi wa nyumba au mamia kwa hoteli, tuna uwezo wa kutimiza agizo lako.",
       "bullet1": "Stock kubwa ya saizi zote za mbao (1x6 hadi 2x6)",
       "bullet2": "Treated poles 2\" hadi 6\" kipenyo, urefu 18ft",
       "bullet3": "Agizo kubwa linakaribishwa — bei nafuu za jumla",
-      "bullet4": "Eneo maalum la kupakia kwa utoaji haraka"
+      "bullet4": "Sehemu maalum ya kupakia kwa usafiri haraka"
     },
     "delivery": {
-      "heading": "Utoaji Zanzibar Zima",
-      "p1": "Tunatoa huduma ya haraka na ya kuaminika ya utoaji mbao kote Zanzibar. Meli zetu zina uwezo wa kubeba mizigo ya ukubwa wowote.",
-      "p2": "Kwa malipo kwa uzoaji, unalipa tu mbao zikifika — kukupa amani ya akili na urahisi.",
-      "feature1": "Utoaji Masaa 24-48",
-      "feature2": "Malipo kwa Uzoaji",
-      "feature3": "Utoaji Zote Kisiwa",
+      "heading": "Usafiri Bure Zanzibar Zima",
+      "p1": "Tunatoa usafiri wa haraka na wa kuaminika kote Zanzibar. Meli zetu zina uwezo wa kubeba mizigo ya ukubwa wowote.",
+      "p2": "Malipo baada ya kupelekwa — unalipa mbao zikifika tu.",
+      "feature1": "Usafiri Masaa 24-48",
+      "feature2": "Malipo Baada ya Kupelekwa",
+      "feature3": "Usafiri Zanzibar Zima",
       "feature4": "Mizigo Mikubwa Inakaribishwa"
     },
     "logistics": {
-      "heading": "Usafirishaji na Upakiaji",
-      "p1": "Tunachukulia usafirishaji kwa uzito. Timu yetu yenye uzoefu inashughulikia kila agizo kwa uangalifu — kutoka uteuzi na upakiaji hadi usafirishaji salama.",
-      "p2": "Tunafanya kazi na wabunifu, hoteli, na wasimamizi wa miradi kuratibu ratiba za utoaji zinazoweka mradi wako kwenye Ratiba.",
+      "heading": "Usafiri na Upakiaji",
+      "p1": "Timu yetu yenye uzoefu inashughulikia kila agizo kwa uangalifu — kutoka uteuzi na upakiaji hadi usafirishaji salama.",
+      "p2": "Tunafanya kazi na wabunifu, hoteli, na wasimamizi wa miradi kuratibu ratiba za usafiri zinazoweka mradi wako kwenye ratiba.",
       "bullet1": "Upakiaji kitaalamu na usafirishaji salama",
-      "bullet2": "Uratibu wa ratiba za utoaji wa mradi",
-      "bullet3": "Usambazaji kwa wabunifu kwa ratiba rahisi"
+      "bullet2": "Uratibu wa ratiba za usafiri",
+      "bullet3": "Ugavi kwa wabunifu kwa ratiba rahisi"
     },
     "residential": {
-      "heading": "Ujenzi wa Nyumba za Makazi",
-      "p1": "Kutoka ujenzi wa nyumba mpya hadi urekebishaji na upanuzi, Zanzibaba Timber inasambaza mbao treated pine wa ubora kwa miradi ya makazi.",
-      "p2": "Wamiliki nyumba na wabunifu wanatuamini kwa mbao za paa, framing, decking, uzio, na matumizi ya miundo — yote yamekatwa kwa saizi unazohitaji.",
+      "heading": "Mbao kwa Nyumba za Makazi",
+      "p1": "Kutoka ujenzi wa nyumba mpya hadi urekebishaji na upanuzi, Zanzibaba Timber inatoa mbao za treated pine kwa miradi ya makazi.",
+      "p2": "Wamiliki nyumba na wabunifu wanatuamini kwa mbao za paa, framing, decking, uzio, na miundo — yote yamekatwa kwa saizi unazohitaji.",
       "item1": "Nyumba Mpya",
       "item2": "Urekebishaji",
       "item3": "Mbao za Paa"
     },
     "villa": {
-      "heading": "Miradi ya Ujenzi wa Villa",
-      "p1": "Soko la villa za kifahari la Zanzibar linahitaji nyenzo bora, na Zanzibaba Timber inatoa. Tunasambaza mbao treated pine kwa villa za pwani na maendeleo ya makazi ya juu.",
+      "heading": "Mbao kwa Villa Zanzibar",
+      "p1": "Soko la villa za kifahari Zanzibar linahitaji nyenzo bora, na Zanzibaba Timber inatoa mbao za treated pine kwa villa za pwani na maendeleo ya makazi.",
       "p2": "Timu yetu inaelewa mahitaji maalum ya ujenzi wa kifahari na inafanya kazi kwa karibu na wasanifu na wajenzi.",
       "bullet1": "Mbao bora kwa ujenzi wa villa za kifahari",
       "bullet2": "Wataalamu wa miradi ya pwani",
       "bullet3": "Saizi maalum kwa mahitaji ya usanifu"
     },
     "hotel": {
-      "heading": "Usambazaji Hoteli na Resort",
-      "p1": "Zanzibaba Timber ni msambazaji anayependelewa wa mbao kwa hoteli na resort kote Zanzibar. Kutoka Nungwi hadi Paje — tunaweka sekta ya ukarimu kujenga.",
-      "p2": "Tunaelewa ukubwa na uharaka wa miradi ya hoteli na tunatoa bei nafuu na ratiba za utoaji kwa wateja wa ukarimu.",
+      "heading": "Mbao kwa Hoteli na Resort",
+      "p1": "Zanzibaba Timber ndio duka la mbao kwa hoteli na resort kote Zanzibar. Kutoka Nungwi hadi Paje — tunahudumia sekta ya utalii.",
+      "p2": "Tunaelewa ukubwa na uharaka wa miradi ya hoteli na tunatoa bei nafuu na ratiba za usafiri kwa wateja.",
       "item1": "Resorti Nungwi",
       "item2": "Hoteli Paje",
       "item3": "Lodges Kendwa",
@@ -218,80 +222,80 @@
     },
     "government": {
       "heading": "Miradi ya Serikali na Biashara",
-      "p1": "Tunajivunia kusambaza mbao kwa miradi ya serikali na biashara kote Zanzibar. Shule, vituo vya afya, ofisi, na majengo ya umma yanategemea nyenzo zetu.",
-      "p2": "Kwa uwezo wa kushughulikia maagizo makubwa na kuaminika kufikia ratiba, ni mshirika anayeaminika kwa maendeleo ya taasisi na biashara.",
+      "p1": "Tunatoa mbao kwa miradi ya serikali na biashara kote Zanzibar. Shule, vituo vya afya, ofisi, na majengo ya umma yanategemea vifaa vyetu.",
+      "p2": "Kwa uwezo wa kushughulikia maagizo makubwa na kuaminika kufikia ratiba, ndio chaguo bora kwa taasisi na biashara.",
       "bullet1": "Ujenzi wa shule na vituo vya elimu",
       "bullet2": "Miradi ya vituo vya afya na hospitali",
       "bullet3": "Majengo ya ofisi za serikali",
       "bullet4": "Maendeleo makubwa ya biashara"
     },
     "quality": {
-      "heading": "Udhibiti wa Ubora",
-      "p1": "Kila kipande cha mbao kinachoondoka kwenye yadi yetu kinakaguliwa kwa ubora. Tunajivunia kusambaza mbao zinazokidhi mahitaji ya sekta ya ujenzi ya Zanzibar.",
-      "p2": "Mchakato wetu wa treatment unahakikisha uimara dhidi ya hali ya hewa ya Zanzibar — kulinda dhidi ya mchwa, kuoza, na uharibifu wa hali ya hewa.",
-      "badge1": "Imewekwa kwa Hali ya Hewa ya Tropiki",
-      "badge2": "Ubora Umekaguliwa Kabla ya Utoaji"
+      "heading": "Ubora wa Mbao Zetu",
+      "p1": "Kila kipande cha mbao kinachoondoka kwenye yadi yetu kinakaguliwa. Tunatoa mbao zinazokidhi mahitaji ya ujenzi Zanzibar.",
+      "p2": "Mchakato wetu wa treatment unahakikisha uimara dhidi ya hali ya hewa ya Zanzibar — kulinda dhidi ya mchwa, kuoza, na uharibifu.",
+      "badge1": "Inafaa kwa Hali ya Hewa ya Tropiki",
+      "badge2": "Ubora Umekaguliwa Kabla ya Usafiri"
     },
     "gallery": {
       "heading": "Galeria ya Miradi",
-      "p1": "Tembelea galeria yetu ya miradi kuona mifano halisi ya Zanzibaba Timber ikitumika. Kutoka villa na hoteli hadi nyumba na majengo ya serikali — mbao zetu zinajenga Zanzibar.",
-      "p2": "Kila mradi unaonyesha ubora wa mbao treated pine na ustadi wa wajenzi wa Zanzibar."
+      "p1": "Tembelea galeria yetu kuona mifano halisi ya mbao zetu zikitumika. Kutoka villa na hoteli hadi nyumba na majengo ya serikali.",
+      "p2": "Kila mradi unaonyesha ubora wa mbao za treated pine na ustadi wa wajenzi Zanzibar."
     }
   },
   "hotelSupply": {
-    "title": "Usambazaji Hoteli na Resort",
-    "subtitle": "Tunashughulikia usambazaji wa mbao wa ubora wa pine kwa sekta ya hoteli ya Zanzibar.",
-    "ourServices": "Huduma Za Hoteli:",
-    "service1": "Usambazaji wa mbao refu kwa miradi mikubwa",
-    "service2": "Kupaka maalum na urekebishaji",
-    "service3": "Chaguo lililoshughulikiwa kwa matumizi ya nje",
-    "service4": "Utoaji wa haraka kote kisiwa",
-    "service5": "Mazingira ya malipo rahisi kwa biashara",
-    "hotelsWeServe": "Hoteli Tunaazamishea:",
-    "hotel1": "Resorti za pwani Nungwi",
-    "hotel2": "Lodges za urembo Kendwa",
+    "title": "Mbao kwa Hoteli na Resort Zanzibar",
+    "subtitle": "Tunatoa mbao za pine kwa sekta ya hoteli Zanzibar.",
+    "ourServices": "Huduma Zetu:",
+    "service1": "Ugavi wa mbao kwa miradi mikubwa",
+    "service2": "Vipimo maalum na urekebishaji",
+    "service3": "Mbao za matumizi ya nje",
+    "service4": "Usafiri wa haraka kote kisiwa",
+    "service5": "Malipo rahisi kwa biashara",
+    "hotelsWeServe": "Hoteli Tunazohudumia:",
+    "hotel1": "Resort Nungwi",
+    "hotel2": "Lodge Kendwa",
     "hotel3": "Hoteli za boutique Paje",
-    "hotel4": "Mali rasmi za heritage Stone Town",
-    "hotel5": "Hoteli za pwani Kiwengwa",
-    "cta": "Anza Oda ya Hoteli"
+    "hotel4": "Hoteli za heritage Stone Town",
+    "hotel5": "Hoteli Kiwengwa",
+    "cta": "Pata Anda ya Hoteli"
   },
   "villaSupply": {
-    "title": "Usambazaji Villa",
-    "subtitle": "Mbao wa ubora kwa ujenzi na urekebishaji villa Zanzibar.",
-    "ourServices": "Huduma Za Villa:",
-    "service1": "Mbao maalum kwa villa za ubora",
-    "service2": "Vifaa vya jenereshi ya jadi",
-    "service3": "Mbao wa decking na flooring",
-    "service4": "Vifaa vya msingi",
-    "service5": "Mbao wa landscape",
-    "cta": "Anza Oda ya Villa"
+    "title": "Mbao kwa Villa Zanzibar",
+    "subtitle": "Mbao za ubora kwa ujenzi na urekebishaji villa Zanzibar.",
+    "ourServices": "Huduma Zetu:",
+    "service1": "Mbao maalum kwa villa",
+    "service2": "Mbao za dari na mapambo",
+    "service3": "Mbao za decking na flooring",
+    "service4": "Mbao za msingi",
+    "service5": "Mbao za landscape",
+    "cta": "Pata Anda ya Villa"
   },
   "governmentSupply": {
-    "title": "Usambazaji Serikali",
-    "subtitle": "Kusambazia mbao kwa miradi ya miundombinu ya serikali Zanzibar.",
-    "ourServices": "Huduma Za Serikali:",
-    "service1": "Mbao wa ujenzi wa shule",
-    "service2": "Hospitali na vitu vya afya",
-    "service3": "Maendeleo ya miundombinu",
+    "title": "Mbao kwa Miradi ya Serikali Zanzibar",
+    "subtitle": "Tunatoa mbao kwa miradi ya serikali Zanzibar.",
+    "ourServices": "Huduma Zetu:",
+    "service1": "Mbao za ujenzi wa shule",
+    "service2": "Hospitali na vituo vya afya",
+    "service3": "Miundombinu",
     "service4": "Miradi ya mtaa",
-    "service5": "Huduma za usambazaji kubwa",
-    "cta": "Anza Oda ya Serikali"
+    "service5": "Ugavi kwa wingi",
+    "cta": "Pata Anda ya Serikali"
   },
   "locations": {
-    "title": "Maeneo ya Utoaji",
-    "subtitle": "Tunawasambazia mbao wa pine kote Zanzibar. Kuhudumia mji mkubwa na maeneo ya resort.",
-    "service1": "Usambazaji wa mbao wa pine kwa miradi ya makazi",
-    "service2": "Vifaa vya ujenzi wa hoteli na resort",
-    "service3": "Huduma za urekebishaji maalum",
-    "service4": "Network ya utoaji kote kisiwa",
-    "service5": "Ununuzi wa jumla kwa wabunifu",
+    "title": "Maeneo ya Usafiri",
+    "subtitle": "Tunasafirishia mbao za pine kote Zanzibar. Kuhudumia mji mkubwa na maeneo ya resort.",
+      "service1": "Ugavi wa mbao za pine kwa miradi ya makazi",
+      "service2": "Mbao kwa hoteli na resort",
+      "service3": "Vipimo maalum",
+      "service4": "Usafiri kote kisiwa",
+      "service5": "Bei za jumla kwa wabunifu",
     "services": "Huduma Zetu Kwa {location}:",
     "order": "Agiza Mbao kwa {location}",
     "viewAll": "← Tazama Maeneo Yote"
   },
   "blog": {
-    "title": "Blog ya Mbao",
+    "title": "Blog",
     "readMore": "Soma Zaidi →",
-    "consultation": "Pata Ushauri wa Mbao"
+    "consultation": "Pata Ushauri"
   }
 }

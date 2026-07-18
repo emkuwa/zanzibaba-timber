@@ -1,13 +1,14 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
+import ImageWithFallback from '@/components/ImageWithFallback'
 import { generateSEOMetadata, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo'
 import { BLOG_POSTS, TIMBER_SIZES, INDUSTRIES, generateWhatsAppLink } from '@/lib/data'
 import Link from 'next/link'
 
 export const metadata = generateSEOMetadata(
-  'Hotel Timber Supply Zanzibar - Bulk Treated Pine for Resorts & Lodges',
-  'Specialized bulk treated pine timber supply for Zanzibar hotels resorts and lodges. Serving Nungwi, Kendwa, Paje, Stone Town & Kiwengwa. Custom cutting, pressure-treated, island-wide delivery with cash on delivery.',
+  'Hotel Timber & Teak Wood Poles Supply Zanzibar - Bulk Supply for Resorts & Lodges',
+  'Specialized bulk timber, teak wood poles (mitiki/mirunda), marine board and plywood supply for Zanzibar hotels resorts and lodges. Serving Nungwi, Kendwa, Paje, Stone Town & Kiwengwa. Custom cutting, kiln-dried, island-wide delivery with cash on delivery. Bulk wholesale pricing available.',
   'en',
   '/hotel-supply'
 )
@@ -23,7 +24,7 @@ const faq = [
   },
   {
     question: 'Can you deliver timber to my hotel project site?',
-    answer: 'Absolutely. We deliver timber directly to hotel construction sites across Zanzibar with our own fleet. Cash on delivery is available. Typical delivery is within 24-48 hours for stock items.',
+    answer: 'Absolutely. We deliver timber directly to hotel construction sites across Zanzibar with our own fleet. Cash on delivery, mobile money, or bank transfer available. Typical delivery is within 24-48 hours for stock items.',
   },
   {
     question: 'Do you offer payment terms for hospitality businesses?',
@@ -55,19 +56,20 @@ export default function HotelSupply() {
               <div className="lg:col-span-2">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">Hotel & Resort Timber Supply Zanzibar</h1>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                  From beachfront resorts in <strong>Nungwi</strong> to boutique hotels in <strong>Stone Town</strong>, Zanzibaba Timber is the trusted supplier for Zanzibar&apos;s hospitality sector. We deliver bulk quantities of premium treated pine timber tailored to hotel construction, renovation, and ongoing maintenance.
+                  From beachfront resorts in <strong>Nungwi</strong> to boutique hotels in <strong>Stone Town</strong>, Zanzibaba Timber is the trusted supplier for Zanzibar's hospitality sector. We deliver bulk quantities of premium treated pine timber tailored to hotel construction, renovation, and ongoing maintenance.
                 </p>
 
-                <img
+                <ImageWithFallback
                   src="/images/gallery/hotel-project-zanzibar.jpg"
                   alt="Hotel construction project using Zanzibaba Timber supply in Zanzibar"
+                  aspectRatio="16/9"
                   className="w-full rounded-xl shadow-lg mb-8"
-                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 66vw"
                 />
 
                 <h2 className="text-2xl font-bold mb-4">Bulk Timber for Hospitality Construction</h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Zanzibar&apos;s hospitality industry is growing rapidly, with new resorts and hotel expansions across the island. At Zanzibaba Timber, we understand the unique demands of hotel construction — tight deadlines, large volumes, consistent quality, and reliable supply chains. Our treated pine timber is kiln-dried and professionally treated to withstand Zanzibar&apos;s tropical coastal climate, making it the ideal choice for hotel projects.
+                  Zanzibar's hospitality industry is growing rapidly, with new resorts and hotel expansions across the island. At Zanzibaba Timber, we understand the unique demands of hotel construction — tight deadlines, large volumes, consistent quality, and reliable supply chains. Our treated pine timber is kiln-dried and professionally treated to withstand Zanzibar's tropical coastal climate, making it the ideal choice for hotel projects.
                 </p>
 
                 <h3 className="text-xl font-bold mb-3">Hotels and Resorts We Serve</h3>
@@ -96,7 +98,7 @@ export default function HotelSupply() {
                     { title: 'Bulk Timber Supply', desc: 'Large volume orders for major hotel projects. We maintain high stock levels to meet your schedule.' },
                     { title: 'Custom Cutting', desc: 'Pre-cut timber to your specifications. Save time and reduce waste on your construction site.' },
                     { title: 'Pressure-Treated Options', desc: 'All timber is professionally treated for termite and weather resistance. Ideal for coastal environments.' },
-                    { title: 'Island-Wide Delivery', desc: 'Our fleet delivers directly to your hotel site across Zanzibar. Cash on delivery available.' },
+                    { title: 'Island-Wide Delivery', desc: 'Our fleet delivers directly to your hotel site across Zanzibar. Cash on delivery, mobile money, or bank transfer.' },
                     { title: 'Flexible Payment Terms', desc: 'We work with hospitality businesses to arrange payment schedules that suit your project cash flow.' },
                     { title: 'Dedicated Account Management', desc: 'A single point of contact for all your hotel supply needs, ensuring consistency and reliability.' },
                   ].map((service) => (
@@ -109,7 +111,7 @@ export default function HotelSupply() {
 
                 <h2 className="text-2xl font-bold mb-4">Why Hotels Choose Zanzibaba Timber</h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Hotel developers and contractors across Zanzibar choose us because we deliver <strong>consistent quality</strong> at <strong>competitive prices</strong> with <strong>reliable logistics</strong>. Our treated pine timber is sourced from sustainable plantations and processed to meet international standards. Whether you&apos;re building a 50-room resort in Nungwi or renovating a boutique hotel in Stone Town, we have the stock and expertise to support your project.
+                  Hotel developers and contractors across Zanzibar choose us because we deliver <strong>consistent quality</strong> at <strong>competitive prices</strong> with <strong>reliable logistics</strong>. Our treated pine timber is sourced from sustainable plantations and processed to meet international standards. Whether you're building a 50-room resort in Nungwi or renovating a boutique hotel in Stone Town, we have the stock and expertise to support your project.
                 </p>
 
                 {/* FAQ Section */}

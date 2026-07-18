@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { TIMBER_SIZES, SIZE_USES, SIZE_FAQ, LOCATIONS, PRODUCT_VARIANTS, BLOG_POSTS, generateWhatsAppLink } from '@/lib/data'
+import { TIMBER_SIZES, SIZE_USES, SIZE_FAQ, LOCATIONS, PRODUCT_VARIANTS, BLOG_POSTS, generateWhatsAppLink, sizeToSlug, formatTZS, formatVariantLabel, formatSizeName } from '@/lib/data'
+import PriceNotice from '@/components/PriceNotice'
+import TransportCalculator from '@/components/TransportCalculator'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -17,11 +19,23 @@ export function generateMetadata({ params }: { params: { size: string } }) {
   const timber = TIMBER_SIZES.find((s) => s.id === params.size)
   if (!timber) return {}
 
+  const isTeak = timber.woodType === 'teak'
+  const woodType = isTeak ? 'Teak (Mitiki)' : 'Pine'
+
+  const baseKeywords = [
+    `${timber.name} timber zanzibar`,
+    `${timber.name} ${woodType.toLowerCase()}`,
+    'construction timber',
+    'delivery zanzibar',
+  ]
+
   return generateSEOMetadata(
-    `${timber.name} (${timber.dimensions}) Pine Timber Zanzibar - Treated Pine Timber Supplier`,
-    `Premium ${timber.name} (${timber.dimensions}) treated pine timber in Zanzibar. ${timber.description}. Quality kiln-dried timber for construction, delivery across Zanzibar. Cash on delivery.`,
+    `${timber.name} (${timber.dimensions}) ${woodType} Timber Zanzibar - ${isTeak ? 'Teak Wood Poles' : 'Treated Pine Timber'} Supplier`,
+    `Premium ${timber.name} (${timber.dimensions}) ${isTeak ? 'teak wood poles' : 'treated pine timber'} in Zanzibar. ${timber.description}. Quality timber for construction, delivery across Zanzibar. Cash on delivery, mobile money & bank transfer.`,
     'en',
-    `/timber-sizes/${timber.id}`
+    `/timber-sizes/${timber.id}`,
+    undefined,
+    baseKeywords
   )
 }
 
@@ -29,17 +43,20 @@ export default function TimberSizePage({ params }: { params: { size: string } })
   const timber = TIMBER_SIZES.find((s) => s.id === params.size)
   if (!timber) notFound()
 
+  const isTeak = timber.woodType === 'teak'
+  const woodType = isTeak ? 'Teak (Mitiki)' : 'Pine'
+
   const uses = SIZE_USES[timber.id] || []
   const faqs = SIZE_FAQ[timber.id] || []
   const otherSizes = TIMBER_SIZES.filter((s) => s.id !== timber.id)
-  const variants = PRODUCT_VARIANTS.filter((v) => v.size === timber.id)
+  const variants = PRODUCT_VARIANTS.filter((v) => sizeToSlug(v.size) === timber.id)
   const has18ft = variants.some((v) => v.length === '18ft')
   const has12ft = variants.some((v) => v.length === '12ft')
 
   const breadcrumb = getBreadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Timber Sizes', url: '/timber-sizes' },
-    { name: `${timber.name} Pine Timber`, url: `/timber-sizes/${timber.id}` },
+    { name: `${timber.name} ${woodType} Timber`, url: `/timber-sizes/${timber.id}` },
   ])
 
   return (
@@ -59,9 +76,9 @@ export default function TimberSizePage({ params }: { params: { size: string } })
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6">
                 <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
-                  {timber.name} Pine Timber <span className="text-primary-300">Zanzibar</span>
+                  {formatSizeName(timber.name)} {woodType} Timber <span className="text-primary-300">Zanzibar</span>
                 </h1>
-                <p className="text-gray-200 mt-1 text-xs sm:text-sm">{timber.dimensions} — Treated Pine</p>
+                <p className="text-gray-200 mt-1 text-xs sm:text-sm">{timber.dimensions} — {isTeak ? 'Teak Wood Poles' : 'Treated Pine'}</p>
               </div>
             </div>
 
@@ -72,11 +89,11 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                   <span className="mx-1 text-gray-400">/</span>
                   <Link href="/timber-sizes" className="text-primary-600 hover:underline">Sizes</Link>
                   <span className="mx-1 text-gray-400">/</span>
-                  <span className="text-gray-500">{timber.name}</span>
+                  <span className="text-gray-500">{formatSizeName(timber.name)}</span>
                 </nav>
 
                 <h2 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
-                  {timber.name} Treated Pine in Zanzibar
+                  {formatSizeName(timber.name)} {woodType} Timber in Zanzibar
                 </h2>
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-2">
                   <strong>Dimensions:</strong> {timber.dimensions}
@@ -88,6 +105,27 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-4">
                   {timber.description}. Professionally treated for Zanzibar’s tropical climate.
                 </p>
+
+                {variants.length > 0 && (
+                  <div className="mb-4 space-y-2">
+                    {variants.map((v) => v.price && (
+                      <div key={v.sku} className="flex items-center justify-between bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3">
+                        <div>
+                          <span className="font-semibold text-sm">{formatVariantLabel(v)}</span>
+                          {v.dimensions && <span className="text-xs text-gray-400 ml-1">— {v.dimensions}</span>}
+                        </div>
+                        <div className="text-right">
+                          <div className="text-lg font-bold text-primary-600">{formatTZS(v.price)}</div>
+                          <div className="text-[10px] text-gray-400">per piece</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <div className="mb-4">
+                  <PriceNotice />
+                </div>
 
                 {uses.length > 0 && (
                   <div className="mb-4 md:mb-6">
@@ -166,6 +204,10 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                       View all →
                     </Link>
                   </div>
+
+                  <div className="mt-4 md:mt-6">
+                    <TransportCalculator />
+                  </div>
                 </div>
               </div>
             </div>
@@ -180,6 +222,10 @@ export default function TimberSizePage({ params }: { params: { size: string } })
                   Prices
                 </Link>
                 <span className="text-gray-300">|</span>
+                <Link href="/timber-zanzibar" className="text-primary-600 hover:underline">
+                  Timber Zanzibar
+                </Link>
+                <span className="text-gray-300">|</span>
                 <Link href="/" className="text-primary-600 hover:underline">
                   Home
                 </Link>
@@ -191,7 +237,7 @@ export default function TimberSizePage({ params }: { params: { size: string } })
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getProductSchema(`${timber.name} Pine Timber`, timber.description!, timber.name)),
+          __html: JSON.stringify(getProductSchema(`${timber.name} ${woodType} Timber`, timber.description!, timber.name)),
         }}
       />
       <script

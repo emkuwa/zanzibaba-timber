@@ -10,34 +10,34 @@ export default function AdminWhatsapp() {
   
   const prices = {
     '18ft': {
-      'Mirunda': 8000,
-      '2x2': 8000,
-      '2x3': 10000,
-      '2x4': 14000,
-      '2x6': 24000,
-      '1x6': 15000,
-      '1x8': 22000,
-      '1x10': 35000,
+      '2x2': 11500,
+      '2x3': 18000,
+      '2x4': 19500,
+      '2x6': 31000,
+      '2x8': 48000,
+      '1x4': 9000,
+      '1x6': 18000,
+      '1x8': 28000,
+      '1x10': 41000,
+      'Wood Poles': 11500,
     },
     '12ft': {
-      '2x2': 5000,
-      '2x3': 7000,
-      '2x4': 10000,
-      '2x6': 18000,
-      '1x6': 8000,
-      '1x8': 11000,
-      '1x10': 18000,
+      '2x2': 8000,
+      '2x4': 11500,
+      '1x6': 13000,
+      '1x8': 16000,
+      '1x10': 25000,
     },
   }
 
   const generatePriceList = () => {
     let text = 'ZANZIBABA TIMBER PRICE LIST\n\n18ft:\n'
     Object.entries(prices['18ft']).forEach(([size, price]) => {
-      text += `${size}: ${price.toLocaleString()} TZS\n`
+      text += `${size}: ${price.toLocaleString()}\n`
     })
     text += '\n12ft:\n'
     Object.entries(prices['12ft']).forEach(([size, price]) => {
-      text += `${size}: ${price.toLocaleString()} TZS\n`
+      text += `${size}: ${price.toLocaleString()}\n`
     })
     text += '\n📞 +255 716 002 790\n📍 Kwa Ndevu, Daraja Bovu, Zanzibar'
     return text

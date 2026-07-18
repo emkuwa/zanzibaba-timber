@@ -17,10 +17,19 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   if (!location) return {}
 
   return generateSEOMetadata(
-    `Pine Timber Delivery ${location.name} Zanzibar - Treated Timber Supplier`,
-    `${location.description}. Buy premium treated pine timber in ${location.name}, Zanzibar. Sizes: 1x6, 1x8, 1x10, 2x2, 2x3, 2x4, 2x6. Cash on delivery. Order your construction timber in ${location.name} today.`,
+    `Timber Delivery ${location.name} Zanzibar - Treated Pine & Teak Wood Poles Supplier`,
+    `${location.description}. Buy premium timber in ${location.name}, Zanzibar. 2x2, 2x3, 2x4, 2x6, 2x8 in Treated Pine. Teak wood poles 2-6 inch. Cash on delivery, mobile money & bank transfer. Order your construction timber in ${location.name} today.`,
     'en',
-    `/locations/${location.slug}`
+    `/locations/${location.slug}`,
+    undefined,
+    [
+      `timber delivery ${location.name}`,
+      `treated pine zanzibar`,
+      `teak poles zanzibar`,
+      `construction timber zanzibar`,
+      `mbao za pine`,
+      `mbao za dawa`,
+    ]
   )
 }
 
@@ -53,14 +62,20 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
             <div className="grid md:grid-cols-5 gap-8 md:gap-12">
               <div className="md:col-span-3">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Pine Timber Delivery in <span className="text-primary-600">{location.name}</span>
+                  Timber Delivery in <span className="text-primary-600">{location.name}</span>
                 </h1>
 
                 <div className="prose dark:prose-invert max-w-none mb-8">
-                  <p>{location.description}. We provide fast, reliable timber delivery throughout {location.name} and surrounding areas with cash on delivery available.</p>
+                  <p>{location.description}. We provide fast, reliable timber delivery throughout {location.name} and surrounding areas with cash on delivery, mobile money, and bank transfer payments available.</p>
+
+                  {location.uniqueContent && (
+                    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-8">
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{location.uniqueContent}</p>
+                    </div>
+                  )}
 
                   <h2>Timber Sizes Available in {location.name}</h2>
-                  <p>We deliver all premium treated pine timber sizes to {location.name}. Here are the standard sizes we supply:</p>
+                  <p>We deliver all premium timber sizes to {location.name}. 1x6, 1x8, 1x10 in Mninga/Hardwood. 2x2, 2x3, 2x4, 2x6 in Treated Pine. Here are the standard sizes we supply:</p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 my-6">
                     {TIMBER_SIZES.map((s) => (
                       <Link
@@ -82,14 +97,14 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                     <li>Villa construction timber supply</li>
                     <li>Custom cutting and sizing available</li>
                     <li>Wholesale and bulk pricing for contractors</li>
-                    <li>Cash on delivery — pay when your timber arrives</li>
+                    <li>Cash on delivery, mobile money & bank transfer — flexible payment</li>
                   </ul>
 
                   <h2>Why Choose Zanzibaba Timber for {location.name}</h2>
                   <ul>
                     <li><strong>High Quality Treated Timber</strong> — Professionally treated pine for Zanzibar’s tropical climate</li>
                     <li><strong>Reliable Delivery</strong> — Fast, scheduled delivery to {location.name} and surrounding areas</li>
-                    <li><strong>Cash on Delivery</strong> — Pay only when you receive your timber</li>
+                    <li><strong>Flexible Payments</strong> — Cash on delivery, mobile money, or bank transfer</li>
                     <li><strong>Large Stock</strong> — All standard sizes always available at our Kwa Ndevu yard</li>
                     <li><strong>Competitive Prices</strong> — Affordable rates for every project size</li>
                   </ul>
@@ -106,11 +121,11 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                       },
                       {
                         question: `What timber sizes are available in ${location.name}?`,
-                        answer: `All standard treated pine timber sizes are available for delivery to ${location.name}: 1x6 (25x150mm), 1x8 (25x200mm), 1x10 (25x250mm), 2x2 (50x50mm), 2x3 (50x75mm), 2x4 (50x100mm), and 2x6 (50x150mm) — in 12ft and 18ft lengths.`,
+                        answer: `All standard timber sizes are available for delivery to ${location.name}: 1x6 (25x150mm), 1x8 (25x200mm), 1x10 (25x250mm) in Mninga/Hardwood, and 2x2 (50x50mm), 2x3 (50x75mm), 2x4 (50x100mm), and 2x6 (50x150mm) in Treated Pine — in 12ft and 18ft lengths.`,
                       },
                       {
-                        question: `Can I pay cash on delivery in ${location.name}?`,
-                        answer: `Yes! We offer cash on delivery for all orders to ${location.name}. You only pay when your timber arrives at your site. This is our standard payment option, giving you peace of mind with every order.`,
+                        question: `What payment options are available in ${location.name}?`,
+                        answer: `We offer cash on delivery, mobile money, and bank transfer payments for all orders to ${location.name}. You only pay when your timber arrives at your site. Choose the payment method that works best for you.`,
                       },
                     ].map((faq, i) => (
                       <div key={i} className="bg-gray-50 dark:bg-gray-800 rounded-lg p-5">
@@ -209,6 +224,10 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
               <span className="mx-3 text-gray-300">|</span>
               <Link href="/timber-sizes" className="text-primary-600 hover:underline font-medium">
                 View Timber Sizes
+              </Link>
+              <span className="mx-3 text-gray-300">|</span>
+              <Link href="/timber-zanzibar" className="text-primary-600 hover:underline font-medium">
+                Timber Zanzibar
               </Link>
               <span className="mx-3 text-gray-300">|</span>
               <Link href="/" className="text-primary-600 hover:underline font-medium">

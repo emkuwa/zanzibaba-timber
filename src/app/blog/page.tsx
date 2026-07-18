@@ -84,7 +84,7 @@ export default function Blog() {
             <div className="mt-12 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center">
               <h2 className="text-2xl font-bold mb-4">Need Timber for Your Project?</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                Browse our full range of treated pine timber sizes or contact us for a quote with island-wide delivery and cash on delivery.
+                Browse our full range of treated pine timber sizes or contact us for a quote with island-wide delivery and flexible payment options.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -92,6 +92,18 @@ export default function Blog() {
                   className="inline-block bg-primary-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-700"
                 >
                   View Timber Sizes
+                </Link>
+                <Link
+                  href="/timber-zanzibar"
+                  className="inline-block bg-primary-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-700"
+                >
+                  Timber Zanzibar
+                </Link>
+                <Link
+                  href="/locations"
+                  className="inline-block border border-primary-600 text-primary-600 px-6 py-2 rounded-lg font-semibold hover:bg-primary-50 dark:hover:bg-gray-700"
+                >
+                  Delivery Locations
                 </Link>
                 <Link
                   href="/"
