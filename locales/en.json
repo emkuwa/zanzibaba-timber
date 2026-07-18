@@ -2,7 +2,7 @@
   "navigation": {
     "home": "Home",
     "about": "About",
-    "timberSizes": "Timber Sizes",
+    "timberSizes": "Softwood",
     "prices": "Prices",
     "projects": "Projects",
     "hotelSupply": "Hotel Supply",
@@ -41,8 +41,8 @@
   },
   "pages": {
     "home": {
-      "sizesTitle": "Premium Pine Timber Sizes",
-      "sizesSubtitle": "Kiln-dried, ready for construction",
+      "sizesTitle": "Softwood: Treated Pine & Poles",
+      "sizesSubtitle": "Treated softwood, ready for construction",
       "ft18": "18ft Lengths Available",
       "ft12": "12ft Lengths Available",
       "quoteTitle": "Start Your Order via WhatsApp",

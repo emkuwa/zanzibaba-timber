@@ -155,7 +155,7 @@ export default function Home() {
         <section className="py-4 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
           <div className="container-custom">
             <div className="flex flex-wrap justify-center gap-3 md:gap-6 text-sm">
-              <a href="#sizes" className="text-primary-600 hover:underline font-medium">Timber Sizes</a>
+              <a href="#sizes" className="text-primary-600 hover:underline font-medium">Softwood</a>
               <a href="#hardwood" className="text-primary-600 hover:underline font-medium">Hardwood</a>
               <a href="#quote" className="text-primary-600 hover:underline font-medium">Start Order</a>
               <a href="#delivery" className="text-primary-600 hover:underline font-medium">Delivery</a>
@@ -181,6 +181,7 @@ export default function Home() {
 
         <section id="hardwood" className="py-24 bg-white dark:bg-gray-900 scroll-mt-20">
           <div className="container-custom">
+            <p className="text-center text-sm uppercase tracking-widest font-bold text-primary-600 mb-2">Category: Hardwood</p>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Premium Hardwood Timber</h2>
             <p className="text-center text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">Mninga, Mvule and Mkongo hardwood, each available in 2x6x8, 2x8x8 and 4x4x8.</p>
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -338,6 +339,7 @@ export default function Home() {
         {/* 8. Timber Sizes - Premium Cards */}
         <section id="sizes" className="py-24 md:py-32 bg-gradient-to-bl from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 scroll-mt-20">
           <div className="container-custom">
+            <p className="text-center text-sm uppercase tracking-widest font-bold text-primary-600 mb-2">Category: Softwood</p>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">{t('pages.home.sizesTitle')}</h2>
             <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-16 max-w-2xl mx-auto">
               {t('pages.home.sizesSubtitle')} - All sizes available in 18ft and 12ft lengths

@@ -2,7 +2,7 @@
   "navigation": {
     "home": "Nyumbani",
     "about": "Kuhusu",
-    "timberSizes": "Saizi za Mbao",
+    "timberSizes": "Softwood",
     "prices": "Bei",
     "projects": "Miradi",
     "hotelSupply": "Usambazaji Hoteli",
@@ -41,8 +41,8 @@
   },
   "pages": {
     "home": {
-      "sizesTitle": "Saizi za Mbao wa Pine",
-      "sizesSubtitle": "Mbao iliyoanguliwa kwa majeraha, tayari kwa ujenzi",
+      "sizesTitle": "Softwood: Treated Pine na Poles",
+      "sizesSubtitle": "Softwood iliyotibiwa, tayari kwa ujenzi",
       "ft18": "Urefu 18ft",
       "ft12": "Urefu 12ft",
       "quoteTitle": "Anza Oda kwa WhatsApp",

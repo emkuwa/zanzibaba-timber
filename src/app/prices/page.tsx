@@ -24,6 +24,9 @@ export default function Prices() {
               Competitive pricing for all project sizes. Bulk discounts available.
             </p>
 
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-3">Softwood Timber Prices</h2>
+              <p className="text-center text-gray-600 dark:text-gray-300 mb-8">Treated pine boards and Mirunda treated poles.</p>
             <div className="overflow-x-auto">
               <table className="w-full max-w-3xl mx-auto border-collapse">
                 <thead>
@@ -55,8 +58,9 @@ export default function Prices() {
                 </tbody>
               </table>
             </div>
+            </div>
 
-            <div className="mt-16">
+            <div>
               <h2 className="text-3xl font-bold text-center mb-3">Hardwood Timber Prices</h2>
               <p className="text-center text-gray-600 dark:text-gray-300 mb-8">Mninga, Mvule and Mkongo hardwood in 8ft lengths.</p>
               <div className="overflow-x-auto">

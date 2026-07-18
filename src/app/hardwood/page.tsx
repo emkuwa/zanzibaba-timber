@@ -22,7 +22,8 @@ export default function HardwoodPage() {
       <main className="py-12 md:py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">Hardwood Timber</h1>
-          <p className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-10">Premium Mninga, Mvule and Mkongo timber for construction, joinery and furniture. Available in three 8ft sizes with delivery across Zanzibar.</p>
+          <p className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-4">Premium Mninga, Mvule and Mkongo timber for construction, joinery and furniture. Available in three 8ft sizes with delivery across Zanzibar.</p>
+          <p className="text-center text-sm font-medium text-primary-700 dark:text-primary-300 mb-10">This category contains hardwood species only. For treated pine and Mirunda poles, visit <a href="/timber-sizes" className="underline">Softwood Timber</a>.</p>
           <HardwoodCatalogue products={HARDWOOD_PRODUCTS} />
         </div>
       </main>

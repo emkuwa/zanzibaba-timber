@@ -19,7 +19,7 @@ export default function TimberSizes() {
 
   const breadcrumb = getBreadcrumbSchema([
     { name: 'Home', url: '/' },
-    { name: 'Timber Sizes', url: '/timber-sizes' },
+    { name: 'Softwood Timber', url: '/timber-sizes' },
   ])
 
   const itemList = getItemListSchema(
@@ -36,7 +36,7 @@ export default function TimberSizes() {
             <nav className="mb-4 md:mb-6 text-sm" aria-label="Breadcrumb">
               <Link href="/" className="text-primary-600 hover:underline">Home</Link>
               <span className="mx-2 text-gray-400">/</span>
-              <span className="text-gray-500">Timber Sizes</span>
+              <span className="text-gray-500">Softwood Timber</span>
             </nav>
 
             <div className="relative w-full h-48 sm:h-64 md:h-80 rounded-xl overflow-hidden mb-8 md:mb-12 shadow-lg">
@@ -51,18 +51,18 @@ export default function TimberSizes() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
-                  Treated Pine Timber Sizes <span className="text-primary-300">Zanzibar</span>
+                  Softwood Timber <span className="text-primary-300">Zanzibar</span>
                 </h1>
                 <p className="text-gray-200 mt-1 md:mt-2 text-xs sm:text-sm md:text-lg leading-tight">1x6, 1x8, 1x10 in 12ft • 2x2, 2x3, 2x4, 2x6 in 12ft &amp; 18ft</p>
               </div>
             </div>
 
             <p className="text-center text-gray-600 dark:text-gray-300 mb-8 md:mb-12 max-w-3xl mx-auto text-sm md:text-base px-2">
-              High quality treated pine timber available in all standard sizes. Kiln-dried and professionally treated for Zanzibar&apos;s tropical climate.
+              Our softwood range consists of treated pine boards and Mirunda treated poles. Hardwood species are listed separately under the Hardwood category.
             </p>
 
             <div className="mb-8 md:mb-12">
-              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">18ft Timber Sizes</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">Softwood — 18ft Sizes</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 md:gap-4">
                 {ft18Variants.map((v) => (
                   <Link
@@ -79,7 +79,7 @@ export default function TimberSizes() {
             </div>
 
             <div className="mb-8 md:mb-12">
-              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">12ft Timber Sizes</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">Softwood — 12ft Sizes</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-4">
                 {ft12Variants.map((v) => (
                   <Link
@@ -96,7 +96,7 @@ export default function TimberSizes() {
             </div>
 
             <div className="mb-8 md:mb-12">
-              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">Timber Size Specifications & Uses</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 px-2">Softwood Specifications & Uses</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
                 {TIMBER_SIZES.map((s) => (
                   <Link
