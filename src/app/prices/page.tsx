@@ -141,17 +141,22 @@ export default function Prices() {
                 uses={['Doors, frames and windows', 'Furniture and cabinetry', 'Flooring, stairs and decking', 'Structural and architectural joinery']}
               />
               <h2 className="text-xl md:text-2xl font-bold mb-4">Hardwood Prices in Zanzibar</h2>
+              <div className="mb-5 rounded-xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-900/20">
+                <p className="font-semibold text-gray-900 dark:text-white">Mninga, Mvule and Mkongo share the same prices for each size.</p>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">Choose a species to see its qualities and recommended uses:</p>
+                <div className="mt-3 flex flex-wrap gap-2">{HARDWOOD_PRODUCTS.map(product => <Link key={product.id} href={`/hardwood/${product.slug}`} className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary-700 shadow-sm hover:text-primary-900 dark:bg-gray-800 dark:text-primary-300">{product.name}</Link>)}</div>
+              </div>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
-                  <thead><tr className="border-b-2 border-primary-600"><th className="text-left py-3 px-3 text-sm">Species</th><th className="text-left py-3 px-3 text-sm">Size</th><th className="text-right py-3 px-3 text-sm">Price (TZS)</th><th className="text-center py-3 px-3 text-sm">Order</th></tr></thead>
-                  <tbody>{HARDWOOD_PRODUCTS.flatMap(product => product.variants.map(variant => (
+                  <thead><tr className="border-b-2 border-primary-600"><th className="text-left py-3 px-3 text-sm">Available Species</th><th className="text-left py-3 px-3 text-sm">Full Dimensions</th><th className="text-right py-3 px-3 text-sm">Shared Price (TZS)</th><th className="text-center py-3 px-3 text-sm">Order</th></tr></thead>
+                  <tbody>{HARDWOOD_PRODUCTS[0].variants.map(variant => (
                     <tr key={variant.sku} className="border-b border-gray-200 dark:border-gray-700">
-                      <td className="py-3 px-3 font-semibold text-sm"><Link href={`/hardwood/${product.slug}`} className="text-primary-600 hover:underline">{product.name}</Link></td>
+                      <td className="py-3 px-3 font-semibold text-sm">Mninga · Mvule · Mkongo</td>
                       <td className="py-3 px-3 text-sm">{formatHardwoodSize(variant.size)}</td>
                       <td className="py-3 px-3 text-right font-bold text-sm">{formatTZS(variant.sellingPrice)}</td>
-                      <td className="py-3 px-3 text-center"><a href={`https://wa.me/255716002790?text=${encodeURIComponent(`Hello Zanzibaba Timber, I would like to order ${product.name} ${formatHardwoodSize(variant.size)}`)}`} className="text-green-600 text-xs font-semibold" target="_blank" rel="noopener noreferrer">Add to Order</a></td>
+                      <td className="py-3 px-3 text-center"><a href={`https://wa.me/255716002790?text=${encodeURIComponent(`Hello Zanzibaba Timber, I would like to order hardwood ${formatHardwoodSize(variant.size)}. Species: `)}`} className="text-green-600 text-xs font-semibold" target="_blank" rel="noopener noreferrer">Add to Order</a></td>
                     </tr>
-                  )))}</tbody>
+                  ))}</tbody>
                 </table>
               </div>
             </div>
