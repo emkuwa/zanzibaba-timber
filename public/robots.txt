@@ -1,13 +1,44 @@
-# *
-User-agent: *
+# AI Crawlers — Explicitly allowed for AEO (Answer Engine Optimization)
+User-agent: GPTBot
 Allow: /
 
-# *
-User-agent: *
-Disallow: /api/
+User-agent: ChatGPT-User
+Allow: /
 
-# *
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GeminiBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# All other crawlers
 User-agent: *
+Allow: /
+Disallow: /api/
 Disallow: /admin/
 
 # Host

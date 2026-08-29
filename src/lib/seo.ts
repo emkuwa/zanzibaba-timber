@@ -145,6 +145,26 @@ export const getWebSiteSchema = () => ({
       url: OG_IMAGE,
     },
   },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://timber.zanzibaba.com/search?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+})
+
+export const getWebPageSpeakableSchema = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://timber.zanzibaba.com/#webpage',
+  url: 'https://timber.zanzibaba.com',
+  dateModified: new Date().toISOString(),
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['.hero-heading', '.product-title', '.product-description', '.faq-answer'],
+  },
 })
 
 export const getProductSchema = (name: string, description: string, size?: string) => ({
