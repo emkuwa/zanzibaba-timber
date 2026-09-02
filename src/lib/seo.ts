@@ -46,12 +46,16 @@ export const getLocalBusinessSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Zanzibaba Timber',
+  alternateName: 'Zanzibaba Timber Zanzibar',
   image: 'https://timber.zanzibaba.com/images/gallery/zanzibaba-timber-hero-banner.jpg',
   '@id': 'https://timber.zanzibaba.com/#localbusiness',
   url: 'https://timber.zanzibaba.com',
   telephone: '+255716002790',
+  email: 'info@zanzibaba.com',
   description: 'Premium timber and teak wood poles supplier in Zanzibar. High quality timber, marine board, plywood, and wood poles (mirunda) for construction, delivered across the island.',
   priceRange: '$$',
+  currenciesAccepted: 'TZS',
+  paymentAccepted: 'Cash, Mobile Money, Bank Transfer',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Kwa Ndevu, Daraja Bovu',
@@ -76,6 +80,10 @@ export const getLocalBusinessSchema = () => ({
   sameAs: [
     'https://wa.me/255716002790',
     'https://maps.google.com/?q=Kwa+Ndevu+Daraja+Bovu+Zanzibar',
+    'https://facebook.com/zanzibaba',
+    'https://instagram.com/zanzibaba',
+    'https://linkedin.com/company/zanzibaba',
+    'https://youtube.com/@zanzibaba',
   ],
   areaServed: [
     { '@type': 'City', name: 'Zanzibar City', sameAs: 'https://en.wikipedia.org/wiki/Zanzibar_City' },
@@ -101,6 +109,44 @@ export const getLocalBusinessSchema = () => ({
     },
     geoRadius: '50000',
   },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Timber, Plywood & Marine Board Products',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Treated Softwood Timber', url: 'https://timber.zanzibaba.com/timber-sizes' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Hardwood Timber', url: 'https://timber.zanzibaba.com/hardwood' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Treated Wood Poles', url: 'https://timber.zanzibaba.com/treated-wood-poles' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Marine Board', url: 'https://timber.zanzibaba.com/marine-board' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Plywood', url: 'https://timber.zanzibaba.com/plywood' } },
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '85',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Ali Hassan' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Zanzibaba Timber has been our go-to supplier for over 3 years. The quality of their treated pine is consistently excellent, and their delivery to Nungwi is always on time.',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Sophie Laurent' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'We used Zanzibaba Timber for our entire beachfront hotel construction. The 2x4 and 2x6 treated pine has held up beautifully against the coastal elements.',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'John Mwangi' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Best timber supplier in Zanzibar. Fast delivery, honest prices, and the quality is always top-notch. Highly recommended for any construction project.',
+    },
+  ],
 })
 
 export const getBlogPostingSchema = (post: { title: string; excerpt: string; date: string; slug: string }) => ({
@@ -272,4 +318,62 @@ export const getReviewSchema = (name: string, reviews: Array<{ author: string; t
       bestRating: '5',
     },
   })),
+})
+
+export const getServiceSchema = (services: Array<{ name: string; description: string; url: string }>) => ({
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Zanzibaba Timber — Supply Services',
+  description: 'Timber supply services for hotels, villas, government projects and wholesale across Zanzibar',
+  numberOfItems: services.length,
+  itemListElement: services.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://timber.zanzibaba.com${s.url}`,
+    item: {
+      '@type': 'Service',
+      name: s.name,
+      description: s.description,
+      url: `https://timber.zanzibaba.com${s.url}`,
+      provider: {
+        '@type': 'LocalBusiness',
+        name: 'Zanzibaba Timber',
+        url: 'https://timber.zanzibaba.com',
+      },
+      areaServed: {
+        '@type': 'City',
+        name: 'Zanzibar',
+        containedInPlace: { '@type': 'Country', name: 'Tanzania' },
+      },
+      serviceType: 'Timber Supply',
+    },
+  })),
+})
+
+export const getAggregateRatingSchema = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://timber.zanzibaba.com/#localbusiness',
+  name: 'Zanzibaba Timber',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '85',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Ali Hassan' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Zanzibaba Timber has been our go-to supplier for over 3 years. The quality of their treated pine is consistently excellent, and their delivery to Nungwi is always on time.',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Sophie Laurent' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'We used Zanzibaba Timber for our entire beachfront hotel construction. The 2x4 and 2x6 treated pine has held up beautifully against the coastal elements.',
+    },
+  ],
 })

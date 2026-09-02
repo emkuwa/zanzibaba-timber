@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 import PriceNotice from '@/components/PriceNotice'
 import TransportCalculator from '@/components/TransportCalculator'
-import { generateSEOMetadata, getBreadcrumbSchema } from '@/lib/seo'
+import { generateSEOMetadata, getBreadcrumbSchema, getFAQSchema } from '@/lib/seo'
 import { PRODUCT_VARIANTS, formatTZS, sizeToSlug, formatVariantLabel, formatHardwoodSize, SHEET_PRODUCTS, HARDWOOD_PRODUCTS } from '@/lib/data'
 import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
@@ -21,6 +21,15 @@ const breadcrumb = getBreadcrumbSchema([
   { name: 'Home', url: '/' },
   { name: 'Prices', url: '/prices' },
 ])
+
+const PRICES_FAQ = [
+  { question: 'What are the current timber prices in Zanzibar?', answer: 'Timber prices in Zanzibar start from TZS 8,000 for 2x2x12ft treated softwood. Prices vary by size and species. Check our updated price list above for all available sizes.' },
+  { question: 'Do you offer free delivery across Zanzibar?', answer: 'Yes. We offer free delivery across all areas of Zanzibar including Stone Town, Paje, Nungwi, Kendwa, Kiwengwa, Jambiani and more.' },
+  { question: 'What payment methods do you accept?', answer: 'We accept Cash on Delivery, Mobile Money (M-Pesa, Tigo Pesa, Airtel Money) and Bank Transfer.' },
+  { question: 'Are prices inclusive of VAT?', answer: 'No. All prices listed are excluding VAT.' },
+  { question: 'Do you offer wholesale or bulk discounts?', answer: 'Yes. We offer special pricing for bulk orders and wholesale customers. Contact us for custom quotes on large quantities.' },
+  { question: 'What timber sizes are available?', answer: 'We stock treated softwood in 2x2, 2x3, 2x4, 2x6, 3x3 and 4x4 sizes in 8ft, 10ft and 12ft lengths. We also supply hardwood, marine board, plywood and wood poles.' },
+]
 
 function CategoryHeader({ id, title, image, description, features, uses }: {
   id: string
@@ -295,6 +304,7 @@ export default function Prices() {
         </section>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(PRICES_FAQ)) }} />
       <Footer />
       <FloatingButtons />
     </>

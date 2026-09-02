@@ -6,7 +6,7 @@ import HeroSection from '@/components/HeroSection'
 import ImageWithFallback from '@/components/ImageWithFallback'
 import OrderBuilder from '@/components/OrderBuilder'
 import PriceNotice from '@/components/PriceNotice'
-import { getLocalBusinessSchema, getFAQSchema, getReviewSchema, getWebSiteSchema } from '@/lib/seo'
+import { getLocalBusinessSchema, getFAQSchema, getReviewSchema, getWebSiteSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/seo'
 import { PRODUCT_VARIANTS, TIMBER_SIZES, WOOD_TYPE_GROUPS, INDUSTRIES, HOMEPAGE_FAQ, TESTIMONIALS, SIZE_USE_CASE, sizeToSlug, formatTZS, formatVariantLabel, SHEET_PRODUCTS, SHEET_PRODUCT_CATEGORIES } from '@/lib/data'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -334,6 +334,14 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebSiteSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(HOMEPAGE_FAQ)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getReviewSchema('Zanzibaba Timber', TESTIMONIALS.map(t => ({ author: t.name, text: t.text, rating: t.rating })))) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getServiceSchema([
+        { name: 'Hotel Timber Supply', description: 'Premium timber supply for hotels, resorts and hospitality projects across Zanzibar. Treated pine, marine board, plywood and hardwood for construction and renovation.', url: '/hotel-supply' },
+        { name: 'Villa Timber Supply', description: 'Custom timber supply for villa construction and renovation in Zanzibar. Framing timber, decking, doors, windows and finish materials.', url: '/villa-supply' },
+        { name: 'Government Timber Supply', description: 'Certified timber supply for government buildings, public infrastructure and institutional projects across Zanzibar.', url: '/government-supply' },
+        { name: 'Wholesale Timber Supply', description: 'Bulk timber, plywood, marine board and wood poles at wholesale prices for contractors, builders and resellers in Zanzibar.', url: '/wholesale' },
+        { name: 'Island-wide Timber Delivery', description: 'Free delivery of timber, plywood, marine board and building materials across all areas of Zanzibar including Paje, Nungwi, Stone Town, Kendwa and more.', url: '/delivery' },
+      ])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbSchema([{ name: 'Home', url: '/' }])) }} />
       <Footer />
       <FloatingButtons />
     </>
