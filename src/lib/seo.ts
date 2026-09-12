@@ -120,33 +120,6 @@ export const getLocalBusinessSchema = () => ({
       { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Plywood', url: 'https://timber.zanzibaba.com/plywood' } },
     ],
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '85',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  review: [
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Ali Hassan' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Zanzibaba Timber has been our go-to supplier for over 3 years. The quality of their treated pine is consistently excellent, and their delivery to Nungwi is always on time.',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Sophie Laurent' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'We used Zanzibaba Timber for our entire beachfront hotel construction. The 2x4 and 2x6 treated pine has held up beautifully against the coastal elements.',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'John Mwangi' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Best timber supplier in Zanzibar. Fast delivery, honest prices, and the quality is always top-notch. Highly recommended for any construction project.',
-    },
-  ],
 })
 
 export const getBlogPostingSchema = (post: { title: string; excerpt: string; date: string; slug: string }) => ({
@@ -209,7 +182,7 @@ export const getWebPageSpeakableSchema = () => ({
   dateModified: new Date().toISOString(),
   speakable: {
     '@type': 'SpeakableSpecification',
-    cssSelector: ['.hero-heading', '.product-title', '.product-description', '.faq-answer'],
+    cssSelector: ['h1', 'h2', '.speakable'],
   },
 })
 
@@ -355,25 +328,4 @@ export const getAggregateRatingSchema = () => ({
   '@type': 'LocalBusiness',
   '@id': 'https://timber.zanzibaba.com/#localbusiness',
   name: 'Zanzibaba Timber',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '85',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  review: [
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Ali Hassan' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Zanzibaba Timber has been our go-to supplier for over 3 years. The quality of their treated pine is consistently excellent, and their delivery to Nungwi is always on time.',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Sophie Laurent' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'We used Zanzibaba Timber for our entire beachfront hotel construction. The 2x4 and 2x6 treated pine has held up beautifully against the coastal elements.',
-    },
-  ],
 })
