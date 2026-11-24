@@ -1,12 +1,14 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Phone, MessageCircle, MapPin, Mail, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
 import { generateWhatsAppLink } from '@/lib/data'
 import { useBilingual } from '@/lib/bilingual'
 
 export default function Footer() {
   const { t, locale } = useBilingual()
+  const americanHardwood = usePathname().startsWith('/american-hardwood')
   const year = new Date().getFullYear()
 
   const S = (sw: string, en: string) => locale === 'sw' ? sw : en
@@ -137,8 +139,8 @@ export default function Footer() {
                 </a>
               </div>
               <div className="text-xs text-gray-500 space-y-1 text-right">
-                <p>Prices Excluding VAT</p>
-                <p>Free Delivery Across Zanzibar</p>
+                <p>{americanHardwood ? "American hardwood: quotation only" : "Prices Excluding VAT"}</p>
+                <p>{americanHardwood ? "Delivery and taxes confirmed in quotation" : "Free Delivery Across Zanzibar"}</p>
               </div>
             </div>
           </div>
