@@ -1,0 +1,8 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const ts=require('typescript');const fs=require('node:fs');const vm=require('node:vm');
+const code=ts.transpileModule(fs.readFileSync('src/lib/american-hardwood.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+const box={exports:{}};vm.runInNewContext(code,box);const {boardVolume,species,hardwoodTerms}=box.exports;
+test('one 1in × 12in × 1ft board is exactly one board foot',()=>{const r=boardVolume(1,12,1,1,'imperial');assert.ok(Math.abs(r.boardFeet-1)<1e-12);assert.ok(Math.abs(r.cbm-0.002359737216)<1e-12)});
+test('metric quantities convert to CBM and board feet',()=>{const r=boardVolume(100,100,1000,100,'metric');assert.ok(Math.abs(r.cbm-1)<1e-12);assert.ok(Math.abs(r.boardFeet-423.7760006578639)<1e-9)});
+test('equivalent metric and imperial measurements agree',()=>{const a=boardVolume(1,12,8,3,'imperial'),b=boardVolume(25.4,304.8,2438.4,3,'metric');assert.ok(Math.abs(a.cbm-b.cbm)<1e-12)});
+test('rejects invalid dimensions, fractions of boards and nonfinite values',()=>{for(const values of [[0,12,8,1],[-1,12,8,1],[1,12,8,1.5],[Infinity,12,8,1],[1,NaN,8,1]])assert.equal(boardVolume(...values,'imperial'),null)});
+test('catalogue includes all twelve unique selections and explicit commercial constraints',()=>{assert.equal(species.length,12);assert.equal(new Set(species.map(s=>s.slug)).size,12);assert.match(hardwoodTerms,/Special order only/);assert.match(hardwoodTerms,/3–4 months/);assert.match(hardwoodTerms,/Cash on delivery is not available/)});

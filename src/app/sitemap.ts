@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
 import { BLOG_POSTS, LOCATIONS, TIMBER_SIZES, SHEET_PRODUCTS, HARDWOOD_PRODUCTS } from '@/lib/data'
 
+import { species } from '@/lib/american-hardwood'
+
 const BASE_URL = 'https://timber.zanzibaba.com'
 
 function e(
@@ -18,7 +20,7 @@ function e(
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const entries: MetadataRoute.Sitemap = []
+  const entries: MetadataRoute.Sitemap = [e('/american-hardwood', 0.95),e('/american-hardwood/enquire',0.8), ...species.map(s=>e('/american-hardwood/'+s.slug,0.85))]
 
   const high: [string, string?][] = [
     ['/', 'daily'],

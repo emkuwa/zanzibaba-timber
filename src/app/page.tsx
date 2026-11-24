@@ -1,4 +1,5 @@
 'use client'
+import AmericanHardwoodSummary from '@/components/AmericanHardwoodSummary'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -64,6 +65,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <AmericanHardwoodSummary />
 
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-green-600 md:hidden shadow-lg">
         <a

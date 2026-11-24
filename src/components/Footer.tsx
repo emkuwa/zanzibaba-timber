@@ -48,6 +48,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">{S('Bidhaa', 'Products')}</h3>
             <ul className="space-y-2">
+              <li><Link href="/american-hardwood" className="text-gray-300 hover:text-white">American Hardwood · Special Order</Link></li>
               <li><Link href="/timber-sizes" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Saizi za Mbao', 'Timber Sizes')}</Link></li>
               <li><Link href="/treated-wood-poles" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Miti ya Mbao', 'Wood Poles')}</Link></li>
               <li><Link href="/timber-zanzibar" className="text-gray-400 hover:text-white text-sm transition-colors">{S('Mbao Treated Pine', 'Treated Pine Timber')}</Link></li>

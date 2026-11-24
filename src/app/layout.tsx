@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: 'Timber, Marine Board & Plywood Supplier | Zanzibaba Zanzibar',
     template: '%s | Timber, Marine Board & Plywood | Zanzibaba',
   },
-    description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles. Serving Paje, Nungwi, Stone Town and all Zanzibar. Cash on delivery, mobile money & bank transfer accepted. FREE island-wide delivery.',
+    description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles. Serving Paje, Nungwi, Stone Town and all Zanzibar. American hardwood: special order, 3–4 months, quotation only; no cash on delivery. Other product delivery and payment terms require confirmation.',
   keywords: [
     'timber supplier zanzibar',
     'pine timber zanzibar',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Timber, Marine Board & Plywood Supplier | Zanzibaba Zanzibar',
-  description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles. Serving Paje, Nungwi, Stone Town and all Zanzibar. Cash on delivery, mobile money & bank transfer accepted. FREE island-wide delivery.',
+  description: 'Zanzibaba Timber — Zanzibar\'s leading supplier of treated pine timber, marine board, plywood, construction timber and treated poles. Serving Paje, Nungwi, Stone Town and all Zanzibar. American hardwood: special order, 3–4 months, quotation only; no cash on delivery. Other product delivery and payment terms require confirmation.',
     url: baseUrl,
     siteName: 'Zanzibaba Timber',
     images: [{ url: ogImage, width: 1200, height: 630, alt: 'Zanzibaba Timber — Premium Treated Pine Supplier in Zanzibar' }],
