@@ -1,0 +1,86 @@
+[
+  {
+    "file": "public/images/american-hardwood/cherry.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American black cherry, Prunus serotina. Warm natural reddish-brown heartwood, cream edge sapwood, fine relatively straight subtle grain, occasional tiny gum flecks.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/hickory.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American hickory, Carya species. Strong naturally contrasting cream sapwood and tan to medium-brown heartwood, clear straight grain, varied boards.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/wormy-red-maple.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "Wormy American red maple, Acer rubrum character selection. Pale creamy maple with irregular grey-brown ambrosia streaks around sparse tiny insect-associated holes, sound solid boards, no live insects, not decayed.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/poplar.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American yellow poplar / tulipwood, Liriodendron tulipifera. Cream sapwood and pale yellow to olive-green heartwood, subtle fine straight grain.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/basswood.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American basswood, Tilia americana. Very pale creamy-white to faint light tan wood, fine uniform subtle straight grain, no strong oak-like rings.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/walnut.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American black walnut, Juglans nigra. Rich natural chocolate-brown heartwood with subtle purple brown undertones and a narrow cream sapwood edge, flowing grain.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/white-oak.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American white oak group. Natural light tan to medium-brown solid wood, coarse open grain, some quarter-sawn ray fleck visible, no orange stain.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/hard-maple.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American hard maple, Acer saccharum. Pale creamy sapwood with faint warm blush, fine dense close grain, understated natural figure, no oak-like pores.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/red-oak.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American red oak group. Natural light pinkish-brown heartwood and light sapwood, visibly coarse open grain and growth rings, no artificial red stain.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/ash.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American ash, Fraxinus species. Pale blonde to cream sapwood and some light brown heartwood, strong pronounced open ring grain, natural straight grain.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/birch.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American yellow birch as an illustrative example only, Betula alleghaniensis. Pale golden cream sapwood with subtle light reddish-brown heartwood, fine even close grain.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  },
+  {
+    "file": "public/images/american-hardwood/red-maple.webp",
+    "type": "representative AI illustration",
+    "generation": "built-in image generation",
+    "promptSubject": "American red maple, Acer rubrum. Creamy white to pale pinkish sapwood, light reddish-brown heartwood accents, fine relatively straight texture, no strong ambrosia pattern.",
+    "style": "three natural unstained solid boards, neutral grey studio background, no text or branding"
+  }
+]

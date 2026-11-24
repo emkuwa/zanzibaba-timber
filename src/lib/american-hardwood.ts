@@ -32,7 +32,8 @@ export function boardVolume(thickness:number,width:number,length:number,quantity
 
 export function hardwoodMetadata(title:string,description:string,_locale:string,path:string):import('next').Metadata {
  const url='https://timber.zanzibaba.com'+path
- const image='https://timber.zanzibaba.com/images/american-hardwood-reference.webp'
+ const selected=species.find(s=>path==='/american-hardwood/'+s.slug)
+ const image=selected?'https://timber.zanzibaba.com/images/american-hardwood/'+selected.slug+'.webp':'https://timber.zanzibaba.com/images/american-hardwood-reference.webp'
  return {title,description,alternates:{canonical:url,languages:{en:url}},openGraph:{title,description,url,siteName:'Zanzibaba Timber',locale:'en_TZ',type:'website',images:[{url:image,width:1536,height:1024,alt:'Representative illustrations of natural American hardwood grain; not actual stock'}]},twitter:{card:'summary_large_image',title,description,images:[image]}}
 }
 
