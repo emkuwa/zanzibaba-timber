@@ -35,3 +35,18 @@ export function hardwoodMetadata(title:string,description:string,_locale:string,
  const image='https://timber.zanzibaba.com/images/american-hardwood-reference.webp'
  return {title,description,alternates:{canonical:url,languages:{en:url}},openGraph:{title,description,url,siteName:'Zanzibaba Timber',locale:'en_TZ',type:'website',images:[{url:image,width:1536,height:1024,alt:'Representative illustrations of natural American hardwood grain; not actual stock'}]},twitter:{card:'summary_large_image',title,description,images:[image]}}
 }
+
+
+// Keep the first external project source while recording the current product page separately.
+export function hardwoodSource(incoming:string) {
+ if (typeof window === 'undefined') return incoming || 'timber.zanzibaba.com'
+ let source=incoming
+ try {
+  const key='american-hardwood-source'
+  const saved=sessionStorage.getItem(key)
+  const external=incoming && !incoming.includes('timber.zanzibaba.com')
+  source=external?incoming:(saved||incoming||'timber.zanzibaba.com')
+  sessionStorage.setItem(key,source.slice(0,500))
+ } catch {}
+ return source || 'timber.zanzibaba.com'
+}
