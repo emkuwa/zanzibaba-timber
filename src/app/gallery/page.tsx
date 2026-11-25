@@ -1,53 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import FloatingButtons from '@/components/FloatingButtons'
-import ImageWithFallback from '@/components/ImageWithFallback'
-import { generateSEOMetadata } from '@/lib/seo'
-
-export const metadata = generateSEOMetadata(
-  'Timber Gallery - Zanzibar Projects & Products',
-  'View our premium pine timber products and completed projects across Zanzibar. Hotels, villas, residential and commercial work.',
-  'en',
-  '/gallery'
-)
-
-export default function Gallery() {
-  const images = [
-    { id: '1', src: '/images/gallery/timber-yard-aerial-view.jpg', alt: 'Timber storage yard in Kwa Ndevu' },
-    { id: '2', src: '/images/gallery/timber-sizes-display.jpg', alt: 'Pine timber 2x4 for construction' },
-    { id: '3', src: '/images/gallery/hotel-project-zanzibar.jpg', alt: 'Hotel project Nungwi' },
-    { id: '4', src: '/images/gallery/villa-construction-zanzibar.jpg', alt: 'Villa construction Paje' },
-    { id: '5', src: '/images/gallery/timber-delivery-zanzibar.jpg', alt: 'Bulk timber delivery' },
-    { id: '6', src: '/images/gallery/contractor-inspecting-timber.jpg', alt: 'Custom timber cutting' },
-    { id: '7', src: '/images/gallery/residential-house-construction.jpg', alt: 'Finished villa project' },
-    { id: '8', src: '/images/gallery/resort-construction-zanzibar.jpg', alt: 'Roof construction timber' },
-  ]
-
-  return (
-    <>
-      <Header />
-      <main>
-        <section className="py-20 bg-white dark:bg-gray-900">
-          <div className="container-custom">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">Project Gallery</h1>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {images.map((img) => (
-                <ImageWithFallback
-                  key={img.id}
-                  src={img.src}
-                  alt={img.alt}
-                  aspectRatio="1/1"
-                  className="rounded-lg shadow-md hover:scale-105 transition-transform"
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-      <FloatingButtons />
-    </>
-  )
-}
+import CustomerGallery from '@/components/CustomerGallery'
+import {generateSEOMetadata} from '@/lib/seo'
+export const metadata=generateSEOMetadata('Timber, Flooring, Doors & Cabinetry Inspiration','Explore timber samples, flooring, doors, cabinets and interior design references. Request a project quotation from Zanzibaba Timber.','en','/gallery')
+export default function Gallery(){return <><Header/><main style={{background:'#faf7ef'}}><div className="container-custom py-8"><h1 className="sr-only">Timber and interior reference gallery</h1><CustomerGallery full/></div></main><Footer/></>}
