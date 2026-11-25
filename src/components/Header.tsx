@@ -209,7 +209,7 @@ export default function Header() {
         <div className="flex items-center gap-1 md:gap-2">
           <a
             href="tel:+255716002790"
-            className="inline-flex items-center gap-1.5 text-gray-600 dark:text-gray-300 hover:text-primary-600 text-sm font-medium transition-colors min-h-[40px]"
+            className="hidden sm:inline-flex items-center gap-1.5 text-gray-600 dark:text-gray-300 hover:text-primary-600 text-sm font-medium transition-colors min-h-[40px]"
           >
             <span className="inline whitespace-nowrap">+255 716 002 790</span>
           </a>
