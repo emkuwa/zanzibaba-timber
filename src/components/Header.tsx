@@ -26,7 +26,7 @@ export default function Header() {
 
   const productLinks = [
     { href: '/products', label: 'All Products' },
-    { href: '/american-hardwood', label: 'American Hardwood' },
+    { href: '/american-hardwood', label: 'Exotic American Hardwood' },
     { href: '/timber-sizes', label: t('navigation.timberSizes') },
     { href: '/hardwood', label: 'Hardwood' },
     { href: '/treated-wood-poles', label: t('navigation.treatedWoodPoles') },
